@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+crops/*
+features/*
+placeholders/*
+*.jpg
+*.png
+*.svg
+*.gif
