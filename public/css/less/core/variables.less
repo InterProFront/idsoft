@@ -1,6 +1,88 @@
-@link-color: #333333;
-@link-border: #666666;
+@link-color :  #006699;
+@link-border:  #b2d1e0;
+@hover-color : #cc0000;
+@hover-border: #f0b2b2;
 
-@hover-color: #000000;
-@hover-border: #000000;
+@white-link-color: #ffffff;
+@white-link-border: #4d94b8;
+@white-hover-color: #ddba71;
+@white-hover-border: #4d858a;
 
+
+@black-link: #333333;
+@black-border: #cccccc;
+
+@yellow : #fed054;
+@blue   : #006699;
+
+
+// Fonts
+@arial     : "Arial", sans-serif;
+
+@title     : 48px;
+@subtitle  : 24px;
+@regular   : 16px;
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: @arial;
+}
+
+
+body{
+  background: #25394d;
+}
+.top{
+  color: #cccccc;
+  max-width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: @regular;
+  padding: 10px;
+}
+.wrapper{
+  margin: 0 auto;
+  max-width: 1200px;
+  min-width: 320px;
+}
+
+
+
+
+
+
+
+
+.bx-controls.bx-has-pager.bx-has-controls-direction {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+a.bx-pager-link {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #dbe5ec;
+  display: block;
+  &.active{
+    background: @yellow ;
+  }
+}
+
+.bx-pager.bx-default-pager {
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  min-width: 60px;
+  margin: 0 auto;
+}
+
+.bx-pager-item {
+  display: inline-block;
+  margin: 0 5px;
+}

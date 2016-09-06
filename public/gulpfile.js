@@ -26,9 +26,11 @@ gulp.task('watch',function(){
     livereload.listen();
     gulp.watch('./css/less/style.less', ['Styles']);
     gulp.watch('./css/less/mobile.less', ['Mobile']);
-    gulp.watch('./css/less/include/*.less', ['Styles']);
-    gulp.watch('./css/less/include/pages/*.less', ['Styles']);
-    gulp.watch('./css/less/mobile/*.less', ['Mobile']);
+
+    gulp.watch('./css/less/desctop/*.less', ['Styles']);
+    gulp.watch('./css/less/core/*.less',    ['Styles','Mobile']);
+    gulp.watch('./css/less/mobile/*.less',  ['Mobile']);
+
 });
 
 gulp.task('default', ['Styles']);

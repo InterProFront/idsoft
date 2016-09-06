@@ -7,5 +7,13 @@
  */
    return
        [
-        'second' => [],
+
+        'category_1' => [],
+        'category_2' => [],
+        'product' => [],
+        'auto' => [],
+        'tarif_category' =>[],
+        'tarif' => [],
+        'client' => [],
+
       ];

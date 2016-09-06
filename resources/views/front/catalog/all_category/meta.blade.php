@@ -1,0 +1,2 @@
+@section('meta')
+@endsection

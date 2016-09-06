@@ -7,5 +7,13 @@ $(document).ready(function(){
         midClick: true,
         callbacks: {
         }
-    })
+    });
+
+    $('.slider-list').bxSlider({
+        nextText: '<div class="right-slide"></div>',
+        prevText: '<div class="left-slide"></div>',
+        auto: true,
+        speed: 1500,
+        pause: 5000
+    });
 });
