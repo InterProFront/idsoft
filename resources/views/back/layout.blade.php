@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Тест админки</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <script src="/admin/js/jquery-1.8.3.js"></script>
+    <script src="/Admin/js/jquery-1.8.3.js"></script>
 
     @include('back/scripts')
     @yield('scripts')
