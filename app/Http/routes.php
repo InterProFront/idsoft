@@ -13,6 +13,11 @@
 
 Route::get('/', 'PageController@getIndex');
 Route::get('/test', 'PageController@getNew');
+Route::get('/product', 'PageController@getProduct');
+
+
+
+
 
 Route::get('/catalog', 				'CatalogController@getCatalog');
 Route::get('/catalog/{category}',	'CatalogController@getCategory');

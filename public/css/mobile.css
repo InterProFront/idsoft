@@ -21,6 +21,26 @@ body {
   max-width: 1200px;
   min-width: 320px;
 }
+.button {
+  color: #ffffff;
+  background: #006699;
+  padding: 0 24px;
+  border-radius: 3px;
+  border: none;
+}
+.button:focus {
+  outline: none;
+}
+.button:hover {
+  background: #1491c4;
+  cursor: pointer;
+}
+.block-separator .separator {
+  display: block;
+  height: 2px;
+  background: #e5e5e5;
+  width: 100%;
+}
 .bx-controls.bx-has-pager.bx-has-controls-direction {
   display: -ms-flexbox;
   display: flex;

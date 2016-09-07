@@ -1,6 +1,9 @@
 @extends('front.layout')
 @include('front.index.meta')
 @section('content')
+    {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
+    <?php $shadow = false; ?>
+    {{----}}
     <section class="content">
         <div class="automatic">
             <h1 class="block-title">Автоматизация общепита и торговли</h1>

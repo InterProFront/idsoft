@@ -65,7 +65,13 @@ class PageController extends Controller{
 
 
 		$menu_popup = [$catalog, $auto, $soft, $showcase, $acc, $video];
-		dd($iiko);
+	}
+
+
+	public function getProduct(){
+		return view('front.catalog.product.product',[
+
+		]);
 	}
 
 }

@@ -1,5 +1,5 @@
 @section('header')
-    <header>
+    <header @if($shadow) class="shadow" @else @endif>
         <div class="info-row">
             <div class="col-1-3">
                 <div class="wrap">

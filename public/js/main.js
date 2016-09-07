@@ -16,4 +16,11 @@ $(document).ready(function(){
         speed: 1500,
         pause: 5000
     });
+    $('.zoom').elevateZoom({
+        gallery:'gallery_01',
+        cursor: 'pointer',
+        galleryActiveClass: 'active',
+        imageCrossfade: true,
+        borderColour: '#cccccc',
+        borderSize: 1});
 });
