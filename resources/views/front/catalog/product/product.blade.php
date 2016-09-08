@@ -25,9 +25,7 @@
                         <a href="#" data-image="/img/391.jpg" data-zoom-image="img/1101.jpg">
                             <img id="img_01" src="/img/91.jpg"/>
                         </a>
-                        <a href="#" data-image="/img/392.jpg" data-zoom-image="/img/1102.jpg">
-                            <img id="img_01" src="/img/92.jpg"/>
-                        </a>
+
                     </div>
                 </div>
                 <div class="automatic-block">

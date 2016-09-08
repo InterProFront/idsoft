@@ -7,7 +7,7 @@
         <h1 class="block-title">POS-системы</h1>
         <div class="product-list">
             <div class="product-item">
-                <a href="">
+                <a href="/product">
                     <div class="img-wrap">
                         <img src="/img/1.JPG" alt="">
                     </div>
@@ -21,7 +21,7 @@
                 </a>
             </div>
             <div class="product-item">
-                <a href="">
+                <a href="/product">
                     <div class="img-wrap">
                         <img src="/img/2.JPG" alt="">
                     </div>
@@ -35,7 +35,7 @@
                 </a>
             </div>
             <div class="product-item">
-                <a href="">
+                <a href="/product">
                     <div class="img-wrap">
                         <img src="/img/3.JPG" alt="">
                     </div>
@@ -49,7 +49,7 @@
                 </a>
             </div>
             <div class="product-item">
-                <a href="">
+                <a href="/product">
                     <div class="img-wrap">
                         <img src="/img/4.JPG" alt="">
                     </div>

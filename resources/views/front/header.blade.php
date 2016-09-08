@@ -16,8 +16,8 @@
             </div>
             <div class="col-1-3">
                 <div class="logo-block">
-                    <img src="/images/{{$static->logo_image->primary_link}}" alt="{{$static->logo_image->alt}}"
-                         class="logo">
+                    <a href="/"><img src="/images/{{$static->logo_image->primary_link}}" alt="{{$static->logo_image->alt}}"
+                         class="logo"></a>
                 </div>
             </div>
             <div class="col-1-3 reverse">
@@ -61,14 +61,14 @@
                                             @if($i == 2)
                                                 <div class="col-1-2">
                                                     <h3 class="popup-title"><a
-                                                                href="{{$link[$i-1]}}">{{$item->menu_text_field}}</a>
+                                                                href="/catalog">{{$item->menu_text_field}}</a>
                                                     </h3>
                                                     <div class="popup-items">
                                                         <ul class="second-row">
                                                             @foreach($m_popup[$i-1] as $item_p)
                                                                 @if( !$item_p->is_iiko_field)
                                                                     <li class="item-popup">
-                                                                        <a href="{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
+                                                                        <a href="/category">{{$item_p->page_name_field}}</a>
                                                                     </li>
                                                                 @endif
                                                             @endforeach
@@ -82,7 +82,7 @@
                                                             @foreach($m_popup[$i-1] as $item_p)
                                                                 @if( $item_p->is_iiko_field)
                                                                     <li class="item-popup">
-                                                                        <a href="{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
+                                                                        <a href="/category">{{$item_p->page_name_field}}</a>
                                                                     </li>
                                                                 @endif
                                                             @endforeach
@@ -91,7 +91,7 @@
                                                     @else
                                                         <div class="col-1-1">
                                                             <h3 class="popup-title"><a
-                                                                        href="{{$link[$i-1]}}">{{$item->menu_text_field}}</a>
+                                                                        href="/catalog">{{$item->menu_text_field}}</a>
                                                             </h3>
                                                             <div class="popup-items">
                                                                 <ul class="popup-list">
