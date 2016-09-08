@@ -13,7 +13,9 @@
 
 Route::get('/', 'PageController@getIndex');
 Route::get('/test', 'PageController@getNew');
-Route::get('/product', 'PageController@getProduct');
+Route::get('/product', 'CatalogController@getProduct');
+Route::get('/catalog', 'CatalogController@getCatalog');
+Route::get('/category', 'CatalogController@getCategory');
 
 
 
@@ -62,7 +64,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 	Route::get('/edit/catalog/{id}',	'BackController@editSubCategory');
 	Route::get('/edit/showcase/{id}',	'BackController@editSubCategory');
 	Route::get('/edit/video/{id}',		'BackController@editSubCategory');
-
+	Route::get('/edit/software/{id}',	'BackController@editSubCategory');
 
 
 	Route::get('/edit/auto',			'BackController@editAuto');
@@ -76,7 +78,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 
 
 
-	Route::get('/edit/software/{product_id}',		'BackController@editProductSoft');
+	Route::get('/edit/software/{id}/{product_id}',	'BackController@editProduct');
 	Route::get('/edit/catalog/{id}/{product_id}',	'BackController@editProduct');
 	Route::get('/edit/showcase/{id}/{product_id}',	'BackController@editProduct');
 	Route::get('/edit/video/{id}/{product_id}',		'BackController@editProduct');

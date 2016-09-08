@@ -16,7 +16,7 @@
                             <p class="card-text">{{$auto->auto_description_field}}</p>
                         </div>
                         <img src="/images/{{$auto->auto_background_image->primary_link}}" alt="">
-                        <div class="popup-form">
+                        <div class="popup-form orange small">
                             <h3 class="popup-title">{{$auto->auto_title_field}}</h3>
                             <div class="popup-items">
                                 <ul class="popup-list">
@@ -35,7 +35,7 @@
                             <p class="card-text">{{$auto->iiko_description_field}}</p>
                         </div>
                         <img src="/images/{{$auto->iiko_background_image->primary_link}}" alt="">
-                        <div class="popup-form right-pull">
+                        <div class="popup-form red">
                             <h3 class="popup-title">{{$auto->iiko_title_field}}</h3>
                             <div class="popup-items">
                                 <ul class="popup-list">
@@ -56,7 +56,7 @@
                             <p class="card-text">{{$catalog->category_description_field}}</p>
                         </div>
                         <img src="/images/{{$catalog->card_background_image->primary_link}}" alt="">
-                        <div class="popup-form">
+                        <div class="popup-form orange big">
                             <h3 class="popup-title">{{$catalog->category_name_field}}</h3>
                             <div class="popup-items">
                                 <ul class="popup-list">
@@ -70,23 +70,13 @@
                         </div>
                     </div>
                     <div class="col-1-2">
-                        <div class="wrap">
-                            <p class="card-title">{{$soft->category_name_field}}</p>
-                            <p class="card-text">{{$soft->category_description_field}}</p>
-                        </div>
-                        <img src="/images/{{$soft->card_background_image->primary_link}}" alt="">
-                        <div class="popup-form right-pull">
-                            <h3 class="popup-title">{{$soft->category_name_field}}</h3>
-                            <div class="popup-items">
-                                <ul class="popup-list">
-                                    @foreach($m_popup[2] as $item_p)
-                                        <li class="item-popup">
-                                            <a href="{{$item_p->slug_field}}">{{$item_p->product_name_field}}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
+                        <a href="#">
+                            <div class="wrap">
+                                <p class="card-title">{{$soft->category_name_field}}</p>
+                                <p class="card-text">{{$soft->category_description_field}}</p>
                             </div>
-                        </div>
+                            <img src="/images/{{$soft->card_background_image->primary_link}}" alt="">
+                        </a>
                     </div>
                 </div>
                 <div class="row">
@@ -96,7 +86,7 @@
                             <p class="card-text">{{$showcase->category_description_field}}</p>
                         </div>
                         <img src="/images/{{$showcase->card_background_image->secondary_link}}" alt="">
-                        <div class="popup-form">
+                        <div class="popup-form orange">
                             <h3 class="popup-title">{{$showcase->category_name_field}}</h3>
                             <div class="popup-items">
                                 <ul class="popup-list">
@@ -110,23 +100,13 @@
                         </div>
                     </div>
                     <div class="col-1-3">
+                        <a href="#">
                         <div class="wrap">
                             <p class="card-title">{{$buh->card_title_field}}</p>
                             <p class="card-text">{{$buh->card_description_field}}</p>
                         </div>
                         <img src="/images/{{$buh->card_background_image->secondary_link}}" alt="">
-                        <div class="popup-form">
-                            <h3 class="popup-title">{{$buh->card_title_field}}</h3>
-                            <div class="popup-items">
-                                <ul class="popup-list">
-                                    @foreach($m_popup[4] as $item_p)
-                                        <li class="item-popup">
-                                            <a href="{{$item_p->slug_field}}">{{$item_p->tarif_name_field}}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="col-1-3">
                         <div class="wrap">
@@ -134,7 +114,7 @@
                             <p class="card-text">{{$video->category_description_field}}</p>
                         </div>
                         <img src="/images/{{$video->card_background_image->secondary_link}}" alt="">
-                        <div class="popup-form right-pull">
+                        <div class="popup-form orange">
                             <h3 class="popup-title">{{$video->category_name_field}}</h3>
                             <div class="popup-items">
                                 <ul class="popup-list">

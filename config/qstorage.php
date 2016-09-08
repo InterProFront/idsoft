@@ -36,7 +36,7 @@ return [
                 'owner' => 'category_1',
                 'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name','category_description'],
                 'bool' => ['sale', 'new', 'individual'],
-                'images'       => ['card_background']
+                'images'       => ['card_background','card_hover']
             ],
             'product' => [
                 'owner' => 'category_2',

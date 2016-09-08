@@ -32,6 +32,11 @@
                 </div>
                 <div class="automatic-block">
                     <ul class="automatic-list">
+                        <li class="item-link"><p class="automatic-title">Программное обеспечение</p></li>
+                        <li class="item-link"><a href="#" class="link">Paloma 365</a></li>
+                        <li class="item-link"><a href="#" class="link">1С Розница</a></li>
+                    </ul>
+                    <ul class="automatic-list">
                         <li class="item-link"><p class="automatic-title">Применяется в автоматизации</p></li>
                         <li class="item-link"><a href="#" class="link">Кафе и ресторанов</a></li>
                         <li class="item-link"><a href="#" class="link">Фастфудов и столовых</a></li>

@@ -36,7 +36,7 @@ class PageController extends Controller{
 		$showcase = $this->queryAgent->getGroupItem('catalog_block','category_1',52);
 		$video = $this->queryAgent->getGroupItem('catalog_block','category_1',53);
 		$auto = $this->queryAgent->getBlock('auto_block',[],[]);
-		$soft = $this->queryAgent->getGroupItem('catalog_block','category_2',55);
+		$soft = $this->queryAgent->getGroupItem('catalog_block','category_1',54);
 		$acc = $this->queryAgent->getBlock('accounting_block',[],[]);
 		$iiko = $this->queryAgent->getGroupFlat('auto_block','auto',[],['auto'=>['is_iiko'=>true]]);
 		$acc_menu = $this->queryAgent->getGroupFlat('auto_block','auto',[],['auto'=>['is_iiko'=>false]]);
@@ -51,27 +51,7 @@ class PageController extends Controller{
 			'acc_m'	  => $acc_menu
 		]);
 	}
-	public function getNew(){
-		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
-
-		$showcase = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>52]]);
-
-		$video = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
-
-		$auto = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
-
-		$soft = $this->queryAgent->getGroupFLat('catalog_block','product',[],['category_2'=>['owner_id'=>55]]);
-		$acc = $this->queryAgent->getGroupFlat('accounting_block','tarif_category',[],[]);
 
 
-		$menu_popup = [$catalog, $auto, $soft, $showcase, $acc, $video];
-	}
-
-
-	public function getProduct(){
-		return view('front.catalog.product.product',[
-
-		]);
-	}
 
 }

@@ -20,7 +20,15 @@ return [
     ],
     'category_2_card_background' => [
         'sizes' => [
-            ['width' => null, 'height' => 180, 'sufix' => 'primary'],
+            ['width' => null, 'height' => 120, 'sufix' => 'primary'],
+            ['width' => null, 'height' => 220, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
+    'category_2_card_hover' => [
+        'sizes' => [
+            ['width' => null, 'height' => 120, 'sufix' => 'primary'],
             ['width' => null, 'height' => 220, 'sufix' => 'secondary'],
             ['width' => 100, 'height' => null, 'sufix' => 'preview'],
             ['width' => 100, 'height' => null, 'sufix' => 'icon'],

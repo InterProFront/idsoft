@@ -88,9 +88,9 @@ class BackController extends Controller {
 		]);
 	}
 	public function editSoft(){
-		$catalog = $this->queryAgent->getGroupItem('catalog_block','category_2',55);
-		return view('back.blocks.groupitems.catalog_block.category_2_edit', [
-			'item_category_2' => $catalog
+		$catalog = $this->queryAgent->getGroupItem('catalog_block','category_1',54);
+		return view('back.blocks.groupitems.catalog_block.category_1_edit', [
+			'item_category_1' => $catalog
 		]);
 	}
 	public function editSubCategory($id){

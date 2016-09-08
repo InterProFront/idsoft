@@ -34,20 +34,61 @@
         position: relative;
         min-height: 210px;
         background: url(../img/back-big.png) no-repeat;
+        & > a{
+          display: inline-block;
+          width: 100%;
+          height: 210px;
+        }
         &:hover {
           .popup-form {
-            &.right-pull {
-              left: -200px;
+            &.big{
+              min-width: 750px;
             }
+            &.small{
+              .popup-items {
+                .popup-list {
+                  .item-popup {
+                    width: 50%;
+                  }
+                }
+              }
+            }
+            &.red{
+              .popup-title {
+                color: #FFFFFF;
+              }
+              .popup-items {
+                .popup-list {
+                  .item-popup {
+                    display: block;
+                    width: 100%;
+                    a{
+                      .link(#f9c361,#bd491f,#ffffff,#cccccc)
+                    }
+                  }
+                }
+              }
+              background: rgb(154,0,0); /* Old browsers */
+              background: -moz-linear-gradient(top, rgba(154,0,0,1) 0%, rgba(154,5,0,1) 11%, rgba(157,5,0,1) 12%, rgba(160,12,0,1) 25%, rgba(163,18,1,1) 30%, rgba(161,18,1,1) 32%, rgba(179,52,1,1) 73%, rgba(187,65,0,1) 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, rgba(154,0,0,1) 0%,rgba(154,5,0,1) 11%,rgba(157,5,0,1) 12%,rgba(160,12,0,1) 25%,rgba(163,18,1,1) 30%,rgba(161,18,1,1) 32%,rgba(179,52,1,1) 73%,rgba(187,65,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, rgba(154,0,0,1) 0%,rgba(154,5,0,1) 11%,rgba(157,5,0,1) 12%,rgba(160,12,0,1) 25%,rgba(163,18,1,1) 30%,rgba(161,18,1,1) 32%,rgba(179,52,1,1) 73%,rgba(187,65,0,1) 100%);
+            }
+            &.orange{
+              background: rgb(252,208,101); /* Old browsers */
+              background: -moz-linear-gradient(top, rgba(252,208,101,1) 0%, rgba(252,213,108,1) 20%, rgba(254,220,122,1) 39%, rgba(253,223,125,1) 49%, rgba(254,224,128,1) 49%, rgba(255,226,132,1) 56%, rgba(253,232,139,1) 70%, rgba(255,232,142,1) 72%, rgba(255,233,140,1) 73%, rgba(255,234,145,1) 77%, rgba(255,241,153,1) 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, rgba(252,208,101,1) 0%,rgba(252,213,108,1) 20%,rgba(254,220,122,1) 39%,rgba(253,223,125,1) 49%,rgba(254,224,128,1) 49%,rgba(255,226,132,1) 56%,rgba(253,232,139,1) 70%,rgba(255,232,142,1) 72%,rgba(255,233,140,1) 73%,rgba(255,234,145,1) 77%,rgba(255,241,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, rgba(252,208,101,1) 0%,rgba(252,213,108,1) 20%,rgba(254,220,122,1) 39%,rgba(253,223,125,1) 49%,rgba(254,224,128,1) 49%,rgba(255,226,132,1) 56%,rgba(253,232,139,1) 70%,rgba(255,232,142,1) 72%,rgba(255,233,140,1) 73%,rgba(255,234,145,1) 77%,rgba(255,241,153,1) 100%);
+            }
+            background: #ffffff;
+            position: absolute;
             display: block;
             z-index: 5;
-            background: #ffffff;
-            border: 3px solid @yellow;
-            border-radius: 10px;
-            position: absolute;
             padding: 30px;
-            min-width: 690px;
-            top: 20px;
+            top: 0;
+            width: 100%;
+            max-width: 599px;
+            min-height: 210px;
+            box-sizing: border-box;
             .popup-title {
               font-size: @subtitle;
               font-weight: normal;
@@ -70,7 +111,7 @@
                 font-size: @regular;
                 font-weight: normal;
                 vertical-align: top;
-                .link(@link-color, @link-border, @hover-color, @hover-border)
+                .link(@link-color, #b6bf8b, @hover-color, @hover-border)
               }
             }
           }
@@ -116,20 +157,37 @@
         min-height: 220px;
         position: relative;
         width: 33.33333333333333333%;
+        & > a{
+          display: inline-block;
+          width: 100%;
+          height: 220px;
+        }
         &:hover {
           .popup-form {
-            &.right-pull {
-              left: -200px;
+            &.red{
+              .popup-title {
+                color: #FFFFFF;
+              }
+              background: rgb(154,0,0); /* Old browsers */
+              background: -moz-linear-gradient(top, rgba(154,0,0,1) 0%, rgba(154,5,0,1) 11%, rgba(157,5,0,1) 12%, rgba(160,12,0,1) 25%, rgba(163,18,1,1) 30%, rgba(161,18,1,1) 32%, rgba(179,52,1,1) 73%, rgba(187,65,0,1) 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, rgba(154,0,0,1) 0%,rgba(154,5,0,1) 11%,rgba(157,5,0,1) 12%,rgba(160,12,0,1) 25%,rgba(163,18,1,1) 30%,rgba(161,18,1,1) 32%,rgba(179,52,1,1) 73%,rgba(187,65,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, rgba(154,0,0,1) 0%,rgba(154,5,0,1) 11%,rgba(157,5,0,1) 12%,rgba(160,12,0,1) 25%,rgba(163,18,1,1) 30%,rgba(161,18,1,1) 32%,rgba(179,52,1,1) 73%,rgba(187,65,0,1) 100%);
+            }
+            &.orange{
+              background: rgb(252,208,101); /* Old browsers */
+              background: -moz-linear-gradient(top, rgba(252,208,101,1) 0%, rgba(252,213,108,1) 20%, rgba(254,220,122,1) 39%, rgba(253,223,125,1) 49%, rgba(254,224,128,1) 49%, rgba(255,226,132,1) 56%, rgba(253,232,139,1) 70%, rgba(255,232,142,1) 72%, rgba(255,233,140,1) 73%, rgba(255,234,145,1) 77%, rgba(255,241,153,1) 100%); /* FF3.6-15 */
+              background: -webkit-linear-gradient(top, rgba(252,208,101,1) 0%,rgba(252,213,108,1) 20%,rgba(254,220,122,1) 39%,rgba(253,223,125,1) 49%,rgba(254,224,128,1) 49%,rgba(255,226,132,1) 56%,rgba(253,232,139,1) 70%,rgba(255,232,142,1) 72%,rgba(255,233,140,1) 73%,rgba(255,234,145,1) 77%,rgba(255,241,153,1) 100%); /* Chrome10-25,Safari5.1-6 */
+              background: linear-gradient(to bottom, rgba(252,208,101,1) 0%,rgba(252,213,108,1) 20%,rgba(254,220,122,1) 39%,rgba(253,223,125,1) 49%,rgba(254,224,128,1) 49%,rgba(255,226,132,1) 56%,rgba(253,232,139,1) 70%,rgba(255,232,142,1) 72%,rgba(255,233,140,1) 73%,rgba(255,234,145,1) 77%,rgba(255,241,153,1) 100%);
             }
             display: block;
             z-index: 5;
-            background: #ffffff;
-            border: 3px solid @yellow;
-            border-radius: 10px;
             position: absolute;
             padding: 30px;
-            min-width: 690px;
-            top: 20px;
+            min-width: 100%;
+            box-sizing: border-box;
+            min-height: 220px;
+            top: 0;
+            
             .popup-title {
               font-size: @subtitle;
               font-weight: normal;
@@ -139,8 +197,8 @@
             .popup-items {
               .popup-list {
                 .item-popup {
-                  display: inline-block;
-                  width: 32%;
+                  display: block;
+                  width: 100%;
                   box-sizing: border-box;
                   padding-bottom: 15px;
                   font-weight: normal;
@@ -152,7 +210,7 @@
                 font-size: @regular;
                 font-weight: normal;
                 vertical-align: top;
-                .link(@link-color, @link-border, @hover-color, @hover-border)
+                .link(@link-color, #b6bf8b, @hover-color, @hover-border)
               }
             }
 

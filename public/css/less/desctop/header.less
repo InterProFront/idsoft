@@ -69,12 +69,25 @@ header{
         padding-top: 15px;
         padding-bottom: 25px;
         .menu-item{
+          &.active{
+            &:hover{
+              a{
+                .link(@black-link,@black-border,@black-link,@black-border)
+              }
+            }
+            background: @yellow;
+            a{
+              .link(@black-link,@black-border,@black-link,@black-border)
+            }
+          }
+          padding: 5px 10px;
+          border-radius: 15px;
           &:nth-child(2){
             margin: 0 90px;
           }
           &:hover{
             a{
-              .link(@hover-color,@hover-border,@hover-color,@hover-border)
+              .link(@black-link,@black-border,@black-link,@black-border)
             }
             .hovered-text{
               display: block;
@@ -86,20 +99,55 @@ header{
               &.right-pull{
                 left: -200px;
               }
+              &.automatic{
+                display: flex;
+
+                &.small{
+                  min-width: 520px;
+                }
+              }
               display: block;
               z-index: 5;
               background: #ffffff;
-              border: 3px solid @yellow;
-              border-radius: 10px;
+              box-shadow: 0 10px 20px 0 rgba(51,51,51,0.75);
+              border-radius: 5px;
               position: absolute;
-              padding: 30px;
+              padding: 25px 30px 30px 30px;
               min-width: 690px;
-              top: 20px;
+              top: -20px;
+              left: -20px;
+              .col-1-2{
+                &:last-child{
+                  .popup-title{
+                    font-size:16px;
+                    color: #666666;
+                    font-weight: normal;
+                  }
+                  .second-row{
+                    .item-popup{
+                      a{
+                        font-size: @regular;
+                        font-weight: normal;
+                        .link(@hover-color,@hover-border,@b-hover-color,@b-hover-border)
+                      }
+                    }
+                  }
+                  padding-left: 55px;
+                }
+                .second-row{
+                  .item-popup{
+                    padding-bottom: 15px;
+                    &:last-child{
+                      padding-bottom: 0;
+                    }
+                  }
+                }
+              }
               .popup-title{
-                font-size: @subtitle;
-                font-weight: normal;
+                font-size: @regular;
+                font-weight: bold;
                 color: #333333;
-                padding-bottom: 30px;
+                padding-bottom: 25px;
               }
               .popup-items{
                 .popup-list{
@@ -111,6 +159,16 @@ header{
                     padding-bottom:15px;
                     padding-right: 20px;
                     vertical-align: top;
+                    &:last-child{
+                      padding-bottom: 0;
+                    }
+
+                    &:nth-last-child(2){
+                    padding-bottom: 0;
+                    }
+                    &:nth-last-child(3){
+                    padding-bottom: 0;
+                    }
                   }
                 }
                 a{
@@ -155,47 +213,89 @@ header{
           }
           &:hover {
             a {
-              .link(@hover-color, @hover-border, @hover-color, @hover-border)
+              .link(@black-link, transparent, @black-link, transparent)
             }
             .hovered-text {
               display: block;
             }
-            .popup-form {
-              &.right-pull {
+            .popup-form{
+              &.right-pull{
                 left: -200px;
+              }
+              &.small{
+                min-width: 330px;
               }
               display: block;
               z-index: 5;
               background: #ffffff;
-              border: 3px solid @yellow;
-              border-radius: 10px;
+              box-shadow: 0 10px 20px 0 rgba(51,51,51,0.75);
+              border-radius: 5px;
               position: absolute;
-              padding: 30px;
+              padding: 25px 30px 30px 30px;
               min-width: 690px;
-              top: 20px;
-              .popup-title {
-                font-size: @subtitle;
-                font-weight: normal;
-                color: #333333;
-                padding-bottom: 30px;
-              }
-              .popup-items {
-                .popup-list {
-                  .item-popup {
-                    display: inline-block;
-                    width: 32%;
-                    box-sizing: border-box;
-                    padding-bottom: 15px;
+              top: -25px;
+              left: -30px;
+              .col-1-2{
+                &:last-child{
+                  .popup-title{
+                    font-size:16px;
+                    color: #666666;
                     font-weight: normal;
-                    vertical-align: top;
-                    padding-right: 20px;
+                  }
+                  .second-row{
+                    .item-popup{
+                      a{
+                        font-size: @regular;
+                        font-weight: normal;
+                        .link(@hover-color,@hover-border,@b-hover-color,@b-hover-border)
+                      }
+                    }
+                  }
+                  padding-left: 55px;
+                }
+                .second-row{
+                  .item-popup{
+                    padding-bottom: 15px;
                   }
                 }
-                a {
+              }
+              .popup-title{
+                font-size: @regular;
+                font-weight: normal;
+                color: #333333;
+                padding-bottom: 25px;
+              }
+              .col-1-col{
+                .popup-items {
+
+                  .popup-list {
+                    .item-popup {
+                      display: block;
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+              .popup-items{
+
+                .popup-list{
+                  .item-popup{
+                    display: inline-block;
+                    font-weight: normal;
+                    width: 32%;
+                    box-sizing: border-box;
+                    padding-bottom:15px;
+                    padding-right: 20px;
+                    vertical-align: top;
+                    &:last-child{
+                      padding-bottom: 0;
+                    }
+                  }
+                }
+                a{
                   font-size: @regular;
                   font-weight: normal;
-
-                  .link(@link-color, @link-border, @hover-color, @hover-border)
+                  .link(@link-color,@link-border,@hover-color,@hover-border)
                 }
               }
             }

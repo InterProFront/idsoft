@@ -66,12 +66,15 @@
       }
     }
     .automatic-block{
-      border: 1px solid #ece7de;
-      background: #fdfaf5;
+      background: url(../img/raw.jpg) no-repeat top,url(../img/raw_r.jpg) no-repeat bottom,#f5f6f7;
       padding: 25px 30px 30px 30px;
       .automatic-list{
+        padding-bottom: 25px;
+        &:last-child{
+          padding-bottom: 0;
+        }
         .item-link{
-            padding-bottom: 15px;
+            padding-bottom: 10px;
           &:last-child{
             padding-bottom: 0;
           }
@@ -100,6 +103,9 @@
           padding-bottom: 0;
         }
         .col-1-2{
+          &:first-child{
+            min-width: 155px;
+          }
           &:last-child{
             margin-top: 5px;
             margin-left: 50px;
