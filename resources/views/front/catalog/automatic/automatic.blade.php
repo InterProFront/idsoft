@@ -20,7 +20,7 @@
                     <br>
                     <h3>Автоматизация кафе</h3>
                     <br>
-                    <img src="/img/test.jpg" alt="">
+                    <img src="/img/test.JPG" alt="">
                     <br>
                 </div>
             </div>
