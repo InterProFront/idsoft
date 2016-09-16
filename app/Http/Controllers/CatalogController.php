@@ -41,6 +41,13 @@ class CatalogController extends Controller {
 		return view('front.catalog.category.category',[
 		]);
 	}
+	public function getAuto(){
+		return view('front.catalog.automatic.automatic',[
+
+		]);
+	}
+
+
 	public function getVideo(){}
 	public function getVideoCategory(){}
 	public function getShowcase(){}

@@ -26,12 +26,14 @@
         margin-bottom: 3px;
       }
       .col-1-2 {
+        overflow: hidden;
         box-sizing: border-box;
         vertical-align: top;
         display: inline-block;
         max-width: 599px;
         width: 50%;
         position: relative;
+        object-position: 100% 100%;
         min-height: 210px;
         background: url(../img/back-big.png) no-repeat;
         & > a{
@@ -40,6 +42,7 @@
           height: 210px;
         }
         &:hover {
+          overflow: inherit;
           .popup-form {
             &.big{
               min-width: 750px;
@@ -337,5 +340,54 @@
         border: none;
       }
     }
+  }
+}
+
+
+
+// animate block
+
+.monitor{
+  transform: translateX(-30px);
+  transition: 1s all;
+  opacity: 0;
+  &.vision{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.hand{
+  transform: translateX(+90px);
+  transition: 1s all;
+  opacity: 0;
+  &.vision{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.iiko{
+  transform: translateY(+60px);
+  transition: 1s all;
+  opacity: 0;
+  &.vision{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.soft{
+  transform: translateX(+60px);
+  transition: 1s all;
+  opacity: 0;
+  &.vision{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.monitor-l{
+  opacity: 0;
+  transition: 500ms all;
+  &.vision{
+    opacity: 1;
+    transition: 500ms all;
   }
 }

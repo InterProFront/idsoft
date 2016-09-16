@@ -1,5 +1,6 @@
 @section('header')
     <header @if($shadow) class="shadow" @else @endif>
+        <div class="wrap-row">
         <div class="info-row">
             <div class="col-1-3">
                 <div class="wrap">
@@ -46,7 +47,7 @@
                 <div class="button-wrap">
                     <button class="mobile-button">☰</button>
                 </div>
-                <div class="wrap">
+                <div class="wrap popup">
                     <ul class="big-menu">
                         <?php $i = 0 ?>
                         @foreach($menu->menu_group as $item)
@@ -144,5 +145,19 @@
                 </div>
             </div>
         </nav>
+        </div>
+        <div class="mobile-menu-bottom">
+            <ul class="list">
+                <li class="item"><a href="#ask">Написать письмо</a></li>
+                <?php $i = 0;?>
+                @foreach($static->phones_group as $item)
+                    <?php $i++?>
+                    @if($i == 2)
+                        <li class="item"><a href="tel:{{$item->phone_field}}">{{$item->phone_field}}</a></li>
+                    @endif
+                @endforeach
+
+            </ul>
+        </div>
     </header>
 @endsection

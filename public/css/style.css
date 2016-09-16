@@ -7,6 +7,7 @@
 }
 body {
   background: #25394d;
+  overflow-x: hidden;
 }
 .top {
   color: #cccccc;
@@ -41,6 +42,12 @@ body {
   background: #e5e5e5;
   width: 100%;
 }
+.dashed-bottom {
+  border-bottom: 2px dashed #006699;
+}
+.dashed-bottom-yellow {
+  border-bottom: 2px dashed #006699;
+}
 .bx-controls.bx-has-pager.bx-has-controls-direction {
   display: -ms-flexbox;
   display: flex;
@@ -67,6 +74,28 @@ a.bx-pager-link.active {
 .bx-pager-item {
   display: inline-block;
   margin: 0 5px;
+}
+.text-block p {
+  color: #666666;
+  line-height: 1.5em;
+  width: 100%;
+  font-size: 16px;
+}
+.text-block img {
+  box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.25);
+}
+.text-block h3 {
+  color: #333333;
+  font-size: 32px;
+  line-height: 1.5em;
+  width: 100%;
+  font-weight: normal;
+}
+.text-block h4 {
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5em;
+  font-weight: bold;
 }
 header {
   background: #ffffff;
@@ -592,6 +621,9 @@ header .main-menu .wrap .small-menu .menu-item a:focus {
 header .main-menu .wrap .small-menu .menu-item .popup-form {
   display: none;
 }
+header .mobile-menu-bottom {
+  display: none;
+}
 .content {
   background: #ffffff;
 }
@@ -621,12 +653,14 @@ header .main-menu .wrap .small-menu .menu-item .popup-form {
   margin-bottom: 3px;
 }
 .content .automatic-block-list .row .col-1-2 {
+  overflow: hidden;
   box-sizing: border-box;
   vertical-align: top;
   display: inline-block;
   max-width: 599px;
   width: 50%;
   position: relative;
+  object-position: 100% 100%;
   min-height: 210px;
   background: url(../img/back-big.png) no-repeat;
 }
@@ -634,6 +668,9 @@ header .main-menu .wrap .small-menu .menu-item .popup-form {
   display: inline-block;
   width: 100%;
   height: 210px;
+}
+.content .automatic-block-list .row .col-1-2:hover {
+  overflow: inherit;
 }
 .content .automatic-block-list .row .col-1-2:hover .popup-form {
   background: #ffffff;
@@ -991,6 +1028,50 @@ header .main-menu .wrap .small-menu .menu-item .popup-form {
 .content .free-project .calculate .calculated-button:hover {
   background: #1491c4;
   cursor: pointer;
+}
+.monitor {
+  transform: translateX(-30px);
+  transition: 1s all;
+  opacity: 0;
+}
+.monitor.vision {
+  transform: translateX(0);
+  opacity: 1;
+}
+.hand {
+  transform: translateX(90px);
+  transition: 1s all;
+  opacity: 0;
+}
+.hand.vision {
+  transform: translateX(0);
+  opacity: 1;
+}
+.iiko {
+  transform: translateY(60px);
+  transition: 1s all;
+  opacity: 0;
+}
+.iiko.vision {
+  transform: translateY(0);
+  opacity: 1;
+}
+.soft {
+  transform: translateX(60px);
+  transition: 1s all;
+  opacity: 0;
+}
+.soft.vision {
+  transform: translateX(0);
+  opacity: 1;
+}
+.monitor-l {
+  opacity: 0;
+  transition: 500ms all;
+}
+.monitor-l.vision {
+  opacity: 1;
+  transition: 500ms all;
 }
 .catalog .block-title {
   padding-top: 5px;
@@ -1593,6 +1674,417 @@ header .main-menu .wrap .small-menu .menu-item .popup-form {
   background-size: 10px 1px;
   background-repeat: repeat-x;
   color: #cc0000;
+}
+.page-title-image {
+  position: relative;
+}
+.page-title-image .image-wrap:after {
+  content: '';
+  position: absolute;
+  background: url(../img/a_shadow.png) repeat-x top;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+.page-title-image .page-title {
+  top: 20px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  font-size: 48px;
+  font-weight: normal;
+  position: absolute;
+}
+.main-content-block {
+  padding: 50px 40px 0 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.main-content-block .col-1-2:first-child {
+  box-sizing: border-box;
+}
+.main-content-block .col-1-2:first-child .text-block {
+  padding-right: 80px;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .menu-title {
+  color: #333333;
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu {
+  max-width: 200px;
+  margin-left: -10px;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item {
+  padding: 1px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.active {
+  background: #fed054;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.active a.link {
+  font-weight: bold;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+  background: none;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.active a.link:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.active a.link:focus {
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item a.link {
+  display: inline-block;
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item a.link:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item a.link:focus {
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup {
+  position: relative;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup:hover .left-popup {
+  display: block;
+  transition: 1s all;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup {
+  display: none;
+  z-index: 5;
+  background: #ffffff;
+  box-shadow: 0 10px 20px 0 rgba(51, 51, 51, 0.75);
+  border-radius: 5px;
+  padding: 20px 60px 20px 20px;
+  position: absolute;
+  top: -30px;
+  left: -340px;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup:after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: 30px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #fffcf6;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup .popup-menu .popup-item {
+  margin-bottom: 15px;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup .popup-menu .popup-item .link {
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup .popup-menu .popup-item .link:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #d6d6d6, #d6d6d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+.main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup .popup-menu .popup-item .link:focus {
+  background: linear-gradient(to left, #d6d6d6, #d6d6d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+.main-content-block .col-1-2:last-child .capability {
+  padding: 30px;
+  background: url(../img/hole.jpg) no-repeat 10px 0, url(../img/hole.jpg) no-repeat 265px 0, #fef6df;
+  box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.45);
+}
+.main-content-block .col-1-2:last-child .capability h4 {
+  font-size: 16px;
+  color: #333333;
+}
+.main-content-block .col-1-2:last-child .capability p {
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #666666;
+}
+.second-content {
+  padding: 50px 40px 0 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.second-content .col-1-2:first-child .text-block {
+  padding-right: 80px;
+}
+.second-content .col-1-2:last-child {
+  padding-top: 70px;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item {
+  padding-bottom: 110px;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item:first-child .img-wrap {
+  height: 190px;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .img-wrap {
+  position: relative;
+  height: 210px;
+  width: 260px;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .img-wrap img {
+  position: absolute;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .text-wrap {
+  padding-left: 25px;
+  position: relative;
+  z-index: 10;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .text-wrap p {
+  line-height: 1.5em;
+  color: #333333;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .text-wrap p strong {
+  font-weight: bold;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .text-wrap p a {
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .text-wrap p a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.second-content .col-1-2:last-child .advantages-block .block-item .text-wrap p a:focus {
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.block-separator {
+  padding: 0 100px 0 100px;
+}
+.block-separator .separator.dotted {
+  background: none;
+  border-bottom: 1px dashed #cccccc;
+}
+.equipment-block .block-title {
+  padding: 0 40px 0 100px;
+}
+.equipment-block .block-title .sub-title {
+  padding: 55px 0 40px;
+  text-align: left;
+}
+.equipment-block .block-title .products-list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.equipment-block .block-title .products-list .product-item {
+  max-width: 20%;
+  width: 20%;
+  margin-bottom: 40px;
+}
+.equipment-block .block-title .products-list .product-item a .img-wrap {
+  padding-bottom: 5px;
+  text-align: left;
+}
+.equipment-block .block-title .products-list .product-item a .img-wrap img {
+  line-height: 148px;
+  border: 1px solid #cccccc;
+}
+.equipment-block .block-title .products-list .product-item a .text-wrap {
+  max-width: 180px;
+}
+.equipment-block .block-title .products-list .product-item a .text-wrap p {
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.5em;
+  color: #333333;
+  padding-bottom: 5px;
+}
+.equipment-block .block-title .products-list .product-item a .text-wrap .wrap span {
+  line-height: 1.5em;
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.equipment-block .block-title .products-list .product-item a .text-wrap .wrap span:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.equipment-block .block-title .products-list .product-item a .text-wrap .wrap span:focus {
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.equipment-block .block-title .products-list .product-item a .text-wrap .cost {
+  padding-top: 5px;
+  color: #333333;
+  font-weight: bold;
+  position: relative;
+}
+.equipment-block .block-title .products-list .product-item a .text-wrap .cost .sale {
+  font-size: 10px;
+  position: absolute;
+  top: 7px;
+  margin-left: 10px;
+  text-decoration: line-through;
+  color: #993333;
+}
+.equipment-block .block-title .products-list .product-item a:hover .img-wrap img {
+  border: 1px solid #cc0000;
+}
+.equipment-block .block-title .products-list .product-item a:hover .text-wrap {
+  max-width: 180px;
+}
+.equipment-block .block-title .products-list .product-item a:hover .text-wrap .wrap span {
+  line-height: 1.5em;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.equipment-block .block-title .products-list .product-item a:hover .text-wrap .wrap span:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.equipment-block .block-title .products-list .product-item a:hover .text-wrap .wrap span:focus {
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.warranty {
+  background: #feedbf;
+  width: 100%;
+  text-align: center;
+}
+.warranty p {
+  color: #333333;
+  margin: 0 auto;
+  max-width: 600px;
+  line-height: 1.5em;
+  padding: 30px;
+}
+.cost-block {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+.cost-block .cost {
+  font-size: 48px;
+  font-weight: normal;
+  color: #333333;
+  position: relative;
+  width: 600px;
+  margin: 0 auto;
+}
+.cost-block .cost .sale {
+  font-size: 16px;
+  left: 25px;
+  top: 10px;
+  color: #990000;
+  text-decoration: line-through;
+  position: absolute;
+}
+.credit {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.credit p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #333333;
+  line-height: 1.5em;
+}
+.button-wrap {
+  width: 200px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.button-wrap .buy-it {
+  padding: 15px;
+  text-align: center;
 }
 .footer-menu {
   background: #006699;

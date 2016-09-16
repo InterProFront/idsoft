@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = false; ?>
     {{----}}
-    <section class="content">
+    <section class="content ">
         <div class="automatic">
             <h1 class="block-title">Автоматизация общепита и торговли</h1>
 
@@ -15,7 +15,8 @@
                             <p class="card-title">{{$auto->auto_title_field}}</p>
                             <p class="card-text">{{$auto->auto_description_field}}</p>
                         </div>
-                        <img src="/images/{{$auto->auto_background_image->primary_link}}" alt="">
+                        <img src="/images/{{$auto->auto_background_image->primary_link}}" class="monitor" alt="">
+                        <img src="/img/monitor.PNG" class="monitor-l" alt="">
                         <div class="popup-form orange small">
                             <h3 class="popup-title">{{$auto->auto_title_field}}</h3>
                             <div class="popup-items">
@@ -34,7 +35,7 @@
                             <p class="card-title">{{$auto->iiko_title_field}}</p>
                             <p class="card-text">{{$auto->iiko_description_field}}</p>
                         </div>
-                        <img src="/images/{{$auto->iiko_background_image->primary_link}}" alt="">
+                        <img src="/images/{{$auto->iiko_background_image->primary_link}}" class="iiko" alt="">
                         <div class="popup-form red">
                             <h3 class="popup-title">{{$auto->iiko_title_field}}</h3>
                             <div class="popup-items">
@@ -55,7 +56,7 @@
                             <p class="card-title">{{$catalog->category_name_field}}</p>
                             <p class="card-text">{{$catalog->category_description_field}}</p>
                         </div>
-                        <img src="/images/{{$catalog->card_background_image->primary_link}}" alt="">
+                        <img src="/images/{{$catalog->card_background_image->primary_link}}" class="hand" alt="">
                         <div class="popup-form orange big">
                             <h3 class="popup-title">{{$catalog->category_name_field}}</h3>
                             <div class="popup-items">
@@ -75,7 +76,7 @@
                                 <p class="card-title">{{$soft->category_name_field}}</p>
                                 <p class="card-text">{{$soft->category_description_field}}</p>
                             </div>
-                            <img src="/images/{{$soft->card_background_image->primary_link}}" alt="">
+                            <img src="/images/{{$soft->card_background_image->primary_link}}" class="soft" alt="">
                         </a>
                     </div>
                 </div>
@@ -158,7 +159,7 @@
                 </ul>
             </div>
         </div>
-        <div class="free-project">
+        <div class="free-project dashed-bottom-yellow">
             <h2 class="sub-title">Бесплатный расчет проекта</h2>
             <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитывает заказ.</p>
             <div class="calculate">

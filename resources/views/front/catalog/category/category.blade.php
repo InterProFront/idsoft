@@ -3,7 +3,7 @@
 @section('content')
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content category">
+    <section class="content category dashed-bottom">
         <h1 class="block-title">POS-системы</h1>
         <div class="product-list">
             <div class="product-item">

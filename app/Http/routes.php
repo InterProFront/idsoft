@@ -16,6 +16,7 @@ Route::get('/test', 'PageController@getNew');
 Route::get('/product', 'CatalogController@getProduct');
 Route::get('/catalog', 'CatalogController@getCatalog');
 Route::get('/category', 'CatalogController@getCategory');
+Route::get('/automatic', 'CatalogController@getAuto');
 
 
 

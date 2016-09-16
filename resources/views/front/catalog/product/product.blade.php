@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content product">
+    <section class="content product dashed-bottom">
         <div class="bread-crumb">
             <span class="crumb-item"><a href="#">Каталог оборудования</a></span>
             <span class="crumb-separate">→</span>
