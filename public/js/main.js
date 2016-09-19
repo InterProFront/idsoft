@@ -16,14 +16,14 @@ $(document).ready(function () {
         pause: 5000,
         responsive: true
     });
-    $('.zoom').elevateZoom({
-        gallery: 'gallery_01',
-        cursor: 'pointer',
-        galleryActiveClass: 'active',
-        imageCrossfade: true,
-        borderColour: '#cccccc',
-        borderSize: 1
-    });
+    //$('.zoom').elevateZoom({
+    //    gallery: 'gallery_01',
+    //    cursor: 'pointer',
+    //    galleryActiveClass: 'active',
+    //    imageCrossfade: true,
+    //    borderColour: '#cccccc',
+    //    borderSize: 1
+    //});
 
     $('.mobile-button').on('click',function(){
         if($(this).hasClass('active')){

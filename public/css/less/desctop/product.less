@@ -35,12 +35,13 @@
     .preview-block{
       padding-bottom: 20px;
       .big-picture{
-        max-width:388px;
-        height: 388px;
+        max-width:390px;
+
+        height: 390px;
 
         img{
-          width: 388px !important;
-          height: 388px !important;
+          width: 390px !important;
+          height: 390px !important;
           border: 1px solid #cccccc;
           line-height:388px;
         }
@@ -48,13 +49,19 @@
       }
       .pictures-row{
         font-size:0;
+        width: 390px;
         a{
+          &:nth-child(4){
+            margin-right: 0;
+          }
           margin-right: 10px;
           display: inline-block;
           border:1px solid #cccccc;
-          height: 90px;
+          height: 88px;
+          width: 88px;
           img{
             line-height: 88px;
+            max-width: 88px;
           }
           &:hover{
             border: 1px solid #006699;

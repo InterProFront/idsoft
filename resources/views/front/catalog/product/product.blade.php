@@ -28,6 +28,9 @@
                         <a href="#" data-image="/img/392.jpg" data-zoom-image="img/1102.jpg">
                             <img id="img_01" src="/img/92.jpg"/>
                         </a>
+                        <a href="#" data-image="/img/392.jpg" data-zoom-image="img/1102.jpg">
+                            <img id="img_01" src="/img/92.jpg"/>
+                        </a>
 
                     </div>
                 </div>
