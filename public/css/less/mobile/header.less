@@ -69,7 +69,9 @@
       }
     }
     .main-menu {
+
       .wrap {
+
         .big-menu {
           padding-bottom: 25px;
         }
@@ -115,20 +117,25 @@
           .button-wrap {
             width: auto;
             vertical-align: top;
-            padding-top: 30px;
+            padding-top: 0;
             text-align: right;
             padding-bottom: 0;
             .mobile-button {
               &.active{
-                background: #0071bc;
+                background: #25394d;
+                transition: 0.4s all;
                 color: #ffffff;
               }
-              padding: 5px;
+              padding: 25px 19px;
+              border-radius: 10px;
+              line-height: 20px;
               outline: none;
-              background: #ffffff;
+              background: #e9ebed;
               border: none;
               font-size: 36px;
-              color: #0071bc;
+              z-index: 10;
+              position: relative;
+              color: #25394d;
             }
             display: block;
           }
@@ -136,20 +143,30 @@
             display: none;
             position: absolute;
             box-sizing: border-box;
-            left:0;
-            width: 100%;
-            padding:20px;
-            background: #0071bc;
+            left:20px;
+            top: 20px;
+            border-radius: 10px;
+            width: calc(~"100% - 40px");
+            padding:60px 10px 0 10px;
+            background: #25394d;
+            .small-menu{
+              .menu-item{
+                &:last-child{
+                  border-bottom: none;
+                }
+              }
+            }
             .big-menu,.small-menu{
               padding: 0;
               margin: 0;
               .menu-item{
+
                 width: 100%;
                 margin: 0;
                 text-align: center;
                 border-radius: 0;
-                border-bottom: 1px solid #cccccc;
-                padding: 10px 10px;
+                border-bottom: 1px solid #455768;
+                padding: 15px 10px;
                 font-weight: normal;
                 &:hover{
                   .popup-form{

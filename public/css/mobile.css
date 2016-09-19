@@ -179,31 +179,41 @@ a.bx-pager-link.active {
   header .wrap-row .main-menu .mobile-menu-wrap .button-wrap {
     width: auto;
     vertical-align: top;
-    padding-top: 30px;
+    padding-top: 0;
     text-align: right;
     padding-bottom: 0;
     display: block;
   }
   header .wrap-row .main-menu .mobile-menu-wrap .button-wrap .mobile-button {
-    padding: 5px;
+    padding: 25px 19px;
+    border-radius: 10px;
+    line-height: 20px;
     outline: none;
-    background: #ffffff;
+    background: #e9ebed;
     border: none;
     font-size: 36px;
-    color: #0071bc;
+    z-index: 10;
+    position: relative;
+    color: #25394d;
   }
   header .wrap-row .main-menu .mobile-menu-wrap .button-wrap .mobile-button.active {
-    background: #0071bc;
+    background: #25394d;
+    transition: 0.4s all;
     color: #ffffff;
   }
   header .wrap-row .main-menu .mobile-menu-wrap .wrap {
     display: none;
     position: absolute;
     box-sizing: border-box;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background: #0071bc;
+    left: 20px;
+    top: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    padding: 60px 10px 0 10px;
+    background: #25394d;
+  }
+  header .wrap-row .main-menu .mobile-menu-wrap .wrap .small-menu .menu-item:last-child {
+    border-bottom: none;
   }
   header .wrap-row .main-menu .mobile-menu-wrap .wrap .big-menu,
   header .wrap-row .main-menu .mobile-menu-wrap .wrap .small-menu {
@@ -216,8 +226,8 @@ a.bx-pager-link.active {
     margin: 0;
     text-align: center;
     border-radius: 0;
-    border-bottom: 1px solid #cccccc;
-    padding: 10px 10px;
+    border-bottom: 1px solid #455768;
+    padding: 15px 10px;
     font-weight: normal;
   }
   header .wrap-row .main-menu .mobile-menu-wrap .wrap .big-menu .menu-item:hover .popup-form,
@@ -700,6 +710,7 @@ a.bx-pager-link.active {
     width: auto !important;
     height: auto !important;
     max-width: 100%;
+    position: relative !important;
   }
   .product .product-grid .col-1-2 .buy-button-block {
     max-width: 100%;

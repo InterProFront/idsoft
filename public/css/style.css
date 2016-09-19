@@ -187,6 +187,9 @@ header .main-menu .wrap {
   -ms-flex-direction: column;
       flex-direction: column;
 }
+header .main-menu .wrap.popup {
+  display: block;
+}
 header .main-menu .wrap .big-menu {
   display: -ms-flexbox;
   display: flex;
