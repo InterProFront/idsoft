@@ -33,7 +33,14 @@
                        value="{{$item_category_2->category_name_field}}" data-item-id="{{$item_category_2->id_field}}"
                        placeholder="Строка">
             </div>
-
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <input type="text" data-field-type="string" data-field-name="slug" data-block="catalog_block"
+                       data-group="category_2" class="input group_pre_field"
+                       value="{{$item_category_2->slug_field}}" data-item-id="{{$item_category_2->id_field}}"
+                       placeholder="Строка">
+            </div>
 
 
 

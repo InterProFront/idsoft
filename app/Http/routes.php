@@ -17,8 +17,11 @@ Route::get('/product', 'CatalogController@getProduct');
 Route::get('/catalog', 'CatalogController@getCatalog');
 Route::get('/category', 'CatalogController@getCategory');
 Route::get('/automatic', 'CatalogController@getAuto');
+Route::get('/accounting', 'CatalogController@getAccounting');
 
 
+Route::get('/clients', 'PageController@getClients');
+Route::get('/clients/client', 'PageController@getClientItem');
 
 
 

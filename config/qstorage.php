@@ -44,7 +44,8 @@ return [
                     'product_name',
                     'seo_keywords',
                     'seo_description',
-                    'page_title'
+                    'page_title',
+                    'small_description'
                 ],
                 'numbs' => ['product_sale', 'product_cost'],
                 'textfields' => ['product_description'],
@@ -57,6 +58,10 @@ return [
             'product_auto' => [
                 'owner' => 'product',
                 'numbs' => ['auto']
+            ],
+            'soft_related' => [
+                'owner' => 'product',
+                'numbs' => ['soft']
             ],
             'product_related' => [
                 'owner' => 'product',
@@ -108,10 +113,10 @@ return [
         ]
     ],
     'clients_filter' => [
-        'numbs' => ['course'],
+        'stringfields' => ['course'],
         'groups' => [
             'institution' => [
-                'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description'],
+                'stringfields' => ['page_name', 'page_title','seo_keywords', 'seo_description'],
             ],
             'city' => [
                 'stringfields' => ['city_name']

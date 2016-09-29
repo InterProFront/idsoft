@@ -6,8 +6,11 @@ class CatalogController extends Controller {
 
 
 	private $queryAgent;
+	private $course;
 	function __construct(QueryAgent $queryAgent){
+
 		$this->queryAgent = $queryAgent;
+		$this->course = $this->queryAgent->getBlock('clients_filter',[],[]);
 		$static = $this->queryAgent->getBlock('static_site',[],[]);
 		$menu 	= $this->queryAgent->getBlock('main_menu',[],[]);
 		$menu_link = ['/catalog','/automation','/soft','/showcase','/accounting','/video'];
@@ -33,12 +36,25 @@ class CatalogController extends Controller {
 
 	public function getCatalog(){
 		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
+		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',51);
+
 		return view('front.catalog.all_category.catalog',[
-			'category_1' => $catalog
+			'category_1' => $catalog,
+			'seo'		=> $seo
 		]);
 	}
-	public function getCategory(){
+	public function getCategory($slug){
+		$catalog = $this->queryAgent->getGroupItemBySlug('catalog_block','category_2',$slug);
+
+
+		foreach($catalog->product_group as $item){
+			$new_price = $item->product_cost_field * $this->course->course_field;
+			$item->setField('product_cost',$new_price);
+
+		}
+
 		return view('front.catalog.category.category',[
+			'products' => $catalog
 		]);
 	}
 	public function getAuto(){
@@ -46,7 +62,11 @@ class CatalogController extends Controller {
 
 		]);
 	}
+	public function getAccounting(){
+		return view('front.accounting.accounting',[
 
+		]);
+	}
 
 	public function getVideo(){}
 	public function getVideoCategory(){}
@@ -54,11 +74,19 @@ class CatalogController extends Controller {
 	public function getShowcaseCategory(){}
 
 
-	public function getProduct(){
+	public function getProduct($category, $product){
+		$product = $this->queryAgent->getGroupItemBySlug('catalog_block','product',$product);
+		$cost = $product->product_cost_field * $this->course->course_field;
+		$product->setField('product_cost',$cost);
 
-
+		$auto = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
+		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		$soft = $this->queryAgent->getGroupFlat('catalog_block','product',[],['product'=>['owner_id' => 55]]);
 		return view('front.catalog.product.product',[
-
+			'product' => $product,
+			'auto' 	  => $auto,
+			'soft'	  => $soft,
+			'prod' => $test
 		]);
 	}
 

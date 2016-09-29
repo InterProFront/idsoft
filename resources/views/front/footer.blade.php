@@ -4,7 +4,7 @@
             <ul class="menu-list">
                 <li class="menu-item"><a href="#" class="menu-link">О компании</a></li>
                 <li class="menu-item"><a href="#" class="menu-link">Поддержка</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Наши клиенты</a></li>
+                <li class="menu-item"><a href="/clients" class="menu-link">Наши клиенты</a></li>
                 <li class="menu-item"><a href="#" class="menu-link">Драйверы и документация</a></li>
                 <li class="menu-item"><a href="#" class="menu-link">Стать партнером</a></li>
             </ul>

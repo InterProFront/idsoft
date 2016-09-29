@@ -9,6 +9,14 @@
                        data-group="auto" class="input group_field" value="{{$item_auto->page_name_field}}"
                        data-item-id="{{$item_auto->id_field}}" placeholder="Строка">
             </div>
+
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <input type="text" data-field-type="string" data-field-name="slug" data-block="auto_block"
+                       data-group="auto" class="input group_pre_field" value="{{$item_auto->slug_field}}"
+                       data-item-id="{{$item_auto->id_field}}" placeholder="Строка">
+            </div>
             <div class="field-wrap ">
                 <label class="input-file">
                 </label>

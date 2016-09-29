@@ -62,14 +62,14 @@
                                             @if($i == 2)
                                                 <div class="col-1-2">
                                                     <h3 class="popup-title"><a
-                                                                href="/catalog">{{$item->menu_text_field}}</a>
+                                                                href="/automatic">{{$item->menu_text_field}}</a>
                                                     </h3>
                                                     <div class="popup-items">
                                                         <ul class="second-row">
                                                             @foreach($m_popup[$i-1] as $item_p)
                                                                 @if( !$item_p->is_iiko_field)
                                                                     <li class="item-popup">
-                                                                        <a href="/category">{{$item_p->page_name_field}}</a>
+                                                                        <a href="/automatic/{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
                                                                     </li>
                                                                 @endif
                                                             @endforeach
@@ -83,7 +83,7 @@
                                                             @foreach($m_popup[$i-1] as $item_p)
                                                                 @if( $item_p->is_iiko_field)
                                                                     <li class="item-popup">
-                                                                        <a href="/category">{{$item_p->page_name_field}}</a>
+                                                                        <a href="/automatic/{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
                                                                     </li>
                                                                 @endif
                                                             @endforeach

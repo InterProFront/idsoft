@@ -16,7 +16,7 @@
         <div class="category-block">
             @foreach($category_1 as $item)
                 <div class="category-item">
-                    <a href="/category">
+                    <a href="/catalog/{{$item->slug_field}}">
                         <div class="image-wrap">
                             <img src="/images/{{$item->card_background_image->primary_link}}" alt="{{$item->card_background_image->alt}}" class="static">
                             <img src="/images/{{$item->card_hover_image->primary_link}}" alt="{{$item->card_hover_image->alt}}" class="hover">

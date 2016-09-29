@@ -23,7 +23,7 @@
                                 <ul class="popup-list">
                                     @foreach($acc_m as $item_p)
                                         <li class="item-popup">
-                                            <a href="{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
+                                            <a href="/automatic/{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -42,7 +42,7 @@
                                 <ul class="popup-list">
                                     @foreach($iiko as $item_p)
                                         <li class="item-popup">
-                                            <a href="{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
+                                            <a href="/automatic/{{$item_p->slug_field}}">{{$item_p->page_name_field}}</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -63,7 +63,7 @@
                                 <ul class="popup-list">
                                     @foreach($m_popup[0] as $item_p)
                                         <li class="item-popup">
-                                            <a href="{{$item_p->slug_field}}">{{$item_p->category_name_field}}</a>
+                                            <a href="/catalog/{{$item_p->slug_field}}">{{$item_p->category_name_field}}</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="col-1-2">
-                        <a href="#">
+                        <a href="/soft">
                             <div class="wrap">
                                 <p class="card-title">{{$soft->category_name_field}}</p>
                                 <p class="card-text">{{$soft->category_description_field}}</p>
@@ -93,7 +93,7 @@
                                 <ul class="popup-list">
                                     @foreach($m_popup[3] as $item_p)
                                         <li class="item-popup">
-                                            <a href="{{$item_p->slug_field}}">{{$item_p->category_name_field}}</a>
+                                            <a href="/showcase/{{$item_p->slug_field}}">{{$item_p->category_name_field}}</a>
                                         </li>
                                     @endforeach
                                 </ul>
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <div class="col-1-3">
-                        <a href="#">
+                        <a href="/acconting">
                         <div class="wrap">
                             <p class="card-title">{{$buh->card_title_field}}</p>
                             <p class="card-text">{{$buh->card_description_field}}</p>
@@ -121,7 +121,7 @@
                                 <ul class="popup-list">
                                     @foreach($m_popup[5] as $item_p)
                                         <li class="item-popup">
-                                            <a href="{{$item_p->slug_field}}">{{$item_p->category_name_field}}</a>
+                                            <a href="/video/{{$item_p->slug_field}}">{{$item_p->category_name_field}}</a>
                                         </li>
                                     @endforeach
                                 </ul>
