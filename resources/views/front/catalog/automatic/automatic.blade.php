@@ -4,112 +4,64 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = false; ?>
     {{----}}
-    <section class="content dashed-bottom">
+    <section class="content automatic dashed-bottom">
         <div class="page-title-image">
             <div class="image-wrap">
-                <img src="/img/title.jpg" alt="">
+                <img src="/images/{{$auto->background_image->primary_link}}" alt="">
             </div>
-            <h1 class="page-title">Автоматизация ресторанов и кафе</h1>
+            <h1 class="page-title">{{$auto->page_name_field}}</h1>
         </div>
         <div class="main-content-block">
             <div class="col-1-2">
                 <div class="text-block">
-                    <p>Кафе – одно из самых распространенных типов общественного питания в Казахстане. В этом сегменте рынка идет особо сильная конкурентная борьба за постоянных клиентов. Автоматизация такого вида бизнеса - одна из важнейших составляющих для повышения скорости и качества обслуживания, сохранения и приумножения текущей клиентской базы.</p>
-                    <br>
-                    <p>Автоматизация процессов повышает прозрачность, сокращаются издержки, пресекаются злоупотребление, а рабочее время персонала используется рациональнее.</p>
-                    <br>
-                    <h3>Автоматизация кафе</h3>
-                    <br>
-                    <img src="/img/test.JPG" alt="">
-                    <br>
+                    {!! $auto->content_field !!}
                 </div>
             </div>
             <div class="col-1-2">
                 <div class="right-menu-block">
                     <p class="menu-title">Готовые решения</p>
                     <ul class="right-menu">
-                        <li class="menu-item active"><a href="/automatic/#" class="link">Рестораны и кафе</a></li>
-                        <li class="menu-item"><a href="/automatic/#" class="link">Фастфуды и столовые</a></li>
-                        <li class="menu-item"><a href="/automatic/#" class="link">Бутики</a></li>
-                        <li class="menu-item"><a href="/automatic/#" class="link">Розничные магазины</a></li>
-                        <li class="menu-item"><a href="/automatic/#" class="link">Салоны красоты</a></li>
+                        @foreach($all as $item)
+                            @if(!$item->is_iiko_field)
+                                <li class="menu-item"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></li>
+                            @endif
+                        @endforeach
                         <li class="menu-item iiko-popup"><a href="/automatic/#" class="link">Автоматизация IIKO</a>
                             <div class="left-popup">
                                 <ul class="popup-menu">
-                                    <li class="popup-item"><a href="/automatic/iiko/#" class="link">Сеть ресторанов</a>
-                                    </li>
-                                    <li class="popup-item"><a href="/automatic/iiko/#" class="link">Ресторан
-                                            обслуживания у столов</a></li>
-                                    <li class="popup-item"><a href="/automatic/iiko/#" class="link">Ресторан быстрого
-                                            обслуживания</a></li>
-                                    <li class="popup-item"><a href="/automatic/iiko/#" class="link">Небольшое
-                                            заведение</a></li>
-                                    <li class="popup-item"><a href="/automatic/iiko/#" class="link">Доставка</a></li>
-                                    <li class="popup-item"><a href="/automatic/iiko/#" class="link">Корпоративное
-                                            питание</a></li>
+                                    @foreach($all as $item)
+                                        @if($item->is_iiko_field)
+                                            <li class="menu-item"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></li>
+                                        @endif
+                                    @endforeach
                                 </ul>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="capability">
-                    <h4>Возможности системы</h4>
-                    <br>
-                    <p>Система налаживает автоматические процессы сбыта, контроля нагрузки по залам и столикам, складской учет.</p>
-                    <br>
-                    <p>Так же система позволяет печатать чеки и предзаказники, учитывать рабочее время персонала и вести учет остатков в реальном времени.</p>
+                  {!! $auto->vozm_field !!}
                 </div>
             </div>
         </div>
         <div class="second-content">
             <div class="col-1-2">
                 <div class="text-block">
-                    <h3>Результаты</h3>
-                    <br>
-                    <h4>Продажи</h4>
-                    <p>Строго фиксированный прием и оплата каждого заказа.</p>
-                    <br>
-                    <h4>Сервис</h4>
-                    <p>Быстрое и точное обслуживание гостей, повышение скорости приготовления и подачи блюд за счет автоматизированного внесения, распределения информации о заказе в соответствующие подразделения производства (например, в горячий цех, в холодный цех или в бар) и своевременного оповещения официанта о готовности того или иного блюда или напитка. Кухня и официанты работают эффективнее.</p>
-                    <br>
-                    <h4>Персонал</h4>
-                    <p>Статистика работы каждого сотрудника в различных разрезах дисциплинирует персонал, максимально снижается уровень злоупотреблений со стороны официантов, барменов, поваров.</p>
-                    <br>
-                    <h4>Склад</h4>
-                    <p>Автоматизированное получение и списание продуктов, контроль уровня запасов на складе и сроков хранения продуктов, анализ закупочных цен.</p>
-                    <br>
-                    <h4>Кухня</h4>
-                    <p>Строгое следование рецептурам за счет калькуляционных карт, строгий учет реальных остатков ингредиентов и полуфабрикатов, автоматический расчет и анализ себестоимости блюд.</p>
-                    <br>
-                    <h4>Управление</h4>
-                    <p>Анализ движения денежных и материальных средств, взаиморасчетов с контрагентами, удобное и оперативное формирование отчетов о продажах по официантам, блюдам, дням, клиентским картам. Анализ рентабельности как всего предприятия так каждого блюда/товара/услуги в отдельности.</p>
-                    <br>
+                   {!! $auto->system_features_field !!}
                 </div>
             </div>
             <div class="col-1-2">
                 <div class="advantages-block">
-                    <div class="block-item">
-                        <div class="img-wrap">
-                            <img src="/img/g2.png" alt="">
+                    @foreach($auto->auto_adv_group as $item)
+                        <div class="block-item">
+                            <div class="img-wrap">
+                                <img src="/images/{{$item->card_image->primary_link}}" alt="{{$item->card_image->alt}}">
+                            </div>
+                            <div class="text-wrap">
+                             {!! $item->card_text_field !!}
+                            </div>
                         </div>
-                        <div class="text-wrap">
-                            <p>
-                                <a href="#">Удаленная бухгалтерия</a>
-                                Приобретая готовое решение, вы получаете <strong>скидку 10%</strong> на услуги бухгалтера
-                            </p>
-                        </div>
-                    </div>
-                    <div class="block-item">
-                        <div class="img-wrap">
-                            <img src="/img/g1.png" alt="">
-                        </div>
-                        <div class="text-wrap">
-                            <p>
-                                Более <a href="#">30 ресторанов и кафе</a>
-                                используют наше решение
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -120,35 +72,44 @@
             <div class="block-title">
                 <h2 class="sub-title">Комплектация</h2>
                 <div class="products-list">
-                    @for($i = 0; $i < 5; $i++)
-                        <div class="product-item">
-                            <a href="#">
-                                <div class="img-wrap">
-                                    <img src="/img/123.JPG" alt="">
+                    @foreach($prod as $item_prod)
+                        @foreach($auto->auto_related_group as $rel)
+                            @if($item_prod->id_field == $rel->product_field)
+                                <div class="product-item">
+                                    <a href="#">
+                                        <div class="img-wrap">
+                                            <img src="/images/{{$item_prod->product_base_photo_image->icon_link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p>{{$rel->about_item_field}}</p>
+                                            <p class="wrap">
+                                                <span>{{$item_prod->product_name_field}}</span>
+                                            </p>
+                                            <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="text-wrap">
-                                    <p>Сенсорный моноблок в качестве станции официанта</p>
-                                    <p class="wrap">
-                                        <span>Дисплей покупателя Senor Tech USB</span>
-                                    </p>
-                                    <p class="cost">27 240 тг <span class="sale"></span></p>
-                                </div>
-                            </a>
-                        </div>
-                    @endfor
+                            @endif
+                        @endforeach
+                    @endforeach
+
                 </div>
             </div>
         </div>
         <div class="warranty">
-            <p>Мы доставим и настроим комплект оборудования, установим программное обеспечение. На оборудование <strong>гарантия 12 месяцев.</strong></p>
+            {!! $auto->warranty_field !!}
         </div>
         <div class="cost-block">
 
-            <h2 class="cost">  <span class="sale">560 000 тг</span>от 475 000 тенге</h2>
+            <h2 class="cost">
+                @if($auto->auto_sale_field > 0)
+                    <span class="sale">{{ number_format($auto->auto_sale_field,0,'',' ') }} тг</span>
+                @endif
+                    от {{ number_format($auto->auto_cost_field,0,'',' ') }}  тенге
+            </h2>
         </div>
         <div class="credit">
-            <p>Возможна <strong>беспроцентная рассрочка</strong> на 2 месяца и выплатами 212 000 тенге ежемесячно, или
-            услуги <strong>аренды оборудования</strong> под 10% от стоимости комплекта.</p>
+            {!! $auto->rassr_field !!}
         </div>
         <div class="button-wrap">
             <div class="button buy-it">Оформить заказ</div>

@@ -59,7 +59,14 @@ return [
         ]
     ],
 //====index page end===========================================================================
-
+    'auto_adv_card'      => [
+        'sizes' => [
+            ['width' => 260, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
     'adventages_adv_img' => [
         'sizes' => [
             ['width' => 100, 'height' => null, 'sufix' => 'primary'],
@@ -86,7 +93,7 @@ return [
     ],
     'auto_background' => [
         'sizes' => [
-            ['width' => 700, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
             ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
             ['width' => 100, 'height' => null, 'sufix' => 'preview'],
             ['width' => 100, 'height' => null, 'sufix' => 'icon'],

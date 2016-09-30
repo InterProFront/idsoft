@@ -85,6 +85,12 @@ a.bx-pager-link.active {
   width: 100%;
   font-size: 16px;
 }
+.text-block p bold {
+  font-weight: bold;
+}
+.text-block p strong {
+  font-weight: bold;
+}
 .text-block h2 {
   font-size: 32px;
   font-weight: normal;

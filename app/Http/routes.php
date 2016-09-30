@@ -16,7 +16,11 @@ Route::get('/test', 'PageController@getNew');
 Route::get('/product', 'CatalogController@getProduct');
 Route::get('/catalog', 'CatalogController@getCatalog');
 Route::get('/category', 'CatalogController@getCategory');
-Route::get('/automatic', 'CatalogController@getAuto');
+
+Route::get('/automatic/{slug}', 'CatalogController@getAuto');
+
+
+
 Route::get('/accounting', 'CatalogController@getAccounting');
 
 
@@ -35,6 +39,9 @@ Route::get('/video/{category}', 	'CatalogController@getVideoCategory');
 
 Route::get('/showcase', 			'CatalogController@getShowcase');
 Route::get('/showcase/{category}',  'CatalogController@getShowcaseCategory');
+
+
+Route::get('/soft',					'CatalogController@getSoft');
 
 
 Route::get('/catalog/{category}/{product}',		'CatalogController@getProduct');

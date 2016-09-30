@@ -85,6 +85,12 @@ a.bx-pager-link.active {
   width: 100%;
   font-size: 16px;
 }
+.text-block p bold {
+  font-weight: bold;
+}
+.text-block p strong {
+  font-weight: bold;
+}
 .text-block h2 {
   font-size: 32px;
   font-weight: normal;
@@ -1720,7 +1726,7 @@ header .mobile-menu-bottom {
   position: absolute;
 }
 .main-content-block {
-  padding: 50px 40px 0 100px;
+  padding: 50px 40px 30px 100px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -1875,6 +1881,9 @@ header .mobile-menu-bottom {
   line-height: 1.5em;
   color: #666666;
 }
+.automatic .second-content .col-1-2:last-child .advantages-block .block-item:last-child .img-wrap {
+  padding-bottom: 60px;
+}
 .second-content {
   padding: 50px 40px 0 100px;
   display: -ms-flexbox;
@@ -1971,6 +1980,7 @@ header .mobile-menu-bottom {
   text-align: left;
 }
 .equipment-block .block-title .products-list .product-item a .img-wrap img {
+  max-width: 150px;
   line-height: 148px;
   border: 1px solid #cccccc;
 }
@@ -2069,6 +2079,12 @@ header .mobile-menu-bottom {
   line-height: 1.5em;
   padding: 30px;
 }
+.warranty p bold {
+  font-weight: bold;
+}
+.warranty p strong {
+  font-weight: bold;
+}
 .cost-block {
   width: 100%;
   text-align: center;
@@ -2099,6 +2115,12 @@ header .mobile-menu-bottom {
   margin: 0 auto;
   color: #333333;
   line-height: 1.5em;
+}
+.credit p bold {
+  font-weight: bold;
+}
+.credit p strong {
+  font-weight: bold;
 }
 .button-wrap {
   width: 200px;

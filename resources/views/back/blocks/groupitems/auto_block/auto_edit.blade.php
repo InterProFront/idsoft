@@ -154,6 +154,34 @@
                           data-group="auto" class="input group_field" data-item-id="{{$item_auto->id_field}}"
                           placeholder="Текст">{{$item_auto->pre_cost_text_field}}</textarea>
             </div>
+
+
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <textarea data-field-type="text" data-field-name="warranty" data-block="auto_block"
+                          data-group="auto" class="input group_field" data-item-id="{{$item_auto->id_field}}"
+                          placeholder="Текст">{{$item_auto->warranty_field}}</textarea>
+            </div>
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <textarea data-field-type="text" data-field-name="vozm" data-block="auto_block"
+                          data-group="auto" class="input group_field" data-item-id="{{$item_auto->id_field}}"
+                          placeholder="Текст">{{$item_auto->vozm_field}}</textarea>
+            </div>
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <textarea data-field-type="text" data-field-name="rassr" data-block="auto_block"
+                          data-group="auto" class="input group_field" data-item-id="{{$item_auto->id_field}}"
+                          placeholder="Текст">{{$item_auto->rassr_field}}</textarea>
+            </div>
+
+
+
+
+
             <div class="field-wrap ">
                 <label class="input-file">
                 </label>
@@ -163,6 +191,7 @@
             </div>
             <div class="field-wrap ">
                 <label class="input-file">
+                    Цена
                 </label>
                 <input type="number" data-field-type="numb" data-field-name="auto_cost" data-block="auto_block"
                        data-group="auto" data-item-id="{{$item_auto->id_field}}" class="input group_field"
@@ -170,18 +199,34 @@
             </div>
             <div class="field-wrap ">
                 <label class="input-file">
+                    Скидка
                 </label>
                 <input type="number" data-field-type="numb" data-field-name="auto_sale" data-block="auto_block"
                        data-group="auto" data-item-id="{{$item_auto->id_field}}" class="input group_field"
                        value="{{$item_auto->auto_sale_field}}" placeholder="Целое число">
             </div>
-            <div class="field-wrap ">
-                <label class="input-file">
-                </label>
-                <input type="number" data-field-type="numb" data-field-name="iiko" data-block="auto_block"
-                       data-group="auto" data-item-id="{{$item_auto->id_field}}" class="input group_field"
-                       value="{{$item_auto->iiko_field}}" placeholder="Целое число">
-            </div>
+
+            {{------------------------------------------------------------------------------------}}
+            <ul class="group-block group_container" data-block="auto_block" data-group="auto"
+                data-owner-id="{{$item_auto->id_field}}">
+                @foreach($item_auto->auto_related_group as $item_auto_related)
+                    @include('back.blocks.groupitems.auto_block.auto_related')
+                @endforeach
+            </ul>
+            <button class="any_create" data-block="auto_block" data-group="auto_related"
+                    data-descr="Эл. первой группы" data-owner-id="{{$item_auto->id_field}}"> Добавить Продукт
+            </button>
+            {{------------------------------------------------------------------------------------}}
+            <ul class="group-block group_container" data-block="auto_block" data-group="auto"
+                data-owner-id="{{$item_auto->id_field}}">
+                @foreach($item_auto->auto_adv_group as $item_auto_adv )
+                    @include('back.blocks.groupitems.auto_block.auto_adv')
+                @endforeach
+            </ul>
+            <button class="any_create" data-block="auto_block" data-group="auto_adv"
+                    data-descr="Эл. первой группы" data-owner-id="{{$item_auto->id_field}}"> Добавить Блок преимуществ
+            </button>
+            {{------------------------------------------------------------------------------------}}
 
             <div class="field-wrap ">
                 @if($item_auto->is_iiko_field)

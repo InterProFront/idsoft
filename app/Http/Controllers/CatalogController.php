@@ -49,7 +49,9 @@ class CatalogController extends Controller {
 
 		foreach($catalog->product_group as $item){
 			$new_price = $item->product_cost_field * $this->course->course_field;
+			$new_sale = $item->product_sale_field * $this->course->course_field;
 			$item->setField('product_cost',$new_price);
+			$item->setField('product_sale',$new_sale);
 
 		}
 
@@ -57,9 +59,43 @@ class CatalogController extends Controller {
 			'products' => $catalog
 		]);
 	}
-	public function getAuto(){
-		return view('front.catalog.automatic.automatic',[
 
+	public function getSoft(){
+		$catalog = $this->queryAgent->getGroupItem('catalog_block','category_2',55);
+		foreach($catalog->product_group as $item){
+			$new_price = $item->product_cost_field * $this->course->course_field;
+			$new_sale = $item->product_sale_field * $this->course->course_field;
+			$item->setField('product_cost',$new_price);
+			$item->setField('product_sale',$new_sale);
+		}
+		return view('front.catalog.category.category',[
+			'products' => $catalog
+		]);
+	}
+
+
+	public function getAuto($slug){
+
+		$auto = $this->queryAgent->getGroupItemBySlug('auto_block','auto',$slug);
+		$cost = $auto->auto_cost_field * $this->course->course_field;
+		$sale = $auto->auto_sale_field * $this->course->course_field;
+		$auto->setField('auto_cost', $cost);
+		$auto->setField('auto_sale', $sale);
+
+		$all   = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
+		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		foreach($test as $item){
+			$new_price = $item->product_cost_field * $this->course->course_field;
+			$new_sale = $item->product_sale_field * $this->course->course_field;
+			$item->setField('product_cost',$new_price);
+			$item->setField('product_sale',$new_sale);
+		}
+
+
+		return view('front.catalog.automatic.automatic',[
+			'auto' => $auto,
+			'all'  => $all,
+			'prod' => $test
 		]);
 	}
 	public function getAccounting(){
@@ -77,7 +113,10 @@ class CatalogController extends Controller {
 	public function getProduct($category, $product){
 		$product = $this->queryAgent->getGroupItemBySlug('catalog_block','product',$product);
 		$cost = $product->product_cost_field * $this->course->course_field;
+		$sale = $product->product_sale_field * $this->course->course_field;
+
 		$product->setField('product_cost',$cost);
+		$product->setField('product_sale',$cost);
 
 		$auto = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
 		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
@@ -92,3 +131,9 @@ class CatalogController extends Controller {
 
 
 }
+
+
+
+
+
+

@@ -20,7 +20,9 @@
                              class="zoom"
                              data-zoom-image="/images/{{$product->product_base_photo_image->primary_link}}">
                     </div>
+
                     <div class="pictures-row" id="gallery_01">
+                        @if($product->product_image_group->count() > 0)
                         <a href="#" data-image="/images/{{$product->product_base_photo_image->secondary_link}}"
                            data-zoom-image="/images/{{$product->product_base_photo_image->primary_link}}">
                             <img id="img_01" src="/images/{{$product->product_base_photo_image->preview_link}}"/>
@@ -31,13 +33,14 @@
                                 <img id="img_01" src="/images/{{$item->product_image->preview_link}}"/>
                             </a>
                         @endforeach
-
+                        @endif
 
                     </div>
                 </div>
+                @if( $product->soft_related_group->count() > 0  && $product->product_auto_group->count() > 0)
                 <div class="automatic-block">
                     <ul class="automatic-list">
-
+                        @if($product->soft_related_group->count() > 0 )
                         <li class="item-link"><p class="automatic-title">Программное обеспечение</p></li>
                         @foreach($soft as $item)
                             @foreach($product->soft_related_group as $soft_item)
@@ -46,8 +49,10 @@
                                 @endif
                             @endforeach
                         @endforeach
+                        @endif
                     </ul>
                     <ul class="automatic-list">
+                        @if($product->product_auto_group->count() > 0 )
                         <li class="item-link"><p class="automatic-title">Применяется в автоматизации</p></li>
                         @foreach($auto as $item)
                             @foreach($product->product_auto_group as $auto_item)
@@ -56,8 +61,10 @@
                                 @endif
                             @endforeach
                         @endforeach
+                        @endif
                     </ul>
                 </div>
+                @endif
             </div>
             <div class="col-1-2">
                 <div class="buy-button-block">
@@ -66,7 +73,7 @@
                             @if($product->product_sale_field != 0)
                                 <p class="sale">{{ number_format($product->product_sale_field,0,'',' ') }} тг</p>
                             @endif
-                            <p class="cost">{{ number_format($product->product_cost_field,0,'',' ') }}  тг</p>
+                            <p class="cost">{{ number_format($product->product_cost_field,0,'',' ') }} тг</p>
                         </div>
                         <div class="col-1-2">
                             <p class="text">При заказе свыше 5 позиций действуют скидки.</p>

@@ -80,9 +80,19 @@ return [
             'auto' => [
                 'stringfields' => ['page_name', 'page_title', 'seo_description', 'seo_keywords'],
                 'images' => ['background','card_background'],
-                'textfields' => ['content', 'pre_cost_text', 'system_features'],
+                'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty','vozm','rassr'],
                 'numbs' => ['auto_cost', 'auto_sale','iiko'],
                 'bools' =>['is_iiko']
+            ],
+            'auto_adv' =>[
+                'owner'  => 'auto',
+                'images' => ['card'],
+                'textfields' => ['card_text']
+            ],
+            'auto_related' =>[
+                'owner' => 'auto',
+                'stringfields' =>['about_item'],
+                'numbs'  => ['product']
             ]
         ]
     ],

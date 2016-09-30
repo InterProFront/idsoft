@@ -142,8 +142,10 @@ class BackController extends Controller {
 	}
 	public function editAutoItem($id){
 		$auto = $this->queryAgent->getGroupItem('auto_block','auto',$id);
+		$all_products = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
 		return view('back.blocks.groupitems.auto_block.auto_edit', [
-			'item_auto' => $auto
+			'item_auto' => $auto,
+			'related'   => $all_products
 		]);
 	}
 
