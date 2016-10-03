@@ -54,29 +54,26 @@ class PageController extends Controller{
 
 
 	public function getClients(){
+		$client_all = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
 		$i = 0;
 		$clients[$i] = $this->queryAgent->getGroup('clients_block','client',[],[]);
-		$client_all = $this->queryAgent->getBlock('clients_block',[],[]);
 		foreach($filter->institution_group as $item){
 			$i++;
 			$clients[$i] = $this->queryAgent->getGroup('clients_block','client',[],['client'=>['institution_type' => $item->id_field]]);
 
 		}
-
-
-
-
-
-
 		return view('front.clients.all-clients.clients',[
+			'all_c'    => $client_all,
 			'filter' => $filter,
 			'counts' => $clients,
-			'all'    => $client_all
 		]);
 	}
-	public function getClientItem(){
-		return view('front.clients.client-item.client-item',[]);
+	public function getClientItem($slug){
+		$client = $this->queryAgent->getGroupItemBySlug('clients_block','client',$slug);
+		return view('front.clients.client-item.client-item',[
+			'client' => $client
+		]);
 	}
 
 

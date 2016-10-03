@@ -141,10 +141,10 @@ return [
     ],
     'client_background' => [
         'sizes' => [
-            ['width' => 700, 'height' => null, 'sufix' => 'primary'],
-            ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
-            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
-            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+            ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
+            ['width' => null, 'height' => 280, 'sufix' => 'secondary'],
+            ['width' => null, 'height' => 210, 'sufix' => 'preview'],
+            ['width' => null, 'height' => 140, 'sufix' => 'icon'],
         ]
     ],
     'images_set_text_pict' => [

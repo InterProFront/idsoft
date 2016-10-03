@@ -8,7 +8,7 @@
         <div class="product-list">
             @foreach($products->product_group as $item)
                 <div class="product-item">
-                    <a href="/catalog/{{$products->slug_field}}/{{$item->slug_field}}">
+                    <a href="{{$products->slug_field}}/{{$item->slug_field}}">
                         <div class="img-wrap">
                             <img src="/images/{{$item->product_base_photo_image->icon_link}}" alt="{{$item->product_base_photo_image->alt}}">
                         </div>

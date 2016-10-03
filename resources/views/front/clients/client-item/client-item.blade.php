@@ -6,29 +6,16 @@
     {{----}}
     <section class="content client dashed-bottom">
         <div class="bread-crumb">
-            <span class="crumb-item"><a href="#">Каталог оборудования</a></span>
-            <span class="crumb-separate">→</span>
-            <span class="crumb-item"><a href="#">POS-системы</a></span>
+            <span class="crumb-item"><a href="/clients">Клиенты</a></span>
         </div>
-        <h1 class="block-title">Сенсорный моноблок IDSOFT ID5000</h1>
+        <h1 class="block-title">{{$client->page_name_field}}</h1>
         <div class="title-image">
-            <img src="/img/latortine.JPG" alt="">
+            <img src="/images/{{$client->background_image->primary_link}}" alt="">
         </div>
         <div class="main-content-grid">
             <div class="col-1-2">
                 <div class="text-block">
-                    <h4>После успешного опыта в автоматизации розничного магазина, компания La Tartine обратилась с просьбой внедрить систему учёта в новом кафе.</h4>
-                    <br>
-                    <p>Французские бизнесмены по достоинству оценили простоту и функциональность нашей системы автоматизации. Программа работает в связке с фискальными регистратором российской компании Штрих-М. </p>
-                    <br>
-                    <p>Официанты очень оперативно работают благодаря удобству программы, а офис, не нарушая работу кафе, всегда может контролировать весь денежный поток кафе, номенклатуру, цены.</p>
-                    <br>
-                    <h3>Отзыв клиента</h3>
-                    <br>
-                    <p>«Французские бизнесмены по достоинству оценили простоту и функциональность нашей системы автоматизации. Программа работает в связке с фискальными регистратором российской компании Штрих-М»</p>
-                    <br>
-                    <p>Ирина Лелявская,</p>
-                    <p>генеральныйы директор</p>
+                    {!! $client->content_field !!}
                 </div>
             </div>
             <div class="col-1-2">

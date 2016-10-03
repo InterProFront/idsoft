@@ -17,6 +17,9 @@ Route::get('/product', 'CatalogController@getProduct');
 Route::get('/catalog', 'CatalogController@getCatalog');
 Route::get('/category', 'CatalogController@getCategory');
 
+
+
+Route::get('/automatic',         'CatalogContoroler@getAuto');
 Route::get('/automatic/{slug}', 'CatalogController@getAuto');
 
 
@@ -26,7 +29,7 @@ Route::get('/accounting/{slug}', 'CatalogController@getTarif');
 
 
 Route::get('/clients', 'PageController@getClients');
-Route::get('/clients/client', 'PageController@getClientItem');
+Route::get('/clients/{slug}', 'PageController@getClientItem');
 
 
 

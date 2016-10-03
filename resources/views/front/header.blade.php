@@ -61,8 +61,14 @@
                                         <div class="popup-form  automatic @if($i == 2) small  @endif">
                                             @if($i == 2)
                                                 <div class="col-1-2">
-                                                    <h3 class="popup-title"><a
-                                                                href="/automatic">{{$item->menu_text_field}}</a>
+                                                    <h3 class="popup-title">
+                                                        <?php $ai = 0;?>
+                                                        @foreach($m_popup[$i-1] as $item_p)
+                                                            <?php $ai++ ?>
+                                                            @if($ai == 1)
+                                                                <a href="/automatic/{{$item_p->slug_field}}">{{$item->menu_text_field}}</a>
+                                                            @endif
+                                                        @endforeach
                                                     </h3>
                                                     <div class="popup-items">
                                                         <ul class="second-row">

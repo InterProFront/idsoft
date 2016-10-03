@@ -174,7 +174,6 @@ class CatalogController extends Controller {
 		$sale = $auto->auto_sale_field * $this->course->course_field;
 		$auto->setField('auto_cost', $cost);
 		$auto->setField('auto_sale', $sale);
-
 		$all   = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
 		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
 		foreach($test as $item){

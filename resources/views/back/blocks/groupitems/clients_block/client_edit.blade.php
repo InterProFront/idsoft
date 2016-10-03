@@ -63,6 +63,22 @@
             </div>
             <div class="field-wrap ">
                 <label class="input-file">
+                    slug
+                </label>
+                <input type="text" data-field-type="string" data-field-name="slug" data-block="clients_block"
+                       data-group="client" class="input group_pre_field" value="{{$item_client->slug_field}}"
+                       data-item-id="{{$item_client->id_field}}" placeholder="Строка">
+            </div>
+            <div class="field-wrap ">
+                <label class="input-file">
+                    Краткое описание
+                </label>
+                <input type="text" data-field-type="string" data-field-name="small_descr" data-block="clients_block"
+                       data-group="client" class="input group_field" value="{{$item_client->small_descr_field}}"
+                       data-item-id="{{$item_client->id_field}}" placeholder="Строка">
+            </div>
+            <div class="field-wrap ">
+                <label class="input-file">
                 </label>
                 <input type="text" data-field-type="string" data-field-name="page_title" data-block="clients_block"
                        data-group="client" class="input group_field" value="{{$item_client->page_title_field}}"
