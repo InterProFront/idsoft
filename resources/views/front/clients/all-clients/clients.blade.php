@@ -31,36 +31,39 @@
         </div>
         <div class="clients-block">
             <div class="clients-row">
-                <div class="col-1-3">
-                    <a href="/clients" class="client-link">
-                        <div class="image-wrap">
-                            <img src="/img/client-big.jpg" alt="">
-                        </div>
-                        <div class="about-wrap">
-                            <p class="name-wrap">
-                                <span>La Tartine</span>
-                            </p>
-                            <p class="about">Французская выпечка, казахстанская система учета</p>
-                            <p class="city">Алматы</p>
-                        </div>
+                <?php
+                    $img_type = 0;
+                    $i = 0;
+                ?>
+                @foreach($all as $item)
+                    <?php
+                        $i++;
+                        $img_type++;
+                    ?>
+                    @if($i <= 2 )
+                            <div class="col-1-3">
+                                <a href="/clients/{{$item->slug_field}}" class="client-link">
+                                    <div class="image-wrap">
+                                        @if($img_type == 1)
+                                            <img src="/images/{{$item->background_image->primary_link}}" alt="{{$item->background_image->alt}}">
+                                        @elseif($img_type == 2)
+                                            <img src="/images/{{$item->background_image->secondary_link}}" alt="{{$item->background_image->alt}}">
+                                        @elseif($img_type == 3)
+                                            <img src="/images/{{$item->background_image->preview_link}}" alt="{{$item->background_image->alt}}">
+                                        @endif
+                                    </div>
+                                    <div class="about-wrap">
+                                        <p class="name-wrap">
+                                            <span>{{$item->page_name_field}}</span>
+                                        </p>
+                                        <p class="about">{{$item->small_descr_field}}</p>
+                                        <p class="city">Алматы</p>
+                                    </div>
+                                </a>
+                            </div>
+                    @endif
 
-                    </a>
-                </div>
-                <div class="col-1-3">
-                    <a href="/clients" class="client-link">
-                        <div class="image-wrap">
-                            <img src="/img/client-medium.jpg" alt="">
-                        </div>
-                        <div class="about-wrap">
-                            <p class="name-wrap">
-                                <span>La Tartine</span>
-                            </p>
-                            <p class="about">Французская выпечка, казахстанская система учета</p>
-                            <p class="city">Алматы</p>
-                        </div>
-
-                    </a>
-                </div>
+                @endforeach
                 <div class="col-1-3">
                     <div class="city-change-menu">
                         <p class="menu-title">По городам</p>

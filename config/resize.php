@@ -23,7 +23,7 @@ return [
             ['width' => null, 'height' => 120, 'sufix' => 'primary'],
             ['width' => null, 'height' => 220, 'sufix' => 'secondary'],
             ['width' => 100, 'height' => null, 'sufix' => 'preview'],
-            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+            ['width' => 210, 'height' => null, 'sufix' => 'icon'],
         ]
     ],
     'category_2_card_hover' => [
@@ -60,6 +60,22 @@ return [
     ],
 //====index page end===========================================================================
     'auto_adv_card'      => [
+        'sizes' => [
+            ['width' => 260, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
+    'employs_photo' => [
+        'sizes' => [
+            ['width' => 300, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
+    'acc_adv_card'      => [
         'sizes' => [
             ['width' => 260, 'height' => null, 'sufix' => 'primary'],
             ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
@@ -109,7 +125,7 @@ return [
     ],
     'accounting_block_work_process' => [
         'sizes' => [
-            ['width' => 1100, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 790, 'height' => null, 'sufix' => 'primary'],
             ['width' => 390, 'height' => null, 'sufix' => 'secondary'],
             ['width' => 90, 'height' => null, 'sufix' => 'preview'],
             ['width' => 300, 'height' => null, 'sufix' => 'icon'],
@@ -117,7 +133,7 @@ return [
     ],
     'tarif_background' => [
         'sizes' => [
-            ['width' => 1100, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
             ['width' => 390, 'height' => null, 'sufix' => 'secondary'],
             ['width' => 90, 'height' => null, 'sufix' => 'preview'],
             ['width' => 300, 'height' => null, 'sufix' => 'icon'],

@@ -57,20 +57,27 @@ class PageController extends Controller{
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
 		$i = 0;
 		$clients[$i] = $this->queryAgent->getGroup('clients_block','client',[],[]);
+		$client_all = $this->queryAgent->getBlock('clients_block',[],[]);
 		foreach($filter->institution_group as $item){
 			$i++;
 			$clients[$i] = $this->queryAgent->getGroup('clients_block','client',[],['client'=>['institution_type' => $item->id_field]]);
+
 		}
 
-//		dd($clients);
+
+
+
 
 
 		return view('front.clients.all-clients.clients',[
 			'filter' => $filter,
-			'counts' => $clients
+			'counts' => $clients,
+			'all'    => $client_all
 		]);
 	}
 	public function getClientItem(){
 		return view('front.clients.client-item.client-item',[]);
 	}
+
+
 }

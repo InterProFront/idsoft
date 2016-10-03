@@ -34,6 +34,12 @@ class CatalogController extends Controller {
 		view()->share('m_popup', 	$menu_popup);
 	}
 
+
+	//==================================================================
+	//=== ******************************************** =================
+	//=== Список категорий каталога\ стеллажей \ видео =================
+	//=== ******************************************** =================
+	//==================================================================
 	public function getCatalog(){
 		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
 		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',51);
@@ -43,18 +49,22 @@ class CatalogController extends Controller {
 			'seo'		=> $seo
 		]);
 	}
+
+
+
+	//==================================================================
+	//=== ******************************************** =================
+	//=== Автоматизация оборудования \ Готовые решения =================
+	//=== ******************************************** =================
+	//==================================================================
 	public function getCategory($slug){
 		$catalog = $this->queryAgent->getGroupItemBySlug('catalog_block','category_2',$slug);
-
-
 		foreach($catalog->product_group as $item){
 			$new_price = $item->product_cost_field * $this->course->course_field;
 			$new_sale = $item->product_sale_field * $this->course->course_field;
 			$item->setField('product_cost',$new_price);
 			$item->setField('product_sale',$new_sale);
-
 		}
-
 		return view('front.catalog.category.category',[
 			'products' => $catalog
 		]);
@@ -72,42 +82,66 @@ class CatalogController extends Controller {
 			'products' => $catalog
 		]);
 	}
+	public function getShowcaseCategory(){
+		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>52]]);
+		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',52);
 
-
-	public function getAuto($slug){
-
-		$auto = $this->queryAgent->getGroupItemBySlug('auto_block','auto',$slug);
-		$cost = $auto->auto_cost_field * $this->course->course_field;
-		$sale = $auto->auto_sale_field * $this->course->course_field;
-		$auto->setField('auto_cost', $cost);
-		$auto->setField('auto_sale', $sale);
-
-		$all   = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
-		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
-		foreach($test as $item){
-			$new_price = $item->product_cost_field * $this->course->course_field;
-			$new_sale = $item->product_sale_field * $this->course->course_field;
-			$item->setField('product_cost',$new_price);
-			$item->setField('product_sale',$new_sale);
-		}
-
-
-		return view('front.catalog.automatic.automatic',[
-			'auto' => $auto,
-			'all'  => $all,
-			'prod' => $test
+		return view('front.catalog.category.video',[
+			'category_1' => $catalog,
+			'seo'        => $seo
 		]);
 	}
+	public function getVideoCategory(){
+		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>53]]);
+		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',53);
+
+		return view('front.catalog.category.video',[
+			'category_1' => $catalog,
+			'seo'        => $seo
+		]);
+	}
+	//=====================================================
+
+
 	public function getAccounting(){
-		return view('front.accounting.accounting',[
+		$test = $this->queryAgent->getBlock('accounting_block',[],[]);
 
+		return view('front.accounting.accounting',[
+			'account' => $test
+		]);
+	}
+	public function getTarif($slug){
+
+		$tarif = $this->queryAgent->getGroupItemBySlug('accounting_block','tarif',$slug);
+		$all_tarif = $this->queryAgent->getGroupFlat('accounting_block','tarif_category',[],[]);
+
+		return view('front.accounting.tarifs.tarif', [
+			'tarif' => $tarif,
+			'all_tarif' => $all_tarif
 		]);
 	}
 
-	public function getVideo(){}
-	public function getVideoCategory(){}
-	public function getShowcase(){}
-	public function getShowcaseCategory(){}
+	public function getVideo(){
+		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
+		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',51);
+
+		return view('front.catalog.all_category.catalog',[
+			'category_1' => $catalog,
+			'seo'		=> $seo
+		]);
+	}
+	public function getShowcase(){
+		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
+		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',51);
+
+		return view('front.catalog.all_category.catalog',[
+			'category_1' => $catalog,
+			'seo'		=> $seo
+		]);
+	}
+
+
+
 
 
 	public function getProduct($category, $product){
@@ -128,8 +162,33 @@ class CatalogController extends Controller {
 			'prod' => $test
 		]);
 	}
+	//==================================================================
+	//=== ******************************************** =================
+	//=== Автоматизация оборудования \ Готовые решения =================
+	//=== ******************************************** =================
+	//==================================================================
+	public function getAuto($slug){
 
+		$auto = $this->queryAgent->getGroupItemBySlug('auto_block','auto',$slug);
+		$cost = $auto->auto_cost_field * $this->course->course_field;
+		$sale = $auto->auto_sale_field * $this->course->course_field;
+		$auto->setField('auto_cost', $cost);
+		$auto->setField('auto_sale', $sale);
 
+		$all   = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
+		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		foreach($test as $item){
+			$new_price = $item->product_cost_field * $this->course->course_field;
+			$new_sale = $item->product_sale_field * $this->course->course_field;
+			$item->setField('product_cost',$new_price);
+			$item->setField('product_sale',$new_sale);
+		}
+		return view('front.catalog.automatic.automatic',[
+			'auto' => $auto,
+			'all'  => $all,
+			'prod' => $test
+		]);
+	}
 }
 
 

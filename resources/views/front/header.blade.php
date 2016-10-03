@@ -114,7 +114,7 @@
                                 <li class="menu-item">
                                     <a href="{{$link[$i-1]}}">{{$item->menu_text_field}}</a>
                                     @if($i == 5)
-                                    @elseif($i == 6)
+                                    @else
                                         <div class="popup-form small">
                                             <h3 class="popup-title"><a
                                                         href="{{$link[$i-1]}}">{{$item->menu_text_field}}</a></h3>
@@ -124,17 +124,6 @@
                                                         @include('front.main_menu')
                                                     </ul>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    @else
-                                        <div class="popup-form small">
-                                            <h3 class="popup-title">{{$item->menu_text_field}}</h3>
-                                            <div class="col-1-col">
-                                            <div class="popup-items">
-                                                <ul class="popup-list">
-                                                    @include('front.main_menu')
-                                                </ul>
-                                            </div>
                                             </div>
                                         </div>
                                     @endif

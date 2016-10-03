@@ -9,6 +9,24 @@
                        data-group="tarif" class="input group_field" value="{{$item_tarif->page_name_field}}"
                        data-item-id="{{$item_tarif->id_field}}" placeholder="Строка">
             </div>
+
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <input type="text" data-field-type="string" data-field-name="slug" data-block="accounting_block"
+                       data-group="tarif" class="input group_pre_field" value="{{$item_tarif->slug_field}}"
+                       data-item-id="{{$item_tarif->id_field}}" placeholder="Строка">
+            </div>
+
+
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <input type="number" data-field-type="numb" data-field-name="tarif_cost" data-block="accounting_block"
+                       data-group="tarif" class="input group_field" value="{{$item_tarif->tarif_cost_field}}"
+                       data-item-id="{{$item_tarif->id_field}}" placeholder="Строка">
+            </div>
+
             <div class="field-wrap ">
                 <label class="input-file">
                 </label>

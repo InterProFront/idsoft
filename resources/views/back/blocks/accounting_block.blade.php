@@ -189,6 +189,27 @@
             <textarea data-field-type="text" data-field-name="advantages" data-block="accounting_block"
                       class="input block_field" placeholder="Текст">{{$accounting_block->advantages_field}}</textarea>
         </div>
+        {{------------------------------------------------------------------------------------}}
+        <ul class="group-block group_container" data-block="accounting_block" data-group="employs"
+            data-owner-id="0">
+            @foreach($accounting_block->employs_group as $item_employs )
+                @include('back.blocks.groupitems.accounting_block.employs')
+            @endforeach
+        </ul>
+        <button class="any_create" data-block="accounting_block" data-group="employs"
+                data-descr="Эл. первой группы" data-owner-id="0"> Добавить Сотрудника
+        </button>
+        {{------------------------------------------------------------------------------------}}
+        <ul class="group-block group_container" data-block="accounting_block" data-group="acc_adv"
+            data-owner-id="0">
+            @foreach($accounting_block->acc_adv_group as $item_acc_adv )
+                @include('back.blocks.groupitems.accounting_block.acc_adv')
+            @endforeach
+        </ul>
+        <button class="any_create" data-block="accounting_block" data-group="acc_adv"
+                data-descr="Эл. первой группы" data-owner-id="0"> Добавить Блок преимуществ
+        </button>
+        {{------------------------------------------------------------------------------------}}
         <div class="field-wrap ">
             <table>
                 <thead>

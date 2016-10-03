@@ -101,14 +101,24 @@ return [
         'images' => ['background', 'work_process','card_background'],
         'textfields' => ['content', 'advantages'],
         'groups' => [
+            'acc_adv' => [
+                'images' => ['card'],
+                'textfields' => ['card_text']
+            ],
+            'employs' => [
+                'images'       => ['photo'],
+                'stringfields' => ['emp_name','emp_prof'],
+                'textfields'   => ['emp_about']
+            ],
             'tarif_category' => [
                 'stringfields' => ['tarif_name']
             ],
             'tarif' => [
                 'owner' => 'tarif_category',
-                'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description'],
+                'stringfields' => ['tarif_name','page_name', 'page_title', 'seo_keywords', 'seo_description'],
                 'images' => ['background'],
-                'textfields' => ['content']
+                'textfields' => ['content'],
+                'numbs' => ['tarif_cost']
             ]
         ]
     ],
@@ -116,7 +126,7 @@ return [
         'groups' => [
             'client' => [
                 'images' => ['background'],
-                'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'letter_link'],
+                'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'letter_link', 'small_descr'],
                 'textfields' => ['content'],
                 'numbs' => ['city_name', 'institution_type']
             ]
