@@ -150,7 +150,7 @@ class CatalogController extends Controller {
 		$sale = $product->product_sale_field * $this->course->course_field;
 
 		$product->setField('product_cost',$cost);
-		$product->setField('product_sale',$cost);
+		$product->setField('product_sale',$sale);
 
 		$auto = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
 		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
