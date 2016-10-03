@@ -117,7 +117,7 @@ return [
     ],
     'accounting_block_background' => [
         'sizes' => [
-            ['width' => 700, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
             ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
             ['width' => 100, 'height' => null, 'sufix' => 'preview'],
             ['width' => 100, 'height' => null, 'sufix' => 'icon'],
