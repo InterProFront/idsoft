@@ -37,9 +37,9 @@
                     </p>
                 </div>
                 <div class="col-1-2">
-                    <label  class="row-name">
+                    <span  class="row-name">
                         <button class="send-form">Отправить</button>
-                    </label>
+                    </span>
                 </div>
             </div>
         </div>

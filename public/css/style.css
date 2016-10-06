@@ -3196,6 +3196,10 @@ header .mobile-menu-bottom {
   border: none;
   border-radius: 5px;
 }
+.white-popup .rows-block .row.button-row .col-1-2 .row-name .send-form:hover {
+  cursor: pointer;
+  background: #0097e8;
+}
 .white-popup .rows-block .row.button-row .col-1-2 .row-name .send-form.load {
   background: url(../img/loader.gif) center center no-repeat, #0078bf;
   background-size: 38px 38px;
