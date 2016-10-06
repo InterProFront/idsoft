@@ -9,6 +9,12 @@
         font-size: @regular;
         .link(@white-link-color,@white-link-border, @white-hover-color,@white-hover-border)
       }
+      &.active{
+        .menu-link{
+          font-weight: bold;
+          .link(@yellow,transparent, @yellow,transparent)
+        }
+      }
     }
   }
 }

@@ -67,7 +67,7 @@ $(document).ready(function(){
     }
 
     $('.send-form').on('click',function() {
-        unical = $(this).parent('.white-popup').attr('id');
+        unical = $(this).closest('.white-popup').attr('id');
         $this = $(this);
         var dataobj = {};
         dataobj['block'] = 'fidback';
@@ -79,7 +79,7 @@ $(document).ready(function(){
         dataobj['images'] = {};
 
 
-        var selector = '#'+unical+' .popup_field';
+        var selector = '#'+unical+' .popup-input';
         var validForm  = fieldsCheck( selector );
 
         if (!validForm){
@@ -115,7 +115,8 @@ $(document).ready(function(){
                 $this.removeClass('load');
             });
 
-
+        }else{
+            $('#'+unical+' .status-bar').addClass('show');
         }
 
 

@@ -29,6 +29,20 @@ class BackController extends Controller {
 		]);
 	}
 
+	public function getInformatic(){
+		$block = $this->queryAgent->getBlock('information_page',[],[]);
+
+		return view('back.blocks.information_page',[
+			'information_page' => $block
+		]);
+	}
+	public function getInformaticItem($id){
+		$block = $this->queryAgent->getGroupItem('information_page','inf_page',$id);
+
+		return view('back.blocks.groupitems.information_page.inf_page_edit',[
+			'item_inf_page' => $block
+		]);
+	}
 	//================================================================
 	//	Редактирование
 	//	Страница "Наши клиенты"

@@ -8,7 +8,12 @@
         <div class="product-list">
             @foreach($products->product_group as $item)
                 <div class="product-item">
-                    <a href="{{$products->slug_field}}/{{$item->slug_field}}">
+                    @if($products->id_field == 55)
+                        <a href="soft/{{$products->slug_field}}/{{$item->slug_field}}">
+                    @else
+                        <a href="{{$products->slug_field}}/{{$item->slug_field}}">
+                    @endif
+
                         <div class="img-wrap">
                             <img src="/images/{{$item->product_base_photo_image->icon_link}}" alt="{{$item->product_base_photo_image->alt}}">
                         </div>

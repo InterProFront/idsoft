@@ -8,7 +8,7 @@
                 </div>
                 <ul class="head-list">
                     <li class="item">
-                        <a href="#ask">Написать письмо</a>
+                        <a id="ask-me" href="#question">Написать письмо</a>
                     </li>
                     <li class="item">
                         <a href="#">Как нас найти</a>
@@ -55,7 +55,7 @@
                             @if ($i <= 3)
                                 <li class="menu-item">
                                     <span class="hovered-text">{{$item->small_text_field}}</span>
-                                    <a href="{{$link[$i-1]}}">{{$item->menu_text_field}}</a>
+                                    <a href="{{$link[$i-1]}}" class="all-site-menu">{{$item->menu_text_field}}</a>
                                     @if($i == 3)
                                     @else
                                         <div class="popup-form  automatic @if($i == 2) small  @endif">
@@ -118,7 +118,7 @@
                             <?php $i++ ?>
                             @if ($i>3)
                                 <li class="menu-item">
-                                    <a href="{{$link[$i-1]}}">{{$item->menu_text_field}}</a>
+                                    <a href="{{$link[$i-1]}}" class="all-site-menu" >{{$item->menu_text_field}}</a>
                                     @if($i == 5)
                                     @else
                                         <div class="popup-form small">

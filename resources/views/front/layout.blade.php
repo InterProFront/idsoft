@@ -4,7 +4,7 @@
 @include('front.header')
 @include('front.footer')
 
-<!doctype html>
+        <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,13 +14,19 @@
     @yield('meta')
 </head>
 <body>
-    <p class="top">{{$static->logo_text_field}}</p>
-    <div class="wrapper">
-        @yield('header')
-        @yield('content')
-        @yield('footer')
-    </div>
+<p class="top">{{$static->logo_text_field}}</p>
+<div class="wrapper">
+    @yield('header')
+    @yield('content')
+    @yield('footer')
+</div>
 </body>
-    @yield('scripts')
-    @yield('metriks')
+
+@yield('scripts')
+@yield('metriks')
+
+@include('front.popups.question')
+@include('front.popups.thank')
+@include('front.popups.order')
+
 </html>

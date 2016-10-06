@@ -180,6 +180,7 @@ header .info-row .col-1-3 .head-list .item a:hover {
   color: #cc0000;
 }
 header .info-row .col-1-3 .head-list .item a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -227,7 +228,7 @@ header .main-menu .wrap .big-menu .menu-item.active {
   background: #fed054;
 }
 header .main-menu .wrap .big-menu .menu-item.active:hover a {
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
@@ -236,7 +237,7 @@ header .main-menu .wrap .big-menu .menu-item.active:hover a {
 }
 header .main-menu .wrap .big-menu .menu-item.active:hover a:hover {
   cursor: pointer;
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
@@ -244,7 +245,8 @@ header .main-menu .wrap .big-menu .menu-item.active:hover a:hover {
   color: #333333;
 }
 header .main-menu .wrap .big-menu .menu-item.active:hover a:focus {
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  outline: none;
+  background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
@@ -252,7 +254,7 @@ header .main-menu .wrap .big-menu .menu-item.active:hover a:focus {
   color: #333333;
 }
 header .main-menu .wrap .big-menu .menu-item.active a {
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
@@ -261,20 +263,21 @@ header .main-menu .wrap .big-menu .menu-item.active a {
 }
 header .main-menu .wrap .big-menu .menu-item.active a:hover {
   cursor: pointer;
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
-  color: #333333;
+  color: #cc0000;
 }
 header .main-menu .wrap .big-menu .menu-item.active a:focus {
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
-  color: #333333;
+  color: #cc0000;
 }
 header .main-menu .wrap .big-menu .menu-item:nth-child(2) {
   margin: 0 90px;
@@ -289,20 +292,21 @@ header .main-menu .wrap .big-menu .menu-item:hover a {
 }
 header .main-menu .wrap .big-menu .menu-item:hover a:hover {
   cursor: pointer;
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
-  color: #333333;
+  color: #cc0000;
 }
 header .main-menu .wrap .big-menu .menu-item:hover a:focus {
-  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
-  color: #333333;
+  color: #cc0000;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .hovered-text {
   display: block;
@@ -360,6 +364,7 @@ header .main-menu .wrap .big-menu .menu-item:hover .popup-form .col-1-2:last-chi
   color: #750000;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form .col-1-2:last-child .second-row .item-popup a:focus {
+  outline: none;
   background: linear-gradient(to left, #a77272, #a77272 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -379,6 +384,32 @@ header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-title {
   color: #333333;
   padding-bottom: 25px;
 }
+header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-title a {
+  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-title a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-title a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup {
   display: inline-block;
   font-weight: normal;
@@ -387,6 +418,33 @@ header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items .pop
   padding-bottom: 15px;
   padding-right: 20px;
   vertical-align: top;
+}
+header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup.active a {
+  font-weight: bold;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup.active a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup.active a:focus {
+  outline: none;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup:last-child {
   padding-bottom: 0;
@@ -417,6 +475,7 @@ header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items a:ho
   color: #cc0000;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -451,6 +510,7 @@ header .main-menu .wrap .big-menu .menu-item a:hover {
   color: #cc0000;
 }
 header .main-menu .wrap .big-menu .menu-item a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -473,11 +533,14 @@ header .main-menu .wrap .small-menu {
 }
 header .main-menu .wrap .small-menu .menu-item {
   position: relative;
+  padding: 5px 15px;
+  border-radius: 15px;
 }
-header .main-menu .wrap .small-menu .menu-item:nth-child(2) {
-  margin: 0 55px;
+header .main-menu .wrap .small-menu .menu-item.active {
+  background: #fed054;
 }
-header .main-menu .wrap .small-menu .menu-item:hover a {
+header .main-menu .wrap .small-menu .menu-item.active:hover a {
+  font-weight: bold;
   background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
   background-position: 0 100%;
@@ -485,7 +548,7 @@ header .main-menu .wrap .small-menu .menu-item:hover a {
   background-repeat: repeat-x;
   color: #333333;
 }
-header .main-menu .wrap .small-menu .menu-item:hover a:hover {
+header .main-menu .wrap .small-menu .menu-item.active:hover a:hover {
   cursor: pointer;
   background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -494,13 +557,70 @@ header .main-menu .wrap .small-menu .menu-item:hover a:hover {
   background-repeat: repeat-x;
   color: #333333;
 }
-header .main-menu .wrap .small-menu .menu-item:hover a:focus {
+header .main-menu .wrap .small-menu .menu-item.active:hover a:focus {
+  outline: none;
   background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
   color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item.active a {
+  font-weight: bold;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item.active a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item.active a:focus {
+  outline: none;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item:nth-child(2) {
+  margin: 0 55px;
+}
+header .main-menu .wrap .small-menu .menu-item:hover a {
+  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item:hover a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+header .main-menu .wrap .small-menu .menu-item:hover a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
 }
 header .main-menu .wrap .small-menu .menu-item:hover .hovered-text {
   display: block;
@@ -514,8 +634,8 @@ header .main-menu .wrap .small-menu .menu-item:hover .popup-form {
   position: absolute;
   padding: 25px 30px 30px 30px;
   min-width: 690px;
-  top: -25px;
-  left: -30px;
+  top: -20px;
+  left: -15px;
 }
 header .main-menu .wrap .small-menu .menu-item:hover .popup-form.right-pull {
   left: -200px;
@@ -530,6 +650,32 @@ header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-2:last-c
   font-size: 16px;
   color: #666666;
   font-weight: normal;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-2:last-child .popup-title a {
+  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-2:last-child .popup-title a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-2:last-child .popup-title a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
 }
 header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-2:last-child .second-row .item-popup a {
   font-size: 16px;
@@ -551,6 +697,7 @@ header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-2:last-c
   color: #750000;
 }
 header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-2:last-child .second-row .item-popup a:focus {
+  outline: none;
   background: linear-gradient(to left, #a77272, #a77272 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -567,6 +714,32 @@ header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-title {
   color: #333333;
   padding-bottom: 25px;
 }
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-title a {
+  background: linear-gradient(to left, #cccccc, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-title a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-title a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
 header .main-menu .wrap .small-menu .menu-item:hover .popup-form .col-1-col .popup-items .popup-list .item-popup {
   display: block;
   width: 100%;
@@ -579,6 +752,33 @@ header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-items .p
   padding-bottom: 15px;
   padding-right: 20px;
   vertical-align: top;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup.active a {
+  font-weight: bold;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup.active a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
+}
+header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup.active a:focus {
+  outline: none;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #333333;
 }
 header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-items .popup-list .item-popup:last-child {
   padding-bottom: 0;
@@ -603,6 +803,7 @@ header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-items a:
   color: #cc0000;
 }
 header .main-menu .wrap .small-menu .menu-item:hover .popup-form .popup-items a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -629,6 +830,7 @@ header .main-menu .wrap .small-menu .menu-item a:hover {
   color: #cc0000;
 }
 header .main-menu .wrap .small-menu .menu-item a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -740,6 +942,7 @@ header .mobile-menu-bottom {
   color: #ffffff;
 }
 .content .automatic-block-list .row .col-1-2:hover .popup-form.red .popup-items .popup-list .item-popup a:focus {
+  outline: none;
   background: linear-gradient(to left, #cccccc, #cccccc 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -790,6 +993,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .content .automatic-block-list .row .col-1-2:hover .popup-form .popup-items a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -904,6 +1108,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .content .automatic-block-list .row .col-1-3:hover .popup-form .popup-items a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -955,17 +1160,21 @@ header .mobile-menu-bottom {
       justify-content: space-between;
   margin: 0 40px;
 }
-.content .slider-block .slider-list .slide .client-row .client-item {
+.content .slider-block .slider-list .slide .client-row .client-item a {
   max-width: 210px;
 }
-.content .slider-block .slider-list .slide .client-row .client-item .image-wrap {
-  border-radius: 5px;
+.content .slider-block .slider-list .slide .client-row .client-item a .image-wrap {
+  border-radius: 15px;
   padding-bottom: 15px;
 }
-.content .slider-block .slider-list .slide .client-row .client-item .text-wrap {
+.content .slider-block .slider-list .slide .client-row .client-item a .image-wrap img {
+  border-radius: 15px;
+  border: 3px solid transparent;
+}
+.content .slider-block .slider-list .slide .client-row .client-item a .text-wrap {
   text-align: center;
 }
-.content .slider-block .slider-list .slide .client-row .client-item .text-wrap .wrap .client-name {
+.content .slider-block .slider-list .slide .client-row .client-item a .text-wrap .wrap .client-name {
   font-size: 16px;
   font-weight: bold;
   background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
@@ -975,7 +1184,7 @@ header .mobile-menu-bottom {
   background-repeat: repeat-x;
   color: #006699;
 }
-.content .slider-block .slider-list .slide .client-row .client-item .text-wrap .wrap .client-name:hover {
+.content .slider-block .slider-list .slide .client-row .client-item a .text-wrap .wrap .client-name:hover {
   cursor: pointer;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -984,7 +1193,8 @@ header .mobile-menu-bottom {
   background-repeat: repeat-x;
   color: #cc0000;
 }
-.content .slider-block .slider-list .slide .client-row .client-item .text-wrap .wrap .client-name:focus {
+.content .slider-block .slider-list .slide .client-row .client-item a .text-wrap .wrap .client-name:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -992,14 +1202,46 @@ header .mobile-menu-bottom {
   background-repeat: repeat-x;
   color: #cc0000;
 }
-.content .slider-block .slider-list .slide .client-row .client-item .text-wrap .about-client {
+.content .slider-block .slider-list .slide .client-row .client-item a .text-wrap .about-client {
   color: #333333;
   font-size: 14px;
   line-height: 1.5em;
 }
-.content .slider-block .slider-list .slide .client-row .client-item .text-wrap .city {
+.content .slider-block .slider-list .slide .client-row .client-item a .text-wrap .city {
   font-size: 14px;
   color: #999999;
+}
+.content .slider-block .slider-list .slide .client-row .client-item a:hover .image-wrap img {
+  border: 3px solid #cc0000;
+}
+.content .slider-block .slider-list .slide .client-row .client-item a:hover .text-wrap {
+  text-align: center;
+}
+.content .slider-block .slider-list .slide .client-row .client-item a:hover .text-wrap .wrap .client-name {
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.content .slider-block .slider-list .slide .client-row .client-item a:hover .text-wrap .wrap .client-name:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.content .slider-block .slider-list .slide .client-row .client-item a:hover .text-wrap .wrap .client-name:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
 }
 .content .free-project {
   background: #ffcc66;
@@ -1179,6 +1421,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .catalog .category-block .category-item a .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1210,6 +1453,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .catalog .category-block .category-item a:hover .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1283,6 +1527,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .catalog.video .category-block .category-item a .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1314,6 +1559,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .catalog.video .category-block .category-item a:hover .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1370,6 +1616,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .category .product-list .product-item a .text-wrap .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1414,6 +1661,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .category .product-list .product-item:hover .text-wrap .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1446,6 +1694,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .bread-crumb .crumb-item a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1530,6 +1779,7 @@ header .mobile-menu-bottom {
   padding-bottom: 0;
 }
 .product-grid .col-1-2 .automatic-block .automatic-list .item-link .link {
+  line-height: 1.5em;
   background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
   background-position: 0 100%;
@@ -1547,6 +1797,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .product-grid .col-1-2 .automatic-block .automatic-list .item-link .link:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1581,7 +1832,7 @@ header .mobile-menu-bottom {
   position: relative;
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:first-child {
-  min-width: 155px;
+  min-width: 195px;
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:last-child {
   margin-top: 5px;
@@ -1654,6 +1905,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .technical-parameters .title-block .open-close-button a:focus {
+  outline: none;
   background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1752,6 +2004,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .product-related .products-list .product-item a .text-wrap .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1798,6 +2051,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .product-related .products-list .product-item a:hover .text-wrap .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1881,6 +2135,7 @@ header .mobile-menu-bottom {
   color: #333333;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.active a.link:focus {
+  outline: none;
   background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1907,6 +2162,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item a.link:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -1930,7 +2186,8 @@ header .mobile-menu-bottom {
   padding: 20px 60px 20px 20px;
   position: absolute;
   top: -30px;
-  left: -340px;
+  left: -415px;
+  width: 330px;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup:after {
   content: "";
@@ -1964,6 +2221,7 @@ header .mobile-menu-bottom {
   color: #333333;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup .left-popup .popup-menu .popup-item .link:focus {
+  outline: none;
   background: linear-gradient(to left, #d6d6d6, #d6d6d6 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2045,6 +2303,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .second-content .col-1-2:last-child .advantages-block .block-item .text-wrap p a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2118,6 +2377,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .equipment-block .block-title .products-list .product-item a .text-wrap .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2164,6 +2424,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .equipment-block .block-title .products-list .product-item a:hover .text-wrap .wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2205,7 +2466,7 @@ header .mobile-menu-bottom {
 .cost-block .cost .sale {
   font-size: 16px;
   left: 25px;
-  top: 10px;
+  top: -15px;
   color: #990000;
   text-decoration: line-through;
   position: absolute;
@@ -2372,6 +2633,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .second-content .col-1-2:last-child .advantages-block .block-item .text-wrap p a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2430,6 +2692,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .tarifs .tarif-block .tarif-item ul.tarifs .item a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2445,6 +2708,28 @@ header .mobile-menu-bottom {
 }
 .tarif .main-content-block .col-1-2:first-child {
   max-width: 700px;
+}
+.inf .main-content-block {
+  padding-bottom: 100px;
+}
+.inf .main-content-block .col-1-2:first-child {
+  max-width: 700px;
+}
+.inf .main-content-block .col-1-2:last-child .right-menu-block .right-menu {
+  max-width: 260px;
+}
+.inf .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item {
+  display: block;
+}
+.inf .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.active {
+  background: none;
+  padding: 0;
+}
+.inf .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.active .orange-wrap {
+  background: #fed054;
+  border-radius: 15px;
+  display: inline-block;
+  padding: 1px 10px;
 }
 .clients .block-title {
   padding-top: 0;
@@ -2482,6 +2767,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .shop-type .type-menu .item .link:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2514,6 +2800,7 @@ header .mobile-menu-bottom {
   color: #333333;
 }
 .shop-type .type-menu .item.active .link:focus {
+  outline: none;
   background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2590,6 +2877,7 @@ header .mobile-menu-bottom {
   color: #fed054;
 }
 .clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item a:focus {
+  outline: none;
   background: linear-gradient(to left, #fede87, #fede87 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2626,6 +2914,7 @@ header .mobile-menu-bottom {
   color: #333333;
 }
 .clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active a:focus {
+  outline: none;
   background: linear-gradient(to left, transparent, transparent 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2636,6 +2925,12 @@ header .mobile-menu-bottom {
 .clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img {
   border: 3px solid transparent;
   border-radius: 15px;
+}
+.clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img.for-mobile {
+  display: none;
+}
+.clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img.medium {
+  display: none;
 }
 .clients .clients-block .clients-row .col-1-3 .client-link .about-wrap {
   margin-top: 10px;
@@ -2660,6 +2955,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .clients .clients-block .clients-row .col-1-3 .client-link .about-wrap .name-wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2699,6 +2995,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .clients .clients-block .clients-row .col-1-3 .client-link:hover .about-wrap .name-wrap span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2752,6 +3049,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .main-content-grid .other-places .places-list .item a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2794,6 +3092,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .main-content-grid .recommend-letter a p span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2819,6 +3118,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .main-content-grid .recommend-letter a:hover p span:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
@@ -2828,6 +3128,121 @@ header .mobile-menu-bottom {
 }
 .block-separator {
   padding: 50px 100px 10px 100px;
+}
+.hide {
+  display: none;
+}
+.white-popup {
+  border: 3px solid #003366;
+  border-radius: 15px;
+}
+.white-popup#thanks {
+  padding: 70px;
+}
+.white-popup#thanks .popup-title {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 1.1;
+  color: #333333;
+  margin-bottom: 65px;
+  font-weight: normal;
+}
+.white-popup#thanks .sub-title-text {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  color: #666666;
+}
+.white-popup .popup-title {
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  color: #333333;
+  font-weight: normal;
+}
+.white-popup .rows-block {
+  padding-top: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+.white-popup .rows-block .row {
+  margin-bottom: 20px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+.white-popup .rows-block .row.button-row .col-1-2 .status-bar {
+  opacity: 0;
+  font-size: 14px;
+  font-style: italic;
+  color: #cc0000;
+  max-width: 120px;
+  padding-top: 5px;
+}
+.white-popup .rows-block .row.button-row .col-1-2 .status-bar.show {
+  opacity: 1;
+}
+.white-popup .rows-block .row.button-row .col-1-2 .row-name {
+  text-align: right;
+}
+.white-popup .rows-block .row.button-row .col-1-2 .row-name .send-form {
+  background: #0078bf;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+.white-popup .rows-block .row.button-row .col-1-2 .row-name .send-form.load {
+  background: url(../img/loader.gif) center center no-repeat, #0078bf;
+  background-size: 38px 38px;
+  color: transparent;
+  width: 136px;
+  height: 40px;
+  padding: 0;
+}
+.white-popup .rows-block .row .col-1-2 {
+  -ms-flex: 1;
+      flex: 1;
+}
+.white-popup .rows-block .row .col-1-2 .row-name {
+  padding-bottom: 5px;
+  display: block;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333333;
+}
+.white-popup .rows-block .row .col-1-2 .row-name .gray {
+  color: #999999;
+  font-weight: normal;
+}
+.white-popup .rows-block .row .col-1-2 textarea.popup-input {
+  min-height: 150px;
+}
+.white-popup .rows-block .row .col-1-2 .popup-input {
+  border: 1px solid #999999;
+  box-sizing: border-box;
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666666;
+  resize: none;
+  width: 100%;
+}
+.white-popup .rows-block .row .col-1-2 .popup-input.error {
+  outline: none;
+  border: 1px solid #cc0000;
+  box-shadow: 0 0 25px 0 rgba(204, 0, 0, 0.5);
+}
+.white-popup .rows-block .row .col-1-2 .popup-input:hover,
+.white-popup .rows-block .row .col-1-2 .popup-input:focus {
+  outline: none;
+  border: 1px solid #0066cc;
+  box-shadow: 0 0 25px 0 rgba(0, 102, 204, 0.5);
 }
 .footer-menu {
   background: #006699;
@@ -2858,12 +3273,40 @@ header .mobile-menu-bottom {
   color: #ddba71;
 }
 .footer-menu .menu-list .menu-item .menu-link:focus {
+  outline: none;
   background: linear-gradient(to left, #4d858a, #4d858a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
   color: #ddba71;
+}
+.footer-menu .menu-list .menu-item.active .menu-link {
+  font-weight: bold;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #fed054;
+}
+.footer-menu .menu-list .menu-item.active .menu-link:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #fed054;
+}
+.footer-menu .menu-list .menu-item.active .menu-link:focus {
+  outline: none;
+  background: linear-gradient(to left, transparent, transparent 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #fed054;
 }
 .advantages {
   background: #233345;
@@ -2922,6 +3365,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .bottom-row .right .gray-text a:focus {
+  outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;

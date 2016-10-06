@@ -184,3 +184,35 @@
     }
   }
 }
+
+.inf{
+  .main-content-block{
+    padding-bottom: 100px;
+    .col-1-2{
+      &:first-child{
+        max-width: 700px;
+      }
+      &:last-child{
+        .right-menu-block{
+          .right-menu{
+            max-width: 260px;
+            .menu-item{
+              &.active {
+                background: none;
+                padding: 0;
+                .orange-wrap{
+                  background: @yellow;
+                  border-radius: 15px;
+                  display: inline-block;
+                  padding: 1px 10px;
+                }
+              }
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

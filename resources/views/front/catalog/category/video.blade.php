@@ -80,7 +80,12 @@
         <div class="category-block video">
             @foreach($category_1 as $item)
                 <div class="category-item">
-                    <a href="/catalog/{{$item->slug_field}}">
+                    @if($seo->category_name_field == 'Стеллажи и витрины')
+                        <a href="/showcase/{{$item->slug_field}}">
+                    @else
+                        <a href="/video/{{$item->slug_field}}">
+                    @endif
+
                         <div class="image-wrap">
                             <img src="/images/{{$item->card_background_image->icon_link}}" alt="{{$item->card_background_image->alt}}" class="static">
                             <img src="/images/{{$item->card_hover_image->primary_link}}" alt="{{$item->card_hover_image->alt}}" class="hover">

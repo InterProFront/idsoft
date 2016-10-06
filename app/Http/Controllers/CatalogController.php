@@ -13,7 +13,7 @@ class CatalogController extends Controller {
 		$this->course = $this->queryAgent->getBlock('clients_filter',[],[]);
 		$static = $this->queryAgent->getBlock('static_site',[],[]);
 		$menu 	= $this->queryAgent->getBlock('main_menu',[],[]);
-		$menu_link = ['/catalog','/automation','/soft','/showcase','/accounting','/video'];
+		$menu_link = ['/catalog','/automatic','/soft','/showcase','/accounting','/video'];
 
 		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
 
@@ -152,14 +152,64 @@ class CatalogController extends Controller {
 		$product->setField('product_cost',$cost);
 		$product->setField('product_sale',$sale);
 
+		$parent 	  = $this->queryAgent->getGroupItem('catalog_block','category_2',$product->owner_id_field);
+		$grand_parent = $this->queryAgent->getGroupItem('catalog_block','category_1',$parent->owner_id_field);
+		switch($grand_parent->id_field){
+			case 51:
+				$grand_parent->setField('slug','catalog');
+				break;
+			case 52:
+				$grand_parent->setField('slug','showcase');
+				break;
+			case 53:
+				$grand_parent->setField('slug','video');
+				break;
+			case 54:
+				$grand_parent->setField('slug','soft');
+				break;
+		}
+
 		$auto = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
 		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		$category = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],[]);
+		foreach($test as $item){
+			$new_price = $item->product_cost_field * $this->course->course_field;
+			$new_sale = $item->product_sale_field * $this->course->course_field;
+			$item->setField('product_cost',$new_price);
+			$item->setField('product_sale',$new_sale);
+		}
+		// Генерация ссылки на товар исходя из принадлежности к группе
+		foreach($test as $item){
+			foreach($category as $c_item){
+				if($item->owner_id_field == $c_item->id_field){
+					switch($c_item->owner_id_field){
+						case 51:
+							$item->setField('title','/catalog/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+						case 52:
+							$item->setField('title','/showcase/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+
+						case 53:
+							$item->setField('title','/video/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+						case 54:
+							$item->setField('title','/soft/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+					}
+				}
+			}
+		}
+
+
 		$soft = $this->queryAgent->getGroupFlat('catalog_block','product',[],['product'=>['owner_id' => 55]]);
 		return view('front.catalog.product.product',[
 			'product' => $product,
 			'auto' 	  => $auto,
 			'soft'	  => $soft,
-			'prod' => $test
+			'prod' 	  => $test,
+			'parent'  => $parent,
+			'grand'	  => $grand_parent
 		]);
 	}
 	//==================================================================
@@ -169,19 +219,44 @@ class CatalogController extends Controller {
 	//==================================================================
 	public function getAuto($slug){
 
-		$auto = $this->queryAgent->getGroupItemBySlug('auto_block','auto',$slug);
-		$cost = $auto->auto_cost_field * $this->course->course_field;
-		$sale = $auto->auto_sale_field * $this->course->course_field;
-		$auto->setField('auto_cost', $cost);
-		$auto->setField('auto_sale', $sale);
-		$all   = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
-		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+        $auto = $this->queryAgent->getGroupItemBySlug('auto_block','auto',$slug);
+        $cost = $auto->auto_cost_field * $this->course->course_field;
+        $sale = $auto->auto_sale_field * $this->course->course_field;
+        $auto->setField('auto_cost', $cost);
+        $auto->setField('auto_sale', $sale);
+        $all   = $this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
+        $test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+        $category = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],[]);
+        foreach($test as $item){
+            $new_price = $item->product_cost_field * $this->course->course_field;
+            $new_sale = $item->product_sale_field * $this->course->course_field;
+            $item->setField('product_cost',$new_price);
+            $item->setField('product_sale',$new_sale);
+        }
+
+		// Генерация ссылки на товар исходя из принадлежности к группе
 		foreach($test as $item){
-			$new_price = $item->product_cost_field * $this->course->course_field;
-			$new_sale = $item->product_sale_field * $this->course->course_field;
-			$item->setField('product_cost',$new_price);
-			$item->setField('product_sale',$new_sale);
+			foreach($category as $c_item){
+				if($item->owner_id_field == $c_item->id_field){
+					switch($c_item->owner_id_field){
+						case 51:
+							$item->setField('title','/catalog/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+						case 52:
+                            $item->setField('title','/showcase/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+
+						case 53:
+                            $item->setField('title','/video/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+						case 54:
+                            $item->setField('title','/soft/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+					}
+				}
+			}
 		}
+
 		return view('front.catalog.automatic.automatic',[
 			'auto' => $auto,
 			'all'  => $all,

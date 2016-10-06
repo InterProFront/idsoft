@@ -26,9 +26,7 @@
                     <span class="menu-name">Страницы<i class="triangle">▲</i> </span>
                     <ul class="sub-menu">
                         <li class="menu-level-2"><a href="/adm/edit/all">Главная страница</a></li>
-                        <li class="menu-level-2"><a href="/adm/edit/about">О компании</a></li>
-                        <li class="menu-level-2"><a href="/adm/edit/drivers">Драйвера и руководства</a></li>
-                        <li class="menu-level-2"><a href="/adm/edit/support">Рекомендации клиентов</a></li>
+                        <li class="menu-level-2"><a href="/adm/edit/informatic">Информационные страницы</a></li>
                         <li class="menu-level-2"><a href="/adm/edit/clients">Клиенты</a></li>
                     </ul>
                 </li>

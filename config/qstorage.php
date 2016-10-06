@@ -17,10 +17,20 @@ return [
             ]
         ]
     ],
+
+    'information_page' => [
+        'groups' => [
+            'inf_page' => [
+                'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'page_name'],
+                'textfields' => ['content'],
+                'images'     => ['background'],
+            ]
+        ]
+    ],
     'main_menu' => [
         'groups' => [
             'menu' => [
-                'stringfields' => ['menu_text','small_text']
+                'stringfields' => ['menu_text', 'small_text']
             ]
         ]
 
@@ -29,14 +39,14 @@ return [
         'stringfields' => ['seo_keywords', 'seo_description'],
         'groups' => [
             'category_1' => [
-                'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name','category_description'],
-                'images'       => ['card_background']
+                'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name', 'category_description'],
+                'images' => ['card_background']
             ],
             'category_2' => [
                 'owner' => 'category_1',
-                'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name','category_description'],
+                'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name', 'category_description'],
                 'bool' => ['sale', 'new', 'individual'],
-                'images'       => ['card_background','card_hover']
+                'images' => ['card_background', 'card_hover']
             ],
             'product' => [
                 'owner' => 'category_2',
@@ -45,7 +55,8 @@ return [
                     'seo_keywords',
                     'seo_description',
                     'page_title',
-                    'small_description'
+                    'small_description',
+                    'parent_link'
                 ],
                 'numbs' => ['product_sale', 'product_cost'],
                 'textfields' => ['product_description'],
@@ -74,31 +85,31 @@ return [
         ]
     ],
     'auto_block' => [
-        'stringfields' =>['auto_title','auto_description','iiko_title','iiko_description'],
-        'images' =>['auto_background','iiko_background'],
+        'stringfields' => ['auto_title', 'auto_description', 'iiko_title', 'iiko_description'],
+        'images' => ['auto_background', 'iiko_background'],
         'groups' => [
             'auto' => [
                 'stringfields' => ['page_name', 'page_title', 'seo_description', 'seo_keywords'],
-                'images' => ['background','card_background'],
-                'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty','vozm','rassr'],
-                'numbs' => ['auto_cost', 'auto_sale','iiko'],
-                'bools' =>['is_iiko']
+                'images' => ['background', 'card_background'],
+                'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty', 'vozm', 'rassr'],
+                'numbs' => ['auto_cost', 'auto_sale', 'iiko'],
+                'bools' => ['is_iiko']
             ],
-            'auto_adv' =>[
-                'owner'  => 'auto',
+            'auto_adv' => [
+                'owner' => 'auto',
                 'images' => ['card'],
                 'textfields' => ['card_text']
             ],
-            'auto_related' =>[
+            'auto_related' => [
                 'owner' => 'auto',
-                'stringfields' =>['about_item'],
-                'numbs'  => ['product']
+                'stringfields' => ['about_item'],
+                'numbs' => ['product']
             ]
         ]
     ],
     'accounting_block' => [
-        'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description','card_title','card_description'],
-        'images' => ['background', 'work_process','card_background'],
+        'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'card_title', 'card_description'],
+        'images' => ['background', 'work_process', 'card_background'],
         'textfields' => ['content', 'advantages'],
         'groups' => [
             'acc_adv' => [
@@ -106,16 +117,16 @@ return [
                 'textfields' => ['card_text']
             ],
             'employs' => [
-                'images'       => ['photo'],
-                'stringfields' => ['emp_name','emp_prof'],
-                'textfields'   => ['emp_about']
+                'images' => ['photo'],
+                'stringfields' => ['emp_name', 'emp_prof'],
+                'textfields' => ['emp_about']
             ],
             'tarif_category' => [
                 'stringfields' => ['tarif_name']
             ],
             'tarif' => [
                 'owner' => 'tarif_category',
-                'stringfields' => ['tarif_name','page_name', 'page_title', 'seo_keywords', 'seo_description'],
+                'stringfields' => ['tarif_name', 'page_name', 'page_title', 'seo_keywords', 'seo_description'],
                 'images' => ['background'],
                 'textfields' => ['content'],
                 'numbs' => ['tarif_cost']
@@ -129,6 +140,9 @@ return [
                 'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'letter_link', 'small_descr'],
                 'textfields' => ['content'],
                 'numbs' => ['city_name', 'institution_type']
+            ],
+            'client_related' => [
+
             ]
         ]
     ],
@@ -136,7 +150,7 @@ return [
         'stringfields' => ['course'],
         'groups' => [
             'institution' => [
-                'stringfields' => ['page_name', 'page_title','seo_keywords', 'seo_description'],
+                'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description'],
             ],
             'city' => [
                 'stringfields' => ['city_name']

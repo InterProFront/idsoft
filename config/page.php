@@ -15,5 +15,6 @@
         'tarif_category' =>[],
         'tarif' => [],
         'client' => [],
+        'inf_page' => [],
 
       ];

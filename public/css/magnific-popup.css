@@ -7,7 +7,7 @@
   z-index: 1042;
   overflow: hidden;
   position: fixed !important;
-  background: rgba(0,102,0,0.85);
+  background: rgba(0,120,191,0.85);
 }
 
 .mfp-wrap {
@@ -103,9 +103,10 @@
 .white-popup {
   position: relative;
   background: #FFF;
-  padding: 40px 40px 40px 40px;
+  padding: 20px 40px 20px;
   width: auto;
-  max-width: 500px;
+  max-width: 400px;
+  box-sizing: border-box;
   border-radius: 20px;
   margin: 20px auto;
 }
@@ -135,12 +136,12 @@ button::-moz-focus-inner {
   border: 0; }
 
 .mfp-close {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 5px;
+  top: 5px;
   text-decoration: none;
   text-align: center;
   opacity: 0.65;
@@ -154,7 +155,8 @@ button::-moz-focus-inner {
 .mfp-close:focus {
   opacity: 1; }
 .mfp-close:active {
-  top: 1px; }
+  top: 5px;
+}
 
 .mfp-close-btn-in .mfp-close {
   color: transparent;
@@ -358,7 +360,7 @@ img.mfp-img {
     padding-left: 6px;
     padding-right: 6px; } }
 
-.mfp-close-btn-in .mfp-close:hover {/* background: url(../images/close.png) center center no-repeat; */}
+.mfp-close-btn-in .mfp-close:hover {background: url(../img/close_h.png) center center no-repeat;}
 .white-popup.consult {
   max-width: 900px;
 }
@@ -428,16 +430,3 @@ button.mfp-arrow.mfp-arrow-right:hover {
 
 
 /**/
-.send-form{
-  background: #0000C2;
-  color: #ffffff;
-  font-size: 18px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-}
-.send-form.load{
-  background: url(../img/ring.svg) center center no-repeat, #0000C2;
-  background-size: contain;
-  color: transparent;
-}

@@ -36,5 +36,46 @@ $(document).ready(function () {
     });
 
 
-    $
+    //===============================================================
+    //======= Обработчики для подсветки текущего пунтка меню ========
+    //===============================================================
+    var items = document.location.pathname;
+    var category = items.split('/')[1];
+    $('.all-site-menu').each(function(){
+       if($(this).attr('href') == '/'+category){
+           console.log($(this).attr('href')+'  '+category);
+           $(this).closest('li').addClass('active');
+       }
+    });
+    $('.menu-item .link').each(function(){
+        if($(this).attr('href') == items  ){
+            $(this).closest('.menu-item').addClass('active');
+        }
+    });
+
+    $('.item-popup a').each(function(){
+        if($(this).attr('href') == items  ){
+            $(this).closest('.item-popup').addClass('active');
+        }
+    });
+    $('.type-menu .client-filter').each(function(){
+        $href = $(this).attr('href').split('/');
+        if( $href[3] == items.split('/')[3]){
+            $(this).closest('li').addClass('active');
+        }
+    });
+    $('.city-menu .client-filter').each(function(){
+        $href = $(this).attr('href').split('/');
+        if( $href[2] == items.split('/')[2] ){
+            $(this).closest('li').addClass('active');
+        }
+    });
+
+    $('#ask-me').magnificPopup({
+        type: 'inline'
+    });
+    $('#buy').magnificPopup({
+        type: 'inline'
+    });
+
 });

@@ -102,11 +102,11 @@
                     </div>
                     <div class="col-1-3">
                         <a href="/acconting">
-                        <div class="wrap">
-                            <p class="card-title">{{$buh->card_title_field}}</p>
-                            <p class="card-text">{{$buh->card_description_field}}</p>
-                        </div>
-                        <img src="/images/{{$buh->card_background_image->secondary_link}}" alt="">
+                            <div class="wrap">
+                                <p class="card-title">{{$buh->card_title_field}}</p>
+                                <p class="card-text">{{$buh->card_description_field}}</p>
+                            </div>
+                            <img src="/images/{{$buh->card_background_image->secondary_link}}" alt="">
                         </a>
                     </div>
                     <div class="col-1-3">
@@ -136,32 +136,51 @@
 
             <div class="slider-block">
                 <ul class="slider-list">
-                    @for($i =0; $i<3; $i++)
-                        <li class="slide">
-                            <div class="client-row">
-                                @for($j =0; $j<4; $j++)
-                                    <div class="client-item">
-                                        <a href="#">
-                                            <div class="image-wrap">
-                                                <img src="/img/client-1.JPG" alt="">
-                                            </div>
-                                            <div class="text-wrap">
-                                                <p class="wrap"><a class="client-name" href="#">La Tartine</a></p>
-                                                <p class="about-client">Французская выпечка, казахстанская система учета</p>
-                                                <p class="city">Алматы</p>
-                                            </div>
-                                        </a>
+                    <?php
+                    $i = 0;
+                    $j = 0;
+                    $max = floor( $client->count() / 4 )*4;
+                    ?>
+                    {{$max}}
+                    @foreach($client as $item)
+                        <?php $j++;?>
+                        @if($j <= $max)
+                            @if($i == 0)
+                                <li class="slide">
+                                    <div class="client-row">
+                                        @endif
+                                        <div class="client-item">
+                                            <a href="/clients/{{$item->slug_field}}">
+                                                <div class="image-wrap">
+                                                    <img src="/images/{{$item->background_image->small_crop->link}}"
+                                                         alt="{{$item->background_image->alt}}">
+                                                </div>
+                                                <div class="text-wrap">
+                                                    <p class="wrap"><span class="client-name">{{$item->page_name_field}}</span></p>
+                                                    <p class="about-client">{{$item->small_descr_field}}</p>
+                                                    @foreach($filter->city_group as $item_c)
+                                                        @if($item_c->id_field == $item->city_name_field)
+                                                            <p class="city">{{$item_c->city_name_field}}</p>
+                                                        @endif
+                                                    @endforeach
+                                                </div>
+                                            </a>
+                                        </div>
+                                        @if($i == 3)
                                     </div>
-                                @endfor
-                            </div>
-                        </li>
-                    @endfor
+                                </li>
+                                <?php $i = -1?>
+                            @endif
+                            <?php $i++ ?>
+                        @endif
+                    @endforeach
                 </ul>
             </div>
         </div>
         <div class="free-project dashed-bottom-yellow">
             <h2 class="sub-title">Бесплатный расчет проекта</h2>
-            <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитывает заказ.</p>
+            <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитывает
+                заказ.</p>
             <div class="calculate">
                 <input type="text" class="input phone" data-mask="+7(000)000-00-00" placeholder="Номер телефона">
                 <button class="calculated-button">Рассчитать</button>

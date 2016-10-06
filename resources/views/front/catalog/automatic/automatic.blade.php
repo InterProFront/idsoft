@@ -74,9 +74,10 @@
                 <div class="products-list">
                     @foreach($prod as $item_prod)
                         @foreach($auto->auto_related_group as $rel)
+
                             @if($item_prod->id_field == $rel->product_field)
                                 <div class="product-item">
-                                    <a href="#">
+                                    <a href="{{$item_prod->title_field}}">
                                         <div class="img-wrap">
                                             <img src="/images/{{$item_prod->product_base_photo_image->icon_link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
                                         </div>
@@ -112,7 +113,7 @@
             {!! $auto->rassr_field !!}
         </div>
         <div class="button-wrap">
-            <div class="button buy-it">Оформить заказ</div>
+            <div class="button buy-it" id="buy" href="#order">Оформить заказ</div>
         </div>
 
     </section>

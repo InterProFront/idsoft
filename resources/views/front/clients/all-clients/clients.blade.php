@@ -17,14 +17,14 @@
                 @foreach($filter->institution_group as $item)
                     <?php
                     $i++;
-                    $count = $counts[$i]->count();
+                    $count = $counts[$i];
                     ?>
                     @if($count % 10 == 1)
-                        <li class="item"><a href="/clients/{{$item->slug_field}}"
-                                            class="link">{{$count}} {{$item->page_name_field}}</a></li>
+                        <li class="item"><a href="/clients/{{$city}}/{{$item->id_field}}"
+                                            class="link client-filter">{{$count}} {{$item->page_name_field}}</a></li>
                     @else
-                        <li class="item"><a href="/clients/{{$item->slug_field}}"
-                                            class="link">{{$count}} {{$item->page_title_field}}</a></li>
+                        <li class="item"><a href="/clients/{{$city}}/{{$item->id_field}}"
+                                            class="link client-filter">{{$count}} {{$item->page_title_field}}</a></li>
                     @endif
                 @endforeach
             </ul>
@@ -54,13 +54,22 @@
                                         <img src="/images/{{$item->background_image->small_crop->link}}"
                                              alt="{{$item->background_image->alt}}">
                                     @endif
+                                        <img src="/images/{{$item->background_image->medium_crop->link}}"
+                                             alt="{{$item->background_image->alt}}" class="for-mobile">
+
+                                        <img src="/images/{{$item->background_image->big_crop->link}}"
+                                             alt="{{$item->background_image->alt}}" class="medium">
                                 </div>
                                 <div class="about-wrap">
                                     <p class="name-wrap">
                                         <span>{{$item->page_name_field}}</span>
                                     </p>
                                     <p class="about">{{$item->small_descr_field}}</p>
-                                    <p class="city">Алматы</p>
+                                    @foreach($filter->city_group as $item_c)
+                                        @if($item_c->id_field == $item->city_name_field)
+                                            <p class="city">{{$item_c->city_name_field}}</p>
+                                        @endif
+                                    @endforeach
                                 </div>
                             </a>
                         </div>
@@ -71,12 +80,17 @@
                     <div class="city-change-menu">
                         <p class="menu-title">По городам</p>
                         <ul class="city-menu">
-                            <li class="item"><a href="#">Алматы</a>45</li>
-                            <li class="item"><a href="#">Астана</a>22</li>
-                            <li class="item"><a href="#">Караганда</a>12</li>
-                            <li class="item"><a href="#">Атырау</a>5</li>
-                            <li class="item"><a href="#">Актау</a>7</li>
-                            <li class="item"><a href="#" class="no_bold">Все города</a></li>
+                            <?php $i = 0 ?>
+                            @foreach($filter->city_group as $item_c)
+                                @foreach($all_c as $item)
+                                    @if($item->city_name_field == $item_c->id_field)
+                                        <?php $i++ ?>
+                                    @endif
+                                @endforeach
+                                <li class="item"><a class="client-filter" href="/clients/{{$item_c->id_field}}/{{$inst}}">{{$item_c->city_name_field}}</a>{{$i}}</li>
+                                <?php $i = 0?>
+                            @endforeach
+                            <li class="item"><a href="/clients/all/{{$inst}}" class="no_bold">Все города</a></li>
                         </ul>
                     </div>
                 </div>
@@ -107,6 +121,10 @@
                                     <img src="/images/{{$item->background_image->small_crop->link}}"
                                          alt="{{$item->background_image->alt}}">
                                 @endif
+                                    <img src="/images/{{$item->background_image->medium_crop->link}}"
+                                         alt="{{$item->background_image->alt}}" class="for-mobile">
+                                    <img src="/images/{{$item->background_image->big_crop->link}}"
+                                         alt="{{$item->background_image->alt}}" class="medium">
                             </div>
                             <div class="about-wrap">
                                 <p class="name-wrap">

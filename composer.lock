@@ -461,12 +461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/intpro/quickstart.git",
-                "reference": "d14c0337e4134e0f626280a10d458f14250da62f"
+                "reference": "a5c52706a41c8cdea382cf21acf38ab970a10883"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/intpro/quickstart/zipball/d14c0337e4134e0f626280a10d458f14250da62f",
-                "reference": "d14c0337e4134e0f626280a10d458f14250da62f",
+                "url": "https://api.github.com/repos/intpro/quickstart/zipball/a5c52706a41c8cdea382cf21acf38ab970a10883",
+                "reference": "a5c52706a41c8cdea382cf21acf38ab970a10883",
                 "shasum": ""
             },
             "type": "library",
@@ -496,7 +496,7 @@
             "keywords": [
                 "qstorage"
             ],
-            "time": "2016-09-28 08:30:53"
+            "time": "2016-10-05 06:38:32"
         },
         {
             "name": "intervention/image",

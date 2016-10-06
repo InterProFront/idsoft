@@ -28,8 +28,9 @@ Route::get('/accounting', 'CatalogController@getAccounting');
 Route::get('/accounting/{slug}', 'CatalogController@getTarif');
 
 
-Route::get('/clients', 'PageController@getClients');
-Route::get('/clients/{slug}', 'PageController@getClientItem');
+Route::get('/clients', 								'PageController@getClients');
+Route::get('/clients/{slug}', 						'PageController@getClientItem');
+Route::get('/clients/{city}/{inst}',  				'PageController@getClientsFilter');
 
 
 
@@ -51,6 +52,7 @@ Route::get('/soft',					'CatalogController@getSoft');
 Route::get('/catalog/{category}/{product}',		'CatalogController@getProduct');
 Route::get('/video/{category}/{product}',		'CatalogController@getProduct');
 Route::get('/showcase/{category}/{product}', 	'CatalogController@getProduct');
+Route::get('/soft/{category}/{product}', 	'CatalogController@getProduct');
 
 
 
@@ -59,6 +61,9 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 
 	Route::get('/edit/parents',     	'BackController@editParentGroup');
 
+
+	Route::get('/edit/informatic',      'BackController@getInformatic');
+	Route::get('/edit/informatic/{id}', 'BackController@getInformaticItem');
 
 
 
@@ -107,7 +112,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 	Route::get('/edit/inst', 		'BackController@editInstitution');
 	Route::get('/edit/course', 		'BackController@editCourse');
 });
-
+Route::get('/inf/{slug}', 					'PageController@getInfPage');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

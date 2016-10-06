@@ -2,11 +2,11 @@
     <footer>
         <nav class="footer-menu">
             <ul class="menu-list">
-                <li class="menu-item"><a href="#" class="menu-link">О компании</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Поддержка</a></li>
-                <li class="menu-item"><a href="/clients" class="menu-link">Наши клиенты</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Драйверы и документация</a></li>
-                <li class="menu-item"><a href="#" class="menu-link">Стать партнером</a></li>
+                <li class="menu-item"><a href="/inf/about" class="menu-link all-site-menu">О компании</a></li>
+                <li class="menu-item"><a href="/inf/support" class="menu-link all-site-menu">Поддержка</a></li>
+                <li class="menu-item"><a href="/clients" class="menu-link all-site-menu">Наши клиенты</a></li>
+                <li class="menu-item"><a href="/inf/drivers-and-docs" class="menu-link all-site-menu">Драйверы и документация</a></li>
+                <li class="menu-item"><a href="/inf/partners" class="menu-link all-site-menu">Стать партнером</a></li>
             </ul>
         </nav>
         <div class="advantages">

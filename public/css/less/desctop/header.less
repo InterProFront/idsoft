@@ -75,12 +75,12 @@ header{
           &.active{
             &:hover{
               a{
-                .link(@black-link,@black-border,@black-link,@black-border)
+                .link(@black-link,transparent,@black-link,transparent)
               }
             }
             background: @yellow;
             a{
-              .link(@black-link,@black-border,@black-link,@black-border)
+              .link(@black-link,transparent,@hover-color,@hover-border)
             }
           }
           padding: 5px 10px;
@@ -90,7 +90,7 @@ header{
           }
           &:hover{
             a{
-              .link(@black-link,@black-border,@black-link,@black-border)
+              .link(@black-link,@black-border,@hover-color,@hover-border)
             }
             .hovered-text{
               display: block;
@@ -151,6 +151,9 @@ header{
                 font-weight: bold;
                 color: #333333;
                 padding-bottom: 25px;
+                a {
+                  .link(@black-link, @black-border, @hover-color, @hover-border);
+                }
               }
               .popup-items{
                 .popup-list{
@@ -162,6 +165,12 @@ header{
                     padding-bottom:15px;
                     padding-right: 20px;
                     vertical-align: top;
+                    &.active{
+                      a{
+                        font-weight: bold;
+                        .link(#333333,transparent,#333333,transparent)
+                      }
+                    }
                     &:last-child{
                       padding-bottom: 0;
                     }
@@ -211,12 +220,28 @@ header{
         margin-left: -20px;
         .menu-item{
           position: relative;
+          padding: 5px 15px;
+          border-radius: 15px;
+          &.active{
+
+            &:hover{
+              a{
+                font-weight: bold;
+                .link(@black-link,transparent,@black-link,transparent)
+              }
+            }
+            background: @yellow;
+            a{
+              font-weight: bold;
+              .link(@black-link,transparent,@black-link,transparent)
+            }
+          }
           &:nth-child(2){
             margin: 0 55px;
           }
           &:hover {
             a {
-              .link(@black-link, transparent, @black-link, transparent)
+              .link(@black-link,@black-border,@hover-color,@hover-border);
             }
             .hovered-text {
               display: block;
@@ -236,14 +261,17 @@ header{
               position: absolute;
               padding: 25px 30px 30px 30px;
               min-width: 690px;
-              top: -25px;
-              left: -30px;
+              top: -20px;
+              left: -15px;
               .col-1-2{
                 &:last-child{
                   .popup-title{
                     font-size:16px;
                     color: #666666;
                     font-weight: normal;
+                    a{
+                      .link(@black-link,@black-border,@hover-color,@hover-border);
+                    }
                   }
                   .second-row{
                     .item-popup{
@@ -267,6 +295,9 @@ header{
                 font-weight: normal;
                 color: #333333;
                 padding-bottom: 25px;
+                a{
+                  .link(@black-link,@black-border,@hover-color,@hover-border);
+                }
               }
               .col-1-col{
                 .popup-items {
@@ -290,6 +321,12 @@ header{
                     padding-bottom:15px;
                     padding-right: 20px;
                     vertical-align: top;
+                    &.active{
+                      a{
+                        font-weight: bold;
+                        .link(#333333,transparent,#333333,transparent)
+                      }
+                    }
                     &:last-child{
                       padding-bottom: 0;
                     }

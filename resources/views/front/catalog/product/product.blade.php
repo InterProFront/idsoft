@@ -6,9 +6,9 @@
     {{----}}
     <section class="content product dashed-bottom">
         <div class="bread-crumb">
-            <span class="crumb-item"><a href="/">Каталог оборудования</a></span>
+            <span class="crumb-item"><a href="/{{$grand->slug_field}}">{{$grand->category_name_field}}</a></span>
             <span class="crumb-separate">→</span>
-            <span class="crumb-item"><a href="/">POS-системы</a></span>
+            <span class="crumb-item"><a href="/{{$grand->slug_field}}/{{$parent->slug_field}}">{{$parent->category_name_field}}</a></span>
         </div>
         <h1 class="block-title">{{$product->product_name_field}}</h1>
 
@@ -81,7 +81,7 @@
                     </div>
                     <div class="row-1-2">
                         <div class="col-1-2">
-                            <button class="button buy-it">Заказать</button>
+                            <button class="button buy-it" id="buy" href="#order">Заказать</button>
                         </div>
                         <div class="col-1-2">
                             <p class="text">Возможна рассрочка и аренда оборудования.</p>
@@ -126,7 +126,7 @@
                     @foreach($product->product_related_group as $rel)
                         @if($item_prod->id_field == $rel->related_field)
                             <div class="product-item">
-                                <a href="#">
+                                <a href="{{$item_prod->title_field}}">
                                     <div class="img-wrap">
                                         <img src="/images/{{$item_prod->product_base_photo_image->icon_link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
                                     </div>
