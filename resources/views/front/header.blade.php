@@ -143,7 +143,7 @@
         </div>
         <div class="mobile-menu-bottom">
             <ul class="list">
-                <li class="item"><a href="#ask">Написать письмо</a></li>
+                <li class="item"><a id="ask-me" href="#question">Написать письмо</a></li>
                 <?php $i = 0;?>
                 @foreach($static->phones_group as $item)
                     <?php $i++?>

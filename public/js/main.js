@@ -41,9 +41,12 @@ $(document).ready(function () {
     //===============================================================
     var items = document.location.pathname;
     var category = items.split('/')[1];
+    var category2 = items.split('/')[2];
     $('.all-site-menu').each(function(){
        if($(this).attr('href') == '/'+category){
            console.log($(this).attr('href')+'  '+category);
+           $(this).closest('li').addClass('active');
+       }else if($(this).attr('href') == '/inf/'+category2){
            $(this).closest('li').addClass('active');
        }
     });

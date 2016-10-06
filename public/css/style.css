@@ -102,14 +102,14 @@ a.bx-pager-link.active {
 .text-block h3 {
   color: #333333;
   font-size: 32px;
-  line-height: 1.5em;
+  line-height: 1.2em;
   width: 100%;
   font-weight: normal;
 }
 .text-block h4 {
   font-size: 16px;
   color: #333333;
-  line-height: 1.5em;
+  line-height: 1.2em;
   font-weight: bold;
 }
 header {
@@ -1248,14 +1248,13 @@ header .mobile-menu-bottom {
   padding-bottom: 45px;
 }
 .content .free-project .sub-title {
-  padding-top: 30px;
-  padding-bottom: 10px;
+  padding: 30px 10px 10px 10px;
 }
 .content .free-project .sub-title-text {
   font-size: 16px;
   color: #996600;
   text-align: center;
-  padding-bottom: 15px;
+  padding: 0 10px 15px 10px;
 }
 .content .free-project .calculate {
   display: -ms-flexbox;
@@ -2840,6 +2839,7 @@ header .mobile-menu-bottom {
 .clients .clients-block .clients-row .col-1-3 .city-change-menu {
   background: #25394d;
   padding: 30px 15px 10px;
+  margin: 3px;
   min-width: 210px;
   border-radius: 10px;
   box-sizing: border-box;

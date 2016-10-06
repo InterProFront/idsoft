@@ -416,7 +416,12 @@ button.mfp-arrow.mfp-arrow-right:hover {
 }
 
 
+@media screen and (max-width: 450px){
+  .white-popup#thanks {
+    padding:40px 20px !important;
 
+  }
+}
 .white-popup#thanks {
   padding: 222px 20px;
 }

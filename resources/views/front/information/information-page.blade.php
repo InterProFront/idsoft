@@ -23,7 +23,7 @@
                             @foreach($all as $item)
                                 <li class="menu-item">
                                     <div class="orange-wrap">
-                                    <a href="/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a>
+                                    <a href="/inf/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a>
                                     </div>
                                 </li>
                             @endforeach

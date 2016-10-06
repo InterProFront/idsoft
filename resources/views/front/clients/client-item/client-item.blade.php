@@ -48,22 +48,38 @@
             <div class="block-title">
                 <h2 class="sub-title">Комплектация</h2>
                 <div class="products-list">
-                    @for($i = 0; $i < 5; $i++)
+
                         <div class="product-item">
-                            <a href="#">
+                            <a href="/soft/programmnoe-obespechenie/paloma365">
                                 <div class="img-wrap">
-                                    <img src="/img/123.JPG" alt="">
+                                    <img src="/images/product_product_base_photo_66_icon.PNG" alt="">
                                 </div>
                                 <div class="text-wrap">
-                                    <p>Сенсорный моноблок в качестве станции официанта</p>
+                                    <p>Программное обеспечение</p>
                                     <p class="wrap">
-                                        <span>Дисплей покупателя Senor Tech USB</span>
+                                        <span>Облачное решение автоматизации PALOMA365</span>
                                     </p>
-                                    <p class="cost">27 240 тг <span class="sale"></span></p>
+                                    <p class="cost">1 706 670 тг  <span class="sale">1 741 500 тг</span></p>
                                 </div>
                             </a>
                         </div>
-                    @endfor
+
+
+
+                        <div class="product-item">
+                            <a href="/catalog/pos-system/monoblok-citaq-a1">
+                                <div class="img-wrap">
+                                    <img src="/images/product_product_base_photo_107_icon.jpg" alt="">
+                                </div>
+                                <div class="text-wrap">
+                                    <p>Базовая станция для официантов</p>
+                                    <p class="wrap">
+                                        <span>Клавиатурный моноблок Citaq A1</span>
+                                    </p>
+                                    <p class="cost">348 300 тг  </p>
+                                </div>
+                            </a>
+                        </div>
                 </div>
             </div>
         </div>
