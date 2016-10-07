@@ -116,4 +116,7 @@ $(document).ready(function () {
         $('.parameters-block').slideToggle();
         e.preventDefault();
     });
+    if ($('.bx-pager-link').length <= 1){
+        $('.bx-pager-item').css('display','none');
+    }
 });
