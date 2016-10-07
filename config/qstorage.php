@@ -59,7 +59,7 @@ return [
                     'parent_link'
                 ],
                 'numbs' => ['product_sale', 'product_cost'],
-                'textfields' => ['product_description'],
+                'textfields' => ['product_description','builder','why_apply'],
                 'images' => ['product_base_photo']
             ],
             'product_image' => [

@@ -47,7 +47,7 @@
                         @foreach($soft as $item)
                             @foreach($product->soft_related_group as $soft_item)
                                 @if($item->id_field == $soft_item->soft_field )
-                                    <li class="item-link"><a href="/soft/{{$item->slug_field}}" class="link">{{$item->product_name_field}}</a></li>
+                                    <li class="item-link"><a href="/soft/programmnoe-obespechenie/{{$item->slug_field}}" class="link">{{$item->product_name_field}}</a></li>
                                 @endif
                             @endforeach
                         @endforeach
