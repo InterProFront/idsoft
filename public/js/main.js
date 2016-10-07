@@ -35,7 +35,32 @@ $(document).ready(function () {
         }
     });
 
-
+    $('.calculated-button').on('click',function(){
+       if($('.input.phone').val() != ''){
+           $('.input.phone').val('');
+           $.magnificPopup.open({
+               items: {
+                   src: '#thanks'
+               },
+               type: 'inline'
+           });
+       } else{
+           $('.input.phone').addClass('error');
+       }
+    });
+    $('.give-price').on('click',function(){
+       if($('.input.mail').val() != ''){
+           $('.input.mail').val('');
+           $.magnificPopup.open({
+               items: {
+                   src: '#thanks'
+               },
+               type: 'inline'
+           });
+       } else{
+           $('.input.mail').addClass('error');
+       }
+    });
     //===============================================================
     //======= Обработчики для подсветки текущего пунтка меню ========
     //===============================================================

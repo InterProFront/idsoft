@@ -1271,6 +1271,11 @@ header .mobile-menu-bottom {
   border: 1px solid #cc9900;
   min-width: 240px;
 }
+.content .free-project .calculate .input.error {
+  outline: none;
+  border: 1px solid #cc0000;
+  box-shadow: 0 0 25px 0 rgba(204, 0, 0, 0.5);
+}
 .content .free-project .calculate .input:focus {
   outline: none;
 }
@@ -1357,6 +1362,11 @@ header .mobile-menu-bottom {
   border: none;
   color: #333333;
   box-sizing: border-box;
+}
+.catalog .price-list .row .input.error {
+  outline: none;
+  border: 1px solid #cc0000;
+  box-shadow: 0 0 25px 0 rgba(204, 0, 0, 0.5);
 }
 .catalog .price-list .row .input:focus {
   outline: none;

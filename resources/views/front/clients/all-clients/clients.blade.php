@@ -100,49 +100,55 @@
                 $j = 0;
                 $i = 0;
                 $img_type = 0;
+                $first_two = 0;
             ?>
             <div class="clients-row">
             @foreach($all_c as $item)
                 <?php
                     $i++;
                     $img_type++;
+                        $first_two++;
                 ?>
-                @if($i <= 3)
-                    <div class="col-1-3">
-                        <a href="/clients/{{$item->slug_field}}" class="client-link">
-                            <div class="image-wrap">
-                                @if($img_type == 1)
-                                    <img src="/images/{{$item->background_image->big_crop->link}}"
-                                         alt="{{$item->background_image->alt}}">
-                                @elseif($img_type == 2)
-                                    <img src="/images/{{$item->background_image->medium_crop->link}}"
-                                         alt="{{$item->background_image->alt}}">
-                                @elseif($img_type == 3)
-                                    <img src="/images/{{$item->background_image->small_crop->link}}"
-                                         alt="{{$item->background_image->alt}}">
-                                @endif
-                                    <img src="/images/{{$item->background_image->medium_crop->link}}"
-                                         alt="{{$item->background_image->alt}}" class="for-mobile">
-                                    <img src="/images/{{$item->background_image->big_crop->link}}"
-                                         alt="{{$item->background_image->alt}}" class="medium">
-                            </div>
-                            <div class="about-wrap">
-                                <p class="name-wrap">
-                                    <span>{{$item->page_name_field}}</span>
-                                </p>
-                                <p class="about">{{$item->small_descr_field}}</p>
-                                <p class="city">Алматы</p>
-                            </div>
-                        </a>
-                    </div>
-                @else
-                    <?php
-                        $i = 0;
-                        $img_type = 0;
-                    ?>
-                    </div>
-                    <div class="clients-row">
-                @endif
+                    @if($i <= 3)
+                        <div class="col-1-3">
+                            <a href="/clients/{{$item->slug_field}}" class="client-link">
+                                <div class="image-wrap">
+                                    @if($img_type == 1)
+                                        <img src="/images/{{$item->background_image->big_crop->link}}"
+                                             alt="{{$item->background_image->alt}}">
+                                    @elseif($img_type == 2)
+                                        <img src="/images/{{$item->background_image->medium_crop->link}}"
+                                             alt="{{$item->background_image->alt}}">
+                                    @elseif($img_type == 3)
+                                        <img src="/images/{{$item->background_image->small_crop->link}}"
+                                             alt="{{$item->background_image->alt}}">
+                                    @endif
+                                        <img src="/images/{{$item->background_image->medium_crop->link}}"
+                                             alt="{{$item->background_image->alt}}" class="for-mobile">
+                                        <img src="/images/{{$item->background_image->big_crop->link}}"
+                                             alt="{{$item->background_image->alt}}" class="medium">
+                                </div>
+                                <div class="about-wrap">
+                                    <p class="name-wrap">
+                                        <span>{{$item->page_name_field}}</span>
+                                    </p>
+                                    <p class="about">{{$item->small_descr_field}}</p>
+                                    @foreach($filter->city_group as $item_c)
+                                        @if($item_c->id_field == $item->city_name_field)
+                                            <p class="city">{{$item_c->city_name_field}}</p>
+                                        @endif
+                                    @endforeach
+                                </div>
+                            </a>
+                        </div>
+                    @else
+                        <?php
+                            $i = 0;
+                            $img_type = 0;
+                        ?>
+                        </div>
+                        <div class="clients-row">
+                    @endif
             @endforeach
                     </div>
 

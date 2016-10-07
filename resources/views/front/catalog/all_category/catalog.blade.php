@@ -9,7 +9,7 @@
         <div class="price-list">
             <h2 class="sub-title">Прайс-лист на почту</h2>
             <div class="row">
-                <input type="text" class="input" placeholder="Эл. почта">
+                <input type="text" class="input mail" placeholder="Эл. почта">
                 <button class="button give-price">Получить</button>
             </div>
         </div>
