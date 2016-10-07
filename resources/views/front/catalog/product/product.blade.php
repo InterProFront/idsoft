@@ -7,8 +7,10 @@
     <section class="content product dashed-bottom">
         <div class="bread-crumb">
             <span class="crumb-item"><a href="/{{$grand->slug_field}}">{{$grand->category_name_field}}</a></span>
-            <span class="crumb-separate">→</span>
-            <span class="crumb-item"><a href="/{{$grand->slug_field}}/{{$parent->slug_field}}">{{$parent->category_name_field}}</a></span>
+            @if($grand->slug_field != 'soft')
+                <span class="crumb-separate">→</span>
+                <span class="crumb-item"><a href="/{{$grand->slug_field}}/{{$parent->slug_field}}">{{$parent->category_name_field}}</a></span>
+            @endif
         </div>
         <h1 class="block-title">{{$product->product_name_field}}</h1>
 
@@ -99,7 +101,7 @@
         <div class="technical-parameters">
             <div class="title-block">
                 <h2 class="sub-title">Технические характеристики</h2>
-                <span class="open-close-button"><a href="#">Свернуть</a></span>
+                <span class="open-close-button"><a href="#" class="close">Свернуть</a></span>
             </div>
             <div class="parameters-block">
                 @foreach($product->product_features_group as $item)

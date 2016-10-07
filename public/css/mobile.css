@@ -139,6 +139,9 @@ a.bx-pager-link.active {
         -ms-grid-row-align: center;
         align-items: center;
   }
+  header .main-menu .wrap .big-menu .menu-item:hover .hovered-text {
+    display: none;
+  }
   header .main-menu .wrap .big-menu .menu-item:nth-child(2) {
     margin: 0 0;
   }
@@ -615,6 +618,116 @@ a.bx-pager-link.active {
     max-width: 25%;
     min-width: 25%;
   }
+  .video .advantages.advantages-top {
+    background: #f5f6f7;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-radius: 15px;
+    padding: 50px 20px 70px;
+  }
+  .video .advantages.advantages-top .advantages-item {
+    width: 33.33333%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  .video .advantages.advantages-top .advantages-item .image-wrap {
+    padding-bottom: 15px;
+  }
+  .video .advantages.advantages-top .advantages-item .text-wrap .advantages-title {
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 3px;
+  }
+  .video .advantages.advantages-top .advantages-item .text-wrap .advantages-text {
+    color: #666666;
+    line-height: 1.5em;
+  }
+  .catalog.video .category-block {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 20px 0;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .catalog.video .category-block .category-item {
+    padding: 0 30px 60px;
+    box-sizing: border-box;
+    max-width: 33.333333%;
+    min-width: 33.333333%;
+  }
+  .catalog.video .category-block .category-item a .image-wrap {
+    padding-bottom: 15px;
+  }
+  .catalog.video .category-block .category-item a .image-wrap .static {
+    display: block;
+  }
+  .catalog.video .category-block .category-item a .wrap span {
+    background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #006699;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .catalog.video .category-block .category-item a .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .image-wrap .static {
+    display: block;
+  }
+  .catalog.video .category-block .category-item a:hover .image-wrap .hover {
+    display: none;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span {
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
 }
 @media screen and (max-width: 768px) {
   .catalog .price-list {
@@ -626,6 +739,87 @@ a.bx-pager-link.active {
   .catalog .category-block .category-item {
     max-width: 25%;
     min-width: 25%;
+  }
+  .catalog.video .category-block {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 20px 0;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .catalog.video .category-block .category-item {
+    padding: 0 30px 60px;
+    box-sizing: border-box;
+    max-width: 50%;
+    min-width: 50%;
+  }
+  .catalog.video .category-block .category-item a .image-wrap {
+    padding-bottom: 15px;
+  }
+  .catalog.video .category-block .category-item a .image-wrap .static {
+    display: block;
+  }
+  .catalog.video .category-block .category-item a .wrap span {
+    background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #006699;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .catalog.video .category-block .category-item a .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .image-wrap .static {
+    display: block;
+  }
+  .catalog.video .category-block .category-item a:hover .image-wrap .hover {
+    display: none;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span {
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
   }
 }
 @media screen and (max-width: 600px) {
@@ -645,8 +839,129 @@ a.bx-pager-link.active {
     max-width: 33.33333333%;
     min-width: 33.33333333%;
   }
+  .catalog.video .category-block {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 20px 0;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .catalog.video .category-block .category-item {
+    padding: 0 30px 60px;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 100%;
+  }
+  .catalog.video .category-block .category-item a .image-wrap {
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .catalog.video .category-block .category-item a .image-wrap .static {
+    display: inline;
+  }
+  .catalog.video .category-block .category-item a .wrap {
+    text-align: center;
+  }
+  .catalog.video .category-block .category-item a .wrap span {
+    background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #006699;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .catalog.video .category-block .category-item a .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .image-wrap .static {
+    display: block;
+  }
+  .catalog.video .category-block .category-item a:hover .image-wrap .hover {
+    display: none;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span {
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.video .category-block .category-item a:hover .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
 }
 @media screen and (max-width: 500px) {
+  .video .advantages.advantages-top {
+    background: #f5f6f7;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    margin: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    border-radius: 15px;
+    padding: 50px 20px 70px;
+  }
+  .video .advantages.advantages-top .advantages-item {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+  .video .advantages.advantages-top .advantages-item .image-wrap {
+    padding-bottom: 15px;
+    padding-left: 0;
+  }
+  .video .advantages.advantages-top .advantages-item .text-wrap .advantages-title {
+    color: #333333;
+    font-weight: bold;
+    padding-bottom: 3px;
+  }
+  .video .advantages.advantages-top .advantages-item .text-wrap .advantages-text {
+    color: #666666;
+    line-height: 1.5em;
+  }
   .catalog .price-list {
     margin: 0 20px;
   }
@@ -1086,6 +1401,14 @@ a.bx-pager-link.active {
     min-width: 250px;
     margin-left: -10px;
   }
+  .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup:hover .left-popup {
+    display: block;
+    width: 310px;
+    box-sizing: border-box;
+    left: 0;
+    padding: 5px;
+    top: 30px;
+  }
   .second-content {
     padding: 50px 40px 0 40px;
     display: -ms-flexbox;
@@ -1214,6 +1537,9 @@ a.bx-pager-link.active {
     -ms-flex-pack: justify;
         justify-content: space-between;
   }
+  .second-content .col-1-2:last-child .advantages-block .text-wrap {
+    max-width: 300px;
+  }
   .equipment-block .block-title {
     padding: 0 20px 0 20px;
   }
@@ -1285,8 +1611,9 @@ a.bx-pager-link.active {
     -ms-flex-direction: column;
         flex-direction: column;
   }
-  .equipment-block .block-title .products-list .product-item1 {
-    width: auto;
+  .equipment-block .block-title .products-list .product-item {
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 40px;
   }
 }

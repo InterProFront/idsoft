@@ -81,4 +81,14 @@ $(document).ready(function () {
         type: 'inline'
     });
 
+    $('.open-close-button a').on('click',function(e){
+
+        if($(this).hasClass('open')){
+            $(this).text('Свернуть').addClass('close').removeClass('open');
+        }else{
+            $(this).text('Развернуть').addClass('open').removeClass('close');
+        }
+        $('.parameters-block').slideToggle();
+        e.preventDefault();
+    });
 });

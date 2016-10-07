@@ -76,6 +76,20 @@
             max-width: 250px;
             min-width: 250px;
             margin-left: -10px;
+            .menu-item{
+              &.iiko-popup{
+                &:hover{
+                  .left-popup{
+                    display: block;
+                    width: 310px;
+                    box-sizing: border-box;
+                    left:0;
+                    padding: 5px;
+                    top:30px;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -205,6 +219,9 @@
           left: -20px;
           width: 100%;
           justify-content: space-between;
+          .text-wrap{
+            max-width: 300px;
+          }
         }
       }
     }
@@ -278,9 +295,11 @@
         justify-content: flex-start;
         flex-wrap: wrap;
         flex-direction: column;
-        .product-item1 {
-          width: auto;
+        .product-item {
+          width: 100%;
+          max-width: 100%;
           margin-bottom: 40px;
+
         }
       }
     }
