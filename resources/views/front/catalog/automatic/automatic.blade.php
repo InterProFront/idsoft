@@ -23,18 +23,19 @@
                     <ul class="right-menu">
                         @foreach($all as $item)
                             @if(!$item->is_iiko_field)
-                                <li class="menu-item"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></li>
+                                <li class="menu-item"><div class="orange-wrap"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></div></li>
                             @endif
                         @endforeach
-                        <li class="menu-item iiko-popup"><a href="/automatic/set-restoranov" class="link">Автоматизация IIKO</a>
+                        <li class="menu-item iiko-popup"><div class="orange-wrap"><a href="/automatic/set-restoranov" class="link">Автоматизация IIKO</a>
                             <div class="left-popup">
                                 <ul class="popup-menu">
                                     @foreach($all as $item)
                                         @if($item->is_iiko_field)
-                                            <li class="menu-item"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></li>
+                                            <li class="menu-item"><div class="orange-wrap-iiko"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></div></li>
                                         @endif
                                     @endforeach
                                 </ul>
+                            </div>
                             </div>
                         </li>
                     </ul>

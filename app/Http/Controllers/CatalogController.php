@@ -200,8 +200,6 @@ class CatalogController extends Controller {
 				}
 			}
 		}
-
-
 		$soft = $this->queryAgent->getGroupFlat('catalog_block','product',[],['product'=>['owner_id' => 55]]);
 		return view('front.catalog.product.product',[
 			'product' => $product,

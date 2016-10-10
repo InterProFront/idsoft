@@ -181,7 +181,7 @@ return [
                 'bools' => ['mailed']
             ],
             'order' => [
-                'stringfields' => ['name', 'phone', 'mail'],
+                'stringfields' => ['name', 'phone', 'mail','question','product'],
                 'bools' => ['mailed']
             ]
         ]
