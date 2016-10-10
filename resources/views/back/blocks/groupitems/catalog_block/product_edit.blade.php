@@ -50,10 +50,27 @@
 
             <div class="field-wrap ">
                 <label class="input-file">
+                    Описание
                 </label>
                 <textarea type="text" data-field-type="text" data-field-name="product_description" data-block="catalog_block"
                        data-group="product" class="input group_field"
                        data-item-id="{{$item_product->id_field}}" placeholder="Строка">{{$item_product->product_description_field}}</textarea>
+            </div>
+            <div class="field-wrap ">
+                <label class="input-file">
+                    Производитель
+                </label>
+                <textarea type="text" data-field-type="text" data-field-name="builder" data-block="catalog_block"
+                          data-group="product" class="input group_field"
+                          data-item-id="{{$item_product->id_field}}" placeholder="Строка">{{$item_product->builder_field}}</textarea>
+            </div>
+            <div class="field-wrap ">
+                <label class="input-file">
+                    Для чего применяется
+                </label>
+                <textarea type="text" data-field-type="text" data-field-name="why_apply" data-block="catalog_block"
+                          data-group="product" class="input group_field"
+                          data-item-id="{{$item_product->id_field}}" placeholder="Строка">{{$item_product->why_apply_field}}</textarea>
             </div>
 
             <div class="field-wrap ">

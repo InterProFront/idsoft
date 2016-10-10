@@ -91,7 +91,18 @@
                     </div>
                 </div>
                 <div class="product-description-block text-block">
-                  {!! $product->product_description_field !!}
+                    @if($product->product_description_field != '')
+                        <h4>Описание</h4>
+                        {!! $product->product_description_field !!}
+                    @endif
+                    @if($product->product_description_field != '')
+                        <h4>Производитель</h4>
+                        {!! $product->builder_field !!}
+                    @endif
+                    @if($product->product_description_field != '')
+                        <h4>Для чего применяется</h4>
+                        {!! $product->why_apply_field !!}
+                    @endif
                 </div>
             </div>
         </div>

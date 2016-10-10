@@ -1070,8 +1070,12 @@ a.bx-pager-link.active {
     -ms-flex-direction: column;
         flex-direction: column;
   }
+  .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 {
+    width: 100%;
+  }
   .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:last-child {
     margin-left: 0;
+    right: 0;
   }
   .product .technical-parameters .parameters-block .param-row .col-30 {
     width: 35%;
@@ -1186,6 +1190,7 @@ a.bx-pager-link.active {
   }
   .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:last-child {
     margin-left: 50px;
+    right: 0;
   }
   .product .technical-parameters .title-block .sub-title {
     padding-bottom: 20px;
@@ -1773,6 +1778,19 @@ a.bx-pager-link.active {
     -ms-flex-direction: row-reverse;
         flex-direction: row-reverse;
   }
+  .clients .clients-block .clients-row:nth-child(2n) .col-1-3 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .clients .clients-block .clients-row:nth-child(2n) .col-1-3:nth-child(1) {
+    max-width: 33.333333%;
+  }
+  .clients .clients-block .clients-row:nth-child(2n) .col-1-3:nth-child(2) {
+    max-width: 33.333333%;
+  }
+  .clients .clients-block .clients-row:nth-child(2n) .col-1-3:nth-child(3) {
+    max-width: 33.333333%;
+  }
   .clients .clients-block .clients-row .col-1-3 {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1789,7 +1807,7 @@ a.bx-pager-link.active {
   .clients .clients-block .clients-row .col-1-3 .city-change-menu {
     background: #25394d;
     padding: 30px 15px 10px;
-    min-width: 210px;
+    min-width: 252px;
     border-radius: 10px;
     box-sizing: border-box;
   }
@@ -1920,6 +1938,7 @@ a.bx-pager-link.active {
   }
   .clients .clients-block .clients-row .col-1-3 .city-change-menu {
     margin-left: 3px;
+    min-width: 234px;
   }
   .clients .clients-block .clients-row .col-1-3:nth-child(1),
   .clients .clients-block .clients-row .col-1-3:nth-child(2) {

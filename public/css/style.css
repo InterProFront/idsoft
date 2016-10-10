@@ -1824,7 +1824,7 @@ header .mobile-menu-bottom {
 .product-grid .col-1-2 .buy-button-block {
   background: #fee7a9;
   padding: 30px 20px 30px 30px;
-  max-width: 440px;
+  max-width: 500px;
   box-sizing: border-box;
   margin-bottom: 35px;
 }
@@ -1834,20 +1834,20 @@ header .mobile-menu-bottom {
   -ms-flex-pack: start;
       justify-content: flex-start;
   padding-bottom: 15px;
+  position: relative;
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2:last-child {
   padding-bottom: 0;
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 {
+  width: 50%;
   padding-left: 0;
   position: relative;
 }
-.product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:first-child {
-  min-width: 195px;
-}
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:last-child {
+  position: relative;
+  right: 10px;
   margin-top: 5px;
-  margin-left: 50px;
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .cost {
   font-size: 32px;
@@ -1926,6 +1926,7 @@ header .mobile-menu-bottom {
 }
 .technical-parameters .title-block .open-close-button a:hover {
   border-bottom: 1px dotted #f0b2b2;
+  cursor: default;
 }
 .technical-parameters .title-block .open-close-button a:focus {
   border-bottom: 1px dotted #f0b2b2;
@@ -2664,7 +2665,7 @@ header .mobile-menu-bottom {
   display: flex;
 }
 .tarifs .tarif-block .tarif-item {
-  background: #cccccc;
+  background: #f2f3f4;
   margin: 0 10px;
   padding: 30px;
   width: 50%;
@@ -2839,20 +2840,33 @@ header .mobile-menu-bottom {
   -ms-flex-direction: row-reverse;
       flex-direction: row-reverse;
 }
+.clients .clients-block .clients-row:nth-child(2n) .col-1-3:nth-child(1) {
+  max-width: 50%;
+  margin-left: 8px;
+  margin-right: 0;
+}
+.clients .clients-block .clients-row:nth-child(2n) .col-1-3:nth-child(3) {
+  max-width: 25%;
+  margin-right: 8px;
+  margin-left: 0;
+}
 .clients .clients-block .clients-row .col-1-3:nth-child(1) {
-  max-width: 450px;
+  max-width: 50%;
+  margin-right: 8px;
 }
 .clients .clients-block .clients-row .col-1-3:nth-child(2) {
-  max-width: 210px;
+  max-width: 25%;
+  margin: 0 6px;
 }
 .clients .clients-block .clients-row .col-1-3:nth-child(3) {
-  max-width: 210px;
+  max-width: 25%;
+  margin-left: 8px;
 }
 .clients .clients-block .clients-row .col-1-3 .city-change-menu {
   background: #25394d;
   padding: 30px 15px 10px;
   margin: 3px;
-  min-width: 210px;
+  min-width: 252px;
   border-radius: 10px;
   box-sizing: border-box;
 }
@@ -2865,6 +2879,9 @@ header .mobile-menu-bottom {
 .clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item {
   margin: 5px 15px 15px;
   color: #999999;
+}
+.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item .orange-wrap {
+  display: inline-block;
 }
 .clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item:hover {
   color: #ffffff;
@@ -2901,12 +2918,13 @@ header .mobile-menu-bottom {
   font-weight: normal;
 }
 .clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active {
+  margin: 0 0 10px;
+  color: #333333;
+}
+.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active .orange-wrap {
   padding: 5px 15px 5px;
   background: #fed054;
-  margin: 0 0 10px;
   border-radius: 15px;
-  color: #333333;
-  font-weight: bold;
 }
 .clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active a {
   background: linear-gradient(to left, transparent, transparent 100%);
@@ -2937,6 +2955,7 @@ header .mobile-menu-bottom {
 .clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img {
   border: 3px solid transparent;
   border-radius: 15px;
+  max-width: 100%;
 }
 .clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img.for-mobile {
   display: none;
@@ -3373,19 +3392,19 @@ header .mobile-menu-bottom {
 }
 .bottom-row .right .gray-text a:hover {
   cursor: pointer;
-  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  background: linear-gradient(to left, #fed054, #fed054 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
-  color: #cc0000;
+  color: #fed054;
 }
 .bottom-row .right .gray-text a:focus {
   outline: none;
-  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  background: linear-gradient(to left, #fed054, #fed054 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
   background-position: 0 100%;
   background-size: 10px 1px;
   background-repeat: repeat-x;
-  color: #cc0000;
+  color: #fed054;
 }

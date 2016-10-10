@@ -7,10 +7,16 @@
     <section class="content client dashed-bottom">
         <div class="bread-crumb">
             <span class="crumb-item"><a href="/clients">Клиенты</a></span>
+            <span class="crumb-separate">→</span>
+            @foreach($filter->institution_group as $item)
+                @if($item->id_field == $client->institution_type_field)
+                    <span class="crumb-item"><a href="/clients/all/{{$client->institution_type_field}}">{{$item->seo_keywords_field}}</a></span>
+                @endif
+            @endforeach
         </div>
         <h1 class="block-title">{{$client->page_name_field}}</h1>
         <div class="title-image">
-            <img src="/images/{{$client->background_image->primary_link}}" alt="">
+            <img src="/images/{{$client->background_image->primary_link}}" alt="{{$client->background_image->alt}}">
         </div>
         <div class="main-content-grid">
             <div class="col-1-2">
@@ -22,21 +28,25 @@
                 <div class="other-places">
                     <p class="menu-title">Другие заведения</p>
                     <ul class="places-list">
-                        <li class="item"><a href="#">КофеТайм</a></li>
-                        <li class="item"><a href="#">Томато</a></li>
-                        <li class="item"><a href="#">МакДональдс</a></li>
-                        <li class="item"><a href="#">СтарБакс</a></li>
-                        <li class="item"><a href="#">КофеТайм</a></li>
-                        <li class="item"><a href="#">СтарБакс</a></li>
-                        <li class="item"><a href="#" class="bold">Все 35 ресторанов и кафе</a></li>
+                        @foreach($all as $item)
+                            @if ($item->page_name_field != $client->page_name_field)
+                            <li class="item"><a href="/clients/{{$item->slug_field}}">{{$item->page_name_field}}</a></li>
+                            @endif
+                        @endforeach
+                        @foreach($filter->institution_group as $item)
+                            @if($item->id_field == $client->institution_type_field)
+                                <li class="item"><a href="/clients/all/{{$item->id_field}}" class="bold">Все {{$all->count()}} {{$item->page_title_field}}</a></li>
+                            @endif
+                        @endforeach
+
                     </ul>
                 </div>
                 <div class="recommend-letter">
-                    <a href="#">
-                    <div class="image-wrap frame">
-                        <img src="/img/letter.jpg" alt="">
-                    </div>
-                    <p><span>Рекомендательное письмо La Tortine</span></p>
+                    <a href="/images/{{$client->letter_image->primary_link}}">
+                        <div class="image-wrap frame">
+                            <img src="/images/{{$client->letter_image->frame_crop->link}}" alt="{{$client->letter_image->alt}}">
+                        </div>
+                        <p><span>Рекомендательное письмо {{$client->page_name_field}}</span></p>
                     </a>
                 </div>
             </div>

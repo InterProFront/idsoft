@@ -156,6 +156,14 @@ return [
             ['width' => null, 'height' => 140, 'sufix' => 'icon'],
         ]
     ],
+    'client_letter' => [
+        'sizes' => [
+            ['width' => 800, 'height' => null, 'sufix' => 'primary'],
+            ['width' => null, 'height' => 280, 'sufix' => 'secondary'],
+            ['width' => null, 'height' => 120, 'sufix' => 'preview'],
+            ['width' => null, 'height' => 140, 'sufix' => 'icon'],
+        ]
+    ],
     'images_set_text_pict' => [
         'sizes' => []
     ],

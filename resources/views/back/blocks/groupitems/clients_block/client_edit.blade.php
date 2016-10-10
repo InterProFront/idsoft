@@ -54,6 +54,60 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="field-wrap ">
+                <label class="input-file">
+                </label>
+                <div class="image-load">
+                    <div class="drag-n-drop">
+                        <div class="drag"><input type="text" value="Отпустите клавишу мыши, чтобы загрузить файл"></div>
+                        <div class="img-hide-block">
+                            <input type="hidden" class="prefix" data-field-name="letter" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->letter_image->prefix}}">
+                            <input type="hidden" class="original_link" data-field-name="letter" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->letter_image->original_link}}">
+                            <input type="hidden" class="preview_link" data-field-name="letter" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->letter_image->preview_link}}">
+                            <input type="hidden" class="primary_link" data-field-name="letter" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->letter_image->primary_link}}">
+                            <input type="hidden" class="secondary_link" data-field-name="letter" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block"
+                                   value="{{$item_client->letter_image->secondary_link}}">
+                            <input type="hidden" class="icon_link" data-field-name="letter" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->letter_image->icon_link}}">
+                        </div>
+                        <div class="preview-block">
+                            <img src="/images/{{$item_client->letter_image->preview_link}}" class="preview"
+                                 data-field-name="letter" data-block="clients_block" data-group="client"
+                                 data-item-id="{{$item_client->id_field}}">
+                            <div class="buttons">
+                                <span class="refresh"></span>
+                                <span class="clear"></span>
+                            </div>
+                        </div>
+                        <div class="action-block">
+                            <input type="text" placeholder="alt текст" class="alt-text"
+                                   value="{{$item_client->letter_image->alt}}"
+                                   data-item-id="{{$item_client->id_field}}" data-field-name="letter"
+                                   data-block="clients_block">
+                            <label class="file-input">
+                                Загрузить
+                                <input type="file" accept="image/*" class="input_file group_field"
+                                       data-field-name="letter" data-field-type="image" data-block="clients_block"
+                                       data-group="client" data-item-id="{{$item_client->id_field}}"
+                                       data-entity="groupitem">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="field-wrap ">
                 <label class="input-file">
                 </label>

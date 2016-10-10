@@ -234,6 +234,7 @@ class CatalogController extends Controller {
             $item->setField('product_sale',$new_sale);
         }
 
+
 		// Генерация ссылки на товар исходя из принадлежности к группе
 		foreach($test as $item){
 			foreach($category as $c_item){

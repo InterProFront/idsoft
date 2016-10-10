@@ -82,12 +82,12 @@
                         <ul class="city-menu">
                             <?php $i = 0 ?>
                             @foreach($filter->city_group as $item_c)
-                                @foreach($all_c as $item)
+                                @foreach($all_all as $item)
                                     @if($item->city_name_field == $item_c->id_field)
                                         <?php $i++ ?>
                                     @endif
                                 @endforeach
-                                <li class="item"><a class="client-filter" href="/clients/{{$item_c->id_field}}/{{$inst}}">{{$item_c->city_name_field}}</a>{{$i}}</li>
+                                <li class="item"><div class="orange-wrap"><a class="client-filter" href="/clients/{{$item_c->id_field}}/{{$inst}}">{{$item_c->city_name_field}}</a>{{$i}}</div></li>
                                 <?php $i = 0?>
                             @endforeach
                             <li class="item"><a href="/clients/all/{{$inst}}" class="no_bold">Все города</a></li>
@@ -104,11 +104,12 @@
             ?>
             <div class="clients-row">
             @foreach($all_c as $item)
-                <?php
-                    $i++;
-                    $img_type++;
-                        $first_two++;
-                ?>
+                <?php $first_two++;?>
+                @if($first_two > 2)
+                    <?php
+                        $i++;
+                        $img_type++;
+                    ?>
                     @if($i <= 3)
                         <div class="col-1-3">
                             <a href="/clients/{{$item->slug_field}}" class="client-link">
@@ -141,7 +142,8 @@
                                 </div>
                             </a>
                         </div>
-                    @else
+                    @endif
+                    @if($i == 3)
                         <?php
                             $i = 0;
                             $img_type = 0;
@@ -149,6 +151,7 @@
                         </div>
                         <div class="clients-row">
                     @endif
+                @endif
             @endforeach
                     </div>
 

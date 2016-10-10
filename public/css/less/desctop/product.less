@@ -101,23 +101,25 @@
     .buy-button-block{
       background: #fee7a9;
       padding: 30px 20px 30px 30px;
-      max-width: 440px;
+      max-width: 500px;
       box-sizing: border-box;
       margin-bottom: 35px;
       .row-1-2{
         display: flex;
         justify-content: flex-start;
         padding-bottom: 15px;
+        position: relative;
         &:last-child{
           padding-bottom: 0;
         }
         .col-1-2{
+          width: 50%;
           &:first-child{
-            min-width: 195px;
           }
           &:last-child{
+            position: relative;
+            right: 10px;
             margin-top: 5px;
-            margin-left: 50px;
           }
           padding-left: 0;
           position: relative;
@@ -180,7 +182,7 @@
       a{
       .link(@link-color, transparent, @hover-color, transparent);
       border-bottom: 1px dotted @link-border;
-      &:hover{border-bottom: 1px dotted @hover-border}
+      &:hover{border-bottom: 1px dotted @hover-border; cursor: default}
       &:focus{border-bottom: 1px dotted @hover-border}
       }
     }

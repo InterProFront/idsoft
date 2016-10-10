@@ -60,6 +60,7 @@ class PageController extends Controller{
 	public function getClients(){
 		$client_all = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
+		$all = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		$i = 0;
 		$clients_type[$i] = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		foreach($filter->institution_group as $item){
@@ -71,6 +72,7 @@ class PageController extends Controller{
 		$inst = 'all';
 		return view('front.clients.all-clients.clients',[
 			'all_c'    => $client_all,
+			'all_all' => $all,
 			'filter' => $filter,
 			'counts' => $clients_type,
 			'city'	 => $city,
@@ -79,26 +81,27 @@ class PageController extends Controller{
 	}
 
 	public function getClientsFilter($city, $inst){
+		$i = 0;
+		$all = $this->queryAgent->getGroup('clients_block','client',[],[]);
+		$clients_type[$i] = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		if($city != 'all' && $inst != 'all'){
-				$all_clients = $this->queryAgent->getGroupFlat('clients_block','client',[],['client' => ['city_name'=>$city, 'institution_type' => $inst]  ]);
+			$all_clients = $this->queryAgent->getGroupFlat('clients_block','client',[],['client' => ['city_name'=>$city, 'institution_type' => $inst]  ]);
 		} else if($inst != 'all'){
 			$all_clients = $this->queryAgent->getGroupFlat('clients_block','client',[],['client' => ['institution_type' => $inst]  ]);
 		} else if( $city != 'all'){
 			$all_clients = $this->queryAgent->getGroupFlat('clients_block','client',[],['client' => ['city_name'=>$city]  ]);
 		}else{
-
+			$all_clients =	$this->queryAgent->getGroup('clients_block','client',[],[]);
 		}
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
-		$i = 0;
-		$clients_type[$i] = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		foreach($filter->institution_group as $item){
 			$i++;
 			$clients_type[$i] = $this->queryAgent->getGroup('clients_block','client',[],['client'=>['institution_type' => $item->id_field]]);
 			$clients_type[$i] = $clients_type[$i]->count();
 		}
-
 		return view('front.clients.all-clients.clients',[
 			'all_c'    => $all_clients,
+			'all_all'  => $all,
 			'filter' => $filter,
 			'counts' => $clients_type,
 			'city'  => $city,
@@ -107,8 +110,12 @@ class PageController extends Controller{
 	}
 	public function getClientItem($slug){
 		$client = $this->queryAgent->getGroupItemBySlug('clients_block','client',$slug);
+		$all_clients = $this->queryAgent->getGroupFlat('clients_block','client',[],['client' => ['institution_type' => $client->institution_type_field]  ]);
+		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
 		return view('front.clients.client-item.client-item',[
-			'client' => $client
+			'client' => $client,
+			'filter' => $filter,
+			'all'	 => $all_clients
 		]);
 	}
 

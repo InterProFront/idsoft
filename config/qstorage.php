@@ -136,7 +136,7 @@ return [
     'clients_block' => [
         'groups' => [
             'client' => [
-                'images' => ['background'],
+                'images' => ['background','letter'],
                 'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'letter_link', 'small_descr'],
                 'textfields' => ['content'],
                 'numbs' => ['city_name', 'institution_type']

@@ -119,4 +119,9 @@ $(document).ready(function () {
     if ($('.bx-pager-link').length <= 1){
         $('.bx-pager-item').css('display','none');
     }
+
+
+    $('.recommend-letter a').magnificPopup({
+        type: 'image'
+    })
 });
