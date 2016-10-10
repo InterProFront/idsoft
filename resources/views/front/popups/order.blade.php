@@ -32,6 +32,22 @@
                     <input type="text" class="popup-input" data-field-name="mail" data-field-type="string" placeholder="Эл. почта">
                 </div>
             </div>
+            <div class="row">
+                <div class="col-1-2">
+                    <label  class="row-name">
+                        Сообщение
+                    </label>
+                    <textarea type="text" class="popup-input" data-field-name="question" data-field-type="string" placeholder="Комментарий"></textarea>
+                </div>
+            </div>
+            <div class="row" style="display: none">
+                <div class="col-1-2">
+                    <label  class="row-name">
+                        Сообщение
+                    </label>
+                    <textarea type="text" class="popup-input" data-field-name="product" data-field-type="string" placeholder="Комментарий"></textarea>
+                </div>
+            </div>
             <div class="row button-row">
                 <div class="col-1-2">
                     <p class="status-bar">

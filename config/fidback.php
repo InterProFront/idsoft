@@ -2,11 +2,11 @@
 
 return [
     'block_name' => 'fidback',
-    'mail_username' => 'Администратор',
-    'site_name' => 'Наш сайт',
-    'mail_rec' => 'bla@bla.ru',
-    'mail_rec_copy1' => 'bla@bla.ru',
-    'mail_rec_copy2' => 'bla@bla.ru',
-    'mail_rec_copy3' => 'bla@bla.ru',
+    'mail_username' => 'demigod96@bk.ru',
+    'site_name' => 'IDsoft.kz',
+    'mail_rec' => 'demigod96@bk.ru',
+    'mail_rec_copy1' => 'demigod96@bk.ru',
+    'mail_rec_copy2' => 'demigod96@bk.ru',
+    'mail_rec_copy3' => 'demigod96@bk.ru',
     'inqueue' => false,
 ];

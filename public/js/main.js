@@ -104,7 +104,10 @@ $(document).ready(function () {
     });
     $('#buy').magnificPopup({
         type: 'inline'
+    }).on('click',function(){
+        $('.popup-input[data-field-name="product"]').val($('.block-title').text());
     });
+
 
     $('.open-close-button a').on('click',function(e){
 

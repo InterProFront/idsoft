@@ -177,13 +177,13 @@
                 </ul>
             </div>
         </div>
-        <div class="free-project dashed-bottom-yellow">
+        <div class="free-project dashed-bottom-yellow white-popup" id="calculation">
             <h2 class="sub-title">Бесплатный расчет проекта</h2>
             <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитывает
                 заказ.</p>
             <div class="calculate">
-                <input type="text" class="input phone" data-mask="+7(000)000-00-00" placeholder="Номер телефона">
-                <button class="calculated-button">Рассчитать</button>
+                <input type="text" class="input phone popup-input" data-mask="+7(000)000-00-00" placeholder="Номер телефона" data-field-name="phone" data-field-type="string">
+                <button class="calculated-button send-form">Рассчитать</button>
             </div>
         </div>
     </section>
