@@ -94,14 +94,17 @@
                     @if($product->product_description_field != '')
                         <h4>Описание</h4>
                         {!! $product->product_description_field !!}
+                        <br>
                     @endif
-                    @if($product->product_description_field != '')
+                    @if($product->builder_field != '')
                         <h4>Производитель</h4>
                         {!! $product->builder_field !!}
+                            <br>
                     @endif
-                    @if($product->product_description_field != '')
+                    @if($product->why_apply_field != '')
                         <h4>Для чего применяется</h4>
                         {!! $product->why_apply_field !!}
+                            <br>
                     @endif
                 </div>
             </div>
