@@ -59,37 +59,25 @@
                 <h2 class="sub-title">Комплектация</h2>
                 <div class="products-list">
 
-                        <div class="product-item">
-                            <a href="/soft/programmnoe-obespechenie/paloma365">
-                                <div class="img-wrap">
-                                    <img src="/images/product_product_base_photo_66_icon.PNG" alt="">
+                    @foreach($product as $item_prod)
+                        @foreach($client->client_related_group as $rel)
+                            @if($item_prod->id_field == $rel->product_field)
+                                <div class="product-item">
+                                    <a href="{{$item_prod->title_field}}">
+                                        <div class="img-wrap">
+                                            <img src="/images/{{$item_prod->product_base_photo_image->icon_link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
+                                        </div>
+                                        <div class="text-wrap">
+                                            <p class="wrap">
+                                                <span>{{$item_prod->product_name_field}}</span>
+                                            </p>
+                                            <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                        </div>
+                                    </a>
                                 </div>
-                                <div class="text-wrap">
-                                    <p>Программное обеспечение</p>
-                                    <p class="wrap">
-                                        <span>Облачное решение автоматизации PALOMA365</span>
-                                    </p>
-                                    <p class="cost">1 706 670 тг  <span class="sale">1 741 500 тг</span></p>
-                                </div>
-                            </a>
-                        </div>
-
-
-
-                        <div class="product-item">
-                            <a href="/catalog/pos-system/monoblok-citaq-a1">
-                                <div class="img-wrap">
-                                    <img src="/images/product_product_base_photo_107_icon.jpg" alt="">
-                                </div>
-                                <div class="text-wrap">
-                                    <p>Базовая станция для официантов</p>
-                                    <p class="wrap">
-                                        <span>Клавиатурный моноблок Citaq A1</span>
-                                    </p>
-                                    <p class="cost">348 300 тг  </p>
-                                </div>
-                            </a>
-                        </div>
+                            @endif
+                        @endforeach
+                    @endforeach
                 </div>
             </div>
         </div>

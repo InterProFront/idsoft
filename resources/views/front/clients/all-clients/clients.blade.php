@@ -1,4 +1,4 @@
-@include('front.clients.client-item.meta')
+@include('front.clients.all-clients.meta')
 @extends('front.layout')
 @section('content')
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}

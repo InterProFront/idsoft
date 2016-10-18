@@ -59,13 +59,13 @@ class BackController extends Controller {
 		$clients = $this->queryAgent->getGroupItem('clients_block','client',$id);
 		$city    = $this->queryAgent->getGroupFlat('clients_filter','city',[],[]);
 		$inst    = $this->queryAgent->getGroupFlat('clients_filter','institution',[],[]);
-
+		$related = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
 
 		return view('back.blocks.groupitems.clients_block.client_edit',[
 			'item_client' => $clients,
 			'city_name'   => $city,
-			'inst'		  => $inst
-
+			'inst'		  => $inst,
+			'related'     => $related
 		]);
 	}
 

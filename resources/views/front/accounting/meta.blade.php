@@ -1,5 +1,5 @@
 @section('meta')
-    <title></title>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <title>{{$account->page_title_field}}</title>
+    <meta name="description" content="{{$account->seo_description_field}}">
+    <meta name="keywords" content="{{$account->seo_keywords_field}}">
 @endsection

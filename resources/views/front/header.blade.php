@@ -32,6 +32,11 @@
                             </li>
                         @else
                             <li class="item">
+                                <span class="icon-group">
+                                    <i class="wpp"></i>
+                                    <i class="tel"></i>
+                                    <i class="vib"></i>
+                                </span>
                                 <p>{{$item->phone_field}}</p>
                             </li>
                         @endif

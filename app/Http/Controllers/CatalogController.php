@@ -41,7 +41,7 @@ class CatalogController extends Controller {
 	//=== ******************************************** =================
 	//==================================================================
 	public function getCatalog(){
-		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
+		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51,'show' => 1]]);
 		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',51);
 
 		return view('front.catalog.all_category.catalog',[
@@ -83,7 +83,7 @@ class CatalogController extends Controller {
 		]);
 	}
 	public function getShowcaseCategory(){
-		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>52]]);
+		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>52, 'show' => 1]]);
 		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',52);
 
 		return view('front.catalog.category.video',[
@@ -92,7 +92,7 @@ class CatalogController extends Controller {
 		]);
 	}
 	public function getVideoCategory(){
-		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>53]]);
+		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>53,'show' => 1]]);
 		$seo     = $this->queryAgent->getGroupItem('catalog_block','category_1',53);
 
 		return view('front.catalog.category.video',[

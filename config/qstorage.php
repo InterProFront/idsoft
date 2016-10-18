@@ -134,6 +134,7 @@ return [
         ]
     ],
     'clients_block' => [
+        'stringfields' => ['page_title', 'seo_keywords', 'seo_description'],
         'groups' => [
             'client' => [
                 'images' => ['background','letter'],
@@ -142,7 +143,9 @@ return [
                 'numbs' => ['city_name', 'institution_type']
             ],
             'client_related' => [
-
+                'owner' => 'client',
+                'stringfields' => ['about_item'],
+                'numbs' => ['product']
             ]
         ]
     ],

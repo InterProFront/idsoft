@@ -6,8 +6,10 @@ class PageController extends Controller{
 
 
 	private $queryAgent;
+	private $course;
 	function __construct(QueryAgent $queryAgent){
 		$this->queryAgent = $queryAgent;
+		$this->course = $this->queryAgent->getBlock('clients_filter',[],[]);
 		$static = $this->queryAgent->getBlock('static_site',[],[]);
 		$menu 	= $this->queryAgent->getBlock('main_menu',[],[]);
 		$menu_link = ['/catalog','/automation','/soft','/showcase','/accounting','/video'];
@@ -58,6 +60,7 @@ class PageController extends Controller{
 
 
 	public function getClients(){
+		$seo = $this->queryAgent->getBlock('clients_block',[],[]);
 		$client_all = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
 		$all = $this->queryAgent->getGroup('clients_block','client',[],[]);
@@ -76,7 +79,8 @@ class PageController extends Controller{
 			'filter' => $filter,
 			'counts' => $clients_type,
 			'city'	 => $city,
-			'inst'	 => $inst
+			'inst'	 => $inst,
+			'seo_c' 	 => $seo
 		]);
 	}
 
@@ -112,10 +116,43 @@ class PageController extends Controller{
 		$client = $this->queryAgent->getGroupItemBySlug('clients_block','client',$slug);
 		$all_clients = $this->queryAgent->getGroupFlat('clients_block','client',[],['client' => ['institution_type' => $client->institution_type_field]  ]);
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
-		return view('front.clients.client-item.client-item',[
+
+		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		$category = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],[]);
+		foreach($test as $item) {
+			$new_price = $item->product_cost_field * $this->course->course_field;
+			$new_sale = $item->product_sale_field * $this->course->course_field;
+			$item->setField('product_cost', $new_price);
+			$item->setField('product_sale', $new_sale);
+		}
+
+		// Генерация ссылки на товар исходя из принадлежности к группе
+		foreach($test as $item){
+			foreach($category as $c_item){
+				if($item->owner_id_field == $c_item->id_field){
+					switch($c_item->owner_id_field){
+						case 51:
+							$item->setField('title','/catalog/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+						case 52:
+							$item->setField('title','/showcase/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+
+						case 53:
+							$item->setField('title','/video/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+						case 54:
+							$item->setField('title','/soft/'.$c_item->slug_field.'/'.$item->slug_field);
+							break;
+					}
+				}
+			}
+		}
+			return view('front.clients.client-item.client-item',[
 			'client' => $client,
 			'filter' => $filter,
-			'all'	 => $all_clients
+			'all'	 => $all_clients,
+			'product'	=> $test
 		]);
 	}
 

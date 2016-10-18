@@ -287,12 +287,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/intpro/admin_generator.git",
-                "reference": "8a7bed811205de01b2211613f8f250db98f1d31a"
+                "reference": "8a2715de4b4d730057a51a4399d1b4ac8dc2f1cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/intpro/admin_generator/zipball/8a7bed811205de01b2211613f8f250db98f1d31a",
-                "reference": "8a7bed811205de01b2211613f8f250db98f1d31a",
+                "url": "https://api.github.com/repos/intpro/admin_generator/zipball/8a2715de4b4d730057a51a4399d1b4ac8dc2f1cf",
+                "reference": "8a2715de4b4d730057a51a4399d1b4ac8dc2f1cf",
                 "shasum": ""
             },
             "type": "library",
@@ -316,7 +316,7 @@
                 }
             ],
             "description": "admin generator class",
-            "time": "2016-05-25 08:14:32"
+            "time": "2016-10-14 08:21:18"
         },
         {
             "name": "interpro/fidback",
@@ -461,12 +461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/intpro/quickstart.git",
-                "reference": "a5c52706a41c8cdea382cf21acf38ab970a10883"
+                "reference": "9b643f025ad1861beb361f3a9382428035f74a10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/intpro/quickstart/zipball/a5c52706a41c8cdea382cf21acf38ab970a10883",
-                "reference": "a5c52706a41c8cdea382cf21acf38ab970a10883",
+                "url": "https://api.github.com/repos/intpro/quickstart/zipball/9b643f025ad1861beb361f3a9382428035f74a10",
+                "reference": "9b643f025ad1861beb361f3a9382428035f74a10",
                 "shasum": ""
             },
             "type": "library",
@@ -496,7 +496,7 @@
             "keywords": [
                 "qstorage"
             ],
-            "time": "2016-10-05 06:38:32"
+            "time": "2016-10-17 07:34:31"
         },
         {
             "name": "intervention/image",
