@@ -109,6 +109,7 @@
                 </div>
             </div>
         </div>
+        @if ($product->product_features_group->count() > 0 )
         <div class="block-separator">
             <div class="separator"></div>
         </div>
@@ -130,6 +131,8 @@
                 @endforeach
             </div>
         </div>
+        @endif
+        @if($product->product_related_group->count() > 0 )
         <div class="block-separator">
             <div class="separator black"></div>
         </div>
@@ -161,5 +164,6 @@
 
             </div>
         </div>
+        @endif
     </section>
 @endsection

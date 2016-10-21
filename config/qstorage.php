@@ -58,7 +58,7 @@ return [
                     'small_description',
                     'parent_link'
                 ],
-                'numbs' => ['product_sale', 'product_cost'],
+                'numbs' => ['product_sale', 'product_cost','course_id'],
                 'textfields' => ['product_description','builder','why_apply'],
                 'images' => ['product_base_photo']
             ],
@@ -92,7 +92,7 @@ return [
                 'stringfields' => ['page_name', 'page_title', 'seo_description', 'seo_keywords'],
                 'images' => ['background', 'card_background'],
                 'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty', 'vozm', 'rassr'],
-                'numbs' => ['auto_cost', 'auto_sale', 'iiko'],
+                'numbs' => ['auto_cost', 'auto_sale', 'iiko','course_id'],
                 'bools' => ['is_iiko']
             ],
             'auto_adv' => [
@@ -152,6 +152,9 @@ return [
     'clients_filter' => [
         'stringfields' => ['course'],
         'groups' => [
+            'course'      => [
+                'stringfields' => ['course_name','course']
+            ],
             'institution' => [
                 'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description'],
             ],

@@ -127,6 +127,18 @@
                    data-item-id="{{$item_product->id_field}}" placeholder="Строка">
         </div>
         <div class="field-wrap ">
+            <label class="field-title">Валюта</label>
+            <select type="number" data-field-type="numb"
+                    data-field-name="course_id" data-block="catalog_block"
+                    data-group="product"
+                    data-item-id="{{$item_product->id_field}}"
+                    class="input-field group_field">
+                @foreach($cor as $c_item)
+                    <option value="{{$c_item->id_field}}" @if($item_product->course_id_field == $c_item->id_field) selected @endif>{{$c_item->course_name_field}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="field-wrap ">
             <label class="field-title"> Скидка ( При наличии скидки введите сюда цену без скидки )</label>
             <input type="number" data-field-type="numb"
                    data-field-name="product_sale" data-block="catalog_block"

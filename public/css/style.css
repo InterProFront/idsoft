@@ -127,6 +127,32 @@ a.bx-pager-link.active {
 .text-block p strong {
   font-weight: bold;
 }
+.text-block p a {
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.text-block p a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.text-block p a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
 .text-block h2 {
   font-size: 32px;
   font-weight: normal;
@@ -146,6 +172,35 @@ a.bx-pager-link.active {
   font-size: 16px;
   color: #333333;
   line-height: 1.2em;
+  font-weight: bold;
+}
+.text-block ul {
+  list-style-type: disc;
+  margin-left: 15px;
+}
+.text-block ul li {
+  list-style-type: disc;
+  margin-bottom: 5px;
+  color: #666666;
+  line-height: 1.5em;
+  width: 100%;
+  font-size: 16px;
+}
+.text-block ul li strong {
+  font-weight: bold;
+}
+.text-block ol {
+  list-style-type: decimal;
+  margin-left: 15px;
+}
+.text-block ol li {
+  list-style-type: decimal;
+  color: #666666;
+  line-height: 1.5em;
+  width: 100%;
+  font-size: 16px;
+}
+.text-block ol li strong {
   font-weight: bold;
 }
 header {
@@ -1787,7 +1842,7 @@ header .mobile-menu-bottom {
   color: #cc0000;
 }
 .bread-crumb {
-  padding: 15px 60px 0 100px;
+  padding: 15px 60px 0 60px;
   text-align: center;
 }
 .bread-crumb .crumb-item {

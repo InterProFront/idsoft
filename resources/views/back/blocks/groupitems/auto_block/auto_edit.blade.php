@@ -187,6 +187,19 @@
                 {{--</div>--}}
             {{--</div>--}}
             <div class="field-wrap ">
+                <label class="field-title">Валюта</label>
+                <select data-field-type="numb"
+                        data-field-name="course_id"
+                        data-block="auto_block"
+                        data-group="auto"
+                        data-item-id="{{$item_auto->id_field}}"
+                        class="input-field group_field">
+                    @foreach($cor as $c_item)
+                        <option value="{{$c_item->id_field}}" @if($item_auto->course_id_field == $c_item->id_field) selected @endif>{{$c_item->course_name_field}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="field-wrap ">
                 <label class="field-title"> Цена без скидки </label>
                 <input type="number" data-field-type="numb" data-field-name="auto_sale"
                        data-block="auto_block" data-group="auto"
@@ -194,7 +207,7 @@
                        value="{{$item_auto->auto_sale_field}}" placeholder="Целое число">
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> Заголовок </label>
+                <label class="field-title"> Цена с учетом скидки </label>
                 <input type="number" data-field-type="numb" data-field-name="auto_cost"
                        data-block="auto_block" data-group="auto"
                        data-item-id="{{$item_auto->id_field}}" class="input-field group_field"
@@ -249,7 +262,14 @@
             </div>
         </div>
 
-
+        <div class="disabled">
+            <div class="field-wrap buttons disabled">
+                <button type="button" class="any_save" data-block="auto_block" data-group="auto"
+                        data-entity="groupitem" data-item-id="{{$item_auto->id_field}}"
+                        data-descr="Эл. первой группы"> Сохранить
+                </button>
+            </div>
+        </div>
         <div class="save-panel">
             <div class="status-panel success">
                 <p>Изменения сохранены</p>

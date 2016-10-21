@@ -124,10 +124,12 @@ class BackController extends Controller {
 		$product = 		$this->queryAgent->getGroupItem('catalog_block','product',$product_id);
 		$all_products = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
 		$auto = 		$this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
+		$course 	=   $this->queryAgent->getGroupFlat('clients_filter','course',[],[]);
 		$soft =         $this->queryAgent->getGroupFlat('catalog_block','product',[],['product'=>['owner_id' => 55]]);
 		return view('back.blocks.groupitems.catalog_block.product_edit', [
 			'item_product' => $product,
 			'related'      => $all_products,
+			'cor'	   		=> $course,
 			'auto'		   => $auto,
 			'soft'         => $soft
 		]);
@@ -157,8 +159,10 @@ class BackController extends Controller {
 	public function editAutoItem($id){
 		$auto = $this->queryAgent->getGroupItem('auto_block','auto',$id);
 		$all_products = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		$course 	=   $this->queryAgent->getGroupFlat('clients_filter','course',[],[]);
 		return view('back.blocks.groupitems.auto_block.auto_edit', [
 			'item_auto' => $auto,
+			'cor'		=> $course,
 			'related'   => $all_products
 		]);
 	}
