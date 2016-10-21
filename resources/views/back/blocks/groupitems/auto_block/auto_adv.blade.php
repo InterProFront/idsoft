@@ -69,7 +69,7 @@
         </div>
         <div class="col-1-2 disabled">
             <button type="button" class="any_save" data-block="auto_block" data-group="auto_adv" data-entity="groupitem"
-                    data-item-id="{{$auto_adv->id_field}}" data-descr="Эл. первой группы"> Сохранить
+                    data-item-id="{{$item_auto_adv->id_field}}" data-descr="Эл. первой группы"> Сохранить
             </button>
         </div>
     </div>
