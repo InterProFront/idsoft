@@ -1,6 +1,9 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Mail;
+use Interpro\QuickStorage\Concept\Exception\WrongBlockFieldNameException;
 use Interpro\QuickStorage\Laravel\QueryAgent;
+use Illuminate\Http\Request;;
 
 class BackController extends Controller {
 
@@ -229,4 +232,98 @@ class BackController extends Controller {
 		]);
 	}
 
+
+	public function price(Request $request){
+		$file = $request->file('price');
+		$ext  =  strtolower($file->getClientOriginalExtension());;
+		$file->move(base_path().'/public/price/', 'price.'.$ext);
+		return ['status' => 'OK','name' => 'price.'.$ext];
+	}
+	public function priceSend(Request $request){
+		$mail = $request->input('mail');
+		$block = $this->queryAgent->getBlock('fidback',[],[]);
+		$file = $this->queryAgent->getGroupItem('catalog_block','category_1',51);
+		//------------------
+		try{
+			$inqueue  = $block->inqueue_field;
+			if(!$inqueue)
+			{
+				$inqueue = config('fidback')['inqueue'];
+			}
+		}catch(WrongBlockFieldNameException $exc){
+			$inqueue = config('fidback')['inqueue'];
+		}
+		//------------------
+
+		try{
+			$mailto  = $block->mail_rec_field;
+			if(!$mailto)
+			{
+				$mailto = config('fidback')['mail_rec'];
+			}
+		}catch(WrongBlockFieldNameException $exc){
+			$mailto = config('fidback')['mail_rec'];
+		}
+		//------------------
+		try{
+			$mailto_copy1  = $block->mail_rec_copy1_field;
+			if(!$mailto_copy1)
+			{
+				$mailto_copy1 = config('fidback')['mail_rec_copy1'];
+			}
+		}catch(WrongBlockFieldNameException $exc){
+			$mailto_copy1 = config('fidback')['mail_rec_copy1'];
+		}
+		//------------------
+		try{
+			$mailto_copy2  = $block->mail_rec_copy2_field;
+			if(!$mailto_copy2)
+			{
+				$mailto_copy2 = config('fidback')['mail_rec_copy2'];
+			}
+		}catch(WrongBlockFieldNameException $exc){
+			$mailto_copy2 = config('fidback')['mail_rec_copy2'];
+		}
+		//------------------
+		try{
+			$mailto_copy3  = $block->mail_rec_copy3_field;
+			if(!$mailto_copy3)
+			{
+				$mailto_copy3 = config('fidback')['mail_rec_copy3'];
+			}
+		}catch(WrongBlockFieldNameException $exc){
+			$mailto_copy3 = config('fidback')['mail_rec_copy3'];
+		}
+		//------------------
+
+		try{
+			$username  = $block->mail_username_field;
+			if(!$username)
+			{
+				$username = config('fidback')['mail_username'];
+			}
+		}catch(WrongBlockFieldNameException $exc){
+			$username = config('fidback')['mail_username'];
+		}
+		//------------------
+		try{
+			$site_name  = $block->site_name_field;
+			if(!$site_name)
+			{
+				$site_name = config('fidback')['site_name'];
+			}
+		}catch(WrongBlockFieldNameException $exc){
+			$site_name = config('fidback')['site_name'];
+		}
+		Mail::send('back/mail/price',
+			['item'=> []],
+			function($message) use ($username, $mail, $mailto_copy1, $mailto_copy2,$file,$mailto_copy3, $site_name)
+			{
+				$message->from($username, $site_name);
+				$message->to($mail);
+				$message->attach(base_path().'/public/price/'.$file->price_name_field);
+				$message->subject('Сообщение из сайта '.$site_name);
+			});
+		return ['status' => 'OK'];
+	}
 }

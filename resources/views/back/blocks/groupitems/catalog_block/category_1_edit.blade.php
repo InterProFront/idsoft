@@ -21,6 +21,18 @@
                    value="{{$item_category_1->category_description_field}}"
                    data-item-id="{{$item_category_1->id_field}}" placeholder="Строка">
         </div>
+        <div class="field-wrap disabled">
+            <label class="field-title">  </label>
+            <input type="text" data-field-type="string" data-field-name="price_name"
+                   data-block="catalog_block" data-group="category_1" class="input-field group_field"
+                   value="{{$item_category_1->price_name_field}}"
+                   data-item-id="{{$item_category_1->id_field}}" placeholder="Строка">
+        </div>
+        <div class="field-wrap ">
+            <label class="field-title"> Прайс лист на почту </label>
+            <input type="file" class="send-file price-list-send">
+            <button class="button blue save load-price">Загрузить</button>
+        </div>
         <div class="field-wrap ">
             <label class="field-title"> Задний фон </label>
             <div class="image-load">

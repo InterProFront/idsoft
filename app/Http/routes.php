@@ -111,6 +111,9 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 	Route::get('/edit/city', 		'BackController@editCity');
 	Route::get('/edit/inst', 		'BackController@editInstitution');
 	Route::get('/edit/course', 		'BackController@editCourse');
+
+	Route::post('/price',           'BackController@price');
+	Route::post('/send-price',           'BackController@priceSend');
 });
 Route::get('/inf/{slug}', 					'PageController@getInfPage');
 

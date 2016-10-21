@@ -123,5 +123,30 @@ $(document).ready(function(){
 
 
     });
+    $('.give-price').on('click',function(){
+        if( !isEmail($('.input.mail').val()) ){
+            var data = {};
+            data['mail'] = $('.input.mail').val();
+            var deferred = $.ajax(
+                {
+                    type: 'POST',
+                    url: '/adm/send-price',
+                    dataType: 'json',
+                    data: data
+                }
+            );
+            deferred.done(function(){
+                $.magnificPopup.open({
+                    items: {
+                        src: '#thanks'
+                    },
+                    type: 'inline'
+                });
+                $('.input.mail').val('');
+            });
+        } else{
+            $('.input.mail').addClass('error');
+        }
+    });
 
 });

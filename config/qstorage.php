@@ -39,7 +39,7 @@ return [
         'stringfields' => ['seo_keywords', 'seo_description'],
         'groups' => [
             'category_1' => [
-                'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name', 'category_description'],
+                'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name', 'category_description','price_name'],
                 'images' => ['card_background']
             ],
             'category_2' => [
