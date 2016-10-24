@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <div class="col-1-3">
-                        <a href="/acconting">
+                        <a href="/accounting">
                             <div class="wrap">
                                 <p class="card-title">{{$buh->card_title_field}}</p>
                                 <p class="card-text">{{$buh->card_description_field}}</p>
