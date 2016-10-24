@@ -467,8 +467,8 @@ header .main-menu .wrap .big-menu .menu-item:hover a:focus {
 header .main-menu .wrap .big-menu .menu-item:hover .hovered-text {
   display: block;
   text-align: left;
-  color: #333333;
-  font-family: "Arial", sans-serif;
+  color: #666666;
+  font-family: 12px;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form {
   height: auto;
