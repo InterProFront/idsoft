@@ -186,6 +186,32 @@ a.bx-pager-link.active {
   width: 100%;
   font-size: 16px;
 }
+.text-block ul li a {
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.text-block ul li a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.text-block ul li a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
 .text-block ul li strong {
   font-weight: bold;
 }
@@ -199,6 +225,32 @@ a.bx-pager-link.active {
   line-height: 1.5em;
   width: 100%;
   font-size: 16px;
+}
+.text-block ol li a {
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.text-block ol li a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.text-block ol li a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
 }
 .text-block ol li strong {
   font-weight: bold;
@@ -982,7 +1034,7 @@ header .mobile-menu-bottom {
   text-align: center;
 }
 .content .sub-title {
-  argin: 0 0 0 0;
+  margin: 0 0 0 0;
   padding: 70px 0 0 0;
   font-size: 32px;
   font-weight: normal;
@@ -1015,15 +1067,22 @@ header .mobile-menu-bottom {
   width: 100%;
   height: 210px;
 }
+.content .automatic-block-list .row .col-1-2 .popup-form {
+  opacity: 0;
+  height: 0;
+  transition: 0.75s opacity ease;
+}
 .content .automatic-block-list .row .col-1-2:hover {
   overflow: inherit;
 }
 .content .automatic-block-list .row .col-1-2:hover .popup-form {
+  opacity: 1;
+  height: auto;
   background: #ffffff;
   position: absolute;
   display: block;
   z-index: 5;
-  padding: 30px;
+  padding: 22px 20px 20px 20px;
   top: 0;
   width: 100%;
   max-width: 599px;
@@ -1171,11 +1230,18 @@ header .mobile-menu-bottom {
   width: 100%;
   height: 220px;
 }
+.content .automatic-block-list .row .col-1-3 .popup-form {
+  opacity: 0;
+  height: 0;
+  transition: 0.75s opacity ease;
+}
 .content .automatic-block-list .row .col-1-3:hover .popup-form {
   display: block;
   z-index: 5;
+  opacity: 1;
+  height: auto;
   position: absolute;
-  padding: 30px;
+  padding: 22px 20px 20px 20px;
   min-width: 100%;
   box-sizing: border-box;
   min-height: 220px;
