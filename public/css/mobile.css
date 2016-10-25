@@ -186,6 +186,32 @@ a.bx-pager-link.active {
   width: 100%;
   font-size: 16px;
 }
+.text-block ul li a {
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.text-block ul li a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.text-block ul li a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
 .text-block ul li strong {
   font-weight: bold;
 }
@@ -199,6 +225,32 @@ a.bx-pager-link.active {
   line-height: 1.5em;
   width: 100%;
   font-size: 16px;
+}
+.text-block ol li a {
+  background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #006699;
+}
+.text-block ol li a:hover {
+  cursor: pointer;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
+}
+.text-block ol li a:focus {
+  outline: none;
+  background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+  background-position: 0 100%;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+  color: #cc0000;
 }
 .text-block ol li strong {
   font-weight: bold;
@@ -1146,10 +1198,10 @@ a.bx-pager-link.active {
 }
 @media screen and (max-width: 1000px) {
   .category .product-list {
-    padding: 0 100px;
+    padding: 0 40px;
   }
   .category .product-list .product-item {
-    margin: 0 10px 60px;
+    margin: 0 0 60px;
   }
 }
 @media screen and (max-width: 840px) {
@@ -1157,17 +1209,36 @@ a.bx-pager-link.active {
     padding: 0 40px;
   }
   .category .product-list .product-item {
-    margin: 0 10px 60px;
+    margin: 0 0 60px;
   }
 }
 @media screen and (max-width: 720px) {
   .category .product-list {
     padding: 0 20px;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
   }
   .category .product-list .product-item {
     margin: 0 0 60px;
+    width: 50%;
+  }
+  .category .product-list .product-item:nth-child(1) {
+    padding: 0;
+  }
+  .category .product-list .product-item:nth-child(3n-1) {
+    padding: 0;
+  }
+  .category .product-list .product-item:nth-child(3n+1) {
+    padding: 0;
+  }
+  .category .product-list .product-item:nth-child(3n) {
+    padding: 0;
+  }
+  .category .product-list .product-item:nth-child(2n) {
+    padding-left: 10px;
+  }
+  .category .product-list .product-item:nth-child(2n-1) {
+    padding-right: 10px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -1177,6 +1248,18 @@ a.bx-pager-link.active {
         justify-content: center;
   }
   .category .product-list .product-item {
+    margin: 0 0 60px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .category .product-list {
+    padding: 0 20px;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .category .product-list .product-item {
+    width: 100%;
+    padding: 0 !important;
     margin: 0 0 60px;
   }
 }

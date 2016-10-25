@@ -103,13 +103,15 @@ class PageController extends Controller{
 			$clients_type[$i] = $this->queryAgent->getGroup('clients_block','client',[],['client'=>['institution_type' => $item->id_field]]);
 			$clients_type[$i] = $clients_type[$i]->count();
 		}
+		$seo = $this->queryAgent->getBlock('clients_block',[],[]);
 		return view('front.clients.all-clients.clients',[
 			'all_c'    => $all_clients,
 			'all_all'  => $all,
 			'filter' => $filter,
 			'counts' => $clients_type,
 			'city'  => $city,
-			'inst'	=> $inst
+			'inst'	=> $inst,
+			'seo_c' 	 => $seo
 		]);
 	}
 	public function getClientItem($slug){

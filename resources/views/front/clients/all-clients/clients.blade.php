@@ -5,11 +5,18 @@
     <?php $shadow = true; ?>
     {{----}}
     <section class="content clients dashed-bottom">
-        <?php $i = 0; ?>
-        @if($counts[$i]->count() % 10 == 1)
-            <h1 class="block-title"> {{$counts[$i]->count()}} счастливый клиент</h1>
+        <?php $i = 0;
+        $all_count = $counts[$i]->count();
+        $all_count = 20;
+        $d10 = $all_count % 10;
+        $d100 = ($all_count % 100 < 5) || ($all_count % 100 > 20);
+        ?>
+        @if ($d100 && ($d10 == 1))
+            <h1 class="block-title"> {{$all_count}} счастливый клиент</h1>
+        @elseif ($d100 && ($d10 > 1) && ($d10 < 5))
+            <h1 class="block-title"> {{$all_count}} счастливых клиента</h1>
         @else
-            <h1 class="block-title"> {{$counts[$i]->count()}} счастливых клиентов</h1>
+            <h1 class="block-title"> {{$all_count}} счастливых клиентов</h1>
         @endif
 
         <div class="shop-type">
@@ -54,11 +61,11 @@
                                         <img src="/images/{{$item->background_image->small_crop->link}}"
                                              alt="{{$item->background_image->alt}}">
                                     @endif
-                                        <img src="/images/{{$item->background_image->medium_crop->link}}"
-                                             alt="{{$item->background_image->alt}}" class="for-mobile">
+                                    <img src="/images/{{$item->background_image->medium_crop->link}}"
+                                         alt="{{$item->background_image->alt}}" class="for-mobile">
 
-                                        <img src="/images/{{$item->background_image->big_crop->link}}"
-                                             alt="{{$item->background_image->alt}}" class="medium">
+                                    <img src="/images/{{$item->background_image->big_crop->link}}"
+                                         alt="{{$item->background_image->alt}}" class="medium">
                                 </div>
                                 <div class="about-wrap">
                                     <p class="name-wrap">
@@ -87,7 +94,11 @@
                                         <?php $i++ ?>
                                     @endif
                                 @endforeach
-                                <li class="item"><div class="orange-wrap"><a class="client-filter" href="/clients/{{$item_c->id_field}}/{{$inst}}">{{$item_c->city_name_field}}</a>{{$i}}</div></li>
+                                <li class="item">
+                                    <div class="orange-wrap"><a class="client-filter"
+                                                                href="/clients/{{$item_c->id_field}}/{{$inst}}">{{$item_c->city_name_field}}</a>{{$i}}
+                                    </div>
+                                </li>
                                 <?php $i = 0?>
                             @endforeach
                             <li class="item"><a href="/clients/all/{{$inst}}" class="no_bold">Все города</a></li>
@@ -97,63 +108,63 @@
             </div>
 
             <?php
-                $j = 0;
-                $i = 0;
-                $img_type = 0;
-                $first_two = 0;
+            $j = 0;
+            $i = 0;
+            $img_type = 0;
+            $first_two = 0;
             ?>
             <div class="clients-row">
-            @foreach($all_c as $item)
-                <?php $first_two++;?>
-                @if($first_two > 2)
-                    <?php
+                @foreach($all_c as $item)
+                    <?php $first_two++;?>
+                    @if($first_two > 2)
+                        <?php
                         $i++;
                         $img_type++;
-                    ?>
-                    @if($i <= 3)
-                        <div class="col-1-3">
-                            <a href="/clients/{{$item->slug_field}}" class="client-link">
-                                <div class="image-wrap">
-                                    @if($img_type == 1)
-                                        <img src="/images/{{$item->background_image->big_crop->link}}"
-                                             alt="{{$item->background_image->alt}}">
-                                    @elseif($img_type == 2)
-                                        <img src="/images/{{$item->background_image->medium_crop->link}}"
-                                             alt="{{$item->background_image->alt}}">
-                                    @elseif($img_type == 3)
-                                        <img src="/images/{{$item->background_image->small_crop->link}}"
-                                             alt="{{$item->background_image->alt}}">
-                                    @endif
+                        ?>
+                        @if($i <= 3)
+                            <div class="col-1-3">
+                                <a href="/clients/{{$item->slug_field}}" class="client-link">
+                                    <div class="image-wrap">
+                                        @if($img_type == 1)
+                                            <img src="/images/{{$item->background_image->big_crop->link}}"
+                                                 alt="{{$item->background_image->alt}}">
+                                        @elseif($img_type == 2)
+                                            <img src="/images/{{$item->background_image->medium_crop->link}}"
+                                                 alt="{{$item->background_image->alt}}">
+                                        @elseif($img_type == 3)
+                                            <img src="/images/{{$item->background_image->small_crop->link}}"
+                                                 alt="{{$item->background_image->alt}}">
+                                        @endif
                                         <img src="/images/{{$item->background_image->medium_crop->link}}"
                                              alt="{{$item->background_image->alt}}" class="for-mobile">
                                         <img src="/images/{{$item->background_image->big_crop->link}}"
                                              alt="{{$item->background_image->alt}}" class="medium">
-                                </div>
-                                <div class="about-wrap">
-                                    <p class="name-wrap">
-                                        <span>{{$item->page_name_field}}</span>
-                                    </p>
-                                    <p class="about">{{$item->small_descr_field}}</p>
-                                    @foreach($filter->city_group as $item_c)
-                                        @if($item_c->id_field == $item->city_name_field)
-                                            <p class="city">{{$item_c->city_name_field}}</p>
-                                        @endif
-                                    @endforeach
-                                </div>
-                            </a>
-                        </div>
-                    @endif
-                    @if($i == 3)
-                        <?php
+                                    </div>
+                                    <div class="about-wrap">
+                                        <p class="name-wrap">
+                                            <span>{{$item->page_name_field}}</span>
+                                        </p>
+                                        <p class="about">{{$item->small_descr_field}}</p>
+                                        @foreach($filter->city_group as $item_c)
+                                            @if($item_c->id_field == $item->city_name_field)
+                                                <p class="city">{{$item_c->city_name_field}}</p>
+                                            @endif
+                                        @endforeach
+                                    </div>
+                                </a>
+                            </div>
+                        @endif
+                        @if($i == 3)
+                            <?php
                             $i = 0;
                             $img_type = 0;
-                        ?>
-                        </div>
-                        <div class="clients-row">
-                    @endif
+                            ?>
+            </div>
+            <div class="clients-row">
                 @endif
-            @endforeach
-                    </div>
+                @endif
+                @endforeach
+            </div>
 
         </div>
     </section>
