@@ -106,10 +106,9 @@
             </div>
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Описание </label>
-                <input type="text" data-field-type="string" data-field-name="seo_description"
-                       data-block="information_page" data-group="inf_page" class="input-field group_field"
-                       value="{{$item_inf_page->seo_description_field}}" data-item-id="{{$item_inf_page->id_field}}"
-                       placeholder="Строка">
+                <textarea type="text" data-field-type="string" data-field-name="seo_description"
+                       data-block="information_page" data-group="inf_page" class="input-field group_field" data-item-id="{{$item_inf_page->id_field}}"
+                       placeholder="Строка">{{$item_inf_page->seo_description_field}}</textarea>
             </div>
         </div>
 

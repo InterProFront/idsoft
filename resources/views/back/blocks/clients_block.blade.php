@@ -48,8 +48,8 @@
         </div>
         <div class="field-wrap ">
             <label class="field-title"> СЕО: Описание </label>
-            <input type="text" data-field-type="string" data-field-name="seo_description" data-block="clients_block"
-                   class="input-field block_field" value="{{$clients_block->seo_description_field}}" placeholder="Строка">
+            <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="clients_block"
+                   class="input-field block_field" placeholder="Строка">{{$clients_block->seo_description_field}}</textarea>
         </div>
     </div>
     <div class="save-panel">

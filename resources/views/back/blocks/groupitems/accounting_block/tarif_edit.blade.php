@@ -105,10 +105,10 @@
             </div>
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Описание </label>
-                <input type="text" data-field-type="string" data-field-name="seo_description"
+                <textarea type="text" data-field-type="string" data-field-name="seo_description"
                        data-block="accounting_block" data-group="tarif" class="input-field group_field"
-                       value="{{$item_tarif->seo_description_field}}" data-item-id="{{$item_tarif->id_field}}"
-                       placeholder="Строка">
+                        data-item-id="{{$item_tarif->id_field}}"
+                       placeholder="Строка">{{$item_tarif->seo_description_field}}</textarea>
             </div>
         </div>
 

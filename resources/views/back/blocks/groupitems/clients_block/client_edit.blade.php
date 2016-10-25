@@ -198,10 +198,9 @@
             </div>
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Описание </label>
-                <input type="text" data-field-type="string" data-field-name="seo_description"
-                       data-block="clients_block" data-group="client" class="input-field group_field"
-                       value="{{$item_client->seo_description_field}}" data-item-id="{{$item_client->id_field}}"
-                       placeholder="Строка">
+                <textarea type="text" data-field-type="string" data-field-name="seo_description"
+                       data-block="clients_block" data-group="client" class="input-field group_field" data-item-id="{{$item_client->id_field}}"
+                       placeholder="Строка">{{$item_client->seo_description_field}}</textarea>
             </div>
         </div>
 

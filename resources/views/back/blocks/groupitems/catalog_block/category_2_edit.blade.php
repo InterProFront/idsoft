@@ -1,6 +1,6 @@
 @extends('back.layout')
 @section('content')
-    <div class="select-content">
+    <div class="select-content" xmlns="http://www.w3.org/1999/html">
         <ul class="list">
             <li class="item"><a href="#content" class="select-item active">Информация</a></li>
             <li class="item"><a href="#seo" class="select-item">Настройки SEO</a></li>
@@ -167,10 +167,9 @@
         </div>
         <div class="field-wrap ">
             <label class="field-title"> СЕО: Описание </label>
-            <input type="text" data-field-type="string" data-field-name="seo_description"
+            <textarea type="text" data-field-type="string" data-field-name="seo_description"
                    data-block="catalog_block" data-group="category_2" class="input-field group_field"
-                   value="{{$item_category_2->seo_description_field}}"
-                   data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">
+                   data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">{{$item_category_2->seo_description_field}}</textarea>
         </div>
     </div>
     <div class="disabled">

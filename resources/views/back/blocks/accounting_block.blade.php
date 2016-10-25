@@ -180,9 +180,9 @@
         </div>
         <div class="field-wrap ">
             <label class="field-title"> СЕО: Описание </label>
-            <input type="text" data-field-type="string" data-field-name="seo_description" data-block="accounting_block"
-                   class="input-field block_field" value="{{$accounting_block->seo_description_field}}"
-                   placeholder="Строка">
+            <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="accounting_block"
+                   class="input-field block_field"
+                   placeholder="Строка">{{$accounting_block->seo_description_field}}</textarea>
         </div>
     </div>
 
