@@ -117,6 +117,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 });
 Route::get('/inf/{slug}', 					'PageController@getInfPage');
 
+Route::post('/rating/send', 				'RaitingController@saveRaiting');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',

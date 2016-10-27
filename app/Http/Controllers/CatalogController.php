@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Rating;
 use Interpro\QuickStorage\Concept\QueryAgent;
 
 class CatalogController extends Controller
@@ -76,8 +77,11 @@ class CatalogController extends Controller
                 }
             }
         }
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/catalog/'.$slug);
         return view('front.catalog.category.category', [
-            'products' => $catalog
+            'products' => $catalog,
+            'rating'   => $rating
         ]);
     }
 

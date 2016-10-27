@@ -203,7 +203,12 @@
                        placeholder="Строка">{{$item_client->seo_description_field}}</textarea>
             </div>
         </div>
-
+        <div class="disabled">
+            <button type="button" class="any_save" data-block="clients_block" data-group="client"
+                    data-entity="groupitem" data-item-id="{{$item_client->id_field}}" data-descr="Эл. первой группы">
+                Сохранить
+            </button>
+        </div>
         <div class="save-panel">
             <div class="status-panel success">
                 <p>Изменения сохранены</p>
