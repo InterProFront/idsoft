@@ -1956,6 +1956,9 @@ header .mobile-menu-bottom {
   font-size: 14px;
   color: #999999;
 }
+.product > div.rating:last-child {
+  padding-bottom: 0;
+}
 .product > div:last-child {
   padding-bottom: 60px;
 }

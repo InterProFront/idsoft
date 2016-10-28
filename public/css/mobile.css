@@ -2361,6 +2361,9 @@ a.bx-pager-link.active {
     margin-right: 0;
     text-align: center;
   }
+  .advantages .advantages-item .image-wrap img {
+    margin-left: 30px;
+  }
 }
 @media screen and (max-width: 700px) {
   .bottom-row {

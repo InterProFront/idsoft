@@ -199,7 +199,8 @@ class CatalogController extends Controller
                 }
             }
         }
-
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/'.$request->path());
         $parent = $this->queryAgent->getGroupItem('catalog_block', 'category_2', $product->owner_id_field);
         $grand_parent = $this->queryAgent->getGroupItem('catalog_block', 'category_1', $parent->owner_id_field);
         switch ($grand_parent->id_field) {
@@ -261,7 +262,8 @@ class CatalogController extends Controller
             'soft' => $soft,
             'prod' => $test,
             'parent' => $parent,
-            'grand' => $grand_parent
+            'grand' => $grand_parent,
+            'rating'=> $rating
         ]);
     }
     //==================================================================
