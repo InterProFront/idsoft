@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Rating;
 use Interpro\QuickStorage\Concept\QueryAgent;
 
@@ -48,10 +49,12 @@ class CatalogController extends Controller
     {
         $catalog = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], ['category_2' => ['owner_id' => 51, 'show' => 1]]);
         $seo = $this->queryAgent->getGroupItem('catalog_block', 'category_1', 51);
-
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/catalog');
         return view('front.catalog.all_category.catalog', [
             'category_1' => $catalog,
-            'seo' => $seo
+            'seo' => $seo,
+            'rating' => $rating
         ]);
     }
 
@@ -100,8 +103,11 @@ class CatalogController extends Controller
                 }
             }
         }
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/soft');
         return view('front.catalog.category.category', [
-            'products' => $catalog
+            'products' => $catalog,
+            'rating'   => $rating
         ]);
     }
 
@@ -109,10 +115,12 @@ class CatalogController extends Controller
     {
         $catalog = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], ['category_2' => ['owner_id' => 52, 'show' => 1]]);
         $seo = $this->queryAgent->getGroupItem('catalog_block', 'category_1', 52);
-
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/showcase');
         return view('front.catalog.category.video', [
             'category_1' => $catalog,
-            'seo' => $seo
+            'seo' => $seo,
+            'rating' => $rating
         ]);
     }
 
@@ -120,10 +128,12 @@ class CatalogController extends Controller
     {
         $catalog = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], ['category_2' => ['owner_id' => 53, 'show' => 1]]);
         $seo = $this->queryAgent->getGroupItem('catalog_block', 'category_1', 53);
-
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/video');
         return view('front.catalog.category.video', [
             'category_1' => $catalog,
-            'seo' => $seo
+            'seo' => $seo,
+            'rating' => $rating
         ]);
     }
 
@@ -133,9 +143,11 @@ class CatalogController extends Controller
     public function getAccounting()
     {
         $test = $this->queryAgent->getBlock('accounting_block', [], []);
-
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/accounting');
         return view('front.accounting.accounting', [
-            'account' => $test
+            'account' => $test,
+            'rating'  => $rating
         ]);
     }
 
@@ -144,10 +156,12 @@ class CatalogController extends Controller
 
         $tarif = $this->queryAgent->getGroupItemBySlug('accounting_block', 'tarif', $slug);
         $all_tarif = $this->queryAgent->getGroupFlat('accounting_block', 'tarif_category', [], []);
-
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/accounting/'.$slug);
         return view('front.accounting.tarifs.tarif', [
             'tarif' => $tarif,
-            'all_tarif' => $all_tarif
+            'all_tarif' => $all_tarif,
+            'rating'    => $rating
         ]);
     }
 
@@ -155,7 +169,6 @@ class CatalogController extends Controller
     {
         $catalog = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], ['category_2' => ['owner_id' => 51]]);
         $seo = $this->queryAgent->getGroupItem('catalog_block', 'category_1', 51);
-
         return view('front.catalog.all_category.catalog', [
             'category_1' => $catalog,
             'seo' => $seo
@@ -166,7 +179,6 @@ class CatalogController extends Controller
     {
         $catalog = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], ['category_2' => ['owner_id' => 51]]);
         $seo = $this->queryAgent->getGroupItem('catalog_block', 'category_1', 51);
-
         return view('front.catalog.all_category.catalog', [
             'category_1' => $catalog,
             'seo' => $seo
@@ -174,8 +186,9 @@ class CatalogController extends Controller
     }
 
 
-    public function getProduct($category, $product)
+    public function getProduct($category, $product, Request $request)
     {
+        dd($request->path());
         $product = $this->queryAgent->getGroupItemBySlug('catalog_block', 'product', $product);
         if ($product->course_id_field != 0) {
             foreach ($this->course->course_group as $item) {
@@ -187,6 +200,7 @@ class CatalogController extends Controller
                 }
             }
         }
+
         $parent = $this->queryAgent->getGroupItem('catalog_block', 'category_2', $product->owner_id_field);
         $grand_parent = $this->queryAgent->getGroupItem('catalog_block', 'category_1', $parent->owner_id_field);
         switch ($grand_parent->id_field) {
@@ -258,7 +272,8 @@ class CatalogController extends Controller
     //==================================================================
     public function getAuto($slug)
     {
-
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/automatic/'.$slug);
         $auto = $this->queryAgent->getGroupItemBySlug('auto_block', 'auto', $slug);
         if ($auto->course_id_field != 0) {
             foreach ($this->course->course_group as $item) {
@@ -307,7 +322,8 @@ class CatalogController extends Controller
         return view('front.catalog.automatic.automatic', [
             'auto' => $auto,
             'all' => $all,
-            'prod' => $test
+            'prod' => $test,
+            'rating' => $rating
         ]);
     }
 }

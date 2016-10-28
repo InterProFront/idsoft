@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Mail;
 use Interpro\QuickStorage\Concept\Exception\WrongBlockFieldNameException;
 use Interpro\QuickStorage\Laravel\QueryAgent;
-use Illuminate\Http\Request;;
+use Illuminate\Http\Request;
 
 class BackController extends Controller {
 
@@ -237,6 +237,7 @@ class BackController extends Controller {
 		$file = $request->file('price');
 		$ext  =  strtolower($file->getClientOriginalExtension());;
 		$file->move(base_path().'/public/price/', 'price.'.$ext);
+		chmod(base_path().'/public/price/price.'.$ext, 0777);
 		return ['status' => 'OK','name' => 'price.'.$ext];
 	}
 	public function priceSend(Request $request){
@@ -322,7 +323,7 @@ class BackController extends Controller {
 				$message->from($username, $site_name);
 				$message->to($mail);
 				$message->attach(base_path().'/public/price/'.$file->price_name_field);
-				$message->subject('Сообщение из сайта '.$site_name);
+				$message->subject('Прайс-лист'.$site_name);
 			});
 		return ['status' => 'OK'];
 	}

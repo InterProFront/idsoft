@@ -11,7 +11,7 @@
                         <a id="ask-me" href="#question">Написать письмо</a>
                     </li>
                     <li class="item">
-                        <a href="#">Как нас найти</a>
+                        <a href="http://go.2gis.com/nq2ta" target="_blank" rel="nofollow noindex">Как нас найти</a>
                     </li>
                 </ul>
             </div>

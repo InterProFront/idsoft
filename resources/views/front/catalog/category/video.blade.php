@@ -97,11 +97,11 @@
                 </div>
             @endforeach
         </div>
-        <div class="Rating">
+        <div class="rating">
             <span class="head-reiting">Оцените нашу страницу</span>
             <div class="raiting-star" data-entity="news" data-id="1177">
                 <ul class="star-rating-default" style="width:125px">
-                    <li class="current-rating" style="width:91.111111111111%;">4.6</li>
+                    <li class="current-rating" style="width:{{$rating['percent']}}%;">{{$rating['middle']}}</li>
                     <li class="star">
                         <a class="star-link" data-raiting="1" title="1/5" style="width:20%;z-index:6"
                            rel="nofollow">1</a>
@@ -123,13 +123,13 @@
                            rel="nofollow">5</a>
                     </li>
                 </ul>
-                    <span class="totalvotes" itemprop="aggregateRating" itemscope="itemscope"
-                          itemtype="http://schema.org/AggregateRating">
-                    <meta itemprop="ratingValue" content="4.6">Текущий рейтинг — 4.6
-                        <meta itemprop="bestRating" content="5">
-                    <meta itemprop="ratingCount" content="9"> (9 человек)
-                    </span>
             </div>
+            <span class="totalvotes" itemprop="aggregateRating" itemscope="itemscope"
+                  itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="ratingValue" content="{{$rating['middle']}}">Текущий рейтинг — {{$rating['middle']}}
+                <meta itemprop="bestRating" content="5">
+                    <meta itemprop="ratingCount" content="{{$rating['count']}}"> ({{$rating['count']}} человек)
+                    </span>
         </div>
     </section>
 @endsection

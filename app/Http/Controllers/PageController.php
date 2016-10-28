@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Rating;
 use Interpro\QuickStorage\Concept\QueryAgent;
 
 class PageController extends Controller{
@@ -60,6 +61,8 @@ class PageController extends Controller{
 
 
 	public function getClients(){
+		$rating = new Rating();
+		$rating = $rating->getRatingView('/clients');
 		$seo = $this->queryAgent->getBlock('clients_block',[],[]);
 		$client_all = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
@@ -80,12 +83,15 @@ class PageController extends Controller{
 			'counts' => $clients_type,
 			'city'	 => $city,
 			'inst'	 => $inst,
-			'seo_c' 	 => $seo
+			'seo_c' 	 => $seo,
+			'rating' 	=> $rating
 		]);
 	}
 
 	public function getClientsFilter($city, $inst){
 		$i = 0;
+		$rating = new Rating();
+		$rating = $rating->getRatingView('/clients');
 		$all = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		$clients_type[$i] = $this->queryAgent->getGroup('clients_block','client',[],[]);
 		if($city != 'all' && $inst != 'all'){
@@ -111,7 +117,8 @@ class PageController extends Controller{
 			'counts' => $clients_type,
 			'city'  => $city,
 			'inst'	=> $inst,
-			'seo_c' 	 => $seo
+			'seo_c' 	 => $seo,
+			'rating'	=> $rating
 		]);
 	}
 	public function getClientItem($slug){
@@ -127,7 +134,8 @@ class PageController extends Controller{
 			$item->setField('product_cost', $new_price);
 			$item->setField('product_sale', $new_sale);
 		}
-
+		$rating = new Rating();
+		$rating = $rating->getRatingView('/clients/'.$slug);
 		// Генерация ссылки на товар исходя из принадлежности к группе
 		foreach($test as $item){
 			foreach($category as $c_item){
@@ -154,16 +162,20 @@ class PageController extends Controller{
 			'client' => $client,
 			'filter' => $filter,
 			'all'	 => $all_clients,
-			'product'	=> $test
+			'product'	=> $test,
+			'rating'	=> $rating
 		]);
 	}
 
 	public function getInfPage($slug){
+		$rating = new Rating();
+		$rating = $rating->getRatingView('/inf/'.$slug);
 		$inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
 		$all_pages = $this->queryAgent->getGroupFlat('information_page','inf_page',[],[]);
 		return view('front.information.information-page',[
 			'inf' => $inf_page,
-			'all' => $all_pages
+			'all' => $all_pages,
+			'rating'	=> $rating
 		]);
 	}
 

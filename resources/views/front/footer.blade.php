@@ -5,7 +5,8 @@
                 <li class="menu-item"><a href="/inf/about" class="menu-link all-site-menu">О компании</a></li>
                 <li class="menu-item"><a href="/inf/support" class="menu-link all-site-menu">Поддержка</a></li>
                 <li class="menu-item"><a href="/clients" class="menu-link all-site-menu">Наши клиенты</a></li>
-                <li class="menu-item"><a href="/inf/drivers-and-docs" class="menu-link all-site-menu">Драйверы и документация</a></li>
+                <li class="menu-item"><a href="/inf/drivers-and-docs" class="menu-link all-site-menu">Драйверы и
+                        документация</a></li>
                 <li class="menu-item"><a href="/inf/partners" class="menu-link all-site-menu">Стать партнером</a></li>
             </ul>
         </nav>
@@ -28,9 +29,21 @@
             <div class="left">
                 <p class="gray-text">{{$static->copyright_field}}</p>
             </div>
+            <div class="center">
+                <p class="gray-text">Мы в социальных сетях
+                    <span class="big-wrap">
+                    <span class="soc-link"><a href="https://vk.com" rel="nofollow" target="_blank">ВКонтакте</a></span>
+                    <span class="soc-link"><a href="https://facebook.com" rel="nofollow"
+                                              target="_blank">Фейсбук</a></span>
+                    <span class="soc-link"><a href="https://www.instagram.com/" rel="nofollow" target="_blank">Инстограмм</a></span>
+                    </span>
+                </p>
+
+            </div>
             <div class="right">
                 <p class="gray-text">Сделано в <a href="http://interpro.kz" rel="noindex, nofollow">ИнтерПро</a></p>
             </div>
         </div>
     </footer>
+    @yield('seotext')
 @endsection

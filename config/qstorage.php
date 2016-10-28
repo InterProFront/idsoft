@@ -3,7 +3,7 @@
 return [
 
     'static_site' => [
-        'textfields' => ['metrik'],
+        'textfields' => ['metrik','seo_text'],
         'stringfields' => ['logo_text', 'copyright', 'page_title', 'seo_keywords', 'seo_description'],
         'images' => ['logo'],
         'groups' => [
@@ -40,13 +40,15 @@ return [
         'groups' => [
             'category_1' => [
                 'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name', 'category_description','price_name'],
-                'images' => ['card_background']
+                'images' => ['card_background'],
+                'textfields'=> ['seo_text']
             ],
             'category_2' => [
                 'owner' => 'category_1',
                 'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'category_name', 'category_description'],
                 'bool' => ['sale', 'new', 'individual'],
-                'images' => ['card_background', 'card_hover']
+                'images' => ['card_background', 'card_hover'],
+                'textfields' => ['seo_text']
             ],
             'product' => [
                 'owner' => 'category_2',
@@ -135,6 +137,7 @@ return [
     ],
     'clients_block' => [
         'stringfields' => ['page_title', 'seo_keywords', 'seo_description'],
+        'textfields' => ['seo_text'],
         'groups' => [
             'client' => [
                 'images' => ['background','letter'],

@@ -95,6 +95,11 @@
             <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="static_site"
                    class="input-field block_field"  placeholder="Строка">{{$static_site->seo_description_field}}</textarea>
         </div>
+        <div class="field-wrap ">
+            <label class="field-title"> СЕО-текст </label>
+            <textarea type="text" data-field-type="text" data-field-name="seo_text" data-block="static_site"
+                      class="input-field block_field"  placeholder="Строка">{{$static_site->seo_text_field}}</textarea>
+        </div>
     </div>
 
 

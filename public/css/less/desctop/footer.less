@@ -1,5 +1,5 @@
 .footer-menu{
-  background: #006699;
+  background: #0078bf;
   .menu-list{
     display: flex;
     justify-content: space-between;
@@ -23,16 +23,19 @@
   background: #233345;
   display: flex;
   justify-content: space-between;
-  padding: 50px 80px 70px;
+  padding: 20px 80px 70px;
   .advantages-item{
     width: 240px;
     .image-wrap{
+      text-align: center;
+      margin-right: -40px;
       padding-bottom: 15px;
       img{
 
       }
     }
     .text-wrap{
+      text-align: center;
       .advantages-title{
         color: #ffffff;
         font-weight: bold;
@@ -54,6 +57,27 @@
     .gray-text{
       font-size:12px;
       color: #999999;
+    }
+  }
+  .center{
+    .gray-text{
+      font-size:14px;
+      color: #999999;
+      .soc-link{
+        &:first-child{
+          &:before{
+            content: ' ';
+          }
+        }
+        &:before{
+          content: '•';
+          display: inline-block;
+          margin: 0 10px;
+        }
+        a{
+          .link(#ffffff,transparent,@yellow,transparent)
+        }
+      }
     }
   }
   .right{

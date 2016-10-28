@@ -3,7 +3,7 @@
 @section('content')
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content category dashed-bottom">
+    <section class="content category dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
         <h1 class="block-title">{{$products->category_name_field}}</h1>
         <div class="product-list">
             @foreach($products->product_group as $item)
