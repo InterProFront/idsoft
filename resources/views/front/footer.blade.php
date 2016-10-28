@@ -35,7 +35,7 @@
                     <span class="soc-link"><a href="https://vk.com" rel="nofollow" target="_blank">ВКонтакте</a></span>
                     <span class="soc-link"><a href="https://facebook.com" rel="nofollow"
                                               target="_blank">Фейсбук</a></span>
-                    <span class="soc-link"><a href="https://www.instagram.com/" rel="nofollow" target="_blank">Инстограмм</a></span>
+                    <span class="soc-link"><a href="https://www.instagram.com/" rel="nofollow" target="_blank">Инстаграмм</a></span>
                     </span>
                 </p>
 
