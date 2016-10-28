@@ -188,7 +188,6 @@ class CatalogController extends Controller
 
     public function getProduct($category, $product, Request $request)
     {
-        dd($request->path());
         $product = $this->queryAgent->getGroupItemBySlug('catalog_block', 'product', $product);
         if ($product->course_id_field != 0) {
             foreach ($this->course->course_group as $item) {
