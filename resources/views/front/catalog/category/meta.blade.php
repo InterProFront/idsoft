@@ -1,6 +1,6 @@
 @section('meta')
-    <title>{{$products->page_title_field}}</title>
-    <meta name="description" content="{{$products->seo_description_field}}">
-    <meta name="keywords" content="{{$products->seo_keywords_field}}">
+    <title>{{$products->category_name_field}} заказать в Алматы, Казахстане - ID SOFT</title>
+    <meta name="description" content="Компания ID SOFT предлагает заказать {{$products->category_name_field}} недорого. Лучшая цена, отзывы. ☎ +7 (727) 220-2000">
+    <meta name="keywords" content="{{$products->category_name_field}}, {{$products->category_name_field}} купить, заказать {{$products->category_name_field}}">
     @include('front.seotext',['seo_text' => $products->seo_text_field])
 @endsection
