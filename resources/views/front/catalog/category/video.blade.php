@@ -87,9 +87,9 @@
                                     @endif
 
                                     <div class="image-wrap">
-                                        <img src="/images/{{$item->card_background_image->catalog_crop->link}}"
+                                        <img src="/images/{{$item->card_background_image->secondary_link}}"
                                              alt="{{$item->card_background_image->alt}}" class="static">
-                                        <img src="/images/{{$item->card_hover_image->catalog_crop->link}}"
+                                        <img src="/images/{{$item->card_hover_image->secondary_link}}"
                                              alt="{{$item->card_hover_image->alt}}" class="hover">
                                     </div>
                                     <p class="wrap"><span>{{$item->category_name_field}}</span></p>
