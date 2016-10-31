@@ -15,7 +15,7 @@
                             <p class="card-title">{{$auto->auto_title_field}}</p>
                             <p class="card-text">{{$auto->auto_description_field}}</p>
                         </div>
-                        <img src="/images/{{$auto->auto_background_image->primary_link}}" class="monitor" alt="">
+                        <img src="/images/{{$auto->auto_background_image->primary_link}}" class="monitor" alt="{{$auto->auto_background_image->alt}}">
                         <img src="/img/monitor.PNG" class="monitor-l" alt="">
                         <div class="popup-form orange small">
                             <h3 class="popup-title">{{$auto->auto_title_field}}</h3>
@@ -35,7 +35,7 @@
                             <p class="card-title">{{$auto->iiko_title_field}}</p>
                             <p class="card-text">{{$auto->iiko_description_field}}</p>
                         </div>
-                        <img src="/images/{{$auto->iiko_background_image->primary_link}}" class="iiko" alt="">
+                        <img src="/images/{{$auto->iiko_background_image->primary_link}}" class="iiko" alt="{{$auto->iiko_background_image->alt}}">
                         <div class="popup-form red">
                             <h3 class="popup-title">{{$auto->iiko_title_field}}</h3>
                             <div class="popup-items">
@@ -56,7 +56,7 @@
                             <p class="card-title">{{$catalog->category_name_field}}</p>
                             <p class="card-text">{{$catalog->category_description_field}}</p>
                         </div>
-                        <img src="/images/{{$catalog->card_background_image->primary_link}}" class="hand" alt="">
+                        <img src="/images/{{$catalog->card_background_image->primary_link}}" class="hand" alt="{{$catalog->card_background_image->alt}}">
                         <div class="popup-form orange big">
                             <h3 class="popup-title">{{$catalog->category_name_field}}</h3>
                             <div class="popup-items">
@@ -76,7 +76,7 @@
                                 <p class="card-title">{{$soft->category_name_field}}</p>
                                 <p class="card-text">{{$soft->category_description_field}}</p>
                             </div>
-                            <img src="/images/{{$soft->card_background_image->primary_link}}" class="soft" alt="">
+                            <img src="/images/{{$soft->card_background_image->primary_link}}" class="soft" alt="{{$soft->card_background_image->alt}}">
                         </a>
                     </div>
                 </div>
@@ -86,7 +86,7 @@
                             <p class="card-title">{{$showcase->category_name_field}}</p>
                             <p class="card-text">{{$showcase->category_description_field}}</p>
                         </div>
-                        <img src="/images/{{$showcase->card_background_image->secondary_link}}" alt="">
+                        <img src="/images/{{$showcase->card_background_image->secondary_link}}" alt="{{$showcase->card_background_image->alt}}">
                         <div class="popup-form orange">
                             <h3 class="popup-title">{{$showcase->category_name_field}}</h3>
                             <div class="popup-items">
@@ -106,7 +106,7 @@
                                 <p class="card-title">{{$buh->card_title_field}}</p>
                                 <p class="card-text">{{$buh->card_description_field}}</p>
                             </div>
-                            <img src="/images/{{$buh->card_background_image->secondary_link}}" alt="">
+                            <img src="/images/{{$buh->card_background_image->secondary_link}}" alt="{{$buh->card_background_image->alt}}">
                         </a>
                     </div>
                     <div class="col-1-3">
@@ -114,7 +114,7 @@
                             <p class="card-title">{{$video->category_name_field}}</p>
                             <p class="card-text">{{$video->category_description_field}}</p>
                         </div>
-                        <img src="/images/{{$video->card_background_image->secondary_link}}" alt="">
+                        <img src="/images/{{$video->card_background_image->secondary_link}}" alt="{{$video->card_background_image->alt}}">
                         <div class="popup-form orange">
                             <h3 class="popup-title">{{$video->category_name_field}}</h3>
                             <div class="popup-items">
@@ -183,7 +183,7 @@
                 заказ.</p>
             <div class="calculate">
                 <input type="text" class="input phone popup-input" data-mask="+7(000)000-00-00" placeholder="Номер телефона" data-field-name="phone" data-field-type="string">
-                <button class="calculated-button send-form">Рассчитать</button>
+                <button class="calculated-button button send-form">Рассчитать</button>
             </div>
         </div>
     </section>

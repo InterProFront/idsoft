@@ -5,7 +5,16 @@ $(document).ready(function(){
         }
     });
 
-
+    $('.thank').magnificPopup({
+        type: 'inline',
+        removalDelay: 500,
+        callbacks: {
+            beforeOpen: function() {
+                this.st.mainClass ='mfp-zoom-in';
+            }
+        },
+        midClick: true
+    });
 
     // Проверка почты на соответствие маске *@*.*
     function isEmail( mail ){
@@ -46,7 +55,7 @@ $(document).ready(function(){
     function addFields( selector, object ){
 
         $(selector).each(function () {
-            var $this = $(this);
+            $this = $(this);
 
             var field_type = $this.data('field-type');
             var field_name = $this.data('field-name');
@@ -68,7 +77,7 @@ $(document).ready(function(){
 
     $('.send-form').on('click',function() {
         unical = $(this).closest('.white-popup').attr('id');
-        $this = $(this);
+        var $this = $(this);
         var dataobj = {};
         dataobj['block'] = 'fidback';
         dataobj['type_name'] = unical;
@@ -99,13 +108,14 @@ $(document).ready(function(){
 
             deferred.success(function(data){
 
+                //$.magnificPopup.open({
+                //    items: {
+                //        src: '#thanks'
+                //    },
+                //    type: 'inline'
+                //});
+                $('.thank').click();
 
-                $.magnificPopup.open({
-                    items: {
-                        src: '#thanks'
-                    },
-                    type: 'inline'
-                });
                 clearFields(unical);
                 $this.removeClass('load');
 
@@ -124,6 +134,7 @@ $(document).ready(function(){
 
     });
     $('.give-price').on('click',function(){
+        $this = $(this);
         if( !isEmail($('.input.mail').val()) ){
             var data = {};
             data['mail'] = $('.input.mail').val();
@@ -135,14 +146,12 @@ $(document).ready(function(){
                     data: data
                 }
             );
+            $this.addClass('load');
+
             deferred.done(function(){
-                $.magnificPopup.open({
-                    items: {
-                        src: '#thanks'
-                    },
-                    type: 'inline'
-                });
+                $('.thank').click();
                 $('.input.mail').val('');
+                $this.removeClass('load');
             });
         } else{
             $('.input.mail').addClass('error');

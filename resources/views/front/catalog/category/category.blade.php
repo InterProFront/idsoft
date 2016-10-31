@@ -15,7 +15,7 @@
                                     @endif
 
                                     <div class="img-wrap">
-                                        <img src="/images/{{$item->product_base_photo_image->icon_link}}"
+                                        <img src="/images/{{$item->product_base_photo_image->catalog_crop->link}}"
                                              alt="{{$item->product_base_photo_image->alt}}">
                                     </div>
                                     <div class="text-wrap">

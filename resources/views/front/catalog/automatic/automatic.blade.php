@@ -7,7 +7,7 @@
     <section class="content automatic dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
         <div class="page-title-image">
             <div class="image-wrap">
-                <img src="/images/{{$auto->background_image->primary_link}}" alt="">
+                <img src="/images/{{$auto->background_image->primary_link}}" alt="{{$auto->background_image->alt}}">
             </div>
             <h1 class="page-title">{{$auto->page_name_field}}</h1>
         </div>
@@ -80,7 +80,7 @@
                                 <div class="product-item">
                                     <a href="{{$item_prod->title_field}}">
                                         <div class="img-wrap">
-                                            <img src="/images/{{$item_prod->product_base_photo_image->icon_link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
+                                            <img src="/images/{{$item_prod->product_base_photo_image->catalog_crop->link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
                                         </div>
                                         <div class="text-wrap">
                                             <p>{{$rel->about_item_field}}</p>

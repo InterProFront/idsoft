@@ -18,21 +18,21 @@
             <div class="col-1-2">
                 <div class="preview-block">
                     <div class="big-picture">
-                        <img src="/images/{{$product->product_base_photo_image->secondary_link}}"
+                        <img src="/images/{{$product->product_base_photo_image->title_crop->link}}"
                              class="zoom"
-                             data-zoom-image="/images/{{$product->product_base_photo_image->primary_link}}">
+                             data-zoom-image="/images/{{$product->product_base_photo_image->zoom_crop->link}}" alt="{{$product->product_base_photo_image->alt}}">
                     </div>
 
                     <div class="pictures-row" id="gallery_01">
                         @if($product->product_image_group->count() > 0)
-                        <a href="#" data-image="/images/{{$product->product_base_photo_image->secondary_link}}"
-                           data-zoom-image="/images/{{$product->product_base_photo_image->primary_link}}">
-                            <img id="img_01" src="/images/{{$product->product_base_photo_image->preview_link}}"/>
+                        <a href="#" data-image="/images/{{$product->product_base_photo_image->title_crop->link}}"
+                           data-zoom-image="/images/{{$product->product_base_photo_image->zoom_crop->link}}">
+                            <img id="img_01" src="/images/{{$product->product_base_photo_image->preview_crop->link}}" alt="{{$product->product_base_photo_image->alt}}"/>
                         </a>
                         @foreach($product->product_image_group as $item)
-                            <a href="#" data-image="/images/{{$item->product_image->secondary_link}}"
-                               data-zoom-image="/images/{{$item->product_image->primary_link}}">
-                                <img id="img_01" src="/images/{{$item->product_image->preview_link}}"/>
+                            <a href="#" data-image="/images/{{$item->product_image->title_crop->link}}"
+                               data-zoom-image="/images/{{$item->product_image->zoom_crop->link}}">
+                                <img id="img_01" src="/images/{{$item->product_image->preview_crop->link}}" alt="{{$item->product_image->alt}}"/>
                             </a>
                         @endforeach
                         @endif
@@ -147,7 +147,7 @@
                             <div class="product-item">
                                 <a href="{{$item_prod->title_field}}">
                                     <div class="img-wrap">
-                                        <img src="/images/{{$item_prod->product_base_photo_image->icon_link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
+                                        <img src="/images/{{$item_prod->product_base_photo_image->catalog_crop->link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
                                     </div>
                                     <div class="text-wrap">
                                         <p class="wrap">

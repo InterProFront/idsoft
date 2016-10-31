@@ -1,5 +1,5 @@
 <div class="hide">
-    <div class="white-popup" id="order">
+    <div class="white-popup mfp-with-anim mfp-hide" id="order">
         <h4 class="popup-title">Оформить заказ</h4>
         <div class="rows-block">
             <div class="row">

@@ -1,5 +1,5 @@
 <div class="hide">
-    <div class="white-popup" id="question">
+    <div class="white-popup mfp-with-anim mfp-hide" id="question">
         <h4 class="popup-title">Написать письмо</h4>
         <div class="rows-block">
             <div class="row">

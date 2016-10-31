@@ -65,7 +65,7 @@
                                 <div class="product-item">
                                     <a href="{{$item_prod->title_field}}">
                                         <div class="img-wrap">
-                                            <img src="/images/{{$item_prod->product_base_photo_image->icon_link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
+                                            <img src="/images/{{$item_prod->product_base_photo_image->catalog_crop->link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
                                         </div>
                                         <div class="text-wrap">
                                             <p>{{$rel->about_item_field}}</p>

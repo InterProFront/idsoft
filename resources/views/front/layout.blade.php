@@ -28,5 +28,5 @@
 @include('front.popups.question')
 @include('front.popups.thank')
 @include('front.popups.order')
-
+<a href="#thanks" class="thank" style="display: none"></a>
 </html>

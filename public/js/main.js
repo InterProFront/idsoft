@@ -2,12 +2,11 @@
  * Created by Косаностра on 26.08.2016.
  */
 $(document).ready(function () {
-    $('.js_order_popup').magnificPopup({
-        type: 'inline',
-        midClick: true,
-        callbacks: {}
-    });
 
+
+    //=============================================================
+    //===== Главная страница. Слайдер
+    //=============================================================
     $('.slider-list').bxSlider({
         nextText: '<div class="right-slide"></div>',
         prevText: '<div class="left-slide"></div>',
@@ -16,6 +15,10 @@ $(document).ready(function () {
         pause: 5000,
         responsive: true
     });
+    //=============================================================
+    //=========  Плагин "Увеличительно стекло". Страница товара
+    //=============================================================
+
     $('.zoom').elevateZoom({
         gallery: 'gallery_01',
         cursor: 'pointer',
@@ -24,6 +27,9 @@ $(document).ready(function () {
         borderColour: '#cccccc',
         borderSize: 1
     });
+    //=============================================================
+    //======  Главное меню на мобильных
+    //=============================================================
 
     $('.mobile-button').on('click',function(){
         if($(this).hasClass('active')){
@@ -35,19 +41,6 @@ $(document).ready(function () {
         }
     });
 
-    $('.calculated-button').on('click',function(){
-       if($('.input.phone').val() != ''){
-           $('.input.phone').val('');
-           $.magnificPopup.open({
-               items: {
-                   src: '#thanks'
-               },
-               type: 'inline'
-           });
-       } else{
-           $('.input.phone').addClass('error');
-       }
-    });
 
     //===============================================================
     //======= Обработчики для подсветки текущего пунтка меню ========
@@ -55,6 +48,8 @@ $(document).ready(function () {
     var items = document.location.pathname;
     var category = items.split('/')[1];
     var category2 = items.split('/')[2];
+
+    // Подсветка тукущего пункта меню для общего меню ( шапка и футер )
     $('.all-site-menu').each(function(){
        if($(this).attr('href') == '/'+category){
            console.log($(this).attr('href')+'  '+category);
@@ -63,17 +58,22 @@ $(document).ready(function () {
            $(this).closest('li').addClass('active');
        }
     });
+    //==================================================================
+    // Подсветка меню в правой колонке. Готовые решения. Инф Страницы
     $('.menu-item .link').each(function(){
         if($(this).attr('href') == items  ){
             $(this).closest('.menu-item').addClass('active');
         }
     });
-
+    //==================================================================
+    // Подсветка меню во всплывающих меню ( шапка, автоматизации IIKO )
     $('.item-popup a').each(function(){
         if($(this).attr('href') == items  ){
             $(this).closest('.item-popup').addClass('active');
         }
     });
+    //==================================================================
+    // Подсветка фильтров на странице "Наши клиенты"
     $('.type-menu .client-filter').each(function(){
         $href = $(this).attr('href').split('/');
         if( $href[3] == items.split('/')[3]){
@@ -86,19 +86,50 @@ $(document).ready(function () {
             $(this).closest('li').addClass('active');
         }
     });
+    //==================================================================
 
+
+
+
+    //==================================================================
+    //==== Всплывающие формы
+    //==================================================================
+    //==== Форма "Написать нам"
     $('#ask-me').magnificPopup({
-        type: 'inline'
+        type: 'inline',
+        removalDelay: 500,
+        callbacks: {
+            beforeOpen: function() {
+                this.st.mainClass ='mfp-zoom-in';
+            }
+        },
+        midClick: true
     });
+
+
+    //==== Форма "Заказать"
     $('#buy').magnificPopup({
-        type: 'inline'
+        type: 'inline',
+        removalDelay: 500,
+        callbacks: {
+            beforeOpen: function() {
+                this.st.mainClass ='mfp-zoom-in';
+            }
+        },
+        midClick: true
     }).on('click',function(){
-        $('.popup-input[data-field-name="product"]').val($('.block-title').text());
+        $('.popup-input[data-field-name="product"]').val($('.block-title').text()); // Добавление имени товара в заявку
     });
 
 
+    //==== Форма "Рекомендательное письмо"
+    $('.recommend-letter a').magnificPopup({
+        type: 'image'
+    });
+    //==================================================================
+    //==== Свернуть\развернуть "Характеристики"  В карточке товара
+    //==================================================================
     $('.open-close-button a').on('click',function(e){
-
         if($(this).hasClass('open')){
             $(this).text('Свернуть').addClass('close').removeClass('open');
         }else{
@@ -107,12 +138,11 @@ $(document).ready(function () {
         $('.parameters-block').slideToggle();
         e.preventDefault();
     });
+
+    //==== Удалить "Листалку" слайдера если всего 1 набор елементов
     if ($('.bx-pager-link').length <= 1){
         $('.bx-pager-item').css('display','none');
     }
 
 
-    $('.recommend-letter a').magnificPopup({
-        type: 'image'
-    })
 });

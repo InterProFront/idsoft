@@ -5,12 +5,16 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     autopref = require('gulp-autoprefixer'),
     less = require('gulp-less'),
+    styleLint = require('gulp-stylelint'),
+    comb    = require('gulp-csscomb'),
     watch = require('gulp-watch');
+
 
 gulp.task('Styles', function() {
     gulp.src('./css/less/style.less')
         .pipe(less())
         .pipe(autopref('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1','chrome','ff'))
+        .pipe(comb())
         .pipe(gulp.dest('./css'))
         .pipe(livereload());
 });
@@ -20,6 +24,14 @@ gulp.task('Mobile', function() {
         .pipe(autopref('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1','chrome','ff'))
         .pipe(gulp.dest('./css'))
         .pipe(livereload());
+});
+gulp.task('lint', function(){
+    gulp.src('./css/less/desctop/*.less')
+    .pipe(styleLint({
+        reporters: [
+            {configFile: './stylelintrc',formatter: 'string', console: true}
+        ]
+    }));
 });
 
 gulp.task('watch',function(){

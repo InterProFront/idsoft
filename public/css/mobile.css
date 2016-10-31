@@ -36,6 +36,11 @@ body {
   background: #1491c4;
   cursor: pointer;
 }
+.button.load {
+  background: url(../img/default.svg) center no-repeat, #0078bf !important;
+  background-size: 16px 16px;
+  color: transparent !important;
+}
 .block-separator .separator {
   display: block;
   height: 2px;
@@ -2399,7 +2404,7 @@ a.bx-pager-link.active {
     margin: 0 10px;
   }
   .bottom-row .center .gray-text .soc-link a {
-    background: linear-gradient(to left, transparent, transparent 100%);
+    background: linear-gradient(to left, #cccccc, #cccccc 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
     background-position: 0 100%;
     background-size: 10px 1px;
@@ -2408,7 +2413,7 @@ a.bx-pager-link.active {
   }
   .bottom-row .center .gray-text .soc-link a:hover {
     cursor: pointer;
-    background: linear-gradient(to left, transparent, transparent 100%);
+    background: linear-gradient(to left, #fed054, #fed054 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
     background-position: 0 100%;
     background-size: 10px 1px;
@@ -2417,7 +2422,7 @@ a.bx-pager-link.active {
   }
   .bottom-row .center .gray-text .soc-link a:focus {
     outline: none;
-    background: linear-gradient(to left, transparent, transparent 100%);
+    background: linear-gradient(to left, #fed054, #fed054 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
     background-position: 0 100%;
     background-size: 10px 1px;
@@ -2535,7 +2540,7 @@ a.bx-pager-link.active {
     margin: 0 10px;
   }
   .bottom-row .center .gray-text .soc-link a {
-    background: linear-gradient(to left, transparent, transparent 100%);
+    background: linear-gradient(to left, #cccccc, #cccccc 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
     background-position: 0 100%;
     background-size: 10px 1px;
@@ -2544,7 +2549,7 @@ a.bx-pager-link.active {
   }
   .bottom-row .center .gray-text .soc-link a:hover {
     cursor: pointer;
-    background: linear-gradient(to left, transparent, transparent 100%);
+    background: linear-gradient(to left, #fed054, #fed054 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
     background-position: 0 100%;
     background-size: 10px 1px;
@@ -2553,7 +2558,7 @@ a.bx-pager-link.active {
   }
   .bottom-row .center .gray-text .soc-link a:focus {
     outline: none;
-    background: linear-gradient(to left, transparent, transparent 100%);
+    background: linear-gradient(to left, #fed054, #fed054 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
     background-position: 0 100%;
     background-size: 10px 1px;
@@ -2615,8 +2620,10 @@ a.bx-pager-link.active {
     margin: 0 20px;
     min-width: 120px;
     text-align: center;
+    padding-left: 0;
   }
   .rating .totalvotes {
+    padding-left: 0;
     margin: 0 20px;
     text-align: center;
     min-width: 230px;

@@ -2,6 +2,7 @@
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler {
 
@@ -36,7 +37,13 @@ class Handler extends ExceptionHandler {
 	 */
 	public function render($request, Exception $e)
 	{
-		return parent::render($request, $e);
-	}
+		$exception = \Symfony\Component\Debug\Exception\FlattenException::create($e);
+		$statusCode = $exception->getStatusCode($exception);
+
+		if (env('APP_DEBUG') == FALSE && $statusCode == 500 && $e instanceof ValidationException != TRUE) {
+			return response()->view('errors.500', [], 500);
+		} else {
+			return parent::render($request, $e);
+		}	}
 
 }

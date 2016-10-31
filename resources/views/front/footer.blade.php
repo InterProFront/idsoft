@@ -14,7 +14,7 @@
             @foreach($static->adventages_group as $adv_item)
                 <div class="advantages-item">
                     <div class="image-wrap">
-                        <img src="/images/{{$adv_item->adv_img_image->primary_link}}" alt="">
+                        <img src="/images/{{$adv_item->adv_img_image->primary_link}}" alt="{{$adv_item->adv_img_image->alt}}">
                     </div>
                     <div class="text-wrap">
                         <p class="advantages-title">{{$adv_item->adv_title_field}}</p>
@@ -41,7 +41,7 @@
 
             </div>
             <div class="right">
-                <p class="gray-text">Сделано в <a href="http://interpro.kz" rel="noindex, nofollow">ИнтерПро</a></p>
+                <p class="gray-text">Сделано в <a href="http://interpro.kz" rel="nofollow">ИнтерПро</a></p>
             </div>
         </div>
     </footer>
