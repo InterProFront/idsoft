@@ -232,7 +232,9 @@ class BackController extends Controller {
 		]);
 	}
 
-
+	//=====================================================================
+	// Отправка прайс листа на почту.
+	//=====================================================================
 	public function price(Request $request){
 		$file = $request->file('price');
 		$ext  =  strtolower($file->getClientOriginalExtension());;

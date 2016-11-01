@@ -18,6 +18,7 @@ gulp.task('Styles', function() {
         .pipe(gulp.dest('./css'))
         .pipe(livereload());
 });
+
 gulp.task('Mobile', function() {
     gulp.src('./css/less/mobile.less')
         .pipe(less())
@@ -25,6 +26,7 @@ gulp.task('Mobile', function() {
         .pipe(gulp.dest('./css'))
         .pipe(livereload());
 });
+
 gulp.task('lint', function(){
     gulp.src('./css/less/desctop/*.less')
     .pipe(styleLint({
@@ -38,7 +40,6 @@ gulp.task('watch',function(){
     livereload.listen();
     gulp.watch('./css/less/style.less', ['Styles']);
     gulp.watch('./css/less/mobile.less', ['Mobile']);
-
     gulp.watch('./css/less/desctop/*.less', ['Styles']);
     gulp.watch('./css/less/core/*.less',    ['Styles','Mobile']);
     gulp.watch('./css/less/mobile/*.less',  ['Mobile']);
