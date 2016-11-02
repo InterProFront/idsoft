@@ -345,6 +345,9 @@ header .info-row .col-1-3 .head-list .item a:focus{
 header .info-row .col-1-3.reverse{
 	text-align:right;
 }
+header .info-row .col-1-3 .logo-block .logo{
+	width:100px;
+}
 header .main-menu{
 	padding-top:20px;
 }

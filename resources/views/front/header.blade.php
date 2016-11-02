@@ -17,7 +17,8 @@
             </div>
             <div class="col-1-3">
                 <div class="logo-block">
-                    <a href="/"><img src="/images/{{$static->logo_image->primary_link}}" alt="{{$static->logo_image->alt}}"
+                    {{--<a href="/"><img src="/images/{{$static->logo_image->primary_link}}" alt="{{$static->logo_image->alt}}"--}}
+                    <a href="/"><img src="/img/logo.svg" alt="{{$static->logo_image->alt}}"
                          class="logo"></a>
                 </div>
             </div>
