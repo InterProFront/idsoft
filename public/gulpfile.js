@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     autopref = require('gulp-autoprefixer'),
     less = require('gulp-less'),
-    styleLint = require('gulp-stylelint'),
+    //styleLint = require('gulp-stylelint'),
     comb    = require('gulp-csscomb'),
     watch = require('gulp-watch');
 
@@ -27,14 +27,14 @@ gulp.task('Mobile', function() {
         .pipe(livereload());
 });
 
-gulp.task('lint', function(){
-    gulp.src('./css/less/desctop/*.less')
+/*gulp.task('lint', function(){
+    gulp.src('./css/less/desctop/!*.less')
     .pipe(styleLint({
         reporters: [
             {configFile: './stylelintrc',formatter: 'string', console: true}
         ]
     }));
-});
+});*/
 
 gulp.task('watch',function(){
     livereload.listen();

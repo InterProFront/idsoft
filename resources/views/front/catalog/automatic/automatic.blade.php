@@ -5,11 +5,11 @@
     <?php $shadow = false; ?>
     {{----}}
     <section class="content automatic dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+        <h1 class="page-title">{{$auto->page_name_field}}</h1>
         <div class="page-title-image">
             <div class="image-wrap">
                 <img src="/images/{{$auto->background_image->primary_link}}" alt="{{$auto->background_image->alt}}">
             </div>
-            <h1 class="page-title">{{$auto->page_name_field}}</h1>
         </div>
         <div class="main-content-block">
             <div class="col-1-2">

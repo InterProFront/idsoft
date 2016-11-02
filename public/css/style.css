@@ -471,7 +471,7 @@ header .main-menu .wrap .big-menu .menu-item:hover a:focus{
 header .main-menu .wrap .big-menu .menu-item:hover .hovered-text{
 	display:block;
 	text-align:left;
-	color:#666666;
+	color:#CCCCCC;
 	font-size:12px;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form{
@@ -1601,12 +1601,10 @@ header .mobile-menu-bottom{
 }
 .catalog .price-list .row .input:focus{
 	outline:none;
-	padding:10px 9px;
 	border:1px solid #006699;
 }
 .catalog .price-list .row .input:hover{
 	outline:none;
-	padding:10px 9px;
 	border:1px solid #006699;
 }
 .catalog .price-list .row .give-price{
@@ -1990,11 +1988,10 @@ header .mobile-menu-bottom{
 .product-grid .col-1-2 .preview-block .big-picture{
 	max-width:390px;
 	height:390px;
-	margin-bottom:10px;
 }
 .product-grid .col-1-2 .preview-block .big-picture img{
-	width:390px !important;
-	height:390px !important;
+	width:388px !important;
+	height:388px !important;
 	border:1px solid #CCCCCC;
 	line-height:388px;
 }
@@ -2003,13 +2000,13 @@ header .mobile-menu-bottom{
 	width:390px;
 }
 .product-grid .col-1-2 .preview-block .pictures-row a{
-	margin-right:10px;
+	margin:10px 10px 0 0;
 	display:inline-block;
 	border:1px solid #CCCCCC;
 	height:88px;
 	width:88px;
 }
-.product-grid .col-1-2 .preview-block .pictures-row a:nth-child(4){
+.product-grid .col-1-2 .preview-block .pictures-row a:nth-child(4n){
 	margin-right:0;
 }
 .product-grid .col-1-2 .preview-block .pictures-row a img{
@@ -2214,6 +2211,9 @@ header .mobile-menu-bottom{
 .technical-parameters .parameters-block .param-row .col-70 p{
 	color:#333333;
 }
+.zoomContainer .zoomWindowContainer .zoomWindow{
+	height:388px !important;
+}
 .product-related{
 	padding:0 60px 40px 100px;
 }
@@ -2323,15 +2323,6 @@ header .mobile-menu-bottom{
 .page-title-image{
 	position:relative;
 }
-.page-title-image .image-wrap:after{
-	content:"";
-	position:absolute;
-	background:url(../img/a_shadow.png) repeat-x top;
-	top:0;
-	left:0;
-	width:100%;
-	height:100px;
-}
 .page-title-image .image-wrap img{
 	max-width:100%;
 }
@@ -2343,6 +2334,14 @@ header .mobile-menu-bottom{
 	font-size:48px;
 	font-weight:normal;
 	position:absolute;
+}
+.automatic .page-title{
+	margin:0 0 0 0;
+	padding:50px 0 30px 0;
+	font-size:48px;
+	font-weight:normal;
+	color:#333333;
+	text-align:center;
 }
 .main-content-block{
 	padding:50px 40px 30px 100px;

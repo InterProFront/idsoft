@@ -47,21 +47,20 @@
         height: 390px;
 
         img{
-          width: 390px !important;
-          height: 390px !important;
+          width: 388px !important;
+          height: 388px !important;
           border: 1px solid #cccccc;
           line-height:388px;
         }
-        margin-bottom: 10px;
       }
       .pictures-row{
         font-size:0;
         width: 390px;
         a{
-          &:nth-child(4){
+          &:nth-child(4n){
             margin-right: 0;
           }
-          margin-right: 10px;
+          margin: 10px 10px 0 0;
           display: inline-block;
           border:1px solid #cccccc;
           height: 88px;
@@ -223,6 +222,13 @@
           color: #333333;
         }
       }
+    }
+  }
+}
+.zoomContainer{
+  .zoomWindowContainer{
+    .zoomWindow{
+      height: 388px !important;
     }
   }
 }
