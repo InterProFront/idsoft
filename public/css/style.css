@@ -1599,12 +1599,20 @@ header .mobile-menu-bottom{
 	border:1px solid #CC0000;
 	box-shadow:0 0 25px 0 rgba(204, 0, 0, 0.5);
 }
+.catalog .price-list .row .input.error:focus{
+	padding:11px 10px;
+}
+.catalog .price-list .row .input.error:hover{
+	padding:11px 10px;
+}
 .catalog .price-list .row .input:focus{
 	outline:none;
+	padding:10px 9px;
 	border:1px solid #006699;
 }
 .catalog .price-list .row .input:hover{
 	outline:none;
+	padding:10px 9px;
 	border:1px solid #006699;
 }
 .catalog .price-list .row .give-price{
