@@ -1565,6 +1565,7 @@ header .mobile-menu-bottom{
 }
 .catalog .advantages.advantages-top .advantages-item .image-wrap{
 	padding-bottom:15px;
+	margin-right:0;
 }
 .catalog .advantages.advantages-top .advantages-item .text-wrap .advantages-title{
 	color:#333333;
