@@ -62,6 +62,8 @@
                             @if ($i <= 3)
                                 <li class="menu-item">
                                     <span class="hovered-text">{{$item->small_text_field}}</span>
+
+
                                     {{--<a href="{{$link[$i-1]}}" class="all-site-menu">{{$item->menu_text_field}}</a>--}}
                                     @if($link[$i-1] == '/automatic')
                                         @foreach($m_popup[$i-1] as $item_f)
@@ -73,6 +75,8 @@
                                     @else
                                         <a href="{{$link[$i-1]}}" class="all-site-menu">{{$item->menu_text_field}}</a>
                                     @endif
+
+
                                     @if($i == 3)
                                     @else
                                         <div class="popup-form  automatic @if($i == 2) small  @endif">

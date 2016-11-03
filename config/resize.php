@@ -97,7 +97,8 @@ return [
             ['width' => 390, 'height' => null, 'sufix' => 'secondary'],
             ['width' => 90, 'height' => null, 'sufix' => 'preview'],
             ['width' => 300, 'height' => null, 'sufix' => 'icon'],
-        ]
+        ],
+        'proportions' => ['width' => 1, 'height' => 1, 'color' => '#ffffff']
     ],
     'product_image_product' => [
         'sizes' => [
@@ -105,7 +106,8 @@ return [
             ['width' => 390, 'height' => null, 'sufix' => 'secondary'],
             ['width' => 90, 'height' => null, 'sufix' => 'preview'],
             ['width' => 300, 'height' => null, 'sufix' => 'icon'],
-        ]
+        ],
+        'proportions' => ['width' => 1, 'height' => 1, 'color' => '#ffffff']
     ],
     'auto_background' => [
         'sizes' => [

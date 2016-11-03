@@ -1,14 +1,14 @@
 @extends('front.layout')
 @include('front.accounting.meta')
 @section('content')
-    <?php $shadow = false; ?>
+    <?php $shadow = true; ?>
     {{----}}
     <section class="content accounting dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+        <h1 class="page-title">Бухгалтерия для предпринимателей и малого бизнеса</h1>
         <div class="page-title-image">
             <div class="image-wrap">
                 <img src="/images/{{$account->background_image->primary_link}}" alt="">
             </div>
-            <h1 class="page-title">Бухгалтерия для предпринимателей и малого бизнеса</h1>
         </div>
         <div class="main-content-block">
             <div class="col-1-2">

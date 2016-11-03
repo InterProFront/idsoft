@@ -13,7 +13,7 @@ class PageController extends Controller{
 		$this->course = $this->queryAgent->getBlock('clients_filter',[],[]);
 		$static = $this->queryAgent->getBlock('static_site',[],[]);
 		$menu 	= $this->queryAgent->getBlock('main_menu',[],[]);
-		$menu_link = ['/catalog','/automation','/soft','/showcase','/accounting','/video'];
+		$menu_link = ['/catalog','/automatic','/soft','/showcase','/accounting','/video'];
 
 		$catalog = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],['category_2'=>['owner_id'=>51]]);
 
