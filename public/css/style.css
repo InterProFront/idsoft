@@ -3086,6 +3086,9 @@ header .mobile-menu-bottom{
 	display:inline-block;
 	padding:1px 10px;
 }
+.inf .block-title{
+	padding-top:5px;
+}
 .clients .block-title{
 	padding-top:0;
 }

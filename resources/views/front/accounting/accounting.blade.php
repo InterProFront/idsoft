@@ -19,13 +19,13 @@
             <div class="col-1-2">
                 <div class="stage">
                     <p><span class="year">54</span>
-                        <span class="year-small">года</span> суммарный опыт <br>в бухгалетрии сотрудников <br>ID-Soft
+                        <span class="year-small">года</span> суммарный опыт <br>в бухгалетрии сотрудников <br>IDSOFT
                         Бухгалтерия</p>
                 </div>
             </div>
         </div>
         <div class="employs-block">
-            <h2 class="block-title">Руководство</h2>
+            <h2 class="block-title">Команда</h2>
             <div class="employs">
                 @foreach($account->employs_group as $e_item)
                     <div class="employ-item">
