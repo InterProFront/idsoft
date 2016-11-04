@@ -179,7 +179,7 @@
         </div>
         <div class="free-project dashed-bottom-yellow white-popup" id="calculation">
             <h2 class="sub-title">Бесплатный расчет проекта</h2>
-            <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитывает
+            <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитает
                 заказ.</p>
             <div class="calculate">
                 <input type="text" class="input phone popup-input" data-mask="+7(000)000-00-00" placeholder="Номер телефона" data-field-name="phone" data-field-type="string">

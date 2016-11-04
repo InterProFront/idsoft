@@ -67,7 +67,7 @@
         </div>
         <div class="free-project dashed-bottom-yellow">
             <h2 class="sub-title">Бесплатный расчет проекта</h2>
-            <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитывает заказ.</p>
+            <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитает заказ.</p>
             <div class="calculate">
                 <input type="text" class="input phone" data-mask="+7(000)000-00-00" placeholder="Номер телефона">
                 <button class="calculated-button">Рассчитать</button>

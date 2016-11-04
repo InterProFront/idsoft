@@ -49,13 +49,17 @@ $(document).ready(function () {
     var category = items.split('/')[1];
     var category2 = items.split('/')[2];
 
-    // Подсветка тукущего пункта меню для общего меню ( шапка и футер )
+    // Подсветка текущего пункта меню для общего меню ( шапка и футер )
     $('.all-site-menu').each(function(){
        if($(this).attr('href') == '/'+category){
            console.log($(this).attr('href')+'  '+category);
            $(this).closest('li').addClass('active');
        }else if($(this).attr('href') == '/inf/'+category2){
            $(this).closest('li').addClass('active');
+       }else
+            if($(this).attr('href').split('/')[1] == category &&
+            $(this).attr('href').split('/')[1] == 'automatic'){
+                $(this).closest('li').addClass('active');
        }
     });
     //==================================================================

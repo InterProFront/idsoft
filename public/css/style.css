@@ -28,6 +28,7 @@ body{
 	padding:0 24px;
 	border-radius:3px;
 	border:none;
+	font-weight:bold;
 }
 .button:focus{
 	outline:none;
@@ -1477,14 +1478,29 @@ header .mobile-menu-bottom{
 	max-width:230px;
 	border:1px solid #CC9900;
 	min-width:240px;
+	border-radius:3px;
 }
 .content .free-project .calculate .input.error{
 	outline:none;
 	border:1px solid #CC0000;
-	box-shadow:0 0 25px 0 rgba(204, 0, 0, 0.5);
+	box-shadow:0 0 20px 0 rgba(204, 0, 0, 0.5);
+}
+.content .free-project .calculate .input.error:hover{
+	box-shadow:none;
+}
+.content .free-project .calculate .input:hover{
+	outline:none;
+	border:1px solid #996600;
 }
 .content .free-project .calculate .input:focus{
 	outline:none;
+	border:1px solid #996600;
+	box-shadow:0 0 20px 0 rgba(153, 102, 0, 0.5);
+}
+.content .free-project .calculate .input:focus:hover{
+	outline:none;
+	border:1px solid #996600;
+	box-shadow:0 0 20px 0 rgba(153, 102, 0, 0.5);
 }
 .content .free-project .calculate .calculated-button{
 	color:#FFFFFF;
@@ -1492,6 +1508,7 @@ header .mobile-menu-bottom{
 	padding:0 24px;
 	border-radius:3px;
 	border:none;
+	font-weight:bold;
 }
 .content .free-project .calculate .calculated-button:focus{
 	outline:none;
@@ -1596,29 +1613,37 @@ header .mobile-menu-bottom{
 	width:265px;
 	border:none;
 	color:#333333;
+	border-radius:3px;
 	box-sizing:border-box;
 }
 .catalog .price-list .row .input.error{
 	outline:none;
 	padding:11px 9px;
 	border:1px solid #CC0000;
-	box-shadow:0 0 25px 0 rgba(204, 0, 0, 0.5);
+	box-shadow:0 0 10px 0 rgba(204, 0, 0, 0.5);
 }
 .catalog .price-list .row .input.error:focus{
 	padding:11px 9px;
 }
 .catalog .price-list .row .input.error:hover{
 	padding:11px 9px;
-}
-.catalog .price-list .row .input:focus{
-	outline:none;
-	padding:10px 9px;
-	border:1px solid #006699;
+	box-shadow:none;
 }
 .catalog .price-list .row .input:hover{
 	outline:none;
 	padding:10px 9px;
 	border:1px solid #006699;
+}
+.catalog .price-list .row .input:focus{
+	outline:none;
+	padding:10px 9px;
+	border:1px solid #006699;
+	box-shadow:0 0 10px 0 rgba(0, 102, 204, 0.5);
+}
+.catalog .price-list .row .input:focus:hover{
+	outline:none;
+	border:1px solid #0066CC;
+	box-shadow:0 0 10px 0 rgba(0, 102, 204, 0.5);
 }
 .catalog .price-list .row .give-price{
 	margin-left:20px;
@@ -2122,8 +2147,6 @@ header .mobile-menu-bottom{
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .buy-it{
 	text-align:center;
 	padding:15px 40px;
-	font-size:18px;
-	font-weight:normal;
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .text{
 	font-size:14px;
@@ -3542,10 +3565,9 @@ header .mobile-menu-bottom{
 .white-popup .rows-block .row.button-row .col-1-2 .row-name .send-form{
 	background:#0078BF;
 	color:#FFFFFF;
-	font-size:18px;
 	padding:10px 20px;
 	border:none;
-	border-radius:5px;
+	border-radius:3px;
 }
 .white-popup .rows-block .row.button-row .col-1-2 .row-name .send-form:hover{
 	cursor:pointer;
@@ -3579,10 +3601,10 @@ header .mobile-menu-bottom{
 	min-height:150px;
 }
 .white-popup .rows-block .row .col-1-2 .popup-input{
-	border:1px solid #999999;
+	border:1px solid #CCCCCC;
 	box-sizing:border-box;
 	padding:10px 5px;
-	border-radius:5px;
+	border-radius:3px;
 	font-size:16px;
 	color:#666666;
 	resize:none;
@@ -3591,12 +3613,24 @@ header .mobile-menu-bottom{
 .white-popup .rows-block .row .col-1-2 .popup-input.error{
 	outline:none;
 	border:1px solid #CC0000;
-	box-shadow:0 0 25px 0 rgba(204, 0, 0, 0.5);
+	box-shadow:0 0 10px 0 rgba(204, 0, 0, 0.5);
 }
-.white-popup .rows-block .row .col-1-2 .popup-input:hover, .white-popup .rows-block .row .col-1-2 .popup-input:focus{
+.white-popup .rows-block .row .col-1-2 .popup-input.error:hover{
+	box-shadow:none;
+}
+.white-popup .rows-block .row .col-1-2 .popup-input:hover{
 	outline:none;
 	border:1px solid #0066CC;
-	box-shadow:0 0 25px 0 rgba(0, 102, 204, 0.5);
+}
+.white-popup .rows-block .row .col-1-2 .popup-input:focus{
+	outline:none;
+	border:1px solid #0066CC;
+	box-shadow:0 0 10px 0 rgba(0, 102, 204, 0.5);
+}
+.white-popup .rows-block .row .col-1-2 .popup-input:focus:hover{
+	outline:none;
+	border:1px solid #0066CC;
+	box-shadow:0 0 10px 0 rgba(0, 102, 204, 0.5);
 }
 .footer-menu{
 	background:#0078BF;

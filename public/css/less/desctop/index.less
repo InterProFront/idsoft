@@ -363,13 +363,32 @@
         max-width: 230px;
         border: 1px solid #cc9900;
         min-width: 240px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
         &.error{
           outline: none;
           border: 1px solid #cc0000;
-          box-shadow: 0 0 25px 0 rgba(204,0,0,0.5);
+          box-shadow: 0 0 20px 0 rgba(204,0,0,0.5);
+          &:hover{
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+          }
         }
-        &:focus {
+        &:hover{
           outline: none;
+          border: 1px solid #996600;
+        }
+        &:focus{
+          outline: none;
+          border: 1px solid #996600;
+          box-shadow: 0 0 20px 0 rgba(153,102,0,0.5);
+        }
+        &:focus:hover{
+          outline: none;
+          border: 1px solid #996600;
+          box-shadow: 0 0 20px 0 rgba(153,102,0,0.5);
         }
       }
       .calculated-button {
@@ -385,6 +404,7 @@
         padding: 0 24px;
         border-radius: 3px;
         border: none;
+        font-weight: bold;
       }
     }
   }

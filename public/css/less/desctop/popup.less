@@ -56,10 +56,9 @@
             .send-form{
               background: #0078bf;
               color: #ffffff;
-              font-size: 18px;
               padding: 10px 20px;
               border: none;
-              border-radius: 5px;
+              border-radius: 3px;
               &:hover{
                 cursor: pointer;
                 background: #0097e8;
@@ -96,10 +95,10 @@
         }
 
         .popup-input{
-          border: 1px solid #999999;
+          border: 1px solid #cccccc;
           box-sizing: border-box;
           padding:10px 5px;
-          border-radius: 5px;
+          border-radius: 3px;
           font-size: 16px;
           color: #666666;
           resize: none;
@@ -107,12 +106,26 @@
           &.error{
             outline: none;
             border: 1px solid #cc0000;
-            box-shadow: 0 0 25px 0 rgba(204,0,0,0.5);
+            box-shadow: 0 0 10px 0 rgba(204,0,0,0.5);
+            &:hover{
+              -webkit-box-shadow: none;
+              -moz-box-shadow: none;
+              box-shadow: none;
+            }
           }
-          &:hover ,&:focus{
+          &:hover{
             outline: none;
             border: 1px solid #0066cc;
-            box-shadow: 0 0 25px 0 rgba(0,102,204,0.5);
+          }
+          &:focus{
+            outline: none;
+            border: 1px solid #0066cc;
+            box-shadow: 0 0 10px 0 rgba(0,102,204,0.5);
+          }
+          &:focus:hover{
+            outline: none;
+            border: 1px solid #0066cc;
+            box-shadow: 0 0 10px 0 rgba(0,102,204,0.5);
           }
         }
       }

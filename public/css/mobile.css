@@ -28,6 +28,7 @@ body {
   padding: 0 24px;
   border-radius: 3px;
   border: none;
+  font-weight: bold;
 }
 .button:focus {
   outline: none;

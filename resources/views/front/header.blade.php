@@ -69,7 +69,7 @@
                                         @foreach($m_popup[$i-1] as $item_f)
                                             <?php $b++ ?>
                                             @if($b == 1)
-                                                <a href="/automatic/{{$item_f->slug_field}}">{{$item->menu_text_field}}</a>
+                                                <a href="/automatic/{{$item_f->slug_field}}" class="all-site-menu">{{$item->menu_text_field}}</a>
                                             @endif
                                         @endforeach
                                     @else

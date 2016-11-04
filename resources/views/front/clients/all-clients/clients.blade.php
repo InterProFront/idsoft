@@ -7,7 +7,6 @@
     <section class="content clients dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
         <?php $i = 0;
         $all_count = $counts[$i]->count();
-        $all_count = 20;
         $d10 = $all_count % 10;
         $d100 = ($all_count % 100 < 5) || ($all_count % 100 > 20);
         ?>
