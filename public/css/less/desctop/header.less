@@ -156,6 +156,12 @@ header {
                         font-weight: normal;
                         .link(@hover-color, @hover-border, @b-hover-color, @b-hover-border);
                       }
+                      &.active {
+                        a {
+                          font-weight: bold;
+                          .link(#333333, transparent, #333333, transparent)
+                        }
+                      }
                     }
                   }
                   padding-left: 55px;
@@ -210,6 +216,14 @@ header {
                   font-size: @regular;
                   font-weight: normal;
                   .link(@link-color, @link-border, @hover-color, @hover-border)
+                }
+                .item-popup {
+                  &.active {
+                    a {
+                      font-weight: bold;
+                      .link(#333333, transparent, #333333, transparent)
+                    }
+                  }
                 }
               }
             }

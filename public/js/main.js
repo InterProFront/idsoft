@@ -72,7 +72,7 @@ $(document).ready(function () {
     //==================================================================
     // Подсветка меню во всплывающих меню ( шапка, автоматизации IIKO )
     $('.item-popup a').each(function(){
-        if($(this).attr('href') == items  ){
+        if($(this).attr('href').split('/')[1] + $(this).attr('href').split('/')[2] == category + category2  ){
             $(this).closest('.item-popup').addClass('active');
         }
     });
