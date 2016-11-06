@@ -3,13 +3,13 @@
     </div>
     <div class="block ">
         <div class="field-wrap ">
-            <label class="field-title"> Заголовок </label>
+            <label class="field-title"> Название позиции в комплектации </label>
             <input type="text" data-field-name="about_item" data-block="clients_block" data-group="client_related"
                    class="input-field group_field" value="{{$item_client_related->about_item_field}}"
                    data-item-id="{{$item_client_related->id_field}}" placeholder="Строка">
         </div>
         <div class="field-wrap ">
-            <label class="field-title"> Заголовок </label>
+            <label class="field-title"> Позиция в каталоге </label>
             <select data-field-type="numb" data-field-name="product" data-block="clients_block"
                     data-group="client_related" data-item-id="{{$item_client_related->id_field}}"
                     class="input-field group_field">

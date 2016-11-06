@@ -102,7 +102,7 @@
                                           placeholder="Текст">{{$item_auto->system_features_field}}</textarea>
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> Правый блок </label>
+                <label class="field-title"> Возможности системы </label>
                                 <textarea data-field-type="text" data-field-name="vozm" data-block="auto_block"
                                           data-group="auto" class="input group_field"
                                           data-item-id="{{$item_auto->id_field}}"
@@ -227,7 +227,7 @@
                 </ul>
             </div>
             <div class="field-wrap group-wrap">
-                <div class="group-title-row"><label class="group-title">Используемое оборудование</label>
+                <div class="group-title-row"><label class="group-title">Комплектация</label>
                     <button class="any_create button blue" data-block="auto_block" data-group="auto_related"
                             data-descr="Эл. первой группы" data-owner-id="{{$item_auto->id_field}}">Добавить элемент
                     </button>

@@ -167,7 +167,7 @@
 
 
             <div class="field-wrap group-wrap">
-                <div class="group-title-row"><label class="group-title">Используемое оборудование</label>
+                <div class="group-title-row"><label class="group-title">Комплектация</label>
                     <button class="any_create button blue" data-block="clients_block" data-group="client_related"
                             data-descr="Эл. первой группы" data-owner-id="{{$item_client->id_field}}">Добавить элемент
                     </button>
