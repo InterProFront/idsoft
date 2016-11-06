@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content client dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content client " itemscope="" itemtype="http://schema.org/Service">
         <div class="bread-crumb">
             <span class="crumb-item"><a href="/clients">Клиенты</a></span>
             <span class="crumb-separate">→</span>

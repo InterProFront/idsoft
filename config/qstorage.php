@@ -27,6 +27,19 @@ return [
             ]
         ]
     ],
+
+    'about_page' => [
+        'textfields' => ['description'],
+        'stringfields' => ['consult', 'works_time'],
+        'groups' => [
+            'staff' => [
+                'stringfields' => ['name', 'position'],
+                'textfields' => ['description'],
+                'images'     => ['foto'],
+            ]
+        ]
+    ],
+
     'main_menu' => [
         'groups' => [
             'menu' => [

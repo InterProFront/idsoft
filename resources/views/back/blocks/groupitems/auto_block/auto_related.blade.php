@@ -15,13 +15,11 @@
                     class="input-field group_field"
                     placeholder="Целое число" >
                 @foreach($related as $r_item)
-                    @if($r_item->id_field != $item_auto_related->product_field)
                         @if($r_item->id_field == $item_auto_related->product_field)
                             <option selected value="{{$r_item->id_field}}">{{$r_item->product_name_field}} </option>
                         @else
                             <option value="{{$r_item->id_field}}">{{$r_item->product_name_field}} </option>
                         @endif
-                    @endif
                 @endforeach
             </select>
         </div>

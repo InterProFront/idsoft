@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content automatic dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content automatic " itemscope="" itemtype="http://schema.org/Service">
         <h1 class="page-title">{{$auto->page_name_field}}</h1>
         <div class="page-title-image">
             <div class="image-wrap">

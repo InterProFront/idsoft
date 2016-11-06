@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content automatic tarif dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content automatic tarif " itemscope="" itemtype="http://schema.org/Service">
         <h1 class="block-title">{{$tarif->page_name_field}}</h1>
         <div class="page-title-image">
             <div class="image-wrap">
@@ -67,7 +67,7 @@
                     <meta itemprop="ratingCount" content="{{$rating['count']}}"> ({{$rating['count']}} человек)
                     </span>
         </div>
-        <div class="free-project dashed-bottom-yellow white-popup" id="calculation">
+        <div class="free-project white-popup" id="calculation">
             <h2 class="sub-title">Бесплатный расчет проекта</h2>
             <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитает
                 заказ.</p>

@@ -105,7 +105,11 @@ $(document).ready(function(){
 
             $this.addClass('load');
 
-
+            /*$(selector).each(function () {
+                $this = $(this);
+                $this.removeClass('error');
+                error = false;
+            });*/
             deferred.success(function(data){
 
                 //$.magnificPopup.open({

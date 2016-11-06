@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content product dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content product " itemscope="" itemtype="http://schema.org/Service">
         <div class="bread-crumb">
             <span class="crumb-item"><a href="/{{$grand->slug_field}}">{{$grand->category_name_field}}</a></span>
             @if($grand->slug_field != 'soft')

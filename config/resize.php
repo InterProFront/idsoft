@@ -166,6 +166,14 @@ return [
             ['width' => null, 'height' => 140, 'sufix' => 'icon'],
         ]
     ],
+    'staff_foto' => [
+        'sizes' => [
+            ['width' => 270, 'height' => 270, 'sufix' => 'primary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
     'images_set_text_pict' => [
         'sizes' => []
     ],

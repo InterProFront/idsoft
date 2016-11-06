@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content catalog video dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content catalog video " itemscope="" itemtype="http://schema.org/Service">
         <h1 class="block-title">{{$seo->category_name_field}}</h1>
         <div class="advantages advantages-top">
             @if($seo->category_name_field == 'Стеллажи и витрины')

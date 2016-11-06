@@ -3,7 +3,7 @@
 @section('content')
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content accounting dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content accounting " itemscope="" itemtype="http://schema.org/Service">
         <h1 class="page-title">Бухгалтерия для предпринимателей и малого бизнеса</h1>
         <div class="page-title-image">
             <div class="image-wrap">

@@ -170,13 +170,30 @@ class PageController extends Controller{
 	public function getInfPage($slug){
 		$rating = new Rating();
 		$rating = $rating->getRatingView('/inf/'.$slug);
-		$inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
-		$all_pages = $this->queryAgent->getGroupFlat('information_page','inf_page',[],[]);
-		return view('front.information.information-page',[
-			'inf' => $inf_page,
-			'all' => $all_pages,
-			'rating'	=> $rating
-		]);
+		if ($slug != 'about') {
+			$inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
+			$all_pages = $this->queryAgent->getGroupFlat('information_page','inf_page',[],[]);
+			return view('front.information.information-page',[
+				'inf' => $inf_page,
+				'all' => $all_pages,
+				'rating'	=> $rating
+			]);
+		} else {
+			$inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
+			$all_pages = $this->queryAgent->getGroupFlat('information_page','inf_page',[],[]);
+			return view('front.information.information-page',[
+				'inf' => $inf_page,
+				'all' => $all_pages,
+				'rating'	=> $rating
+			]);
+			/*$inf_page = $this->queryAgent->getGroupItemBySlug('about_page','staff',$slug);
+			$all_pages = $this->queryAgent->getGroupFlat('information_page','inf_page',[],[]);
+			return view('front.information.about',[
+				'inf' => $inf_page,
+				'all' => $all_pages,
+				'rating'	=> $rating
+			]);*/
+		}
 	}
 
 

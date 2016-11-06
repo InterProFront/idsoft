@@ -177,7 +177,7 @@
                 </ul>
             </div>
         </div>
-        <div class="free-project dashed-bottom-yellow white-popup" id="calculation">
+        <div class="free-project white-popup" id="calculation">
             <h2 class="sub-title">Бесплатный расчет проекта</h2>
             <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитает
                 заказ.</p>

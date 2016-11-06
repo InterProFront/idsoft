@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content clients dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content clients " itemscope="" itemtype="http://schema.org/Service">
         <?php $i = 0;
         $all_count = $counts[$i]->count();
         $d10 = $all_count % 10;

@@ -4,7 +4,7 @@
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
-    <section class="content catalog dashed-bottom" itemscope="" itemtype="http://schema.org/Service">
+    <section class="content catalog " itemscope="" itemtype="http://schema.org/Service">
         <h1 class="block-title">Оборудование для автоматизации</h1>
 
         <div class="advantages advantages-top">
