@@ -99,7 +99,7 @@ $(document).ready(function () {
     //==== Всплывающие формы
     //==================================================================
     //==== Форма "Написать нам"
-    $('#ask-me').magnificPopup({
+    $('.ask-me').magnificPopup({
         type: 'inline',
         removalDelay: 500,
         callbacks: {

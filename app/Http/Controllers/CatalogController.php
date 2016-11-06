@@ -279,8 +279,8 @@ class CatalogController extends Controller
         if ($auto->course_id_field != 0) {
             foreach ($this->course->course_group as $item) {
                 if ($item->id_field == $auto->course_id_field) {
-                    $cost = $auto->auto_cost_field * $this->course->course_field;
-                    $sale = $auto->auto_sale_field * $this->course->course_field;
+                    $cost = $auto->auto_cost_field * $item->course_field;
+                    $sale = $auto->auto_sale_field * $item->course_field;
                     $auto->setField('auto_cost', $cost);
                     $auto->setField('auto_sale', $sale);
                 }
@@ -290,10 +290,16 @@ class CatalogController extends Controller
         $test = $this->queryAgent->getGroupFlat('catalog_block', 'product', [], []);
         $category = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], []);
         foreach ($test as $item) {
-            $new_price = $item->product_cost_field * $this->course->course_field;
-            $new_sale = $item->product_sale_field * $this->course->course_field;
-            $item->setField('product_cost', $new_price);
-            $item->setField('product_sale', $new_sale);
+            if ($item->course_id_field != 0) {
+                foreach ($this->course->course_group as $item_c) {
+                    if ($item_c->id_field == $item->course_id_field) {
+                        $cost = $item->product_cost_field * $item_c->course_field;
+                        $sale = $item->product_sale_field * $item_c->course_field;
+                        $item->setField('product_cost', $cost);
+                        $item->setField('product_sale', $sale);
+                    }
+                }
+            }
         }
 
 

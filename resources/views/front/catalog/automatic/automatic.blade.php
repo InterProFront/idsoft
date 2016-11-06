@@ -26,7 +26,7 @@
                                 <li class="menu-item"><div class="orange-wrap"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></div></li>
                             @endif
                         @endforeach
-                        <li class="menu-item iiko-popup"><div class="orange-wrap"><a href="/automatic/set-restoranov" class="link">Автоматизация IIKO</a>
+                        <li class="menu-item iiko-popup"><div class="orange-wrap"><span class="open-popup">Автоматизация IIKO</span>
                             <div class="left-popup">
                                 <ul class="popup-menu">
                                     @foreach($all as $item)

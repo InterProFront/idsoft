@@ -40,7 +40,7 @@
     &:last-child {
       max-width: 305px;
       .right-menu-block {
-        padding-bottom: 30px;
+        padding: 0 0 30px 30px;
         .menu-title {
           color: #333333;
           font-size: 24px;
@@ -75,6 +75,16 @@
             a.link {
               display: inline-block;
               .link(@link-color, @link-border, @hover-color, @hover-border)
+            }
+            .open-popup {
+              display: inline-block;
+              background:linear-gradient(to left, #B2D1E0, #B2D1E0 100%);
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+              background-position:0 100%;
+              background-size:10px 1px;
+              background-repeat:repeat-x;
+              color:#006699;
+              cursor: pointer;
             }
             &.iiko-popup {
               &:hover {
@@ -135,7 +145,7 @@
         }
       }
       .capability {
-        margin-left: -30px;
+        margin-left: -5px;
         padding: 40px 30px 30px;
         background: url(../img/hole.jpg) no-repeat 10px 0, url(../img/hole.jpg) no-repeat 265px 0, #fef6df;
         box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.45);
@@ -162,8 +172,9 @@
       .text-block {
         padding-right: 80px;
       }
-    }
+      max-width: 760px;}
     &:last-child {
+      max-width: 305px;
       padding-top: 70px;
       .advantages-block {
         .block-item {
@@ -188,7 +199,6 @@
             z-index: 10;
             p {
               line-height: 1.5em;
-              color: #333333;
               strong {
                 font-weight: bold;
               }

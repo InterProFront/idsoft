@@ -1654,6 +1654,7 @@ a.bx-pager-link.active {
   }
   .main-content-block .col-1-2:last-child .right-menu-block {
     width: 100%;
+    padding: 0 0 30px 0;
     margin-right: 30px;
   }
   .main-content-block .col-1-2:last-child .right-menu-block .right-menu {
@@ -1894,6 +1895,12 @@ a.bx-pager-link.active {
 @media screen and (max-width: 900px) {
   .employs-block .employs .employ-item .img-wrap img {
     max-width: 100%;
+  }
+  .accounting .page-title {
+    font-size: 36px;
+  }
+  .content .block-title {
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 768px) {

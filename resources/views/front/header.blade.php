@@ -8,7 +8,7 @@
                 </div>
                 <ul class="head-list">
                     <li class="item">
-                        <a id="ask-me" href="#question">Написать письмо</a>
+                        <a class="ask-me" href="#question">Написать письмо</a>
                     </li>
                     <li class="item">
                         <a href="http://go.2gis.com/nq2ta" target="_blank" rel="nofollow noindex">Как нас найти</a>
@@ -17,8 +17,7 @@
             </div>
             <div class="col-1-3">
                 <div class="logo-block">
-                    {{--<a href="/"><img src="/images/{{$static->logo_image->primary_link}}" alt="{{$static->logo_image->alt}}"--}}
-                    <a href="/"><img src="/img/logo.svg" alt="{{$static->logo_image->alt}}"
+                    <a href="/"><img src="/images/{{$static->logo_image->primary_link}}" alt="{{$static->logo_image->alt}}"
                          class="logo"></a>
                 </div>
             </div>
@@ -164,7 +163,7 @@
         </div>
         <div class="mobile-menu-bottom">
             <ul class="list">
-                <li class="item"><a id="ask-me" href="#question">Написать письмо</a></li>
+                <li class="item"><a class="ask-me" href="#question">Написать письмо</a></li>
                 <?php $i = 0;?>
                 @foreach($static->phones_group as $item)
                     <?php $i++?>
