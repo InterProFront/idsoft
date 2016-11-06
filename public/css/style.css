@@ -159,7 +159,11 @@ a.bx-pager-link.active{
 	background-repeat:repeat-x;
 	color:#CC0000;
 }
+.text-block h1{
+	color:#333333;
+}
 .text-block h2{
+	color:#333333;
 	font-size:32px;
 	font-weight:normal;
 }
@@ -179,6 +183,9 @@ a.bx-pager-link.active{
 	color:#333333;
 	line-height:1.2em;
 	font-weight:bold;
+}
+.text-block h5{
+	color:#333333;
 }
 .text-block ul{
 	list-style-type:disc;
