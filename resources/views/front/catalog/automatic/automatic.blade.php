@@ -111,7 +111,7 @@
             </h2>
         </div>
         <div class="credit">
-            {!! $auto->rassr_field !!}
+            {!! $auto->pre_cost_text_field !!}
         </div>
         <div class="button-wrap">
             <div class="button buy-it" id="buy" href="#order">Оформить заказ</div>
