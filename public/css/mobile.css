@@ -1494,6 +1494,11 @@ a.bx-pager-link.active {
     width: 50%;
   }
 }
+@media screen and (max-width: 700px) {
+  .product .rating {
+    padding-top: 20px;
+  }
+}
 @media screen and (max-width: 500px) {
   .product .bread-crumb {
     padding: 15px 20px 0;
@@ -2623,7 +2628,7 @@ a.bx-pager-link.active {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    padding-bottom: 15px;
+    padding-bottom: 20px;
   }
   .rating .head-reiting {
     margin: 0 20px;
