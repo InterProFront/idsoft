@@ -2514,7 +2514,8 @@ header .mobile-menu-bottom{
 	color:#333333;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item a.link{
-	display:inline-block;
+	display:inline;
+	padding-bottom:1px;
 	background:linear-gradient(to left, #B2D1E0, #B2D1E0 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
@@ -2996,7 +2997,7 @@ header .mobile-menu-bottom{
 }
 .accounting .page-title{
 	margin:0 0 0 0;
-	padding:5px 20px 30px 20px;
+	padding:5px 20px 30px 0;
 	font-size:48px;
 	font-weight:normal;
 	color:#333333;
