@@ -26,7 +26,8 @@ $(document).ready(function(){
     // Очистка формы
     function clearFields(id){
         $('#'+id+' .popup-input').each(function(){
-            $(this).val('');
+            $(this).val('').removeClass('error');
+            $('.status-bar').removeClass('show');
         });
     }
 
@@ -105,11 +106,6 @@ $(document).ready(function(){
 
             $this.addClass('load');
 
-            /*$(selector).each(function () {
-                $this = $(this);
-                $this.removeClass('error');
-                error = false;
-            });*/
             deferred.success(function(data){
 
                 //$.magnificPopup.open({
