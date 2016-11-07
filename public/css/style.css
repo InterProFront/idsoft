@@ -2988,6 +2988,7 @@ header .mobile-menu-bottom{
 	padding-right:30px;
 }
 .big-image{
+	display:none;
 	padding:50px 40px 0 100px;
 }
 .big-image img{
