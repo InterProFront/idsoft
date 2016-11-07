@@ -143,6 +143,9 @@ header {
               top: -20px;
               left: -20px;
               .col-1-2 {
+                &:first-child {
+                  min-width: 145px;
+                }
                 &:last-child {
                   .popup-title {
                     font-size: 16px;
@@ -181,6 +184,8 @@ header {
                 color: #333333;
                 padding-bottom: 25px;
                 a {
+                  display: inline;
+                  padding-bottom: 1px;
                   .link(@black-link, @black-border, @hover-color, @hover-border);
                 }
               }
@@ -213,6 +218,8 @@ header {
                   }
                 }
                 a {
+                  display: inline;
+                  padding-bottom: 1px;
                   font-size: @regular;
                   font-weight: normal;
                   .link(@link-color, @link-border, @hover-color, @hover-border)

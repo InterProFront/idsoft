@@ -509,6 +509,9 @@ header .main-menu .wrap .big-menu .menu-item:hover .popup-form.automatic{
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form.automatic.small{
 	min-width:520px;
 }
+header .main-menu .wrap .big-menu .menu-item:hover .popup-form .col-1-2:first-child{
+	min-width:145px;
+}
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form .col-1-2:last-child{
 	padding-left:55px;
 }
@@ -585,6 +588,8 @@ header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-title{
 	padding-bottom:25px;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-title a{
+	display:inline;
+	padding-bottom:1px;
 	background:linear-gradient(to left, #CCCCCC, #CCCCCC 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
@@ -656,6 +661,8 @@ header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items .pop
 	padding-bottom:0;
 }
 header .main-menu .wrap .big-menu .menu-item:hover .popup-form .popup-items a{
+	display:inline;
+	padding-bottom:1px;
 	font-size:16px;
 	font-weight:normal;
 	background:linear-gradient(to left, #B2D1E0, #B2D1E0 100%);
@@ -1948,6 +1955,8 @@ header .mobile-menu-bottom{
 	padding-bottom:15px;
 }
 .category .product-list .product-item a .text-wrap .wrap span{
+	display:inline;
+	padding-bottom:1px;
 	line-height:1.5em;
 	font-size:24px;
 	background:linear-gradient(to left, #B2D1E0, #B2D1E0 100%);
@@ -1995,6 +2004,8 @@ header .mobile-menu-bottom{
 	border:1px solid #CC0000;
 }
 .category .product-list .product-item:hover .text-wrap .wrap span{
+	display:inline;
+	padding-bottom:1px;
 	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
@@ -2542,8 +2553,8 @@ header .mobile-menu-bottom{
 	color:#CC0000;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item .open-popup{
-	display:inline-block;
-	background:linear-gradient(to left, #CC0000, #CC0000 100%);
+	display:inline;
+	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
 	background-size:10px 1px;
@@ -3102,6 +3113,7 @@ header .mobile-menu-bottom{
 	padding-bottom:10px;
 }
 .tarifs .tarif-block .tarif-item ul.tarifs .item a{
+	padding-bottom:1px;
 	background:linear-gradient(to left, #7793A2, #7793A2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
@@ -3719,6 +3731,8 @@ header .mobile-menu-bottom{
 	padding:25px 60px;
 }
 .footer-menu .menu-list .menu-item .menu-link{
+	display:inline;
+	padding-bottom:1px;
 	font-size:16px;
 	background:linear-gradient(to left, #4D94B8, #4D94B8 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
