@@ -121,19 +121,23 @@ a.bx-pager-link.active {
   background: url(../img/vib_h.png) no-repeat;
   background-size: 16px 16px;
 }
-.text-block p {
+.text-block p,
+.text-block blockquote {
   color: #666666;
   line-height: 1.5em;
   width: 100%;
   font-size: 16px;
 }
-.text-block p bold {
+.text-block p bold,
+.text-block blockquote bold {
   font-weight: bold;
 }
-.text-block p strong {
+.text-block p strong,
+.text-block blockquote strong {
   font-weight: bold;
 }
-.text-block p a {
+.text-block p a,
+.text-block blockquote a {
   background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
   background-position: 0 100%;
@@ -141,7 +145,8 @@ a.bx-pager-link.active {
   background-repeat: repeat-x;
   color: #006699;
 }
-.text-block p a:hover {
+.text-block p a:hover,
+.text-block blockquote a:hover {
   cursor: pointer;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -150,7 +155,8 @@ a.bx-pager-link.active {
   background-repeat: repeat-x;
   color: #cc0000;
 }
-.text-block p a:focus {
+.text-block p a:focus,
+.text-block blockquote a:focus {
   outline: none;
   background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -1764,6 +1770,7 @@ a.bx-pager-link.active {
     margin-right: 0;
   }
   .main-content-block .col-1-2:last-child .right-menu-block .right-menu {
+    width: auto;
     max-width: 100%;
     min-width: 250px;
     margin-left: -10px;
@@ -2341,6 +2348,17 @@ a.bx-pager-link.active {
         flex-direction: column;
     -ms-flex-pack: justify;
         justify-content: space-between;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about .contact-us {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .about .main-content-block .descr {
+    -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
   }
 }
 @media screen and (max-width: 850px) {
