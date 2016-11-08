@@ -1,58 +1,63 @@
 .about {
-  .descr {
-    .col-1-2 {
-      &:first-child {
-
-      }
-      &:last-child {
-
-      }
-    }
-  }
-  .staff {
-    .staff-item {
+  .main-content-block {
+    flex-direction: column;
+    .descr {
+      display: flex;
+      justify-content: space-between;
       .col-1-2 {
         &:first-child {
-
         }
         &:last-child {
 
         }
-        .image-wrap {
-
-        }
-        .name {
-
-        }
-        .position {
-
-        }
-        .about-member {
-
-        }
       }
     }
-  }
-  .contact-us {
-    .contacts {
-      .contacts-title {
-      }
-      .consult-text {
-
-      }
-      .numbers {
-        .number {
-          .telephone {
+    .staff {
+      .staff-item {
+        display: flex;
+        .col-1-2 {
+          &:first-child {
 
           }
-          .under-number {
+          &:last-child {
+
+          }
+          .image-wrap {
+
+          }
+          .name {
+
+          }
+          .position {
+
+          }
+          .about-member {
 
           }
         }
       }
     }
-    .map {
+    .contact-us {
+      .contacts {
+        .contacts-title {
+        }
+        .consult-text {
 
+        }
+        .numbers {
+          .number {
+            .telephone {
+
+            }
+            .under-number {
+
+            }
+          }
+        }
+      }
+      .map {
+
+      }
     }
   }
 }

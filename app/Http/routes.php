@@ -24,6 +24,10 @@ Route::get('/automatic/{slug}', 'CatalogController@getAuto');
 
 
 
+Route::get('/create/groupitem_new/{block}/{group}/{owner_id}', ['as' => 'create_groupitem', 'uses' => 'CreateController@createGroupItem']);
+
+
+
 Route::get('/accounting', 'CatalogController@getAccounting');
 Route::get('/accounting/{slug}', 'CatalogController@getTarif');
 

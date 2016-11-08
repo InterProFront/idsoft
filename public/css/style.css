@@ -3592,6 +3592,20 @@ header .mobile-menu-bottom{
 .block-separator{
 	padding:50px 100px 10px 100px;
 }
+.about .main-content-block{
+	-ms-flex-direction:column;
+	    flex-direction:column;
+}
+.about .main-content-block .descr{
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-pack:justify;
+	justify-content:space-between;
+}
+.about .main-content-block .staff .staff-item{
+	display:-ms-flexbox;
+	display:flex;
+}
 .hide{
 	display:none;
 }
