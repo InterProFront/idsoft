@@ -148,5 +148,15 @@ $(document).ready(function () {
         $('.bx-pager-item').css('display','none');
     }
 
+    $(window).on('load resize',function(){
+        if( $(window).width() > 900){
+            var topImg = $('.main-content-block .text-block img').offset().top;
+            var topFeat = $('.main-content-block  .capability').offset().top;
+            var difference = topImg - topFeat;
+            if(difference > 0){
+                $('.main-content-block  .capability').css('margin-top', difference+'px');
+            }
 
+        }
+    });
 });

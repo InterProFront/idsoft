@@ -3606,6 +3606,15 @@ header .mobile-menu-bottom{
 	display:-ms-flexbox;
 	display:flex;
 }
+.about .main-content-block .staff .staff-item .col-1-2 .name{
+	color:#333333;
+}
+.about .main-content-block .staff .staff-item .col-1-2 .position{
+	color:#999999;
+}
+.about .main-content-block .staff .staff-item .col-1-2 .about-member{
+	color:#666666;
+}
 .hide{
 	display:none;
 }
