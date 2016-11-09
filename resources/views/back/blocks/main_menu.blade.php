@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование главного меню'?>
     <div class="content-wrap">
         <div class="field-wrap group-wrap">
             <div class="group-title-row"><label class="group-title">Главное меню</label>

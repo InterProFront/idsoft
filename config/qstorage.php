@@ -30,7 +30,8 @@ return [
 
     'about_page' => [
         'textfields' => ['description'],
-        'stringfields' => ['consult', 'works_time'],
+        'stringfields' => ['seo_keywords', 'seo_description', 'page_title', 'consult', 'works_time', 'page_name'],
+        'images'     => ['background'],
         'groups' => [
             'staff' => [
                 'stringfields' => ['name', 'position'],

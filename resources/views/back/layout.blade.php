@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Панель управления</title>
+    <title>{{{ $title or 'Панель управления IDSOFT' }}}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <script src="/Admin/js/jquery-1.8.3.js"></script>
     @include('back.style')
@@ -28,19 +28,24 @@
     <aside class="main-menu">
         <div class="menu-section">
             <ul class="menu">
-                <li class="item"><a href="/adm/edit/all">Главная страница</a></li>
-                <li class="item"><a href="/adm/edit/informatic">Информационные страницы</a></li>
-                <li class="item"><a href="/adm/edit/clients">Клиенты</a></li>
+                <li class="item"><a href="/adm/edit/all">Статичные элементы сайта</a></li>
             </ul>
         </div>
         <div class="menu-section">
             <ul class="menu">
                 <li class="item"><a href="/adm/edit/catalog">Каталог оборудования</a></li>
-                <li class="item"><a href="/adm/edit/video">Видеонаблюдение</a></li>
-                <li class="item"><a href="/adm/edit/showcase">Стеллажи и витрины</a></li>
-                <li class="item"><a href="/adm/edit/software">Программное обеспечение</a></li>
                 <li class="item"><a href="/adm/edit/auto">Готовые решения</a></li>
+                <li class="item"><a href="/adm/edit/software">Программное обеспечение</a></li>
+                <li class="item"><a href="/adm/edit/showcase">Стеллажи и витрины</a></li>
                 <li class="item"><a href="/adm/edit/accounting">Бухгалтерия</a></li>
+                <li class="item"><a href="/adm/edit/video">Видеонаблюдение</a></li>
+            </ul>
+        </div>
+        <div class="menu-section">
+            <ul class="menu">
+                <li class="item"><a href="/adm/edit/informatic">Информационные страницы</a></li>
+                <li class="item"><a href="/adm/edit/about">О компании</a></li>
+                <li class="item"><a href="/adm/edit/clients">Клиенты</a></li>
             </ul>
         </div>
         <div class="menu-section">

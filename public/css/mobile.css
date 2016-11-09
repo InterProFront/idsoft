@@ -2364,6 +2364,25 @@ a.bx-pager-link.active {
     display: block;
     padding-bottom: 0;
   }
+  .about .contact-us .contacts .ask-me {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about .contact-us .contacts {
+    width: 78%;
+  }
+  .about .contact-us .contacts .numbers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 25px;
+  }
+  .about .contact-us .contacts .numbers .number {
+    width: 100%;
+  }
+  .about .contact-us .contacts .numbers .number:last-child {
+    margin: 15px 0 0 0;
+  }
 }
 @media screen and (max-width: 700px) {
   .about .main-content-block .staff .staff-item {
@@ -2374,7 +2393,7 @@ a.bx-pager-link.active {
     margin-top: 80px;
   }
   .about .main-content-block .staff .staff-item:nth-child(n+2) {
-    margin-top: 60px;
+    margin-top: 70px;
   }
   .about .main-content-block .staff .staff-item .col-1-2:first-child {
     width: 100%;
@@ -2388,6 +2407,42 @@ a.bx-pager-link.active {
   }
   .about .rating {
     margin-top: 65px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .about .contact-us {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .contact-us .contacts {
+    max-width: none;
+    width: 100%;
+  }
+  .about .contact-us .contacts .numbers {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .about .contact-us .contacts .numbers .number:last-child {
+    margin: 0;
+  }
+  .about .contact-us .contacts .ask-me {
+    margin-top: 30px;
+  }
+  .about .contact-us .map-wrap {
+    margin: 50px 0 0 0;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .about .contact-us .contacts .numbers {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .about .contact-us .contacts .numbers .number {
+    width: 100%;
+  }
+  .about .contact-us .contacts .numbers .number:last-child {
+    margin: 15px 0 15px 0;
   }
 }
 @media screen and (max-width: 850px) {

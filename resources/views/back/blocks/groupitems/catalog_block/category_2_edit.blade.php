@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование информации о подкатегории оборудования — "'.$item_category_2->category_name_field.'"'?>
     <div class="select-content" xmlns="http://www.w3.org/1999/html">
         <ul class="list">
             <li class="item"><a href="#content" class="select-item active">Информация</a></li>

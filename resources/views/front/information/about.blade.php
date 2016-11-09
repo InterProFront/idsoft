@@ -1,26 +1,31 @@
-@include('front.information.meta')
+@include('front.information.meta_about')
 @extends('front.layout')
 @section('content')
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
     <section class="content about" itemscope="" itemtype="http://schema.org/Service">
-        <h1 class="block-title">{{$inf->page_name_field}}</h1>
+        <h1 class="block-title">{{$about->page_name_field}}</h1>
         <div class="page-title-image">
             <div class="image-wrap">
-                <img src="/images/{{$inf->background_image->primary_link}}" alt="{{$inf->background_image->alt}}">
+                <img src="/images/{{$about->background_image->primary_link}}" alt="{{$about->background_image->alt}}">
             </div>
         </div>
         <div class="main-content-block">
             <div class="descr">
                 <div class="col-1-2">
                     <div class="text-block">
-                        {!! $inf->content_field !!}
+                        {!! $about->description_field !!}
                     </div>
                 </div>
                 <div class="col-1-2">
                     <div class="right-menu-block">
                         <ul class="right-menu">
+                            <li class="menu-item">
+                                <div class="orange-wrap">
+                                    <a href="/inf/about" class="link">{{$about->page_name_field}}</a>
+                                </div>
+                            </li>
                             @foreach($all as $item)
                                 <li class="menu-item">
                                     <div class="orange-wrap">
@@ -33,42 +38,20 @@
                 </div>
             </div>
             <div class="staff">
-                <div class="staff-item">
-                    <div class="col-1-2">
-                        <div class="image-wrap"><img src="/img/olga2.jpg" alt="Ольга Ли"></div>
-                    </div>
-                    <div class="col-1-2">
-                        <div class="name">Ольга Ли</div>
-                        <div class="position">Главный бухгалтер</div>
-                        <div class="text-block"><p>Профессиональный бухгалтер РК, член ассоциации профессиональных
-                                бухгалтеров и бухгалтерских организаций.
-
-                                Практический опыт работы — более 15 лет. Два высших образования (техническое и
-                                экономическое). В разное время работала главным бухгалтером в крупных частных и
-                                государственных компаниях. Является практикующим консультантом по финансовым вопросам и
-                                бухгалтерскому учету.
-                            </p>
+                @foreach($about->staff_group as $staff_item)
+                    <div class="staff-item">
+                        <div class="col-1-2">
+                            <div class="image-wrap"><img src="/images/{{$staff_item->foto_image->primary_link}}"
+                                                         alt="{{$staff_item->foto_image->alt}}"></div>
+                        </div>
+                        <div class="col-1-2">
+                            <div class="name">{{$staff_item->name_field}}</div>
+                            <div class="position">{{$staff_item->position_field}}</div>
+                            <div class="text-block">{!! $staff_item->description_field !!}
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="staff-item">
-                    <div class="col-1-2">
-                        <div class="image-wrap"><img src="/img/olga1.jpg" alt="Ольга Кобзева"></div>
-                    </div>
-                    <div class="col-1-2">
-                        <div class="name">Ольга Кобзева</div>
-                        <div class="position">Директор</div>
-                        <div class="text-block"><p>Профессиональный бухгалтер РК, член ассоциации профессиональных
-                                бухгалтеров и бухгалтерских организаций.
-
-                                Специалист по налоговому учету. Высшее экономическое образование. Общий стаж работы —
-                                более 13 лет, 10 из которых в аутсорсинге. Имеет практический опыт работы с
-                                Казахстанскими и зарубежными организациями, работающие в области малого и среднего
-                                бизнеса, а так же некоммерческие организации.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
             <div class="rating">
                 <span class="head-reiting">Оцените нашу страницу</span>
@@ -107,31 +90,36 @@
         </div>
         <div class="contact-us">
             <div class="contacts">
-                <div class="contacts-title">Свяжитесь с нами</div>
-                <div class="consult-text">В рабочее время, вы можете получить консультацию по автоматизации,
-                    оборудованию или программному обеспечению по телефонам
-                </div>
+                <h3 class="contacts-title">Свяжитесь с нами</h3>
+                <div class="consult-text">{{$about->consult_field}}</div>
                 <div class="numbers">
-                    <div class="number">
-                        <div class="telephone">+7 (727) 220-20-00</div>
-                        <div class="under-number"> С 10 до 18:00</div>
-                    </div>
-                    <div class="number">
-                        <div class="telephone">+7 747 220-20-00</div>
-                        <div class="under-number">
-                            <div class="icon-group">
-                                <i class="wpp"></i>
-                                <i class="tel"></i>
-                                <i class="vib"></i>
+                    <?php $i = 0;?>
+                    @foreach($static->phones_group as $item)
+                        <?php $i++?>
+                        @if($i == 1)
+                            <div class="number">
+                                <div class="telephone">+7 (727) {{$item->phone_field}}</div>
+                                <div class="under-number">{{$about->works_time_field}}</div>
                             </div>
-                        </div>
-                    </div>
+                        @elseif($i == 2)
+                            <div class="number">
+                                <div class="telephone">{{$item->phone_field}}</div>
+                                <div class="under-number">
+                                    <div class="icon-group">
+                                        <i class="wpp"></i>
+                                        <i class="tel"></i>
+                                        <i class="vib"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
                 <a class="ask-me" href="#question">Написать письмо</a>
             </div>
             <div class="map-wrap">
                 <div id="map">
-                    {{--<script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+                    <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
                     <script type="text/javascript">
                         var map;
 
@@ -142,9 +130,9 @@
                                 fullscreenControl: false,
                             });
 
-                            DG.marker([43.22912475875056, 76.89061760902406]).addTo(map).bindPopup('Вы кликнули по мне!');
+                            DG.marker([43.22912475875056, 76.89061760902406]).addTo(map).bindPopup('IDSOFT - Автоматизация торговли в Казахстане');
                         });
-                    </script>--}}
+                    </script>
                     {{--<a class="dg-widget-link"
                        href="http://2gis.kz/almaty/firm/9429940001659307/center/76.89061760902406,43.22912475875056/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть
                         на карте Алматы</a>

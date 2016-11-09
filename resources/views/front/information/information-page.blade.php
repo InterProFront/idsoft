@@ -20,6 +20,11 @@
             <div class="col-1-2">
                     <div class="right-menu-block">
                         <ul class="right-menu">
+                            <li class="menu-item">
+                                <div class="orange-wrap">
+                                    <a href="/inf/about" class="link">{{$page_name}}</a>
+                                </div>
+                            </li>
                             @foreach($all as $item)
                                 <li class="menu-item">
                                     <div class="orange-wrap">

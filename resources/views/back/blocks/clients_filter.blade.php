@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование курсов валют'?>
     <div class="content-wrap">
         <div class="field-wrap group-wrap">
             <div class="group-title-row">

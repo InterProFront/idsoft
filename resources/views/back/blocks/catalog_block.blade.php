@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование страницы "Каталог"'?>
     <div class="field-wrap ">
         <label class="field-title"> Заголовок </label>
         <input type="text" data-field-type="string" data-field-name="seo_keywords" data-block="catalog_block"

@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Список информационных страниц'?>
     <div class="content-wrap">
         <div class="field-wrap ">
             <div class="row-title">

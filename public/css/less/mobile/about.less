@@ -22,6 +22,32 @@
         }
       }
     }
+    .contact-us {
+      .contacts {
+        .ask-me {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 800px) {
+  .about {
+    .contact-us {
+      .contacts {
+        width: 78%;
+        .numbers {
+          flex-wrap: wrap;
+          margin-top: 25px;
+          .number {
+            width: 100%;
+            &:last-child {
+              margin: 15px 0 0 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 700px) {
@@ -34,7 +60,7 @@
             margin-top: 80px;
           }
           &:nth-child(n+2) {
-            margin-top: 60px;
+            margin-top: 70px;
           }
           .col-1-2 {
             &:first-child {
@@ -53,6 +79,49 @@
     }
     .rating {
       margin-top: 65px;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .about {
+    .contact-us {
+      flex-wrap: wrap;
+      .contacts {
+        max-width: none;
+        width: 100%;
+        .numbers {
+          flex-wrap: nowrap;
+          .number {
+            &:last-child {
+              margin: 0;
+            }
+          }
+        }
+        .ask-me {
+          margin-top: 30px;
+        }
+      }
+      .map-wrap {
+        margin: 50px 0 0 0;
+        height: 250px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .about {
+    .contact-us {
+      .contacts {
+        .numbers {
+          flex-wrap: wrap;
+          .number {
+            width: 100%;
+            &:last-child {
+              margin: 15px 0 15px 0;
+            }
+          }
+        }
+      }
     }
   }
 }

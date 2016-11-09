@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование информации о готовом решении — "'.$item_auto->page_name_field.'"'?>
     <li class="group" data-group-id="{{$item_auto->id_field}}">
         <div class="select-content">
             <ul class="list">

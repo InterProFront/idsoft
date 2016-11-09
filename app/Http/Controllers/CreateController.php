@@ -21,7 +21,7 @@ class CreateController extends Controller {
 
             $dataArr = $this->dispatch(new CreateGroupItemCommand($block, $group, $owner_id));
 
-            $this->dispatch(new InitGroupCropCommand($block, $group, $dataArr['id']));
+            $this->dispatch(new InitOneGroupCropCommand($block, $group, $dataArr['id']));
 
             $group_item = new GroupItem($dataArr);
 

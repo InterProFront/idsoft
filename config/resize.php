@@ -141,8 +141,15 @@ return [
             ['width' => 300, 'height' => null, 'sufix' => 'icon'],
         ]
     ],
-
     'inf_page_background' => [
+        'sizes' => [
+            ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 390, 'height' => null, 'sufix' => 'secondary'],
+            ['width' => 90, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 300, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
+    'about_page_background' => [
         'sizes' => [
             ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
             ['width' => 390, 'height' => null, 'sufix' => 'secondary'],

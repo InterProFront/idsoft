@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование страницы "Бухгалтерия"'?>
     <div class="select-content">
         <ul class="list">
             <li class="item"><a href="#content" class="select-item active">Информация</a></li>

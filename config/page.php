@@ -16,5 +16,6 @@
         'tarif' => [],
         'client' => [],
         'inf_page' => [],
+        'staff' => [],
 
       ];

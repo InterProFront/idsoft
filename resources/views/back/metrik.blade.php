@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование метрики сайта'?>
     <div class="content-wrap">
         <div class="block ">
             <div class="field-wrap ">

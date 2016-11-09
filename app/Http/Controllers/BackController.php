@@ -175,7 +175,9 @@ class BackController extends Controller {
 	//	Редактирование страницы "Бухгалтерия"
 	//	Редактирование Категории
 	//	Редактирования Тарифа
-	//================================================================
+    //	Редактирование страницы "О компании"
+    //	Редактирование Сотрудника
+    //================================================================
 	public function editAcc(){
 		$acc = $this->queryAgent->getBlock('accounting_block',[],[]);
 		return view('back.blocks.accounting_block', [
@@ -194,13 +196,24 @@ class BackController extends Controller {
 			'item_tarif' => $acc
 		]);
 	}
-
+    public function editAbout(){
+        $about = $this->queryAgent->getBlock('about_page',[],[]);
+        return view('back.blocks.about_page', [
+            'about_page' => $about
+        ]);
+    }
+    public function editStaff($id){
+        $staff= $this->queryAgent->getGroupItem('about_page','staff',$id);
+        return view('back.blocks.groupitems.about_page.staff_edit', [
+            'item_staff' => $staff
+        ]);
+    }
 
 
 
 
 	//=====================================================================
-	//	Редактирование допольнительных полей
+	//	Редактирование дополнительных полей
 	//	Город
 	//	Категория заведений
 	//	Метрики
