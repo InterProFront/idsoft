@@ -3592,6 +3592,9 @@ header .mobile-menu-bottom{
 .block-separator{
 	padding:50px 100px 10px 100px;
 }
+.about .block-title{
+	padding-top:5px;
+}
 .about .main-content-block{
 	-ms-flex-direction:column;
 	    flex-direction:column;
