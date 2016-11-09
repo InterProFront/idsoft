@@ -128,12 +128,16 @@ class PageController extends Controller{
 
 		$test = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
 		$category = $this->queryAgent->getGroupFlat('catalog_block','category_2',[],[]);
-		foreach($test as $item) {
-			$new_price = $item->product_cost_field * $this->course->course_field;
-			$new_sale = $item->product_sale_field * $this->course->course_field;
-			$item->setField('product_cost', $new_price);
-			$item->setField('product_sale', $new_sale);
-		}
+        foreach($test as $item) {
+            foreach ($this->course->course_group as $item_c) {
+                if ($item_c->id_field == $item->course_id_field) {
+                    $cost = $item->product_cost_field * $item_c->course_field;
+                    $sale = $item->product_sale_field * $item_c->course_field;
+                    $item->setField('product_cost', $cost);
+                    $item->setField('product_sale', $sale);
+                }
+            }
+        }
 		$rating = new Rating();
 		$rating = $rating->getRatingView('/clients/'.$slug);
 		// Генерация ссылки на товар исходя из принадлежности к группе
