@@ -24,10 +24,6 @@ Route::get('/automatic/{slug}', 'CatalogController@getAuto');
 
 
 
-Route::get('/create/groupitem_new/{block}/{group}/{owner_id}', ['as' => 'create_groupitem', 'uses' => 'CreateController@createGroupItem']);
-
-
-
 Route::get('/accounting', 'CatalogController@getAccounting');
 Route::get('/accounting/{slug}', 'CatalogController@getTarif');
 
@@ -63,7 +59,10 @@ Route::get('/soft/{category}/{product}', 	'CatalogController@getProduct');
 
 Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 
-	Route::get('/edit/parents',     	'BackController@editParentGroup');
+    Route::get('/create/groupitem_new/{block}/{group}/{owner_id}', ['as' => 'create_groupitem', 'uses' => 'CreateController@createGroupItem']);
+
+
+    Route::get('/edit/parents',     	'BackController@editParentGroup');
 
 
 	Route::get('/edit/informatic',      'BackController@getInformatic');
