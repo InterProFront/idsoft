@@ -39,7 +39,7 @@
 
                     </div>
                 </div>
-                @if( $product->soft_related_group->count() > 0  && $product->product_auto_group->count() > 0)
+                @if( $product->soft_related_group->count() > 0  || $product->product_auto_group->count() > 0)
                 <div class="automatic-block">
                     <ul class="automatic-list">
                         @if($product->soft_related_group->count() > 0 )
