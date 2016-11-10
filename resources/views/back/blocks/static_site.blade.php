@@ -64,7 +64,7 @@
         </div>
         <div class="field-wrap group-wrap">
             <div class="group-title-row"><label class="group-title">Блок преимуществ в футере</label>
-                <button class="any_create button blue" data-block="static_site" data-group="adventages"
+                <button class="any_create button blue disabled" data-block="static_site" data-group="adventages"
                         data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
                 </button>
             </div>

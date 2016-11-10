@@ -17,7 +17,7 @@
                 @endforeach
             </ul>
             <div class="col-1-2">
-                <button class="any_create button blue" data-block="information_page" data-group="inf_page"
+                <button class="any_create button blue disabled" data-block="information_page" data-group="inf_page"
                         data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
                 </button>
             </div>

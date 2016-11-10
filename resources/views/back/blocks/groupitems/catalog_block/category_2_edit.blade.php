@@ -139,7 +139,7 @@
                 <div class="col-1-5"></div>
                 <div class="col-1-5"></div>
             </div>
-            <ul class="group-block group_container" data-block="catalog_block" data-group="category_2"
+            <ul class="group-block group_container" data-block="catalog_block" data-group="product"
                 data-owner-id="{{$item_category_2->id_field}}">
                 @foreach($item_category_2->product_group as $item_product )
                     @include('back.blocks.groupitems.catalog_block.product')

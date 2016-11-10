@@ -1949,6 +1949,7 @@ header .mobile-menu-bottom{
 	margin-bottom:20px;
 }
 .category .product-list .product-item a .img-wrap img{
+	display:block;
 	max-width:100%;
 }
 .category .product-list .product-item a .text-wrap .wrap{

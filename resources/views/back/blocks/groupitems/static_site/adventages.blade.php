@@ -61,7 +61,7 @@
 
         <div class="field-wrap buttons_block">
             <div class="col-1-2">
-                <button type="button" class="any_delete button dark" data-block="static_site" data-group="adventages"
+                <button type="button" class="any_delete button dark disabled" data-block="static_site" data-group="adventages"
                         data-entity="groupitem" data-item-id="{{$item_adventages->id_field}}"
                         data-descr="Эл. первой группы">Удалить
                 </button>
