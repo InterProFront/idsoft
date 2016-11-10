@@ -5,7 +5,7 @@
     <div class="column-item"><p>{{$item_category_2->sorter_field}}</p></div>
     <div class="column-item"></div>
     <div class="column-item">
-        <button type="button" class="any_delete button dark disabled" data-block="catalog_block" data-group="category_2"
+        <button type="button" class="any_delete button dark @if($item_category_1->id_field == 54) disabled @endif" data-block="catalog_block" data-group="category_2"
                 data-entity="groupitem" data-item-id="{{$item_category_2->id_field}}" data-descr="Эл. первой группы">
             Удалить
         </button>
