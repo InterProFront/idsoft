@@ -16,6 +16,13 @@
                    data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">
         </div>
         <div class="field-wrap ">
+            <label class="field-title"> Вид ссылки в адресной строке </label>
+            <input type="text" data-field-type="string" data-field-name="slug"
+                   data-block="catalog_block" data-group="category_2"
+                   class="input-field group_pre_field" value="{{$item_category_2->slug_field}}"
+                   data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">
+        </div>
+        <div class="field-wrap ">
             <label class="field-title"> Описание </label>
             <input type="text" data-field-type="string" data-field-name="category_description"
                    data-block="catalog_block" data-group="category_2" class="input-field group_field"
