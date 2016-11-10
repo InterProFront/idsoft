@@ -2127,7 +2127,7 @@ header .mobile-menu-bottom{
 	border:1px solid #006699;
 }
 .product-grid .col-1-2 .automatic-block{
-	background:url(../img/raw.jpg) no-repeat top, url(../img/raw_r.jpg) no-repeat bottom, #F5F6F7;
+	background:url(../img/raw.jpg) repeat-x top, url(../img/raw_r.jpg) repeat-x bottom, #F5F6F7;
 	padding:25px 30px 30px 30px;
 }
 .product-grid .col-1-2 .automatic-block .automatic-list{
@@ -2204,6 +2204,11 @@ header .mobile-menu-bottom{
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .cost{
 	font-size:32px;
+	color:#333333;
+}
+.product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .mes{
+	padding-top:5px;
+	font-size:20px;
 	color:#333333;
 }
 .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .sale{

@@ -75,7 +75,11 @@
                             @if($product->product_sale_field != 0)
                                 <p class="sale">{{ number_format($product->product_sale_field,0,'',' ') }} тг</p>
                             @endif
-                            <p class="cost">{{ number_format($product->product_cost_field,0,'',' ') }} тг</p>
+                            @if($product->product_cost_field != '0' && $product->product_cost_field != '')
+                                <p class="cost">{{ number_format($product->product_cost_field,0,'',' ') }} тг</p>
+                            @else
+                                <p class="mes">Цену уточняйте</p>
+                            @endif
                         </div>
                         <div class="col-1-2">
                             <p class="text">При заказе свыше 5 позиций действуют скидки.</p>
@@ -153,7 +157,9 @@
                                         <p class="wrap">
                                             <span>{{$item_prod->product_name_field}}</span>
                                         </p>
-                                        <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                        @if($item_prod->product_cost_field != '0' && $item_prod->product_cost_field != '')
+                                            <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                        @endif
                                     </div>
                                 </a>
                             </div>

@@ -1335,6 +1335,12 @@ a.bx-pager-link.active {
     margin-left: 0;
     right: 0;
   }
+  .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .mes {
+    padding-bottom: 10px;
+  }
+  .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .text {
+    padding-top: 10px;
+  }
   .product .technical-parameters .parameters-block .param-row .col-30 {
     width: 35%;
   }
@@ -1434,9 +1440,6 @@ a.bx-pager-link.active {
   .product .product-grid .col-1-2 .preview-block .pictures-row a.active {
     border: 1px solid #006699;
   }
-  .product .product-grid .col-1-2 .automatic-block {
-    background: #f5f6f7;
-  }
   .product .product-grid .col-1-2 .buy-button-block {
     margin-top: 40px;
     max-width: 100%;
@@ -1449,6 +1452,9 @@ a.bx-pager-link.active {
   .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:last-child {
     margin-left: 50px;
     right: 0;
+  }
+  .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .text {
+    padding-top: 0;
   }
   .product .technical-parameters .title-block .sub-title {
     padding-bottom: 20px;
@@ -1549,6 +1555,12 @@ a.bx-pager-link.active {
   }
   .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2:last-child {
     margin-left: 0;
+  }
+  .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .mes {
+    padding-bottom: 10px;
+  }
+  .product .product-grid .col-1-2 .buy-button-block .row-1-2 .col-1-2 .text {
+    padding-top: 10px;
   }
   .product .technical-parameters .parameters-block .param-row {
     margin: 0 20px;

@@ -41,14 +41,17 @@
 
                     </ul>
                 </div>
-                <div class="recommend-letter">
-                    <a href="/images/{{$client->letter_image->primary_link}}">
-                        <div class="image-wrap frame">
-                            <img src="/images/{{$client->letter_image->frame_crop->link}}" alt="{{$client->letter_image->alt}}">
-                        </div>
-                        <p><span>Рекомендательное письмо {{$client->page_name_field}}</span></p>
-                    </a>
-                </div>
+                <?php $placeholder = explode("/", $client->letter_image->primary_link)[0]; ?>
+                @if($client->letter_image->primary_link != '' && $placeholder != 'placeholders')
+                    <div class="recommend-letter">
+                        <a href="/images/{{$client->letter_image->primary_link}}">
+                            <div class="image-wrap frame">
+                                <img src="/images/{{$client->letter_image->frame_crop->link}}" alt="{{$client->letter_image->alt}}">
+                            </div>
+                            <p><span>Рекомендательное письмо {{$client->page_name_field}}</span></p>
+                        </a>
+                    </div>
+                @endif
             </div>
         </div>
         <div class="block-separator">
@@ -72,7 +75,9 @@
                                             <p class="wrap">
                                                 <span>{{$item_prod->product_name_field}}</span>
                                             </p>
-                                            <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                            @if($item_prod->product_cost_field != '0' && $item_prod->product_cost_field != '')
+                                                <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                            @endif
                                         </div>
                                     </a>
                                 </div>

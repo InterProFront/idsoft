@@ -23,32 +23,40 @@
                     <ul class="right-menu">
                         @foreach($all as $item)
                             @if(!$item->is_iiko_field)
-                                <li class="menu-item"><div class="orange-wrap"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></div></li>
+                                <li class="menu-item">
+                                    <div class="orange-wrap"><a href="/automatic/{{$item->slug_field}}"
+                                                                class="link">{{$item->page_name_field}}</a></div>
+                                </li>
                             @endif
                         @endforeach
-                        <li class="menu-item iiko-popup"><div class="orange-wrap"><span class="open-popup">Автоматизация IIKO</span>
-                            <div class="left-popup">
-                                <ul class="popup-menu">
-                                    @foreach($all as $item)
-                                        @if($item->is_iiko_field)
-                                            <li class="menu-item"><div class="orange-wrap-iiko"><a href="/automatic/{{$item->slug_field}}" class="link">{{$item->page_name_field}}</a></div></li>
-                                        @endif
-                                    @endforeach
-                                </ul>
-                            </div>
+                        <li class="menu-item iiko-popup">
+                            <div class="orange-wrap"><span class="open-popup">Автоматизация IIKO</span>
+                                <div class="left-popup">
+                                    <ul class="popup-menu">
+                                        @foreach($all as $item)
+                                            @if($item->is_iiko_field)
+                                                <li class="menu-item">
+                                                    <div class="orange-wrap-iiko"><a
+                                                                href="/automatic/{{$item->slug_field}}"
+                                                                class="link">{{$item->page_name_field}}</a></div>
+                                                </li>
+                                            @endif
+                                        @endforeach
+                                    </ul>
+                                </div>
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div class="capability">
-                  {!! $auto->vozm_field !!}
+                    {!! $auto->vozm_field !!}
                 </div>
             </div>
         </div>
         <div class="second-content">
             <div class="col-1-2">
                 <div class="text-block">
-                   {!! $auto->system_features_field !!}
+                    {!! $auto->system_features_field !!}
                 </div>
             </div>
             <div class="col-1-2">
@@ -59,7 +67,7 @@
                                 <img src="/images/{{$item->card_image->primary_link}}" alt="{{$item->card_image->alt}}">
                             </div>
                             <div class="text-wrap">
-                             {!! $item->card_text_field !!}
+                                {!! $item->card_text_field !!}
                             </div>
                         </div>
                     @endforeach
@@ -80,14 +88,19 @@
                                 <div class="product-item">
                                     <a href="{{$item_prod->title_field}}">
                                         <div class="img-wrap">
-                                            <img src="/images/{{$item_prod->product_base_photo_image->catalog_crop->link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
+                                            <img src="/images/{{$item_prod->product_base_photo_image->catalog_crop->link}}"
+                                                 alt="{{$item_prod->product_base_photo_image->alt}}">
                                         </div>
                                         <div class="text-wrap">
                                             <p>{{$rel->about_item_field}}</p>
                                             <p class="wrap">
                                                 <span>{{$item_prod->product_name_field}}</span>
                                             </p>
-                                            <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                            @if($item_prod->product_cost_field != '0' && $item_prod->product_cost_field != '')
+                                            <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }}
+                                                тг @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }}
+                                                    тг</span>@endif</p>
+                                             @endif
                                         </div>
                                     </a>
                                 </div>
@@ -101,15 +114,16 @@
         <div class="warranty">
             {!! $auto->warranty_field !!}
         </div>
-        <div class="cost-block">
-
-            <h2 class="cost">
-                @if($auto->auto_sale_field > 0)
-                    <span class="sale">{{ number_format($auto->auto_sale_field,0,'',' ') }} тг</span>
-                @endif
-                    от {{ number_format($auto->auto_cost_field,0,'',' ') }}  тенге
-            </h2>
-        </div>
+        @if($auto->auto_cost_field != '0' && $auto->auto_cost_field != '')
+            <div class="cost-block">
+                <h2 class="cost">
+                    @if($auto->auto_sale_field > 0)
+                        <span class="sale">{{ number_format($auto->auto_sale_field,0,'',' ') }} тг</span>
+                    @endif
+                    от {{ number_format($auto->auto_cost_field,0,'',' ') }} тенге
+                </h2>
+            </div>
+        @endif
         <div class="credit">
             {!! $auto->pre_cost_text_field !!}
         </div>

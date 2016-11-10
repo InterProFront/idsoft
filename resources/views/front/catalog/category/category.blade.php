@@ -21,9 +21,11 @@
                                     <div class="text-wrap">
                                         <p class="wrap"><span>{{$item->product_name_field}}</span></p>
                                         <p class="about-product">{{$item->small_description_field}}</p>
-                                        <p class="cost">{{ number_format($item->product_cost_field,0,'',' ') }}
+                                        @if($item->product_cost_field != '0' && $item->product_cost_field != '')
+                                            <p class="cost">{{ number_format($item->product_cost_field,0,'',' ') }}
                                             тг @if($item->product_sale_field != 0)<span class="sale">{{ number_format($item->product_sale_field,0,'',' ') }}
                                                 тг</span>@endif</p>
+                                        @endif
                                     </div>
                                 </a>
                 </div>
