@@ -48,9 +48,11 @@
                         </li>
                     </ul>
                 </div>
-                <div class="capability">
-                    {!! $auto->vozm_field !!}
-                </div>
+                @if($auto->vozm_field == '')
+                    <div class="capability">
+                        {!! $auto->vozm_field !!}
+                    </div>
+                @endif
             </div>
         </div>
         <div class="second-content">
