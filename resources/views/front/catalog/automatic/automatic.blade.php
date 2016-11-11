@@ -48,7 +48,7 @@
                         </li>
                     </ul>
                 </div>
-                @if($auto->vozm_field == '')
+                @if($auto->vozm_field != '')
                     <div class="capability">
                         {!! $auto->vozm_field !!}
                     </div>
