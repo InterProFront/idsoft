@@ -73,9 +73,7 @@
             </div>
         </div>
         <div class="tarifs">
-            <div class="page-title">
                 <h2 class="block-title">Выгодные тарифы</h2>
-            </div>
             <div class="tarif-block">
                 @foreach($account->tarif_category_group as $cat)
                     <div class="tarif-item">

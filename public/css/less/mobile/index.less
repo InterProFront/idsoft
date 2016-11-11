@@ -85,7 +85,21 @@
     display: none;
   }
 }
-
+@media screen and (max-width: 900px) {
+  .content {
+    .block-title {
+      font-size: 36px;
+    }
+    .sub-title {
+      font-size: 30px;
+    }
+    .page-title {
+      font-size: 36px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .content {
     .automatic-block-list {
@@ -191,18 +205,27 @@
 @media screen and (max-width: 600px) {
   .content{
     .block-title{
-      padding: 50px 20px 30px;
-      font-size:44px;
+      font-size: 32px;
+    }
+    .sub-title {
+      font-size: 28px;
+    }
+    .page-title {
+      font-size: 32px;
+    }
+  }
+  .text-block{
+    h2{
+      font-size: 28px;
+    }
+    h3{
+      font-size: 26px;
     }
   }
 }
 
 @media screen and (max-width: 500px) {
   .content {
-    .block-title{
-      padding: 50px 20px 30px;
-      font-size:32px;
-    }
     .automatic-block-list {
       .row {
         margin-bottom: 0 !important;
@@ -318,9 +341,21 @@
       }
     }
   }
-
 }
 
+@media screen and (max-width: 425px) {
+  .content {
+    .block-title{
+      font-size: 28px;
+    }
+    .sub-title {
+      font-size: 24px;
+    }
+    .page-title {
+      font-size: 28px;
+    }
+  }
+}
 //==========Client slider ===================//
 @media screen and (max-width: 990px) {
   .slider-block {

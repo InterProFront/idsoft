@@ -118,7 +118,7 @@
         </div>
         <div class="field-wrap group-wrap">
             <div class="group-title-row"><label class="group-title">Преимущества</label>
-                <button class="any_create button blue" data-block="accounting_block" data-group="acc_adv"
+                <button class="any_create button blue disabled" data-block="accounting_block" data-group="acc_adv"
                         data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
                 </button>
             </div>
@@ -130,7 +130,7 @@
         </div>
         <div class="field-wrap group-wrap">
             <div class="group-title-row"><label class="group-title">Сотрудники</label>
-                <button class="any_create button blue" data-block="accounting_block" data-group="employs"
+                <button class="any_create button blue disabled" data-block="accounting_block" data-group="employs"
                         data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
                 </button>
             </div>

@@ -53,7 +53,7 @@
         </div>
         <div class="field-wrap buttons_block">
             <div class="col-1-2">
-                <button type="button" class="any_delete button dark" data-block="accounting_block" data-group="acc_adv"
+                <button type="button" class="any_delete button dark disabled" data-block="accounting_block" data-group="acc_adv"
                         data-entity="groupitem" data-item-id="{{$item_acc_adv->id_field}}"
                         data-descr="Эл. первой группы">Удалить
                 </button>

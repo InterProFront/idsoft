@@ -560,6 +560,19 @@ a.bx-pager-link.active {
     display: none;
   }
 }
+@media screen and (max-width: 900px) {
+  .content .block-title {
+    font-size: 36px;
+  }
+  .content .sub-title {
+    font-size: 30px;
+  }
+  .content .page-title {
+    font-size: 36px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media screen and (max-width: 768px) {
   .content .automatic-block-list .row {
     margin-bottom: 0 !important;
@@ -641,15 +654,22 @@ a.bx-pager-link.active {
 }
 @media screen and (max-width: 600px) {
   .content .block-title {
-    padding: 50px 20px 30px;
-    font-size: 44px;
+    font-size: 32px;
+  }
+  .content .sub-title {
+    font-size: 28px;
+  }
+  .content .page-title {
+    font-size: 32px;
+  }
+  .text-block h2 {
+    font-size: 28px;
+  }
+  .text-block h3 {
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 500px) {
-  .content .block-title {
-    padding: 50px 20px 30px;
-    font-size: 32px;
-  }
   .content .automatic-block-list .row {
     margin-bottom: 0 !important;
   }
@@ -753,6 +773,17 @@ a.bx-pager-link.active {
   .content .free-project .calculate .calculated-button:hover {
     background: #1491c4;
     cursor: pointer;
+  }
+}
+@media screen and (max-width: 425px) {
+  .content .block-title {
+    font-size: 28px;
+  }
+  .content .sub-title {
+    font-size: 24px;
+  }
+  .content .page-title {
+    font-size: 28px;
   }
 }
 @media screen and (max-width: 990px) {
@@ -1737,6 +1768,14 @@ a.bx-pager-link.active {
     width: 33.3333333%;
     margin-bottom: 40px;
   }
+  .cost-block .cost {
+    font-size: 36px;
+  }
+  .cost-block .cost .sale {
+    font-size: 16px;
+    left: 45px;
+    top: -12px;
+  }
 }
 @media screen and (max-width: 800px) {
   .page-title-image {
@@ -1836,26 +1875,13 @@ a.bx-pager-link.active {
     width: 50%;
     margin-bottom: 40px;
   }
-  .cost-block {
-    width: 100%;
-    text-align: center;
-    padding: 30px 0 30px 0;
-  }
   .cost-block .cost {
-    font-size: 48px;
-    font-weight: normal;
-    color: #333333;
-    position: relative;
-    max-width: 600px;
-    margin: 0 auto;
+    font-size: 28px;
   }
   .cost-block .cost .sale {
     font-size: 16px;
-    left: 25px;
-    top: -20px;
-    color: #990000;
-    text-decoration: line-through;
-    position: absolute;
+    left: 60px;
+    top: -12px;
   }
   .credit {
     text-align: center;
@@ -1867,6 +1893,15 @@ a.bx-pager-link.active {
     margin: 0 auto;
     color: #333333;
     line-height: 1.5em;
+  }
+}
+@media screen and (max-width: 425px) {
+  .cost-block .cost {
+    font-size: 24px;
+  }
+  .cost-block .cost .sale {
+    font-size: 14px;
+    left: 45px;
   }
 }
 @media screen and (max-width: 400px) {
@@ -1910,12 +1945,6 @@ a.bx-pager-link.active {
 @media screen and (max-width: 900px) {
   .employs-block .employs .employ-item .img-wrap img {
     max-width: 100%;
-  }
-  .accounting .page-title {
-    font-size: 36px;
-  }
-  .content .block-title {
-    font-size: 36px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -2040,6 +2069,10 @@ a.bx-pager-link.active {
     padding: 0 20px 0 20px;
   }
   .accounting .advantages-title .block-title {
+    padding: 50px 0 30px;
+  }
+  .accounting .block-title {
+    font-size: 32px;
     padding: 50px 0 30px;
   }
 }
