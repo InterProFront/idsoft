@@ -53,7 +53,7 @@
                    class="input-field block_field" placeholder="Строка">{{$clients_block->seo_description_field}}</textarea>
         </div>
         <div class="field-wrap ">
-            <label class="field-title"> СЕО-текст</label>
+            <label class="field-title"> СЕО-Текст (под футером) </label>
             <textarea type="text" data-field-type="text" data-field-name="seo_text" data-block="clients_block"
                       class="input-field block_field" placeholder="Строка">{{$clients_block->seo_text_field}}</textarea>
         </div>

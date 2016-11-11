@@ -79,7 +79,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 	Route::get('/edit/menu',     		'BackController@editMenu');
 
 	Route::get('/edit/clients',     	'BackController@editClients');
-	Route::get('/edit/client/{id}',     'BackController@editClientItem');
+	Route::get('/edit/clients/{id}',     'BackController@editClientItem');
 
 
 

@@ -168,7 +168,7 @@
                 @foreach($static->phones_group as $item)
                     <?php $i++?>
                     @if($i == 2)
-                        <li class="item"><a href="tel:{{$item->phone_field}}">{{$item->phone_field}}</a></li>
+                        <li class="item"><a href="tel:<?php echo preg_replace('/<[^>]+>/', '', $item->phone_field) ?>">{!! $item->phone_field !!}</a></li>
                     @endif
                 @endforeach
 

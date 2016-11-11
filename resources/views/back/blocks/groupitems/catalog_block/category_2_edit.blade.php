@@ -180,7 +180,7 @@
                    data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">{{$item_category_2->seo_description_field}}</textarea>
         </div>
         <div class="field-wrap ">
-            <label class="field-title"> СЕО-Описание </label>
+            <label class="field-title"> СЕО-Текст (под футером) </label>
             <textarea type="text" data-field-type="text" data-field-name="seo_text" data-block="catalog_block"
                       data-group="category_2" class="input-field group_field" data-item-id="{{$item_category_2->id_field}}"
                       placeholder="Строка">{{$item_category_2->seo_text_field}}</textarea>
