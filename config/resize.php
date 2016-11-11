@@ -93,19 +93,19 @@ return [
     ],
     'product_product_base_photo' => [
         'sizes' => [
-            ['width' => 1100, 'height' => null, 'sufix' => 'primary'],
-            ['width' => 390, 'height' => null, 'sufix' => 'secondary'],
-            ['width' => 90, 'height' => null, 'sufix' => 'preview'],
-            ['width' => 300, 'height' => null, 'sufix' => 'icon'],
+            ['width' => 1100, 'height' => null, 'sufix' => 'primary', 'mod'=> true],
+            ['width' => 390, 'height' => null, 'sufix' => 'secondary','mod'=> true ],
+            ['width' => 90, 'height' => null, 'sufix' => 'preview','mod'=> true],
+            ['width' => 300, 'height' => null, 'sufix' => 'icon','mod'=> true],
         ],
         'proportions' => ['width' => 1, 'height' => 1, 'color' => '#ffffff']
     ],
     'product_image_product' => [
         'sizes' => [
-            ['width' => 1100, 'height' => null, 'sufix' => 'primary'],
-            ['width' => 390, 'height' => null, 'sufix' => 'secondary'],
-            ['width' => 90, 'height' => null, 'sufix' => 'preview'],
-            ['width' => 300, 'height' => null, 'sufix' => 'icon'],
+            ['width' => 1100, 'height' => null, 'sufix' => 'primary','mod'=> true],
+            ['width' => 390, 'height' => null, 'sufix' => 'secondary','mod'=> true],
+            ['width' => 90, 'height' => null, 'sufix' => 'preview','mod'=> true],
+            ['width' => 300, 'height' => null, 'sufix' => 'icon','mod'=> true],
         ],
         'proportions' => ['width' => 1, 'height' => 1, 'color' => '#ffffff']
     ],
