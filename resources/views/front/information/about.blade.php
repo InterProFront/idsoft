@@ -98,12 +98,12 @@
                         <?php $i++?>
                         @if($i == 1)
                             <div class="number">
-                                <div class="telephone">+7 (727) {{$item->phone_field}}</div>
+                                <div class="telephone">{!! $item->phone_field !!}</div>
                                 <div class="under-number">{{$about->works_time_field}}</div>
                             </div>
                         @elseif($i == 2)
                             <div class="number">
-                                <div class="telephone">{{$item->phone_field}}</div>
+                                <div class="telephone">{!! $item->phone_field !!}</div>
                                 <div class="under-number">
                                     <div class="icon-group">
                                         <i class="wpp"></i>
