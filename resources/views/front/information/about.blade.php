@@ -125,12 +125,12 @@
 
                         DG.then(function () {
                             map = DG.map('map', {
-                                center: [43.22912475875056, 76.89061760902406],
+                                center: [43.22908475875056, 76.89035760902406],
                                 zoom: 17,
                                 fullscreenControl: false,
                             });
 
-                            DG.marker([43.22912475875056, 76.89061760902406]).addTo(map).bindPopup('IDSOFT - Автоматизация торговли в Казахстане');
+                            DG.marker([43.22908475875056, 76.89035760902406]).addTo(map).bindPopup('IDSOFT - Автоматизация торговли в Казахстане');
                         });
                     </script>
                     {{--<a class="dg-widget-link"

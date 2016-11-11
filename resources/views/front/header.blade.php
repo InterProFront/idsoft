@@ -28,7 +28,7 @@
                         <?php $i++?>
                         @if($i == 1)
                             <li class="item">
-                                <p>+7 (727)<span class="bold"> {{$item->phone_field}}</span></p>
+                                <p>{!! $item->phone_field !!}</p>
                             </li>
                         @else
                             <li class="item">
@@ -37,7 +37,7 @@
                                     <i class="tel"></i>
                                     <i class="vib"></i>
                                 </span>
-                                <p>{{$item->phone_field}}</p>
+                                <p>{!! $item->phone_field !!}</p>
                             </li>
                         @endif
                     @endforeach
