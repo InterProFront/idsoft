@@ -61,6 +61,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 
     Route::get('/create/groupitem_new/{block}/{group}/{owner_id}', ['as' => 'create_groupitem', 'uses' => 'CreateController@createGroupItem']);
 
+    Route::post('/file/upload', 'CreateController@saveFile');
 
     Route::get('/edit/parents',     	'BackController@editParentGroup');
 

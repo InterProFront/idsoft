@@ -47,4 +47,26 @@ class CreateController extends Controller {
         }
     }
 
+    public function saveFile(Request $request)
+    {
+        $files_dir = public_path('files');
+
+
+        $original_name = $request->file('file')->getClientOriginalName();
+
+        $link = '/files/'.$original_name;
+        $chmod = $files_dir.'/'.$original_name;
+
+        $request->file('file')->move(
+            $files_dir,
+            $original_name
+        );
+
+        chmod($chmod, 0644);
+
+        //$this->fSaver->save([['entity_name' => $entity_name, 'entity_id' => $entity_id, 'name' => $name, 'value' => $link]]);
+
+        return ['status' => 'OK','link' =>  $link];
+    }
+
 }

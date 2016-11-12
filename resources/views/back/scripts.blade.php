@@ -21,5 +21,6 @@
     <script src="/Admin/js/sorter.js"></script>
     <script src="/Admin/js/publicated.js"></script>
 
+    <script src="/Admin/js/trumbowyg.upload-file.js"></script>
 
 @endsection
