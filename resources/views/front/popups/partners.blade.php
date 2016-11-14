@@ -1,6 +1,6 @@
 <div class="hide">
     <div class="white-popup mfp-with-anim mfp-hide" id="partners">
-        <h4 class="popup-title">Стать парнером</h4>
+        <h4 class="popup-title">Стать партнером</h4>
         <div class="rows-block">
             <div class="row">
                 <div class="col-1-2">
