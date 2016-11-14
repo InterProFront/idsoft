@@ -7,7 +7,7 @@
                     <label for="" class="row-name">
                         Название компании
                     </label>
-                    <input type="text" class="popup-input" data-field-name="company_name" data-field-type="string" placeholder="Имя">
+                    <input type="text" class="popup-input" data-field-name="company_name" data-field-type="string" placeholder="Название компании">
                 </div>
             </div>
             <div class="row">
@@ -15,7 +15,7 @@
                     <label for="" class="row-name">
                         Адрес сайта
                     </label>
-                    <input type="text" class="popup-input" data-field-name="site_name" data-field-type="string" placeholder="Имя">
+                    <input type="text" class="popup-input" data-field-name="site_name" data-field-type="string" placeholder="Адрес сайта">
                 </div>
             </div>
             <div class="row">
@@ -45,7 +45,7 @@
                     <label for="" class="row-name">
                         Город
                     </label>
-                    <input type="text" class="popup-input" data-field-name="city" data-field-type="string" placeholder="Эл. почта">
+                    <input type="text" class="popup-input" data-field-name="city" data-field-type="string" placeholder="Город">
                 </div>
             </div>
             <div class="row">
@@ -53,7 +53,7 @@
                     <label  class="row-name">
                         Комментарий
                     </label>
-                    <textarea type="text" class="popup-input" data-field-name="question" data-field-type="string" placeholder="Комментарий"></textarea>
+                    <textarea type="text" class="popup-input" data-field-name="question" data-field-type="text" placeholder="Комментарий"></textarea>
                 </div>
             </div>
             <div class="row button-row">
