@@ -206,6 +206,11 @@ return [
             'order' => [
                 'stringfields' => ['name', 'phone', 'mail','question','product'],
                 'bools' => ['mailed']
+            ],
+            'partners'    => [
+                'stringfields' => ['company_name', 'site_name', 'contact_phone', 'mail', 'city'],
+                'textfields'   => ['question'],
+                'bools'        => ['mailed']
             ]
         ]
     ]

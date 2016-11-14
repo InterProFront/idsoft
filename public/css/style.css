@@ -1539,6 +1539,12 @@ header .mobile-menu-bottom{
 	-ms-flex-pack:center;
 	justify-content:center;
 }
+.content .free-project .calculate.partner{
+	margin-top:20px;
+}
+.content .free-project .calculate.partner .button{
+	padding:15px 24px;
+}
 .content .free-project .calculate .input{
 	font-size:16px;
 	color:#333333;
@@ -2484,7 +2490,7 @@ header .mobile-menu-bottom{
 	padding-bottom:10px;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu{
-	width:210px;
+	width:235px;
 	margin-left:-10px;
 }
 .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item{
@@ -3665,7 +3671,7 @@ header .mobile-menu-bottom{
 	background:url(../img/raw.jpg) repeat-x top #F5F6F7;
 }
 .about .contact-us .contacts{
-	max-width:320px;
+	max-width:400px;
 	min-width:240px;
 	width:100%;
 }
@@ -3676,6 +3682,7 @@ header .mobile-menu-bottom{
 }
 .about .contact-us .contacts .consult-text{
 	margin-top:40px;
+	line-height:1.5;
 	color:#666666;
 }
 .about .contact-us .contacts .numbers{

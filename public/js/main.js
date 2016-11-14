@@ -126,6 +126,19 @@ $(document).ready(function () {
     });
 
 
+    //=====Форма "Стать партнером"
+    $('#partner').magnificPopup({
+        type: 'inline',
+        removalDelay: 500,
+        callbacks: {
+            beforeOpen: function() {
+                this.st.mainClass ='mfp-zoom-in';
+            }
+        },
+        midClick: true
+    });
+
+
     //==== Форма "Рекомендательное письмо"
     $('.recommend-letter a').magnificPopup({
         type: 'image'

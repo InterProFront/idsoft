@@ -177,21 +177,30 @@ class PageController extends Controller{
         $all_pages = $this->queryAgent->getGroupFlat('information_page','inf_page',[],[]);
         $about_page = $this->queryAgent->getBlock('about_page',[],[]);
 
-        if ($slug != 'about') {
-			$inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
-            $page_name = $about_page->page_name_field;
-			return view('front.information.information-page',[
-				'inf' => $inf_page,
-                'page_name' => $page_name,
-				'all' => $all_pages,
-				'rating'	=> $rating
-			]);
-		} else {
+        if ($slug == 'about') {
             return view('front.information.about',[
-				'about' => $about_page,
-				'all' => $all_pages,
-				'rating'	=> $rating
-			]);
+                'about' => $about_page,
+                'all' => $all_pages,
+                'rating'	=> $rating
+            ]);
+		} else if ($slug == 'partners') {
+            $inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
+            $page_name = $about_page->page_name_field;
+            return view('front.information.partners',[
+                'inf' => $inf_page,
+                'page_name' => $page_name,
+                'all' => $all_pages,
+                'rating'	=> $rating
+            ]);
+        } else {
+            $inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
+            $page_name = $about_page->page_name_field;
+            return view('front.information.information-page',[
+                'inf' => $inf_page,
+                'page_name' => $page_name,
+                'all' => $all_pages,
+                'rating'	=> $rating
+            ]);
 		}
 	}
 
