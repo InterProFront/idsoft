@@ -64,7 +64,6 @@
     }
 
     a {}
-
     p {
         text-align: center;
     }
