@@ -1,3 +1,3 @@
-@section('metricks')
+@section('metriks')
     {!! $static->metrik_field !!}
 @endsection
