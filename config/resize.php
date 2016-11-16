@@ -95,8 +95,8 @@ return [
         'sizes' => [
             ['width' => 1100, 'height' => null, 'sufix' => 'primary', 'mod'=> true],
             ['width' => 390, 'height' => null, 'sufix' => 'secondary','mod'=> true ],
-            ['width' => 90, 'height' => null, 'sufix' => 'preview','mod'=> true],
-            ['width' => 300, 'height' => null, 'sufix' => 'icon','mod'=> true],
+            ['width' => 90, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 300, 'height' => null, 'sufix' => 'icon'],
         ],
         'proportions' => ['width' => 1, 'height' => 1, 'color' => '#ffffff']
     ],
@@ -104,8 +104,8 @@ return [
         'sizes' => [
             ['width' => 1100, 'height' => null, 'sufix' => 'primary','mod'=> true],
             ['width' => 390, 'height' => null, 'sufix' => 'secondary','mod'=> true],
-            ['width' => 90, 'height' => null, 'sufix' => 'preview','mod'=> true],
-            ['width' => 300, 'height' => null, 'sufix' => 'icon','mod'=> true],
+            ['width' => 90, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 300, 'height' => null, 'sufix' => 'icon'],
         ],
         'proportions' => ['width' => 1, 'height' => 1, 'color' => '#ffffff']
     ],
