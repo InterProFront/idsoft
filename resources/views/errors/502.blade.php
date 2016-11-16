@@ -74,6 +74,7 @@
 <p class="big">502</p>
 <p class="big error">Ошибка</p>
 <p class="text">Страница временно не доступна</p>
+<p class="text">Попробуйте обновить страницу</p>
 <p><a href="/">На главную</a></p>
 </div>
 </body>
