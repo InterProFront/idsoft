@@ -44,6 +44,7 @@
 
     p.text {
         font-family: "Arial", sans-serif;
+        font-weight: bold;
         margin-top: 15px;
         text-align: center;
         color: #333333;
