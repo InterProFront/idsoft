@@ -70,14 +70,32 @@
                     <meta itemprop="ratingCount" content="{{$rating['count']}}"> ({{$rating['count']}} человек)
                     </span>
         </div>
-        <div class="free-project white-popup" id="calculation">
-            <h2 class="sub-title">Бесплатный расчет проекта</h2>
-            <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитает
-                заказ.</p>
-            <div class="calculate">
-                <input type="text" class="input phone popup-input" data-mask="+7(000)000-00-00" placeholder="Номер телефона" data-field-name="phone" data-field-type="string">
-                <button class="calculated-button button send-form">Рассчитать</button>
+        @if ($inf->slug_field == "partners")
+            @include('front.popups.partners')
+            <div class="free-project white-popup">
+                <h2 class="sub-title">Стать партнером</h2>
+                <div class="calculate partner">
+                    <button class="button" href="#partners" id="partner">Отправить заявку</button>
+                </div>
             </div>
-        </div>
+        @elseif ($inf->slug_field == "support")
+            @include('front.popups.supports')
+            <div class="free-project white-popup">
+                <h2 class="sub-title">Поддержка клиентов</h2>
+                <div class="calculate partner">
+                    <button class="button" href="#supports" id="support">Написать в поддержку</button>
+                </div>
+            </div>
+        @else
+            <div class="free-project white-popup" id="calculation">
+                <h2 class="sub-title">Бесплатный расчет проекта</h2>
+                <p class="sub-title-text">Оставьте заявку и менеджер свяжется с вами по указанному номеру и рассчитает
+                    заказ.</p>
+                <div class="calculate">
+                    <input type="text" class="input phone popup-input" data-mask="+7(000)000-00-00" placeholder="Номер телефона" data-field-name="phone" data-field-type="string">
+                    <button class="calculated-button button send-form">Рассчитать</button>
+                </div>
+            </div>
+        @endif
     </section>
 @endsection

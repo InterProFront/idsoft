@@ -211,7 +211,12 @@ return [
                 'stringfields' => ['company_name', 'site_name', 'contact_phone', 'mail', 'city'],
                 'textfields'   => ['question'],
                 'bools'        => ['mailed']
-            ]
+            ],
+            'supports' => [
+                'stringfields' => ['name', 'mail'],
+                'textfields' => ['question'],
+                'bools' => ['mailed']
+            ],
         ]
     ]
 ];

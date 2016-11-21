@@ -139,6 +139,19 @@ $(document).ready(function () {
     });
 
 
+    //=====Форма "Написать в поддержку"
+    $('#support').magnificPopup({
+        type: 'inline',
+        removalDelay: 500,
+        callbacks: {
+            beforeOpen: function() {
+                this.st.mainClass ='mfp-zoom-in';
+            }
+        },
+        midClick: true
+    });
+
+
     //==== Форма "Рекомендательное письмо"
     $('.recommend-letter a').magnificPopup({
         type: 'image'

@@ -183,16 +183,7 @@ class PageController extends Controller{
                 'all' => $all_pages,
                 'rating'	=> $rating
             ]);
-		} else if ($slug == 'partners') {
-            $inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
-            $page_name = $about_page->page_name_field;
-            return view('front.information.partners',[
-                'inf' => $inf_page,
-                'page_name' => $page_name,
-                'all' => $all_pages,
-                'rating'	=> $rating
-            ]);
-        } else {
+		} else {
             $inf_page = $this->queryAgent->getGroupItemBySlug('information_page','inf_page',$slug);
             $page_name = $about_page->page_name_field;
             return view('front.information.information-page',[
