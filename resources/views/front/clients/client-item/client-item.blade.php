@@ -28,10 +28,12 @@
                 <div class="other-places">
                     <p class="menu-title">Другие заведения</p>
                     <ul class="places-list">
+                        <?php $c = 0; ?>
                         @foreach($all as $item)
-                            @if ($item->page_name_field != $client->page_name_field)
+                            @if (($item->page_name_field != $client->page_name_field) && ($c <= 15))
                             <li class="item"><a href="/clients/{{$item->slug_field}}">{{$item->page_name_field}}</a></li>
                             @endif
+                            <?php $c++ ?>
                         @endforeach
                         @foreach($filter->institution_group as $item)
                             @if($item->id_field == $client->institution_type_field)

@@ -8,12 +8,13 @@
   margin-bottom: 50px;
   .type-menu {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     .item {
-      margin: 5px 10px;
+      margin: 5px 25px 10px;
       .link {
 
         .link(@link-color, @link-border, @hover-color, @hover-border);
@@ -21,7 +22,7 @@
 
       &.active {
         background: #fed054;
-        margin: 0;
+        margin: 0 15px;
         padding: 5px 10px;
         border-radius: 15px;
         .link {

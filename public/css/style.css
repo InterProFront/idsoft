@@ -173,7 +173,7 @@ a.bx-pager-link.active{
 }
 .text-block h3{
 	color:#333333;
-	font-size:32px;
+	font-size:26px;
 	line-height:1.2em;
 	width:100%;
 	font-weight:normal;
@@ -3202,14 +3202,16 @@ header .mobile-menu-bottom{
 .shop-type .type-menu{
 	display:-ms-flexbox;
 	display:flex;
-	-ms-flex-pack:justify;
-	justify-content:space-between;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
+	-ms-flex-pack:center;
+	justify-content:center;
 	width:100%;
 	max-width:800px;
 	margin:0 auto;
 }
 .shop-type .type-menu .item{
-	margin:5px 10px;
+	margin:5px 25px 10px;
 }
 .shop-type .type-menu .item .link{
 	background:linear-gradient(to left, #B2D1E0, #B2D1E0 100%);
@@ -3239,7 +3241,7 @@ header .mobile-menu-bottom{
 }
 .shop-type .type-menu .item.active{
 	background:#FED054;
-	margin:0;
+	margin:0 15px;
 	padding:5px 10px;
 	border-radius:15px;
 }
