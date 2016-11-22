@@ -3207,6 +3207,8 @@ header .mobile-menu-bottom{
 	-ms-flex-pack:center;
 	justify-content:center;
 	width:100%;
+	-ms-flex-align:baseline;
+	align-items:baseline;
 	max-width:800px;
 	margin:0 auto;
 }

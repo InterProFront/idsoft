@@ -11,11 +11,11 @@
         $d100 = ($all_count % 100 < 5) || ($all_count % 100 > 20);
         ?>
         @if ($d100 && ($d10 == 1))
-            <h1 class="block-title"> {{$all_count}} счастливый клиент</h1>
+            <h1 class="block-title"> {{$all_count}} автоматизированный клиент</h1>
         @elseif ($d100 && ($d10 > 1) && ($d10 < 5))
-            <h1 class="block-title"> {{$all_count}} счастливых клиента</h1>
+            <h1 class="block-title"> {{$all_count}} автоматизированных клиента</h1>
         @else
-            <h1 class="block-title"> {{$all_count}} счастливых клиентов</h1>
+            <h1 class="block-title"> {{$all_count}} автоматизированных клиентов</h1>
         @endif
 
         <div class="shop-type">
@@ -100,7 +100,7 @@
                                 </li>
                                 <?php $i = 0?>
                             @endforeach
-                            <li class="item"><a href="/clients/all/{{$inst}}" class="no_bold">Все города</a></li>
+                            <li class="item"><div class="orange-wrap"><a href="/clients/all/{{$inst}}" class="no_bold">Все города</a></div></li>
                         </ul>
                     </div>
                 </div>
