@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Mail;
 use Interpro\QuickStorage\Concept\Exception\WrongBlockFieldNameException;
 use Interpro\QuickStorage\Laravel\QueryAgent;
 use Interpro\QuickStorage\Concept\Command\CreateGroupItemCommand;
-use Interpro\QuickStorage\Concept\Command\Crop\InitGroupCropCommand;
+use Interpro\QuickStorage\Concept\Command\Crop\InitOneGroupCropCommand;
 use Interpro\QuickStorage\Laravel\Item\GroupItem;
 
 use Illuminate\Http\Request;
