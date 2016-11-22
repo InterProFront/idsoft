@@ -82,12 +82,15 @@ $(document).ready(function () {
         $href = $(this).attr('href').split('/');
         if( $href[3] == items.split('/')[3]){
             $(this).closest('li').addClass('active');
+            $(this).attr('href','/'+$href[1]+'/'+$href[2]+'/all')
         }
     });
     $('.city-menu .client-filter').each(function(){
         $href = $(this).attr('href').split('/');
         if( $href[2] == items.split('/')[2] ){
             $(this).closest('li').addClass('active');
+        }else if(items.split('/')[2] == 'all' || items.split('/')[2] == undefined){
+            $('a.no_bold').closest('li').addClass('active');
         }
     });
     //==================================================================
