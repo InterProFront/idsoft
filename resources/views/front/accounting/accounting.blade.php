@@ -75,7 +75,16 @@
         <div class="tarifs">
                 <h2 class="block-title">Выгодные тарифы</h2>
             <div class="tarif-block">
-                @foreach($account->tarif_category_group as $cat)
+                <div class="tarif-item" style="text-align: center">
+                    <h4 class="tarif-name">для ИП</h4>
+                    <p class="price">от 20 000 тг</p>
+                </div>
+                <div class="tarif-item" style="text-align: center">
+                    <h4 class="tarif-name">для ТОО</h4>
+                    <p class="price">от 40 000 тг</p>
+                </div>
+
+                {{--@foreach($account->tarif_category_group as $cat)
                     <div class="tarif-item">
                         <h4 class="tarif-name">{{$cat->tarif_name_field}}</h4>
                         <ul class="tarifs">
@@ -86,7 +95,7 @@
                             @endforeach
                         </ul>
                     </div>
-                @endforeach
+                @endforeach--}}
             </div>
         </div>
         <div class="rating">

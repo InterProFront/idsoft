@@ -2026,6 +2026,9 @@ a.bx-pager-link.active {
   .tarifs .tarif-block .tarif-item ul.tarifs .item .cost {
     color: #666666;
   }
+  .tarifs .tarif-block .tarif-item .price {
+    font-size: 38px;
+  }
 }
 @media screen and (max-width: 600px) {
   .stage {
