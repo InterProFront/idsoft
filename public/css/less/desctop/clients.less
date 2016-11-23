@@ -89,6 +89,11 @@
           }
           .city-menu {
             .item {
+              &:last-child {
+                a {
+                  margin-right: 0;
+                }
+              }
               .orange-wrap{
                 display: inline-block;
               }
@@ -111,10 +116,14 @@
                   background: @yellow;
                   border-radius: 15px;
                 }
+                font-weight: bold;
                 margin: 0 0 10px;
                 color: #333333;
                 a {
                   .link(#333333, transparent, #333333, transparent);
+                  &:hover {
+                    cursor: default;
+                  }
                 }
               }
             }

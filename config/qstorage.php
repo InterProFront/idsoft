@@ -126,7 +126,7 @@ return [
     'accounting_block' => [
         'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'card_title', 'card_description'],
         'images' => ['background', 'work_process', 'card_background'],
-        'textfields' => ['content', 'advantages'],
+        'textfields' => ['content', 'advantages', 'seo_text'],
         'groups' => [
             'acc_adv' => [
                 'images' => ['card'],
@@ -144,7 +144,7 @@ return [
                 'owner' => 'tarif_category',
                 'stringfields' => ['tarif_name', 'page_name', 'page_title', 'seo_keywords', 'seo_description'],
                 'images' => ['background'],
-                'textfields' => ['content'],
+                'textfields' => ['content', 'seo_text'],
                 'numbs' => ['tarif_cost']
             ]
         ]
