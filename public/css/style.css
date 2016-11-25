@@ -4235,7 +4235,7 @@ header .mobile-menu-bottom{
 	background:url(../img/all_stars.png) left -1100px repeat-x !important;
 }
 .star-rating-default a:hover, .star-rating-default a:active, .star-rating-default a:focus{
-	background-position:0 -52px !important;
+	background-position:0 -50px !important;
 	cursor:pointer;
 }
 .star-rating-default{
@@ -4264,7 +4264,7 @@ header .mobile-menu-bottom{
 	top:0;
 	left:0;
 	text-indent:-1000em !important;
-	height:24px !important;
+	height:25px !important;
 	line-height:25px !important;
 	outline:none;
 	overflow:hidden;
