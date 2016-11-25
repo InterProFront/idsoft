@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="employs-block">
-            <h2 class="block-title">Команда</h2>
+            <h2 class="block-title">Руководство</h2>
             <div class="employs">
                 @foreach($account->employs_group as $e_item)
                     <div class="employ-item">

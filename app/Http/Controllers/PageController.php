@@ -43,7 +43,7 @@ class PageController extends Controller{
 		$acc = $this->queryAgent->getBlock('accounting_block',[],[]);
 		$iiko = $this->queryAgent->getGroupFlat('auto_block','auto',[],['auto'=>['is_iiko'=>true]]);
 		$acc_menu = $this->queryAgent->getGroupFlat('auto_block','auto',[],['auto'=>['is_iiko'=>false]]);
-		$clients = $this->queryAgent->getGroupFlat('clients_block','client',[],[]);
+		$clients = $this->queryAgent->getGroupFlat('clients_block','client',[],[],['client' => ['take'=> 20, 'skip'=> 0]]);;
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
 		return view('front.index.index',[
 			'catalog' => $catalog,
