@@ -4279,6 +4279,7 @@ header .mobile-menu-bottom{
 }
 .star-rating-default .current-rating{
 	z-index:1;
+	background:#FFFFFF url(../images/all_stars.png) !important;
 	background-position:left center !important;
 }
 span.totalvotes, span.head-reiting{

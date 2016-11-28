@@ -31,11 +31,11 @@ $(document).ready(function () {
     //======  Главное меню на мобильных
     //=============================================================
 
-    $('.mobile-button').on('click',function(){
-        if($(this).hasClass('active')){
+    $('.mobile-button').on('click', function () {
+        if ($(this).hasClass('active')) {
             $(this).removeClass('active');
             $('.wrap.popup').fadeOut();
-        }else{
+        } else {
             $(this).addClass('active');
             $('.wrap.popup').fadeIn();
         }
@@ -50,52 +50,49 @@ $(document).ready(function () {
     var category2 = items.split('/')[2];
 
     // Подсветка текущего пункта меню для общего меню ( шапка и футер )
-    $('.all-site-menu').each(function(){
-       if($(this).attr('href') == '/'+category){
-           console.log($(this).attr('href')+'  '+category);
-           $(this).closest('li').addClass('active');
-       }else if($(this).attr('href') == '/inf/'+category2){
-           $(this).closest('li').addClass('active');
-       }else
-            if($(this).attr('href').split('/')[1] == category &&
-            $(this).attr('href').split('/')[1] == 'automatic'){
-                $(this).closest('li').addClass('active');
-       }
+    $('.all-site-menu').each(function () {
+        if ($(this).attr('href') == '/' + category) {
+            console.log($(this).attr('href') + '  ' + category);
+            $(this).closest('li').addClass('active');
+        } else if ($(this).attr('href') == '/inf/' + category2) {
+            $(this).closest('li').addClass('active');
+        } else if ($(this).attr('href').split('/')[1] == category &&
+            $(this).attr('href').split('/')[1] == 'automatic') {
+            $(this).closest('li').addClass('active');
+        }
     });
     //==================================================================
     // Подсветка меню в правой колонке. Готовые решения. Инф Страницы
-    $('.menu-item .link').each(function(){
-        if($(this).attr('href') == items  ){
+    $('.menu-item .link').each(function () {
+        if ($(this).attr('href') == items) {
             $(this).closest('.menu-item').addClass('active');
         }
     });
     //==================================================================
     // Подсветка меню во всплывающих меню ( шапка, автоматизации IIKO )
-    $('.item-popup a').each(function(){
-        if($(this).attr('href').split('/')[1] + $(this).attr('href').split('/')[2] == category + category2  ){
+    $('.item-popup a').each(function () {
+        if ($(this).attr('href').split('/')[1] + $(this).attr('href').split('/')[2] == category + category2) {
             $(this).closest('.item-popup').addClass('active');
         }
     });
     //==================================================================
     // Подсветка фильтров на странице "Наши клиенты"
-    $('.type-menu .client-filter').each(function(){
+    $('.type-menu .client-filter').each(function () {
         $href = $(this).attr('href').split('/');
-        if( $href[3] == items.split('/')[3]){
+        if ($href[3] == items.split('/')[3]) {
             $(this).closest('li').addClass('active');
-            $(this).attr('href','/'+$href[1]+'/'+$href[2]+'/all')
+            $(this).attr('href', '/' + $href[1] + '/' + $href[2] + '/all')
         }
     });
-    $('.city-menu .client-filter').each(function(){
+    $('.city-menu .client-filter').each(function () {
         $href = $(this).attr('href').split('/');
-        if( $href[2] == items.split('/')[2] ){
+        if ($href[2] == items.split('/')[2]) {
             $(this).closest('li').addClass('active');
-        }else if(items.split('/')[2] == 'all' || items.split('/')[2] == undefined){
+        } else if (items.split('/')[2] == 'all' || items.split('/')[2] == undefined) {
             $('a.no_bold').closest('li').addClass('active');
         }
     });
     //==================================================================
-
-
 
 
     //==================================================================
@@ -106,8 +103,8 @@ $(document).ready(function () {
         type: 'inline',
         removalDelay: 500,
         callbacks: {
-            beforeOpen: function() {
-                this.st.mainClass ='mfp-zoom-in';
+            beforeOpen: function () {
+                this.st.mainClass = 'mfp-zoom-in';
             }
         },
         midClick: true
@@ -119,12 +116,14 @@ $(document).ready(function () {
         type: 'inline',
         removalDelay: 500,
         callbacks: {
-            beforeOpen: function() {
-                this.st.mainClass ='mfp-zoom-in';
-            }
+            beforeOpen: function () {
+                this.st.mainClass = 'mfp-zoom-in';
+                $('.popup-input[data-field-name=phone]').mask('+7(000)000-00-00');
+            },
+
         },
         midClick: true
-    }).on('click',function(){
+    }).on('click', function () {
         $('.popup-input[data-field-name="product"]').val($('.block-title').text()); // Добавление имени товара в заявку
     });
 
@@ -134,8 +133,8 @@ $(document).ready(function () {
         type: 'inline',
         removalDelay: 500,
         callbacks: {
-            beforeOpen: function() {
-                this.st.mainClass ='mfp-zoom-in';
+            beforeOpen: function () {
+                this.st.mainClass = 'mfp-zoom-in';
             }
         },
         midClick: true
@@ -147,8 +146,8 @@ $(document).ready(function () {
         type: 'inline',
         removalDelay: 500,
         callbacks: {
-            beforeOpen: function() {
-                this.st.mainClass ='mfp-zoom-in';
+            beforeOpen: function () {
+                this.st.mainClass = 'mfp-zoom-in';
             }
         },
         midClick: true
@@ -162,10 +161,10 @@ $(document).ready(function () {
     //==================================================================
     //==== Свернуть\развернуть "Характеристики"  В карточке товара
     //==================================================================
-    $('.open-close-button a').on('click',function(e){
-        if($(this).hasClass('open')){
+    $('.open-close-button a').on('click', function (e) {
+        if ($(this).hasClass('open')) {
             $(this).text('Свернуть').addClass('close').removeClass('open');
-        }else{
+        } else {
             $(this).text('Развернуть').addClass('open').removeClass('close');
         }
         $('.parameters-block').slideToggle();
@@ -173,17 +172,19 @@ $(document).ready(function () {
     });
 
     //==== Удалить "Листалку" слайдера если всего 1 набор елементов
-    if ($('.bx-pager-link').length <= 1){
-        $('.bx-pager-item').css('display','none');
+    if ($('.bx-pager-link').length <= 1) {
+        $('.bx-pager-item').css('display', 'none');
     }
 
-    $(window).on('load resize',function(){
-        if( $(window).width() > 900){
-            var topImg = $('.main-content-block .text-block img').offset().top;
-            var topFeat = $('.main-content-block  .capability').offset().top;
-            var difference = topImg - topFeat;
-            if(difference > 0){
-                $('.main-content-block  .capability').css('margin-top', difference+'px');
+    $(window).on('load resize', function () {
+        if ($(window).width() > 900) {
+            if (category == 'automatic') {
+                var topImg = $('.main-content-block .text-block img').offset().top;
+                var topFeat = $('.main-content-block  .capability').offset().top;
+                var difference = topImg - topFeat;
+                if (difference > 0) {
+                    $('.main-content-block  .capability').css('margin-top', difference + 'px');
+                }
             }
 
         }

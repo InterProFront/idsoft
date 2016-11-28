@@ -41,7 +41,7 @@
 
             </div>
             <div class="right">
-                <p class="gray-text">Сделано в <a href="http://interpro.kz" rel="nofollow">ИнтерПро</a></p>
+                <p class="gray-text">Сделано в <a href="http://interpro.kz" rel="nofollow" target="_blank">ИнтерПро</a></p>
             </div>
         </div>
     </footer>
