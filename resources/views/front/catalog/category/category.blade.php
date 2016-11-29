@@ -7,13 +7,13 @@
         <h1 class="block-title">{{$products->category_name_field}}</h1>
         <div class="product-list">
             @foreach($products->product_group as $item)
+                @if($item->show_field == 1)
                 <div class="product-item">
                     @if($products->id_field == 55)
                         <a href="soft/{{$products->slug_field}}/{{$item->slug_field}}">
                             @else
                                 <a href="{{$products->slug_field}}/{{$item->slug_field}}">
                                     @endif
-
                                     <div class="img-wrap">
                                         <img src="/images/{{$item->product_base_photo_image->catalog_crop->link}}"
                                              alt="{{$item->product_base_photo_image->alt}}">
@@ -29,6 +29,7 @@
                                     </div>
                                 </a>
                 </div>
+                @endif
             @endforeach
         </div>
         <div class="rating">
