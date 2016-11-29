@@ -96,7 +96,7 @@
                 <div class="col-1-5"></div>
                 <div class="col-1-5"></div>
             </div>
-            <ul class="group-block group_container page-group" data-block="catalog_block" data-group="category_1"
+            <ul class="group-block group_container page-group" data-block="catalog_block" data-group="category_2"
                 data-owner-id="{{$item_category_1->id_field}}">
                 @foreach($item_category_1->category_2_group as $item_category_2 )
                     @include('back.blocks.groupitems.catalog_block.category_2')
