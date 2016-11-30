@@ -191,7 +191,7 @@
                        placeholder="Строка">
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> СЕО: КЛючевые слова </label>
+                <label class="field-title"> СЕО: Ключевые слова </label>
                 <input type="text" data-field-type="string" data-field-name="seo_keywords"
                        data-block="clients_block" data-group="client" class="input-field group_field"
                        value="{{$item_client->seo_keywords_field}}" data-item-id="{{$item_client->id_field}}"

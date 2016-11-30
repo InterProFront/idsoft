@@ -99,7 +99,7 @@
                        data-item-id="{{$item_tarif->id_field}}" placeholder="Строка">
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> СЕО: ключевые слова </label>
+                <label class="field-title"> СЕО: Ключевые слова </label>
                 <input type="text" data-field-type="string" data-field-name="seo_keywords" data-block="accounting_block"
                        data-group="tarif" class="input-field group_field" value="{{$item_tarif->seo_keywords_field}}"
                        data-item-id="{{$item_tarif->id_field}}" placeholder="Строка">

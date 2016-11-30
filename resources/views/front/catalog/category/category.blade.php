@@ -6,6 +6,7 @@
     <section class="content category " itemscope="" itemtype="http://schema.org/Service">
         <h1 class="block-title">{{$products->category_name_field}}</h1>
         <div class="product-list">
+
             @foreach($products->product_group as $item)
                 @if($item->show_field == 1)
                 <div class="product-item">
