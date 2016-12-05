@@ -2882,6 +2882,7 @@ header .mobile-menu-bottom{
 	background:#FEEDBF;
 	width:100%;
 	text-align:center;
+	margin-bottom:40px;
 }
 .warranty p{
 	color:#333333;
@@ -2899,7 +2900,7 @@ header .mobile-menu-bottom{
 .cost-block{
 	width:100%;
 	text-align:center;
-	padding:30px 0 30px 0;
+	padding-bottom:30px;
 }
 .cost-block .cost{
 	font-size:48px;
@@ -3996,7 +3997,7 @@ header .mobile-menu-bottom{
 	margin:0 10px;
 }
 .bottom-row .center .gray-text .soc-link a{
-	background:linear-gradient(to left, #CCCCCC, #CCCCCC 100%);
+	background:linear-gradient(to left, #677583, #677583 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
 	background-size:10px 1px;
@@ -4026,7 +4027,7 @@ header .mobile-menu-bottom{
 	color:#999999;
 }
 .bottom-row .right .gray-text a{
-	background:linear-gradient(to left, #CCCCCC, #CCCCCC 100%);
+	background:linear-gradient(to left, #677583, #677583 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
 	background-size:10px 1px;
