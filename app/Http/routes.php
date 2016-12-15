@@ -20,7 +20,7 @@ Route::get('/category', 'CatalogController@getCategory');
 
 
 Route::get('/automatic',         'CatalogContoroler@getAuto');
-Route::get('/automatic/{slug}', 'CatalogController@getAuto');
+Route::get('/automatic/{slug}',  'CatalogController@getAuto');
 
 
 
@@ -34,19 +34,20 @@ Route::get('/clients/{city}/{inst}',  				'PageController@getClientsFilter');
 
 
 
-Route::get('/catalog', 				'CatalogController@getCatalog');
-Route::get('/catalog/{category}',	'CatalogController@getCategory');
+Route::get('/catalog', 			                'CatalogController@getCatalog');
+Route::get('/catalog/{category}',               'CatalogController@getCategory');
 
 
-Route::get('/video', 				'CatalogController@getVideoCategory');
-Route::get('/video/{category}', 	'CatalogController@getCategory');
+Route::get('/video', 			                'CatalogController@getVideoCategory');
+Route::get('/video/{category}',                 'CatalogController@getCategory');
 
 
-Route::get('/showcase', 			'CatalogController@getShowcaseCategory');
-Route::get('/showcase/{category}',  'CatalogController@getCategory');
+Route::get('/showcase', 		                'CatalogController@getShowcaseCategory');
+Route::get('/showcase/{category}',              'CatalogController@getCategory');
 
 
-Route::get('/soft',					'CatalogController@getSoft');
+Route::get('/soft',					            'CatalogController@getSoftCategory');
+Route::get('/soft/{category}',					'CatalogController@getCategory');
 
 
 Route::get('/catalog/{category}/{product}',		'CatalogController@getProduct');

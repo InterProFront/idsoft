@@ -1,5 +1,3 @@
 @section('seotext')
-    <div class="seo-text">
-        {!! $seo_text  !!}
-    </div>
+    <div class="seo-text">{!! $seo_text  !!}</div>
 @endsection

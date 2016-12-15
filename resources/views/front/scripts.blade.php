@@ -8,4 +8,21 @@
     <script src="/js/raiting.js"></script>
     <script src="/js/animate.js"></script>
     <script src="/js/main.js"></script>
+    {{--<script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=21a39ec775982af5b06964d7f7996de3"
+            charset="UTF-8"></script>
+    <!-- Chatra {literal} -->
+    <script>
+        (function(d, w, c) {
+            w.ChatraID = 'PEo8Wqk4rkzYKvayF';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                        (w[c].q = w[c].q || []).push(arguments);
+                    };
+            s.async = true;
+            s.src = (d.location.protocol === 'https:' ? 'https:': 'http:')
+                    + '//call.chatra.io/chatra.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Chatra');
+    </script>
+    <!-- /Chatra {/literal} -->--}}
 @endsection

@@ -1417,6 +1417,32 @@ header .mobile-menu-bottom{
 	object-position:100%;
 	max-width:100%;
 }
+.content .clients-block .sub-title a{
+	background:linear-gradient(to left, #3398C7, #3398C7 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+	background-position:0 100%;
+	background-size:10px 1px;
+	background-repeat:repeat-x;
+	color:#006699;
+}
+.content .clients-block .sub-title a:hover{
+	cursor:pointer;
+	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+	background-position:0 100%;
+	background-size:10px 1px;
+	background-repeat:repeat-x;
+	color:#CC0000;
+}
+.content .clients-block .sub-title a:focus{
+	outline:none;
+	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+	background-position:0 100%;
+	background-size:10px 1px;
+	background-repeat:repeat-x;
+	color:#CC0000;
+}
 .content .slider-block{
 	position:relative;
 	padding-top:55px;
@@ -1811,6 +1837,13 @@ header .mobile-menu-bottom{
 	background-size:10px 1px;
 	background-repeat:repeat-x;
 	color:#CC0000;
+}
+.softw .advantages.advantages-top{
+	padding:50px 80px;
+}
+.softw .advantages.advantages-top .soft-text{
+	color:#666666;
+	line-height:1.5em;
 }
 .video .advantages.advantages-top{
 	background:#F5F6F7;
@@ -2674,7 +2707,7 @@ header .mobile-menu-bottom{
 .main-content-block .col-1-2:last-child .capability{
 	margin-left:-5px;
 	padding:40px 30px 30px;
-	background:url(../img/hole.jpg) no-repeat 10px 0, url(../img/hole.jpg) no-repeat 265px 0, #FEF6DF;
+	background:url(../img/hole.jpg) no-repeat 10px 0, url(../img/hole.jpg) no-repeat calc(100% - 10px) 0, #FEF6DF;
 	box-shadow:0 15px 35px -15px rgba(0, 0, 0, 0.45);
 }
 .main-content-block .col-1-2:last-child .capability h4{
@@ -4076,9 +4109,23 @@ header .mobile-menu-bottom{
 	text-align:left;
 	min-width:230px;
 }
+#chatra{
+	z-index:9000001 !important;
+}
+.cbh-wrapper{
+	bottom:20px !important;
+	right:20px !important;
+}
+.cbh-widget.cbh-dragging-widget{
+	border:none !important;
+	box-shadow:none !important;
+}
 .seo-text{
 	background:#172330;
-	padding:20px 20px 10px;
+	padding:20px 20px 35px;
+}
+.seo-text:empty{
+	display:none;
 }
 .seo-text p, .seo-text blockquote{
 	font-size:12px;

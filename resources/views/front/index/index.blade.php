@@ -132,7 +132,7 @@
             </div>
         </div>
         <div class="clients-block">
-            <h2 class="sub-title">Наши клиенты</h2>
+            <h2 class="sub-title"><a href="/clients">Наши клиенты</a></h2>
 
             <div class="slider-block">
                 <ul class="slider-list">

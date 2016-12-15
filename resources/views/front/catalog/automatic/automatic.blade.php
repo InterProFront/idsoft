@@ -69,7 +69,7 @@
                                 <img src="/images/{{$item->card_image->primary_link}}" alt="{{$item->card_image->alt}}">
                             </div>
                             <div class="text-wrap">
-                                {!! $item->card_text_field !!}
+                                <?php echo(str_replace('[%client-count%]', $clients_count, $item->card_text_field)); ?>
                             </div>
                         </div>
                     @endforeach

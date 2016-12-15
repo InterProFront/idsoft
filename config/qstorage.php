@@ -108,7 +108,7 @@ return [
                 'stringfields' => ['page_name', 'page_title', 'seo_description', 'seo_keywords'],
                 'images' => ['background', 'card_background'],
                 'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty', 'vozm', 'rassr'],
-                'numbs' => ['auto_cost', 'auto_sale', 'iiko','course_id'],
+                'numbs' => ['auto_cost', 'auto_sale', 'iiko', 'course_id', 'institution_id'],
                 'bools' => ['is_iiko']
             ],
             'auto_adv' => [
@@ -154,7 +154,7 @@ return [
         'textfields' => ['seo_text'],
         'groups' => [
             'client' => [
-                'images' => ['background','letter'],
+                'images' => ['background','letter', 'logo', 'rec_foto', 'rec_fio', 'rec_position', 'rec_text'],
                 'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'letter_link', 'small_descr'],
                 'textfields' => ['content'],
                 'numbs' => ['city_name', 'institution_type']
@@ -175,7 +175,7 @@ return [
             'institution' => [
                 'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description'],
             ],
-            'city' => [
+            'city'        => [
                 'stringfields' => ['city_name']
             ],
         ]
@@ -215,6 +215,11 @@ return [
             'supports' => [
                 'stringfields' => ['name', 'mail'],
                 'textfields' => ['question'],
+                'bools' => ['mailed']
+            ],
+            'accounting' => [
+                'stringfields' => ['name', 'mail'],
+                'textfields' => ['comment'],
                 'bools' => ['mailed']
             ],
         ]

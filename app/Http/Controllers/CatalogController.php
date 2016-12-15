@@ -88,29 +88,6 @@ class CatalogController extends Controller
         ]);
     }
 
-    public function getSoft()
-    {
-        $catalog = $this->queryAgent->getGroupItem('catalog_block', 'category_2', 55);
-        foreach ($catalog->product_group as $item) {
-            if ($item->course_id_field != 0) {
-                foreach ($this->course->course_group as $item_c) {
-                    if ($item_c->id_field == $item->course_id_field) {
-                        $cost = $item->product_cost_field * $item_c->course_field;
-                        $sale = $item->product_sale_field * $item_c->course_field;
-                        $item->setField('product_cost', $cost);
-                        $item->setField('product_sale', $sale);
-                    }
-                }
-            }
-        }
-        $rating = new Rating();
-        $rating = $rating->getRatingView('/soft');
-        return view('front.catalog.category.category', [
-            'products' => $catalog,
-            'rating'   => $rating
-        ]);
-    }
-
     public function getShowcaseCategory()
     {
         $catalog = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], ['category_2' => ['owner_id' => 52, 'show' => 1]]);
@@ -131,6 +108,19 @@ class CatalogController extends Controller
         $rating = new Rating();
         $rating = $rating->getRatingView('/video');
         return view('front.catalog.category.video', [
+            'category_1' => $catalog,
+            'seo' => $seo,
+            'rating' => $rating
+        ]);
+    }
+
+    public function getSoftCategory()
+    {
+        $catalog = $this->queryAgent->getGroupFlat('catalog_block', 'category_2', [], ['category_2' => ['owner_id' => 54, 'show' => 1]]);
+        $seo = $this->queryAgent->getGroupItem('catalog_block', 'category_1', 54);
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/soft');
+        return view('front.catalog.category.soft', [
             'category_1' => $catalog,
             'seo' => $seo,
             'rating' => $rating
@@ -276,6 +266,7 @@ class CatalogController extends Controller
         $rating = new Rating();
         $rating = $rating->getRatingView('/automatic/'.$slug);
         $auto = $this->queryAgent->getGroupItemBySlug('auto_block', 'auto', $slug);
+        $clients_count = $this->queryAgent->getGroupCount('clients_block', 'client', ['client' => ['institution_type' => $auto->institution_id_field]]);
         if ($auto->course_id_field != 0) {
             foreach ($this->course->course_group as $item) {
                 if ($item->id_field == $auto->course_id_field) {
@@ -329,6 +320,7 @@ class CatalogController extends Controller
         return view('front.catalog.automatic.automatic', [
             'auto' => $auto,
             'all' => $all,
+            'clients_count' => $clients_count,
             'prod' => $test,
             'rating' => $rating
         ]);

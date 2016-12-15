@@ -29,7 +29,7 @@
             <button class="any_create button blue" data-block="catalog_block" data-group="category_1"
                     data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
             </button>
-        </div">
+        </div>
         <div class="col-1-2 disabled"></div>
     </div>
     <div class="field-wrap buttons">

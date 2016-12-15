@@ -1,5 +1,6 @@
 @extends('front.layout')
 @include('front.accounting.meta')
+@include('front.popups.accounting')
 @section('content')
     <?php $shadow = true; ?>
     {{----}}
@@ -45,7 +46,8 @@
             </div>
         </div>
         <div class="big-image">
-            <img src="/images/{{$account->work_process_image->primary_link}}" alt="{{$account->work_process_image->alt}}">
+            <img src="/images/{{$account->work_process_image->primary_link}}"
+                 alt="{{$account->work_process_image->alt}}">
             <span class="image-name">Рабочий процесс</span>
         </div>
         <div class="advantages-title">
@@ -73,7 +75,7 @@
             </div>
         </div>
         <div class="tarifs">
-                <h2 class="block-title">Выгодные тарифы</h2>
+            <h2 class="block-title">Выгодные тарифы</h2>
             <div class="tarif-block">
                 <div class="tarif-item" style="text-align: center">
                     <h4 class="tarif-name">для ИП</h4>
@@ -131,6 +133,12 @@
                 <meta itemprop="bestRating" content="5">
                     <meta itemprop="ratingCount" content="{{$rating['count']}}"> ({{$rating['count']}} человек)
                     </span>
+        </div>
+        <div class="free-project white-popup">
+            <h2 class="sub-title">Написать в бухгалтерию</h2>
+            <div class="calculate partner">
+                <button class="button" href="#accounting" id="account">Отправить заявку</button>
+            </div>
         </div>
     </section>
 @endsection

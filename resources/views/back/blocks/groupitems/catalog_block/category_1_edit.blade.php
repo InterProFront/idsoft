@@ -102,7 +102,7 @@
                     @include('back.blocks.groupitems.catalog_block.category_2')
                 @endforeach
             </ul>
-            <button class="any_create button blue @if($item_category_1->id_field == 54) disabled @endif" data-block="catalog_block" data-group="category_2"
+            <button class="any_create button blue" data-block="catalog_block" data-group="category_2"
                     data-descr="Эл. первой группы" data-owner-id="{{$item_category_1->id_field}}">Добавить
                 элемент
             </button>

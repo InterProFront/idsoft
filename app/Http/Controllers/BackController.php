@@ -163,10 +163,12 @@ class BackController extends Controller {
 		$auto = $this->queryAgent->getGroupItem('auto_block','auto',$id);
 		$all_products = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
 		$course 	=   $this->queryAgent->getGroupFlat('clients_filter','course',[],[]);
+		$institution	=   $this->queryAgent->getGroupFlat('clients_filter','institution',[],[]);
 		return view('back.blocks.groupitems.auto_block.auto_edit', [
-			'item_auto' => $auto,
-			'cor'		=> $course,
-			'related'   => $all_products
+			'item_auto'         => $auto,
+			'cor'		        => $course,
+			'institution'		=> $institution,
+			'related'           => $all_products
 		]);
 	}
 

@@ -89,6 +89,19 @@
                 </div>
             </div>
             <div class="field-wrap ">
+                <label class="field-title">Категория автоматизируемых заведений</label>
+                <select data-field-type="numb"
+                        data-field-name="institution_id"
+                        data-block="auto_block"
+                        data-group="auto"
+                        data-item-id="{{$item_auto->id_field}}"
+                        class="input-field group_field">
+                    @foreach($institution as $i_item)
+                        <option value="{{$i_item->id_field}}" @if($item_auto->institution_id_field == $i_item->id_field) selected @endif>{{$i_item->seo_keywords_field}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="field-wrap ">
                 <label class="field-title"> Описание </label>
                                 <textarea data-field-type="text" data-field-name="content" data-block="auto_block"
                                           data-group="auto" class="input group_field"
