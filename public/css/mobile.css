@@ -1706,6 +1706,9 @@ a.bx-pager-link.active {
     width: 100%;
     max-width: none;
   }
+  .main-content-block .col-1-2:last-child .capability {
+    margin-top: 0 !important;
+  }
   .main-content-block .col-1-2:last-child .right-menu-block {
     width: 100%;
     padding: 0 0 10px 0;
@@ -1723,6 +1726,10 @@ a.bx-pager-link.active {
     left: 0;
     padding: 5px;
     top: 30px;
+  }
+  .main-content-block .col-1-2:last-child .right-menu-block .right-menu .menu-item.iiko-popup:hover .left-popup:after {
+    content: "";
+    border: none;
   }
   .second-content {
     padding: 50px 40px 0 40px;

@@ -189,6 +189,21 @@
 }
 
 .catalog {
+  &.softw {
+    .category-block {
+      .category-item {
+        a {
+          .wrap {
+            span {
+              .link(@link-color, @link-border, @hover-color, @hover-border);
+              font-size: @subtitle;
+              line-height: 1.5em;
+            }
+          }
+        }
+      }
+    }
+  }
   &.video {
     .category-block {
       display: flex;

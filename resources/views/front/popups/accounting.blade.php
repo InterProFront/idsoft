@@ -1,6 +1,6 @@
 <div class="hide">
     <div class="white-popup mfp-with-anim mfp-hide" id="accounting">
-        <h4 class="popup-title">Бухгалтерийа</h4>
+        <h4 class="popup-title">Бухгалтерия</h4>
         <div class="rows-block">
             <div class="row">
             </div>
