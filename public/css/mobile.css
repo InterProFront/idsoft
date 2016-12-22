@@ -873,6 +873,87 @@ a.bx-pager-link.active {
     color: #666666;
     line-height: 1.5em;
   }
+  .catalog.softw .category-block {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 20px 0;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .catalog.softw .category-block .category-item {
+    padding: 0 30px 60px;
+    box-sizing: border-box;
+    max-width: 33.333333%;
+    min-width: 33.333333%;
+  }
+  .catalog.softw .category-block .category-item a .image-wrap {
+    padding-bottom: 15px;
+  }
+  .catalog.softw .category-block .category-item a .image-wrap .static {
+    display: block;
+  }
+  .catalog.softw .category-block .category-item a .wrap span {
+    background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #006699;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .catalog.softw .category-block .category-item a .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .image-wrap .static {
+    display: block;
+  }
+  .catalog.softw .category-block .category-item a:hover .image-wrap .hover {
+    display: none;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span {
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
   .catalog.video .category-block {
     display: -ms-flexbox;
     display: flex;
@@ -965,6 +1046,87 @@ a.bx-pager-link.active {
   .catalog .category-block .category-item {
     max-width: 25%;
     min-width: 25%;
+  }
+  .catalog.softw .category-block {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 20px 0;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .catalog.softw .category-block .category-item {
+    padding: 0 30px 60px;
+    box-sizing: border-box;
+    max-width: 50%;
+    min-width: 50%;
+  }
+  .catalog.softw .category-block .category-item a .image-wrap {
+    padding-bottom: 15px;
+  }
+  .catalog.softw .category-block .category-item a .image-wrap .static {
+    display: block;
+  }
+  .catalog.softw .category-block .category-item a .wrap span {
+    background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #006699;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .catalog.softw .category-block .category-item a .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .image-wrap .static {
+    display: block;
+  }
+  .catalog.softw .category-block .category-item a:hover .image-wrap .hover {
+    display: none;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span {
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
   }
   .catalog.video .category-block {
     display: -ms-flexbox;
@@ -1064,6 +1226,95 @@ a.bx-pager-link.active {
   .catalog .category-block .category-item {
     max-width: 33.33333333%;
     min-width: 33.33333333%;
+  }
+  .catalog.softw .category-block {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 60px 20px 0;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
+  }
+  .catalog.softw .category-block .category-item {
+    padding: 0 30px 60px;
+    box-sizing: border-box;
+    width: auto;
+    min-width: 100%;
+  }
+  .catalog.softw .category-block .category-item a .image-wrap {
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .catalog.softw .category-block .category-item a .image-wrap .static {
+    display: inline;
+  }
+  .catalog.softw .category-block .category-item a .wrap {
+    text-align: center;
+  }
+  .catalog.softw .category-block .category-item a .wrap span {
+    background: linear-gradient(to left, #b2d1e0, #b2d1e0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #006699;
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+  .catalog.softw .category-block .category-item a .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .image-wrap .static {
+    display: block;
+  }
+  .catalog.softw .category-block .category-item a:hover .image-wrap .hover {
+    display: none;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span {
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span:hover {
+    cursor: pointer;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
+  }
+  .catalog.softw .category-block .category-item a:hover .wrap span:focus {
+    outline: none;
+    background: linear-gradient(to left, #f0b2b2, #f0b2b2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
+    background-position: 0 100%;
+    background-size: 10px 1px;
+    background-repeat: repeat-x;
+    color: #cc0000;
   }
   .catalog.video .category-block {
     display: -ms-flexbox;

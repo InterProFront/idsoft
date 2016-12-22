@@ -26,7 +26,7 @@
                     <?php $i = 0;?>
                     @foreach($static->phones_group as $item)
                         <?php $i++?>
-                        @if($i == 1)
+                        @if($i == 1 or $i == 3)
                             <li class="item">
                                 <p>{!! $item->phone_field !!}</p>
                             </li>
