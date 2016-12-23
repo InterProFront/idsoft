@@ -11,7 +11,7 @@
                 @if($item->show_field == 1)
                 <div class="product-item">
                     @if($products->id_field == 55)
-                        <a href="soft/{{$products->slug_field}}/{{$item->slug_field}}">
+                        <a href="{{$products->slug_field}}/{{$item->slug_field}}">
                             @else
                                 <a href="{{$products->slug_field}}/{{$item->slug_field}}">
                                     @endif
