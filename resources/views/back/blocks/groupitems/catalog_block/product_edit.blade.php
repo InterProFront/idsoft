@@ -140,7 +140,7 @@
             </select>
         </div>
         <div class="field-wrap ">
-            <label class="field-title"> Скидка ( При наличии скидки введите сюда цену без скидки )</label>
+            <label class="field-title"> Цена без скидки ( При наличии скидки введите сюда цену без скидки )</label>
             <input type="number" data-field-type="numb"
                    data-field-name="product_sale" data-block="catalog_block"
                    data-group="product"
@@ -150,7 +150,7 @@
                    placeholder="Целое число">
         </div>
         <div class="field-wrap ">
-            <label class="field-title"> Цена со скидкой </label>
+            <label class="field-title">Текущая цена</label>
             <input type="number" data-field-type="numb"
                    data-field-name="product_cost" data-block="catalog_block"
                    data-group="product"
@@ -280,7 +280,7 @@
             <label class="field-title"> СЕО: Описание </label>
             <textarea type="text" data-field-type="string" data-field-name="seo_description"
                    data-block="catalog_block" data-group="product"
-                   class="input-field group_field"
+                   class="input-field group_field no-trumbowyg"
                    data-item-id="{{$item_product->id_field}}" placeholder="Строка">{{$item_product->seo_description_field}}</textarea>
         </div>
     </div>

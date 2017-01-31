@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование страницы "Готовые решения"'?>
     <div class="select-content">
         <ul class="list">
             <li class="item"><a href="#content" class="select-item active">Информация</a></li>
@@ -134,8 +135,8 @@
         </button>
     </div>
     <div class="save-panel">
-        <div class="status-panel success">
-            <p>Изменения сохранены</p>
+        <div class="status-panel ">
+
         </div>
         <div class="tool-panel">
             <div class="column">

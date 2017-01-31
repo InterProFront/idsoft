@@ -1,10 +1,11 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование метрики сайта'?>
     <div class="content-wrap">
         <div class="block ">
             <div class="field-wrap ">
                 <label class="field-title"> Метрика </label>
-        <textarea data-field-type="text" data-field-name="metrik" data-block="static_site" class="input block_field"
+        <textarea data-field-type="text" data-field-name="metrik" data-block="static_site" class="input block_field metrik"
                   placeholder="Текст">{{$static_site->metrik_field}}</textarea>
             </div>
         </div>
@@ -17,8 +18,8 @@
     </div>
 
     <div class="save-panel">
-        <div class="status-panel success">
-            <p>Изменения сохранены</p>
+        <div class="status-panel ">
+
         </div>
         <div class="tool-panel">
             <div class="column">

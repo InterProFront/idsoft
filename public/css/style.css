@@ -3399,73 +3399,43 @@ header .mobile-menu-bottom{
 .clients .clients-block{
 	display:-ms-flexbox;
 	display:flex;
-	-ms-flex-direction:column;
-	    flex-direction:column;
-	margin:0 40px 100px 40px;
+	-ms-flex-wrap:wrap;
+	    flex-wrap:wrap;
+	-ms-flex-pack:distribute;
+	justify-content:space-around;
+	margin:0 35px 100px 35px;
 }
-.clients .clients-block .clients-row{
-	display:-ms-flexbox;
-	display:flex;
-	margin-bottom:20px;
-	-ms-flex-align:start;
-	align-items:flex-start;
-	-ms-flex-pack:justify;
-	justify-content:space-between;
+.clients .clients-block .client-item{
+	width:210px;
+	margin:0 20px 20px;
 }
-.clients .clients-block .clients-row:nth-child(2n){
-	-ms-flex-direction:row-reverse;
-	    flex-direction:row-reverse;
-}
-.clients .clients-block .clients-row:nth-child(2n) .col-1-3:nth-child(1){
-	max-width:50%;
-	margin-left:8px;
-	margin-right:0;
-}
-.clients .clients-block .clients-row:nth-child(2n) .col-1-3:nth-child(3){
-	max-width:25%;
-	margin-right:8px;
-	margin-left:0;
-}
-.clients .clients-block .clients-row .col-1-3:nth-child(1){
-	max-width:50%;
-	margin-right:8px;
-}
-.clients .clients-block .clients-row .col-1-3:nth-child(2){
-	max-width:25%;
-	margin:0 6px;
-}
-.clients .clients-block .clients-row .col-1-3:nth-child(3){
-	max-width:25%;
-	margin-left:8px;
-}
-.clients .clients-block .clients-row .col-1-3 .city-change-menu{
+.clients .clients-block .client-item .city-change-menu{
 	background:#25394D;
 	padding:30px 15px 10px;
 	margin:3px;
-	min-width:252px;
-	border-radius:10px;
+	border-radius:8px;
 	box-sizing:border-box;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .menu-title{
+.clients .clients-block .client-item .city-change-menu .menu-title{
 	font-size:16px;
 	margin-left:15px;
 	color:#999999;
 	padding-bottom:5px;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item{
+.clients .clients-block .client-item .city-change-menu .city-menu .item{
 	margin:5px 15px 15px;
 	color:#999999;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item:last-child a{
+.clients .clients-block .client-item .city-change-menu .city-menu .item:last-child a{
 	margin-right:0;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item .orange-wrap{
+.clients .clients-block .client-item .city-change-menu .city-menu .item .orange-wrap{
 	display:inline-block;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item:hover{
+.clients .clients-block .client-item .city-change-menu .city-menu .item:hover{
 	color:#FFFFFF;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item a{
+.clients .clients-block .client-item .city-change-menu .city-menu .item a{
 	font-weight:bold;
 	background:linear-gradient(to left, #677583, #677583 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
@@ -3475,7 +3445,7 @@ header .mobile-menu-bottom{
 	color:#FFFFFF;
 	margin-right:10px;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item a:hover{
+.clients .clients-block .client-item .city-change-menu .city-menu .item a:hover{
 	cursor:pointer;
 	background:linear-gradient(to left, #FEDE87, #FEDE87 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3484,7 +3454,7 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#FED054;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item a:focus{
+.clients .clients-block .client-item .city-change-menu .city-menu .item a:focus{
 	outline:none;
 	background:linear-gradient(to left, #FEDE87, #FEDE87 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3493,20 +3463,20 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#FED054;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item .no_bold{
+.clients .clients-block .client-item .city-change-menu .city-menu .item .no_bold{
 	font-weight:normal;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active{
+.clients .clients-block .client-item .city-change-menu .city-menu .item.active{
 	font-weight:bold;
 	margin:0 0 10px;
 	color:#333333;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active .orange-wrap{
+.clients .clients-block .client-item .city-change-menu .city-menu .item.active .orange-wrap{
 	padding:5px 15px 5px;
 	background:#FED054;
 	border-radius:15px;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active a{
+.clients .clients-block .client-item .city-change-menu .city-menu .item.active a{
 	background:linear-gradient(to left, transparent, transparent 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
 	background-position:0 100%;
@@ -3514,7 +3484,7 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#333333;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active a:hover{
+.clients .clients-block .client-item .city-change-menu .city-menu .item.active a:hover{
 	cursor:pointer;
 	background:linear-gradient(to left, transparent, transparent 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3523,7 +3493,7 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#333333;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active a:focus{
+.clients .clients-block .client-item .city-change-menu .city-menu .item.active a:focus{
 	outline:none;
 	background:linear-gradient(to left, transparent, transparent 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3532,25 +3502,25 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#333333;
 }
-.clients .clients-block .clients-row .col-1-3 .city-change-menu .city-menu .item.active a:hover{
+.clients .clients-block .client-item .city-change-menu .city-menu .item.active a:hover{
 	cursor:default;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img{
+.clients .clients-block .client-item .client-link .image-wrap img{
 	border:3px solid transparent;
-	border-radius:15px;
+	border-radius:10px;
 	max-width:100%;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img.for-mobile{
+.clients .clients-block .client-item .client-link .image-wrap img.for-mobile{
 	display:none;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .image-wrap img.medium{
+.clients .clients-block .client-item .client-link .image-wrap img.medium{
 	display:none;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .about-wrap{
+.clients .clients-block .client-item .client-link .about-wrap{
 	margin-top:10px;
 	margin-bottom:5px;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .about-wrap .name-wrap span{
+.clients .clients-block .client-item .client-link .about-wrap .name-wrap span{
 	font-weight:bold;
 	background:linear-gradient(to left, #B2D1E0, #B2D1E0 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
@@ -3559,7 +3529,7 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#006699;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .about-wrap .name-wrap span:hover{
+.clients .clients-block .client-item .client-link .about-wrap .name-wrap span:hover{
 	cursor:pointer;
 	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3568,7 +3538,7 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#CC0000;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .about-wrap .name-wrap span:focus{
+.clients .clients-block .client-item .client-link .about-wrap .name-wrap span:focus{
 	outline:none;
 	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3577,20 +3547,20 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#CC0000;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .about-wrap .about{
+.clients .clients-block .client-item .client-link .about-wrap .about{
 	font-size:14px;
 	color:#333333;
 	line-height:1.5em;
 	margin-bottom:5px;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link .about-wrap .city{
+.clients .clients-block .client-item .client-link .about-wrap .city{
 	color:#999999;
 	font-size:14px;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link:hover .image-wrap img{
+.clients .clients-block .client-item .client-link:hover .image-wrap img{
 	border:3px solid #CC0000;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link:hover .about-wrap .name-wrap span{
+.clients .clients-block .client-item .client-link:hover .about-wrap .name-wrap span{
 	font-weight:bold;
 	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border', endColorstr='@border', GradientType=0);
@@ -3599,7 +3569,7 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#CC0000;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link:hover .about-wrap .name-wrap span:hover{
+.clients .clients-block .client-item .client-link:hover .about-wrap .name-wrap span:hover{
 	cursor:pointer;
 	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3608,7 +3578,7 @@ header .mobile-menu-bottom{
 	background-repeat:repeat-x;
 	color:#CC0000;
 }
-.clients .clients-block .clients-row .col-1-3 .client-link:hover .about-wrap .name-wrap span:focus{
+.clients .clients-block .client-item .client-link:hover .about-wrap .name-wrap span:focus{
 	outline:none;
 	background:linear-gradient(to left, #F0B2B2, #F0B2B2 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@border_h', endColorstr='@border_h', GradientType=0);
@@ -3619,6 +3589,10 @@ header .mobile-menu-bottom{
 }
 .title-image img{
 	max-width:100%;
+}
+.client-logo img{
+	width:100%;
+	max-width:200px;
 }
 .main-content-grid{
 	display:-ms-flexbox;
@@ -3631,11 +3605,49 @@ header .mobile-menu-bottom{
 .main-content-grid .col-1-2:last-child{
 	width:25%;
 }
+.main-content-grid .col-1-2 .recall{
+	padding-right:60px;
+	margin-top:50px;
+	line-height:1.5em;
+}
+.main-content-grid .col-1-2 .recall .recall-title{
+	font-weight:normal;
+	color:#333333;
+}
+.main-content-grid .col-1-2 .recall .recall-text{
+	margin-top:30px;
+	font-style:italic;
+	color:#666666;
+}
+.main-content-grid .col-1-2 .recall .recall-text::before{
+	content:"«‎";
+}
+.main-content-grid .col-1-2 .recall .recall-text::after{
+	content:"»";
+}
+.main-content-grid .col-1-2 .recall .who-responded{
+	margin-top:30px;
+}
+.main-content-grid .col-1-2 .recall .who-responded .col-1-2{
+	display:inline-block;
+	width:auto;
+	vertical-align:top;
+}
+.main-content-grid .col-1-2 .recall .who-responded .col-1-2:nth-child(2){
+	padding:5px 0 0 20px;
+}
+.main-content-grid .col-1-2 .recall .who-responded .col-1-2 .name{
+	color:#333333;
+	font-weight:bold;
+}
+.main-content-grid .col-1-2 .recall .who-responded .col-1-2 .position{
+	color:#666666;
+}
 .main-content-grid .text-block{
 	padding-right:60px;
 }
 .main-content-grid .other-places{
-	margin-bottom:60px;
+	margin:40px 0 60px;
 }
 .main-content-grid .other-places .menu-title{
 	font-weight:bold;
@@ -4369,7 +4381,7 @@ header .mobile-menu-bottom{
 	font-weight:bold;
 }
 .star-rating-default, .star-rating-default a:hover, .star-rating-default a:active, .star-rating-default a:focus, .star-rating-default .current-rating{
-	background:url(../img/all_stars.png) left -1100px repeat-x !important;
+	background:#FFFFFF url(../img/all_stars.png) left -1100px repeat-x !important;
 }
 .star-rating-default a:hover, .star-rating-default a:active, .star-rating-default a:focus{
 	background-position:0 -50px !important;

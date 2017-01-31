@@ -68,15 +68,53 @@
                     </div>
                 </div>
             </div>
-
-
-            {{--<div class="field-wrap ">--}}
-            {{--<label class="field-title"> Заголовок </label>--}}
-            {{--<input type="text" data-field-type="string" data-field-name="letter_link" data-block="clients_block"--}}
-            {{--data-group="client" class="input-field group_field"--}}
-            {{--value="{{$item_client->letter_link_field}}" data-item-id="{{$item_client->id_field}}"--}}
-            {{--placeholder="Строка">--}}
-            {{--</div>--}}
+            <div class="field-wrap ">
+                <label class="field-title"> Логотип (отображается на странице клиента и в списке всех клиентов) </label>
+                <div class="image-load">
+                    <div class="drag-n-drop">
+                        <div class="drag"><input type="text" value="Отпустите клавишу мыши, чтобы загрузить файл"></div>
+                        <div class="img-hide-block">
+                            <input type="hidden" class="prefix" data-field-name="logo" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->logo_image->prefix}}">
+                            <input type="hidden" class="original_link" data-field-name="logo" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->logo_image->original_link}}">
+                            <input type="hidden" class="preview_link" data-field-name="logo" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->logo_image->preview_link}}">
+                            <input type="hidden" class="primary_link" data-field-name="logo" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->logo_image->primary_link}}">
+                            <input type="hidden" class="secondary_link" data-field-name="logo" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block"
+                                   value="{{$item_client->logo_image->secondary_link}}">
+                            <input type="hidden" class="icon_link" data-field-name="logo" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->logo_image->icon_link}}">
+                        </div>
+                        <div class="preview-block">
+                            <label class="file-input">
+                                <img src="/images/{{$item_client->logo_image->preview_link}}" class="preview"
+                                     data-field-name="logo" data-block="clients_block" data-group="client"
+                                     data-item-id="{{$item_client->id_field}}">
+                                <input type="file" accept="image/*" class="input_file group_field"
+                                       data-field-name="logo" data-field-type="image" data-block="clients_block"
+                                       data-group="client" data-item-id="{{$item_client->id_field}}"
+                                       data-entity="groupitem"> </label>
+                        </div>
+                        <div class="action-block">
+                            <label class="alt-title">Альтернативный текст (если изображение не удалось
+                                загрузить)</label>
+                            <input type="text" placeholder="alt текст" class="alt-text"
+                                   value="{{$item_client->logo_image->alt}}"
+                                   data-item-id="{{$item_client->id_field}}" data-field-name="logo"
+                                   data-block="clients_block">
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="field-wrap ">
                 <label class="field-title"> Краткое описание </label>
                 <input type="text" data-field-type="string" data-field-name="small_descr" data-block="clients_block"
@@ -131,14 +169,6 @@
                 </div>
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> Описание заведения </label>
-                        <textarea data-field-type="text" data-field-name="content" data-block="clients_block"
-                                  data-group="client" class="input group_field"
-                                  data-item-id="{{$item_client->id_field}}"
-                                  placeholder="Текст">{{$item_client->content_field}}</textarea>
-            </div>
-
-            <div class="field-wrap ">
                 <label class="field-title"> Город </label>
                 <select data-field-type="numb" data-field-name="city_name" data-block="clients_block"
                         data-group="client" data-item-id="{{$item_client->id_field}}" class="input-field group_field">
@@ -165,8 +195,79 @@
                     @endforeach
                 </select>
             </div>
-
-
+            <div class="field-wrap ">
+                <label class="field-title"> Описание заведения </label>
+                        <textarea data-field-type="text" data-field-name="content" data-block="clients_block"
+                                  data-group="client" class="input group_field"
+                                  data-item-id="{{$item_client->id_field}}"
+                                  placeholder="Текст">{{$item_client->content_field}}</textarea>
+            </div>
+            <div class="field-wrap ">
+                <label class="field-title"> Имя оставившего отзыв клиента </label>
+                <input type="text" data-field-type="string" data-field-name="rec_fio" data-block="clients_block"
+                       data-group="client" class="input-field group_field"
+                       value="{{$item_client->rec_fio_field}}" data-item-id="{{$item_client->id_field}}"
+                       placeholder="Строка">
+            </div>
+            <div class="field-wrap ">
+                <label class="field-title"> Занимаемая должность </label>
+                <input type="text" data-field-type="string" data-field-name="rec_position" data-block="clients_block"
+                       data-group="client" class="input-field group_field"
+                       value="{{$item_client->rec_position_field}}" data-item-id="{{$item_client->id_field}}"
+                       placeholder="Строка">
+            </div>
+            <div class="field-wrap ">
+                <label class="field-title"> Фото </label>
+                <div class="image-load">
+                    <div class="drag-n-drop">
+                        <div class="drag"><input type="text" value="Отпустите клавишу мыши, чтобы загрузить файл"></div>
+                        <div class="img-hide-block">
+                            <input type="hidden" class="prefix" data-field-name="rec_foto" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->rec_foto_image->prefix}}">
+                            <input type="hidden" class="original_link" data-field-name="rec_foto" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->rec_foto_image->original_link}}">
+                            <input type="hidden" class="preview_link" data-field-name="rec_foto" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->rec_foto_image->preview_link}}">
+                            <input type="hidden" class="primary_link" data-field-name="rec_foto" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->rec_foto_image->primary_link}}">
+                            <input type="hidden" class="secondary_link" data-field-name="rec_foto" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->rec_foto_image->secondary_link}}">
+                            <input type="hidden" class="icon_link" data-field-name="rec_foto" data-group="client"
+                                   data-field-type="image" data-item-id="{{$item_client->id_field}}"
+                                   data-block="clients_block" value="{{$item_client->rec_foto_image->icon_link}}">
+                        </div>
+                        <div class="preview-block">
+                            <label class="file-input">
+                                <img src="/images/{{$item_client->rec_foto_image->preview_link}}" class="preview"
+                                     data-field-name="rec_foto" data-block="clients_block" data-group="client"
+                                     data-item-id="{{$item_client->id_field}}">
+                                <input type="file" accept="image/*" class="input_file group_field"
+                                       data-field-name="rec_foto" data-field-type="image" data-block="clients_block"
+                                       data-group="client" data-item-id="{{$item_client->id_field}}"
+                                       data-entity="groupitem"> </label>
+                        </div>
+                        <div class="action-block">
+                            <label class="alt-title">Альтернативный текст (если изображение не удалось
+                                загрузить)</label>
+                            <input type="text" placeholder="alt текст" class="alt-text"
+                                   value="{{$item_client->letter_image->alt}}" data-item-id="{{$item_client->id_field}}"
+                                   data-field-name="letter" data-block="clients_block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="field-wrap ">
+                <label class="field-title"> Текст отзыва </label>
+                <textarea data-field-type="text" data-field-name="rec_text" data-block="clients_block"
+                          data-group="client" class="input group_field no-trumbowyg"
+                          data-item-id="{{$item_client->id_field}}"
+                          placeholder="Текст">{{$item_client->rec_text_field}}</textarea>
+            </div>
             <div class="field-wrap group-wrap">
                 <div class="group-title-row"><label class="group-title">Комплектация</label>
                     <button class="any_create button blue" data-block="clients_block" data-group="client_related"
@@ -200,7 +301,7 @@
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Описание </label>
                 <textarea type="text" data-field-type="string" data-field-name="seo_description"
-                       data-block="clients_block" data-group="client" class="input-field group_field" data-item-id="{{$item_client->id_field}}"
+                       data-block="clients_block" data-group="client" class="input-field group_field no-trumbowyg" data-item-id="{{$item_client->id_field}}"
                        placeholder="Строка">{{$item_client->seo_description_field}}</textarea>
             </div>
         </div>

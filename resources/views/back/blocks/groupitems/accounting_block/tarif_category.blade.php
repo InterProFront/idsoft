@@ -1,6 +1,6 @@
 <li class="row-item" data-sorter="{{$item_tarif_category->sorter_field}}" data-id="{{$item_tarif_category->id_field}}">
     <div class="column-item"><a
-                href="/adm/edit/accounting/{{$item_tarif_category->id_field}}">{{$item_tarif_category->tarif_name_field}}</a>
+                href="/adm/edit/accounting/{{$item_tarif_category->id_field}}">@if ($item_tarif_category->tarif_name_field != '') {{$item_tarif_category->tarif_name_field}} @else Новая категория @endif</a>
     </div>
     <div class="column-item"></div>
     <div class="column-item"><p>{{$item_tarif_category->sorter_field}}</p></div>

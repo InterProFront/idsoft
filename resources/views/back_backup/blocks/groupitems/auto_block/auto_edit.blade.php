@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование информации о готовом решении — "'.$item_auto->page_name_field.'"'?>
     <li class="group" data-group-id="{{$item_auto->id_field}}">
         <div class="select-content">
             <ul class="list">
@@ -88,6 +89,19 @@
                 </div>
             </div>
             <div class="field-wrap ">
+                <label class="field-title">Категория автоматизируемых заведений</label>
+                <select data-field-type="numb"
+                        data-field-name="institution_id"
+                        data-block="auto_block"
+                        data-group="auto"
+                        data-item-id="{{$item_auto->id_field}}"
+                        class="input-field group_field">
+                    @foreach($institution as $i_item)
+                        <option value="{{$i_item->id_field}}" @if($item_auto->institution_id_field == $i_item->id_field) selected @endif>{{$i_item->seo_keywords_field}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="field-wrap ">
                 <label class="field-title"> Описание </label>
                                 <textarea data-field-type="text" data-field-name="content" data-block="auto_block"
                                           data-group="auto" class="input group_field"
@@ -102,7 +116,7 @@
                                           placeholder="Текст">{{$item_auto->system_features_field}}</textarea>
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> Правый блок </label>
+                <label class="field-title"> Возможности системы </label>
                                 <textarea data-field-type="text" data-field-name="vozm" data-block="auto_block"
                                           data-group="auto" class="input group_field"
                                           data-item-id="{{$item_auto->id_field}}"
@@ -187,6 +201,19 @@
                 {{--</div>--}}
             {{--</div>--}}
             <div class="field-wrap ">
+                <label class="field-title">Валюта</label>
+                <select data-field-type="numb"
+                        data-field-name="course_id"
+                        data-block="auto_block"
+                        data-group="auto"
+                        data-item-id="{{$item_auto->id_field}}"
+                        class="input-field group_field">
+                    @foreach($cor as $c_item)
+                        <option value="{{$c_item->id_field}}" @if($item_auto->course_id_field == $c_item->id_field) selected @endif>{{$c_item->course_name_field}}</option>
+                    @endforeach
+                </select>
+            </div>
+            <div class="field-wrap ">
                 <label class="field-title"> Цена без скидки </label>
                 <input type="number" data-field-type="numb" data-field-name="auto_sale"
                        data-block="auto_block" data-group="auto"
@@ -194,7 +221,7 @@
                        value="{{$item_auto->auto_sale_field}}" placeholder="Целое число">
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> Заголовок </label>
+                <label class="field-title"> Цена с учетом скидки </label>
                 <input type="number" data-field-type="numb" data-field-name="auto_cost"
                        data-block="auto_block" data-group="auto"
                        data-item-id="{{$item_auto->id_field}}" class="input-field group_field"
@@ -214,7 +241,7 @@
                 </ul>
             </div>
             <div class="field-wrap group-wrap">
-                <div class="group-title-row"><label class="group-title">Используемое оборудование</label>
+                <div class="group-title-row"><label class="group-title">Комплектация</label>
                     <button class="any_create button blue" data-block="auto_block" data-group="auto_related"
                             data-descr="Эл. первой группы" data-owner-id="{{$item_auto->id_field}}">Добавить элемент
                     </button>
@@ -237,9 +264,9 @@
             </div>
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Описание </label>
-                <input type="text" data-field-type="string" data-field-name="seo_description" data-block="auto_block"
-                       data-group="auto" class="input-field group_field" value="{{$item_auto->seo_description_field}}"
-                       data-item-id="{{$item_auto->id_field}}" placeholder="Строка">
+                <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="auto_block"
+                       data-group="auto" class="input-field group_field"
+                       data-item-id="{{$item_auto->id_field}}" placeholder="Строка">{{$item_auto->seo_description_field}}</textarea>
             </div>
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Ключевые слова </label>
@@ -249,10 +276,17 @@
             </div>
         </div>
 
-
+        <div class="disabled">
+            <div class="field-wrap buttons disabled">
+                <button type="button" class="any_save" data-block="auto_block" data-group="auto"
+                        data-entity="groupitem" data-item-id="{{$item_auto->id_field}}"
+                        data-descr="Эл. первой группы"> Сохранить
+                </button>
+            </div>
+        </div>
         <div class="save-panel">
-            <div class="status-panel success">
-                <p>Изменения сохранены</p>
+            <div class="status-panel ">
+
             </div>
             <div class="tool-panel">
                 <div class="column">

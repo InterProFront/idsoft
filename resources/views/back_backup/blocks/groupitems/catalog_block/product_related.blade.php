@@ -3,7 +3,7 @@
     </div>
     <div class="block ">
         <div class="field-wrap ">
-            <label class="field-title"> Заголовок </label>
+            <label class="field-title"> Позиция в каталоге </label>
             <select type="number" data-field-type="numb" data-field-name="related" data-block="catalog_block"
                     data-group="product_related" data-item-id="{{$item_product_related->id_field}}"
                     class="input-field group_field">

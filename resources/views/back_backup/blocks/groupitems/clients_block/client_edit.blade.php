@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование информации о клиенте — "'.$item_client->page_name_field.'"'?>
     <li class="group" data-group-id="{{$item_client->id_field}}">
         <div class="select-content">
             <ul class="list">
@@ -167,7 +168,7 @@
 
 
             <div class="field-wrap group-wrap">
-                <div class="group-title-row"><label class="group-title">Используемое оборудование</label>
+                <div class="group-title-row"><label class="group-title">Комплектация</label>
                     <button class="any_create button blue" data-block="clients_block" data-group="client_related"
                             data-descr="Эл. первой группы" data-owner-id="{{$item_client->id_field}}">Добавить элемент
                     </button>
@@ -190,7 +191,7 @@
                        placeholder="Строка">
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> СЕО: КЛючевые слова </label>
+                <label class="field-title"> СЕО: Ключевые слова </label>
                 <input type="text" data-field-type="string" data-field-name="seo_keywords"
                        data-block="clients_block" data-group="client" class="input-field group_field"
                        value="{{$item_client->seo_keywords_field}}" data-item-id="{{$item_client->id_field}}"
@@ -198,16 +199,20 @@
             </div>
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Описание </label>
-                <input type="text" data-field-type="string" data-field-name="seo_description"
-                       data-block="clients_block" data-group="client" class="input-field group_field"
-                       value="{{$item_client->seo_description_field}}" data-item-id="{{$item_client->id_field}}"
-                       placeholder="Строка">
+                <textarea type="text" data-field-type="string" data-field-name="seo_description"
+                       data-block="clients_block" data-group="client" class="input-field group_field" data-item-id="{{$item_client->id_field}}"
+                       placeholder="Строка">{{$item_client->seo_description_field}}</textarea>
             </div>
         </div>
-
+        <div class="disabled">
+            <button type="button" class="any_save" data-block="clients_block" data-group="client"
+                    data-entity="groupitem" data-item-id="{{$item_client->id_field}}" data-descr="Эл. первой группы">
+                Сохранить
+            </button>
+        </div>
         <div class="save-panel">
-            <div class="status-panel success">
-                <p>Изменения сохранены</p>
+            <div class="status-panel ">
+
             </div>
             <div class="tool-panel">
                 <div class="column">

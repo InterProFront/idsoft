@@ -6,7 +6,7 @@
     <div class="column-item"><p>{{$item_tarif_category->sorter_field}}</p></div>
     <div class="column-item"></div>
     <div class="column-item">
-        <button type="button" class="any_delete button dark" data-block="accounting_block" data-group="tarif_category"
+        <button type="button" class="any_delete button dark disabled" data-block="accounting_block" data-group="tarif_category"
                 data-entity="groupitem" data-item-id="{{$item_tarif_category->id_field}}"
                 data-descr="Эл. первой группы">Удалить
         </button>

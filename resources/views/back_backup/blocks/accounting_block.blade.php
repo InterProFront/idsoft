@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование страницы "Бухгалтерия"'?>
     <div class="select-content">
         <ul class="list">
             <li class="item"><a href="#content" class="select-item active">Информация</a></li>
@@ -117,7 +118,7 @@
         </div>
         <div class="field-wrap group-wrap">
             <div class="group-title-row"><label class="group-title">Преимущества</label>
-                <button class="any_create button blue" data-block="accounting_block" data-group="acc_adv"
+                <button class="any_create button blue disabled" data-block="accounting_block" data-group="acc_adv"
                         data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
                 </button>
             </div>
@@ -129,7 +130,7 @@
         </div>
         <div class="field-wrap group-wrap">
             <div class="group-title-row"><label class="group-title">Сотрудники</label>
-                <button class="any_create button blue" data-block="accounting_block" data-group="employs"
+                <button class="any_create button blue disabled" data-block="accounting_block" data-group="employs"
                         data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
                 </button>
             </div>
@@ -180,13 +181,39 @@
         </div>
         <div class="field-wrap ">
             <label class="field-title"> СЕО: Описание </label>
-            <input type="text" data-field-type="string" data-field-name="seo_description" data-block="accounting_block"
-                   class="input-field block_field" value="{{$accounting_block->seo_description_field}}"
-                   placeholder="Строка">
+            <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="accounting_block"
+                   class="input-field block_field"
+                   placeholder="Строка">{{$accounting_block->seo_description_field}}</textarea>
+        </div>
+        <div class="field-wrap ">
+            <label class="field-title"> СЕО-Текст (под футером) </label>
+            <textarea type="text" data-field-type="text" data-field-name="seo_text" data-block="accounting_block"
+                      class="input-field block_field"  placeholder="Строка">{{$accounting_block->seo_text_field}}</textarea>
         </div>
     </div>
 
+    <div class="save-panel">
+        <div class="status-panel ">
 
+        </div>
+        <div class="tool-panel">
+            <div class="column">
+                <div class="show">
+                    <div class="wrap-checkbox disabled">
+                        <label class="show-it-label"><input type="checkbox"
+                                                            class="show-it-checkbox ">Показать на сайте</label>
+                    </div>
+                </div>
+                <button class="button dark show-it disabled">Посмотреть</button>
+            </div>
+            <div class="column">
+                <div class="buttons-block">
+                    <button class="button glass cancel disabled">Отменить изменения</button>
+                    <button class="button blue save global-save">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 

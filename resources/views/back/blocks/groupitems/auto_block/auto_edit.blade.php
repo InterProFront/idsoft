@@ -263,16 +263,16 @@
                        data-item-id="{{$item_auto->id_field}}" placeholder="Строка">
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> СЕО: Описание </label>
-                <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="auto_block"
-                       data-group="auto" class="input-field group_field"
-                       data-item-id="{{$item_auto->id_field}}" placeholder="Строка">{{$item_auto->seo_description_field}}</textarea>
-            </div>
-            <div class="field-wrap ">
                 <label class="field-title"> СЕО: Ключевые слова </label>
                 <input type="text" data-field-type="string" data-field-name="seo_keywords" data-block="auto_block"
                        data-group="auto" class="input-field group_field" value="{{$item_auto->seo_keywords_field}}"
                        data-item-id="{{$item_auto->id_field}}" placeholder="Строка">
+            </div>
+            <div class="field-wrap ">
+                <label class="field-title"> СЕО: Описание </label>
+                <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="auto_block"
+                       data-group="auto" class="input-field group_field no-trumbowyg"
+                       data-item-id="{{$item_auto->id_field}}" placeholder="Строка">{{$item_auto->seo_description_field}}</textarea>
             </div>
         </div>
 

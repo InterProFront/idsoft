@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование информационной страницы — "'.$item_inf_page->page_name_field.'"'?>
     <li class="group" data-group-id="{{$item_inf_page->id_field}}">
         <div class="select-content">
             <ul class="list">
@@ -98,7 +99,7 @@
                        placeholder="Строка">
             </div>
             <div class="field-wrap ">
-                <label class="field-title"> СЕО: КЛючевые слова </label>
+                <label class="field-title"> СЕО: Ключевые слова </label>
                 <input type="text" data-field-type="string" data-field-name="seo_keywords" data-block="information_page"
                        data-group="inf_page" class="input-field group_field"
                        value="{{$item_inf_page->seo_keywords_field}}" data-item-id="{{$item_inf_page->id_field}}"
@@ -106,10 +107,9 @@
             </div>
             <div class="field-wrap ">
                 <label class="field-title"> СЕО: Описание </label>
-                <input type="text" data-field-type="string" data-field-name="seo_description"
-                       data-block="information_page" data-group="inf_page" class="input-field group_field"
-                       value="{{$item_inf_page->seo_description_field}}" data-item-id="{{$item_inf_page->id_field}}"
-                       placeholder="Строка">
+                <textarea type="text" data-field-type="string" data-field-name="seo_description"
+                       data-block="information_page" data-group="inf_page" class="input-field group_field" data-item-id="{{$item_inf_page->id_field}}"
+                       placeholder="Строка">{{$item_inf_page->seo_description_field}}</textarea>
             </div>
         </div>
 
@@ -120,8 +120,8 @@
             </button>
         </div>
         <div class="save-panel">
-            <div class="status-panel success">
-                <p>Изменения сохранены</p>
+            <div class="status-panel ">
+
             </div>
             <div class="tool-panel">
                 <div class="column">

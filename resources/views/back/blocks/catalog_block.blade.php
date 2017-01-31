@@ -2,14 +2,14 @@
 @section('content')
     <?php $title = 'Редактирование страницы "Каталог"'?>
     <div class="field-wrap ">
-        <label class="field-title"> Заголовок </label>
+        <label class="field-title"> СЕО: Ключевые слова </label>
         <input type="text" data-field-type="string" data-field-name="seo_keywords" data-block="catalog_block"
                class="input-field block_field" value="{{$catalog_block->seo_keywords_field}}" placeholder="Строка">
     </div>
     <div class="field-wrap ">
-        <label class="field-title"> Заголовок </label>
+        <label class="field-title"> СЕО: Описание </label>
         <input type="text" data-field-type="string" data-field-name="seo_description" data-block="catalog_block"
-               class="input-field block_field" value="{{$catalog_block->seo_description_field}}" placeholder="Строка">
+               class="input-field block_field no-trumbowyg" value="{{$catalog_block->seo_description_field}}" placeholder="Строка">
     </div>
     <div class="field-wrap ">
         <div class="row-title">

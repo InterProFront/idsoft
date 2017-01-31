@@ -154,9 +154,9 @@ return [
         'textfields' => ['seo_text'],
         'groups' => [
             'client' => [
-                'images' => ['background','letter', 'logo', 'rec_foto', 'rec_fio', 'rec_position', 'rec_text'],
-                'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'letter_link', 'small_descr'],
-                'textfields' => ['content'],
+                'images' => ['background', 'letter', 'logo', 'rec_foto'],
+                'stringfields' => ['page_name', 'rec_position', 'rec_fio', 'page_title', 'seo_keywords', 'seo_description', 'letter_link', 'small_descr'],
+                'textfields' => ['content', 'rec_text'],
                 'numbs' => ['city_name', 'institution_type']
             ],
             'client_related' => [

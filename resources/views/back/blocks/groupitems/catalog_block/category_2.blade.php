@@ -1,6 +1,6 @@
 <li class="row-item" data-sorter="{{$item_category_2->sorter_field}}" data-id="{{$item_category_2->id_field}}">
     <div class="column-item"><a
-                href="/adm/edit/catalog/{{$item_category_2->id_field}}">{{$item_category_2->category_name_field}}</a></div>
+                href="/adm/edit/catalog/{{$item_category_2->id_field}}">@if ($item_category_2->category_name_field != '') {{$item_category_2->category_name_field}} @else Новая категория @endif</a></div>
     <div class="column-item"></div>
     <div class="column-item"><p>{{$item_category_2->sorter_field}}</p></div>
     <div class="column-item"></div>

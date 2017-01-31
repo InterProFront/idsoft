@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование категории тарифов — "'.$item_tarif_category->tarif_name_field.'"'?>
     <li class="group" data-group-id="{{$item_tarif_category->id_field}}">
             <div class="content-wrap">
                 <div class="field-wrap ">
@@ -29,8 +30,8 @@
                 </div>
             </div>
         <div class="save-panel">
-            <div class="status-panel success">
-                <p>Изменения сохранены</p>
+            <div class="status-panel ">
+
             </div>
             <div class="tool-panel">
                 <div class="column">

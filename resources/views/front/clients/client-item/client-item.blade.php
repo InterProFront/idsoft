@@ -10,34 +10,58 @@
             <span class="crumb-separate">→</span>
             @foreach($filter->institution_group as $item)
                 @if($item->id_field == $client->institution_type_field)
-                    <span class="crumb-item"><a href="/clients/all/{{$client->institution_type_field}}">{{$item->seo_keywords_field}}</a></span>
+                    <span class="crumb-item"><a
+                                href="/clients/all/{{$client->institution_type_field}}">{{$item->seo_keywords_field}}</a></span>
                 @endif
             @endforeach
         </div>
         <h1 class="block-title">{{$client->page_name_field}}</h1>
-        <div class="title-image">
-            <img src="/images/{{$client->background_image->primary_link}}" alt="{{$client->background_image->alt}}">
-        </div>
+        <?php $placeholder = explode("/", $client->background_image->primary_link)[0]; ?>
+        @if($client->background_image->primary_link != '' && $placeholder != 'placeholders')
+            <div class="title-image">
+                <img src="/images/{{$client->background_image->primary_link}}" alt="{{$client->background_image->alt}}">
+            </div>
+        @endif
         <div class="main-content-grid">
             <div class="col-1-2">
-                <div class="text-block">
-                    {!! $client->content_field !!}
-                </div>
+                <div class="text-block">{!! $client->content_field !!}</div>
+                @if ($client->rec_text_field != '')
+                    <div class="recall">
+                        <h2 class="recall-title">Отзыв клиента</h2>
+                        <p class="recall-text">{!! $client->rec_text_field !!}</p>
+                        <div class="who-responded">
+                            <div class="col-1-2">
+                                <img src="/images/{{$client->rec_foto_image->primary_link}}"
+                                     alt="{{$client->rec_foto_image->alt}}">
+                            </div>
+                            <div class="col-1-2">
+                                <p class="name">{{$client->rec_fio_field}}</p>
+                                <p class="position">{{$client->rec_position_field}}</p>
+                            </div>
+                        </div>
+                    </div>
+                @endif
             </div>
             <div class="col-1-2">
+                <div class="client-logo">
+                    <img src="/images/{{$client->logo_image->primary_link}}" alt="{{$client->logo_image->alt}}">
+                </div>
                 <div class="other-places">
                     <p class="menu-title">Другие заведения</p>
                     <ul class="places-list">
                         <?php $c = 0; ?>
                         @foreach($all as $item)
                             @if (($item->page_name_field != $client->page_name_field) && ($c <= 15))
-                            <li class="item"><a href="/clients/{{$item->slug_field}}">{{$item->page_name_field}}</a></li>
+                                <li class="item"><a href="/clients/{{$item->slug_field}}">{{$item->page_name_field}}</a>
+                                </li>
                             @endif
                             <?php $c++ ?>
                         @endforeach
                         @foreach($filter->institution_group as $item)
                             @if($item->id_field == $client->institution_type_field)
-                                <li class="item"><a href="/clients/all/{{$item->id_field}}" class="bold">Все {{$all->count()}} {{$item->page_title_field}}</a></li>
+                                <li class="item"><a href="/clients/all/{{$item->id_field}}"
+                                                    class="bold">Все {{$all->count()}} {{$item->page_title_field}}</a>
+                                </li>
                             @endif
                         @endforeach
 
@@ -48,7 +72,8 @@
                     <div class="recommend-letter">
                         <a href="/images/{{$client->letter_image->primary_link}}">
                             <div class="image-wrap frame">
-                                <img src="/images/{{$client->letter_image->frame_crop->link}}" alt="{{$client->letter_image->alt}}">
+                                <img src="/images/{{$client->letter_image->frame_crop->link}}"
+                                     alt="{{$client->letter_image->alt}}">
                             </div>
                             <p><span>Рекомендательное письмо {{$client->page_name_field}}</span></p>
                         </a>
@@ -70,7 +95,8 @@
                                 <div class="product-item">
                                     <a href="{{$item_prod->title_field}}">
                                         <div class="img-wrap">
-                                            <img src="/images/{{$item_prod->product_base_photo_image->catalog_crop->link}}" alt="{{$item_prod->product_base_photo_image->alt}}">
+                                            <img src="/images/{{$item_prod->product_base_photo_image->catalog_crop->link}}"
+                                                 alt="{{$item_prod->product_base_photo_image->alt}}">
                                         </div>
                                         <div class="text-wrap">
                                             <p>{{$rel->about_item_field}}</p>
@@ -78,7 +104,9 @@
                                                 <span>{{$item_prod->product_name_field}}</span>
                                             </p>
                                             @if($item_prod->product_cost_field != '0' && $item_prod->product_cost_field != '')
-                                                <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }} тг  @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }} тг</span>@endif</p>
+                                                <p class="cost">{{ number_format($item_prod->product_cost_field,0,'',' ') }}
+                                                    тг @if($item_prod->product_sale_field != 0)<span class="sale">{{ number_format($item_prod->product_sale_field,0,'',' ') }}
+                                                        тг</span>@endif</p>
                                             @endif
                                         </div>
                                     </a>

@@ -1,6 +1,6 @@
 <li class="row-item" data-sorter="{{$item_inf_page->sorter_field}}" data-id="{{$item_inf_page->id_field}}">
     <div class="column-item"><a
-                href="/adm/edit/informatic/{{$item_inf_page->id_field}}">{{$item_inf_page->page_name_field}}</a></div>
+                href="/adm/edit/informatic/{{$item_inf_page->id_field}}">@if ($item_inf_page->page_name_field != '') {{$item_inf_page->page_name_field}} @else Новая страница @endif</a></div>
     <div class="column-item"></div>
     <div class="column-item"><p>{{$item_inf_page->sorter_field}}</p></div>
     <div class="column-item"></div>

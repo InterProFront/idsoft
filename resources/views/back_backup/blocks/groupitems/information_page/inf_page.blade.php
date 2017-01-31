@@ -5,7 +5,7 @@
     <div class="column-item"><p>{{$item_inf_page->sorter_field}}</p></div>
     <div class="column-item"></div>
     <div class="column-item">
-        <button type="button" class="any_delete button dark" data-block="information_page" data-group="inf_page"
+        <button type="button" class="any_delete button dark disabled" data-block="information_page" data-group="inf_page"
                 data-entity="groupitem" data-item-id="{{$item_inf_page->id_field}}" data-descr="Эл. первой группы">
             Удалить
         </button>

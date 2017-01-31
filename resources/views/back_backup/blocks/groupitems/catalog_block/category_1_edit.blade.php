@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование информации о категории оборудования'?>
     <div class="select-content">
         <ul class="list">
             <li class="item"><a href="#content" class="select-item active">Информация</a></li>
@@ -20,6 +21,18 @@
                    data-block="catalog_block" data-group="category_1" class="input-field group_field"
                    value="{{$item_category_1->category_description_field}}"
                    data-item-id="{{$item_category_1->id_field}}" placeholder="Строка">
+        </div>
+        <div class="field-wrap disabled">
+            <label class="field-title">  </label>
+            <input type="text" data-field-type="string" data-field-name="price_name"
+                   data-block="catalog_block" data-group="category_1" class="input-field group_field"
+                   value="{{$item_category_1->price_name_field}}"
+                   data-item-id="{{$item_category_1->id_field}}" placeholder="Строка">
+        </div>
+        <div class="field-wrap ">
+            <label class="field-title"> Прайс лист на почту </label>
+            <input type="file" class="send-file price-list-send">
+            <button class="button blue save load-price">Загрузить</button>
         </div>
         <div class="field-wrap ">
             <label class="field-title"> Задний фон </label>
@@ -83,7 +96,7 @@
                 <div class="col-1-5"></div>
                 <div class="col-1-5"></div>
             </div>
-            <ul class="group-block group_container page-group" data-block="catalog_block" data-group="category_1"
+            <ul class="group-block group_container page-group" data-block="catalog_block" data-group="category_2"
                 data-owner-id="{{$item_category_1->id_field}}">
                 @foreach($item_category_1->category_2_group as $item_category_2 )
                     @include('back.blocks.groupitems.catalog_block.category_2')
@@ -118,15 +131,20 @@
         </div>
         <div class="field-wrap ">
             <label class="field-title"> СЕО: Описание </label>
-            <input type="text" data-field-type="string" data-field-name="seo_description" data-block="catalog_block"
-                   data-group="category_1" class="input-field group_field"
-                   value="{{$item_category_1->seo_description_field}}" data-item-id="{{$item_category_1->id_field}}"
-                   placeholder="Строка">
+            <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="catalog_block"
+                   data-group="category_1" class="input-field group_field" data-item-id="{{$item_category_1->id_field}}"
+                   placeholder="Строка">{{$item_category_1->seo_description_field}}</textarea>
+        </div>
+        <div class="field-wrap ">
+            <label class="field-title"> СЕО-Текст (под футером) </label>
+            <textarea type="text" data-field-type="text" data-field-name="seo_text" data-block="catalog_block"
+                      data-group="category_1" class="input-field group_field" data-item-id="{{$item_category_1->id_field}}"
+                      placeholder="Строка">{{$item_category_1->seo_text_field}}</textarea>
         </div>
     </div>
     <div class="save-panel">
-        <div class="status-panel success">
-            <p>Изменения сохранены</p>
+        <div class="status-panel ">
+
         </div>
         <div class="tool-panel">
             <div class="column">

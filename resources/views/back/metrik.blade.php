@@ -5,7 +5,7 @@
         <div class="block ">
             <div class="field-wrap ">
                 <label class="field-title"> Метрика </label>
-        <textarea data-field-type="text" data-field-name="metrik" data-block="static_site" class="input block_field metrik"
+        <textarea data-field-type="text" data-field-name="metrik" data-block="static_site" class="input block_field no-trumbowyg"
                   placeholder="Текст">{{$static_site->metrik_field}}</textarea>
             </div>
         </div>

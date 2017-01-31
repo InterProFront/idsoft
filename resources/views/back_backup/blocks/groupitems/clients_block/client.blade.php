@@ -1,5 +1,5 @@
 <li class="row-item" data-sorter="{{$item_client->sorter_field}}" data-id="{{$item_client->id_field}}">
-    <div class="column-item"><a href="/adm/edit/client/{{$item_client->id_field}}">{{$item_client->page_name_field}}</a>
+    <div class="column-item"><a href="/adm/edit/clients/{{$item_client->id_field}}">{{$item_client->page_name_field}}</a>
     </div>
     <div class="column-item"></div>
     <div class="column-item"><p>{{$item_client->sorter_field}}</p></div>

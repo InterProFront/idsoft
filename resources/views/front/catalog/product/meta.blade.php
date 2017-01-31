@@ -6,7 +6,7 @@
     @endif
 
     @if($product->seo_description_field == '')
-        <meta name="description" content="Интернет магазин торгового оборудования IDSOFT предлагает заказать {{$product->product_name_field}} недорого. Лучшая цена, доставка, отзывы. ☎ +7 (727) 220-2020">
+        <meta name="description" content="Интернет магазин торгового оборудования IDSOFT предлагает заказать {{$product->product_name_field}} недорого. Лучшая цена, доставка, отзывы. ☎ +7 (727) 220-2000">
     @else
         <meta name="description" content="{{$product->seo_description_field}}">
     @endif

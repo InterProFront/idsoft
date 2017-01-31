@@ -1,10 +1,19 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование курсов валют'?>
     <div class="content-wrap">
-        <div class="field-wrap ">
-            <label class="field-title"> Курс тенге к доллару </label>
-            <input type="text" data-field-type="string" data-field-name="course" data-block="clients_filter"
-                   class="input-field block_field" value="{{$clients_filter->course_field}}" placeholder="Строка">
+        <div class="field-wrap group-wrap">
+            <div class="group-title-row">
+                <label class="group-title">Валюты</label>
+                <button class="any_create button blue" data-block="clients_filter" data-group="course"
+                        data-descr="Эл. первой группы" data-owner-id="0">Добавить элемент
+                </button>
+            </div>
+            <ul class="group-block group_container" data-block="clients_filter" data-group="course" data-owner-id="0">
+                @foreach($clients_filter->course_group as $item_course )
+                    @include('back.blocks.groupitems.clients_filter.course')
+                @endforeach
+            </ul>
         </div>
         <div class="field-wrap buttons disabled">
             <button class="btn btn-primary pull-right any_save" data-block="clients_filter" data-entity="block"
@@ -14,15 +23,15 @@
         </div>
     </div>
     <div class="save-panel">
-        <div class="status-panel success">
-            <p>Изменения сохранены</p>
+        <div class="status-panel ">
+
         </div>
         <div class="tool-panel">
             <div class="column">
                 <div class="show">
                     <div class="wrap-checkbox disabled">
-                        <label class="show-it-label"><input type="checkbox"
-                                                            class="show-it-checkbox ">Показать на сайте</label>
+                        <label class="show-it-label"><input type="checkbox" class="show-it-checkbox">Показать на
+                            сайте</label>
                     </div>
                 </div>
                 <button class="button dark show-it disabled">Посмотреть</button>
@@ -35,5 +44,4 @@
             </div>
         </div>
     </div>
-
 @endsection

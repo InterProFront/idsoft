@@ -1,6 +1,7 @@
 @extends('back.layout')
 @section('content')
-    <div class="select-content">
+    <?php $title = 'Редактирование информации о подкатегории оборудования — "'.$item_category_2->category_name_field.'"'?>
+    <div class="select-content" xmlns="http://www.w3.org/1999/html">
         <ul class="list">
             <li class="item"><a href="#content" class="select-item active">Информация</a></li>
             <li class="item"><a href="#seo" class="select-item">Настройки SEO</a></li>
@@ -12,6 +13,13 @@
             <input type="text" data-field-type="string" data-field-name="category_name"
                    data-block="catalog_block" data-group="category_2" class="input-field group_field"
                    value="{{$item_category_2->category_name_field}}"
+                   data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">
+        </div>
+        <div class="field-wrap ">
+            <label class="field-title"> Вид ссылки в адресной строке </label>
+            <input type="text" data-field-type="string" data-field-name="slug"
+                   data-block="catalog_block" data-group="category_2"
+                   class="input-field group_pre_field" value="{{$item_category_2->slug_field}}"
                    data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">
         </div>
         <div class="field-wrap ">
@@ -138,7 +146,7 @@
                 <div class="col-1-5"></div>
                 <div class="col-1-5"></div>
             </div>
-            <ul class="group-block group_container" data-block="catalog_block" data-group="category_2"
+            <ul class="group-block group_container" data-block="catalog_block" data-group="product"
                 data-owner-id="{{$item_category_2->id_field}}">
                 @foreach($item_category_2->product_group as $item_product )
                     @include('back.blocks.groupitems.catalog_block.product')
@@ -167,21 +175,40 @@
         </div>
         <div class="field-wrap ">
             <label class="field-title"> СЕО: Описание </label>
-            <input type="text" data-field-type="string" data-field-name="seo_description"
+            <textarea type="text" data-field-type="string" data-field-name="seo_description"
                    data-block="catalog_block" data-group="category_2" class="input-field group_field"
-                   value="{{$item_category_2->seo_description_field}}"
-                   data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">
+                   data-item-id="{{$item_category_2->id_field}}" placeholder="Строка">{{$item_category_2->seo_description_field}}</textarea>
+        </div>
+        <div class="field-wrap ">
+            <label class="field-title"> СЕО-Текст (под футером) </label>
+            <textarea type="text" data-field-type="text" data-field-name="seo_text" data-block="catalog_block"
+                      data-group="category_2" class="input-field group_field" data-item-id="{{$item_category_2->id_field}}"
+                      placeholder="Строка">{{$item_category_2->seo_text_field}}</textarea>
+        </div>
+    </div>
+    <div class="disabled">
+        <div class="field-wrap buttons disabled">
+            <button type="button" class="any_save" data-block="catalog_block" data-group="category_2"
+                    data-entity="groupitem" data-item-id="{{$item_category_2->id_field}}"
+                    data-descr="Эл. первой группы"> Сохранить
+            </button>
         </div>
     </div>
     <div class="save-panel">
-        <div class="status-panel success">
-            <p>Изменения сохранены</p>
+        <div class="status-panel ">
+
         </div>
         <div class="tool-panel">
             <div class="column">
                 <div class="show">
-                    <div class="wrap-checkbox disabled">
-                        <label class="show-it-label"><input type="checkbox" class="show-it-checkbox">Показать на
+                    <div class="wrap-checkbox">
+                        <label class="show-it-label">
+                            <input type="checkbox" class="show-it-checkbox group_pre_field"
+                                   data-field-type="bool" data-field-name="show"
+                                   data-block="catalog_block" data-group="category_2"
+                                   @if($item_category_2->show_field) checked  @endif
+                                   data-item-id="{{$item_category_2->id_field}}"
+                            >Показать на
                             сайте</label>
                     </div>
                 </div>

@@ -119,7 +119,7 @@
             </div>
             <div class="map-wrap">
                 <div id="map">
-                    <script src="http://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+                    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
                     <script type="text/javascript">
                         var map;
 

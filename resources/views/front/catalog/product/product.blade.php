@@ -7,8 +7,8 @@
     <section class="content product " itemscope="" itemtype="http://schema.org/Service">
         <div class="bread-crumb">
             <span class="crumb-item"><a href="/{{$grand->slug_field}}">{{$grand->category_name_field}}</a></span>
-            <span class="crumb-separate">→</span>
-            <span class="crumb-item"><a href="/{{$grand->slug_field}}/{{$parent->slug_field}}">{{$parent->category_name_field}}</a></span>
+                <span class="crumb-separate">→</span>
+                <span class="crumb-item"><a href="/{{$grand->slug_field}}/{{$parent->slug_field}}">{{$parent->category_name_field}}</a></span>
         </div>
         <h1 class="block-title">{{$product->product_name_field}}</h1>
 

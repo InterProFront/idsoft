@@ -2,26 +2,24 @@
     <div class="title-block">
     </div>
         <div class="field-wrap ">
-            <label class="field-title"> Заголовок </label>
+            <label class="field-title"> Название позиции в комплектации </label>
             <input type="text" data-field-type="string" data-field-name="about_item" data-block="auto_block"
                    data-group="auto_related" class="input-field group_field"
                    value="{{$item_auto_related->about_item_field}}"
                    data-item-id="{{$item_auto_related->id_field}}" placeholder="Строка">
         </div>
         <div class="field-wrap ">
-            <label class="field-title"> Заголовок </label>
+            <label class="field-title"> Позиция в каталоге </label>
             <select type="number" data-field-type="numb" data-field-name="product" data-block="auto_block"
                     data-group="auto_related" data-item-id="{{$item_auto_related->id_field}}"
                     class="input-field group_field"
                     placeholder="Целое число" >
                 @foreach($related as $r_item)
-                    @if($r_item->id_field != $item_auto_related->product_field)
                         @if($r_item->id_field == $item_auto_related->product_field)
                             <option selected value="{{$r_item->id_field}}">{{$r_item->product_name_field}} </option>
                         @else
                             <option value="{{$r_item->id_field}}">{{$r_item->product_name_field}} </option>
                         @endif
-                    @endif
                 @endforeach
             </select>
         </div>

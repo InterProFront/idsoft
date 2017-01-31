@@ -3,7 +3,7 @@
     </div>
     <div class="block ">
         <div class="field-wrap ">
-            <label class="field-title"> Название </label>
+            <label class="field-title"> Категория заведений </label>
 
             <select type="number" data-field-type="numb" data-field-name="auto" data-block="catalog_block"
                     data-group="product_auto" data-item-id="{{$item_product_auto->id_field}}"

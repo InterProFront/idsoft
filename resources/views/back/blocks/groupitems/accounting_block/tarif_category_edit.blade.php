@@ -11,7 +11,7 @@
                            data-item-id="{{$item_tarif_category->id_field}}" placeholder="Строка">
                 </div>
                 <div class="field-wrap ">
-                    <ul class="group-block group_container page-group" data-block="accounting_block" data-group="tarif_category"
+                    <ul class="group-block group_container page-group" data-block="accounting_block" data-group="tarif"
                         data-owner-id="{{$item_tarif_category->id_field}}">
                         @foreach($item_tarif_category->tarif_group as $item_tarif )
                             @include('back.blocks.groupitems.accounting_block.tarif')

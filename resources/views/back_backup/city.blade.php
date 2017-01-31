@@ -1,5 +1,6 @@
 @extends('back.layout')
 @section('content')
+    <?php $title = 'Редактирование списка городов'?>
     <div class="content-wrap">
         <div class="field-wrap group-wrap">
             <div class="group-title-row">
@@ -22,8 +23,8 @@
         </div>
     </div>
     <div class="save-panel">
-        <div class="status-panel success">
-            <p>Изменения сохранены</p>
+        <div class="status-panel ">
+
         </div>
         <div class="tool-panel">
             <div class="column">

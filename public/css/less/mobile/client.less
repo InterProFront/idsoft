@@ -6,6 +6,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .client-logo {
+    margin-top: 40px;
+  }
   .main-content-grid {
     flex-direction: column;
     padding-bottom: 0;
@@ -13,7 +16,7 @@
       margin-bottom: 40px;
       &:first-child {
         width: 100%;
-        .text-block{
+        .text-block {
           padding-right: 0;
         }
       }
@@ -22,18 +25,27 @@
         display: flex;
         justify-content: space-between;
       }
+      .recall {
+        padding-right: 0;
+      }
+    }
+    .other-places {
+      margin-top: 0;
     }
   }
 }
+
 @media screen and (max-width: 600px) {
   .main-content-grid {
     padding: 50px 20px 0 20px;
   }
-  .block-separator{
+
+  .block-separator {
     padding: 0 20px 10px 20px;
   }
 }
-@media  screen and  (max-width: 450px){
+
+@media screen and  (max-width: 450px) {
   .main-content-grid {
     flex-direction: column;
     padding-bottom: 0;
@@ -41,7 +53,7 @@
       margin-bottom: 40px;
       &:first-child {
         width: 100%;
-        .text-block{
+        .text-block {
           padding-right: 0;
         }
       }
@@ -52,6 +64,27 @@
         justify-content: space-between;
       }
     }
+    .other-places {
+      margin-top: 40px;
+      order: 1;
+    }
   }
+}
 
+@media screen and  (max-width: 400px) {
+  .main-content-grid {
+    .col-1-2 {
+      .recall {
+        .who-responded {
+          .col-1-2 {
+            width: 100%;
+            margin-bottom: 0;
+            &:nth-child(2) {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

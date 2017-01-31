@@ -1,6 +1,6 @@
 <li class="row-item" data-sorter="{{$item_tarif->sorter_field}}" data-id="{{$item_tarif->id_field}}">
     <div class="column-item"><a
-                href="/adm/edit/accounting/{{$item_tarif_category->id_field}}/{{$item_tarif->id_field}}">{{$item_tarif->page_name_field}}</a>
+                href="/adm/edit/accounting/{{$item_tarif->id_field}}/{{$item_tarif->id_field}}">@if ($item_tarif->page_name_field != '') {{$item_tarif->page_name_field}} @else Новый тариф @endif</a>
     </div>
     <div class="column-item"></div>
     <div class="column-item"><p>{{$item_tarif->sorter_field}}</p></div>

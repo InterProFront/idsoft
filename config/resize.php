@@ -173,6 +173,22 @@ return [
             ['width' => null, 'height' => 140, 'sufix' => 'icon'],
         ]
     ],
+    'client_logo' => [
+        'sizes' => [
+            ['width' => 210, 'height' => null, 'sufix' => 'primary'],
+            ['width' => null, 'height' => 280, 'sufix' => 'secondary'],
+            ['width' => 120, 'height' => null, 'sufix' => 'preview'],
+            ['width' => null, 'height' => 140, 'sufix' => 'icon'],
+        ]
+    ],
+    'client_rec_foto' => [
+        'sizes' => [
+            ['width' => 100, 'height' => null, 'sufix' => 'primary'],
+            ['width' => null, 'height' => 280, 'sufix' => 'secondary'],
+            ['width' => 120, 'height' => null, 'sufix' => 'preview'],
+            ['width' => null, 'height' => 140, 'sufix' => 'icon'],
+        ]
+    ],
     'staff_foto' => [
         'sizes' => [
             ['width' => 270, 'height' => 270, 'sufix' => 'primary'],

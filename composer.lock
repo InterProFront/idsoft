@@ -324,12 +324,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/intpro/fidback.git",
-                "reference": "5130ef1df5b8872a5e5bd297fbdd0171bac46370"
+                "reference": "4bdebb8085a7025303a8c7d2b552e8bd8b9503ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/intpro/fidback/zipball/5130ef1df5b8872a5e5bd297fbdd0171bac46370",
-                "reference": "5130ef1df5b8872a5e5bd297fbdd0171bac46370",
+                "url": "https://api.github.com/repos/intpro/fidback/zipball/4bdebb8085a7025303a8c7d2b552e8bd8b9503ed",
+                "reference": "4bdebb8085a7025303a8c7d2b552e8bd8b9503ed",
                 "shasum": ""
             },
             "require": {
@@ -363,7 +363,7 @@
                 "fidback",
                 "popap"
             ],
-            "time": "2016-05-04 13:41:29"
+            "time": "2017-01-05 10:25:34"
         },
         {
             "name": "interpro/imagefilelogic",
@@ -461,12 +461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/intpro/quickstart.git",
-                "reference": "5fbb8e0be91034dc4f9d5686df0d3c766feb0c91"
+                "reference": "6b7318650a10d6488ee220b4d5e697f3581eaeb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/intpro/quickstart/zipball/5fbb8e0be91034dc4f9d5686df0d3c766feb0c91",
-                "reference": "5fbb8e0be91034dc4f9d5686df0d3c766feb0c91",
+                "url": "https://api.github.com/repos/intpro/quickstart/zipball/6b7318650a10d6488ee220b4d5e697f3581eaeb0",
+                "reference": "6b7318650a10d6488ee220b4d5e697f3581eaeb0",
                 "shasum": ""
             },
             "type": "library",
@@ -496,7 +496,7 @@
             "keywords": [
                 "qstorage"
             ],
-            "time": "2016-12-13 13:05:08"
+            "time": "2017-01-06 10:53:00"
         },
         {
             "name": "intervention/image",

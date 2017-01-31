@@ -50,7 +50,7 @@
         <div class="field-wrap ">
             <label class="field-title"> СЕО: Описание </label>
             <textarea type="text" data-field-type="string" data-field-name="seo_description" data-block="clients_block"
-                   class="input-field block_field" placeholder="Строка">{{$clients_block->seo_description_field}}</textarea>
+                   class="input-field block_field no-trumbowyg" placeholder="Строка">{{$clients_block->seo_description_field}}</textarea>
         </div>
         <div class="field-wrap ">
             <label class="field-title"> СЕО-Текст (под футером) </label>

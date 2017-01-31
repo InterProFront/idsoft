@@ -36,8 +36,7 @@
                     <div class="preview-block">
                         <label class="file-input">
                             <img src="/images/{{$item_auto_adv->card_image->preview_link}}"
-                                 class="preview" data-field-name="card" data-block="auto_block" d
-                                 ta-group="auto_adv"
+                                 class="preview" data-field-name="card" data-block="auto_block" data-group="auto_adv"
                                  data-item-id="{{$item_auto_adv->id_field}}">
                             <input type="file" accept="image/*" class="input_file group_field" data-field-name="card"
                                    data-field-type="image" data-block="auto_block" data-group="auto_adv"
@@ -70,7 +69,7 @@
         </div>
         <div class="col-1-2 disabled">
             <button type="button" class="any_save" data-block="auto_block" data-group="auto_adv" data-entity="groupitem"
-                    data-item-id="{Заголовокauto_adv->id_field}}" data-descr="Эл. первой группы"> Сохранить
+                    data-item-id="{{$item_auto_adv->id_field}}" data-descr="Эл. первой группы"> Сохранить
             </button>
         </div>
     </div>

@@ -8,7 +8,8 @@
     <script src="/js/raiting.js"></script>
     <script src="/js/animate.js"></script>
     <script src="/js/main.js"></script>
-    {{--<script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=21a39ec775982af5b06964d7f7996de3"
+    {{--<script crossorigin="anonymous" async type="text/javascript" src="//api.pozvonim.com/widget/callback/v3/3353ad4817b50083cfd0c2ffba2b72b9/connect" id="check-code-pozvonim" charset="UTF-8"></script>
+    <script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=21a39ec775982af5b06964d7f7996de3"
             charset="UTF-8"></script>
     <!-- Chatra {literal} -->
     <script>
