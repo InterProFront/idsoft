@@ -107,7 +107,7 @@ return [
             'auto' => [
                 'stringfields' => ['page_name', 'page_title', 'seo_description', 'seo_keywords'],
                 'images' => ['background', 'card_background'],
-                'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty', 'vozm', 'rassr'],
+                'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty', 'vozm', 'rassr', 'seo_text'],
                 'numbs' => ['auto_cost', 'auto_sale', 'iiko', 'course_id', 'institution_id'],
                 'bools' => ['is_iiko']
             ],

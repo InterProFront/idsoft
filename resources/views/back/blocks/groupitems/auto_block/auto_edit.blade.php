@@ -274,6 +274,12 @@
                        data-group="auto" class="input-field group_field no-trumbowyg"
                        data-item-id="{{$item_auto->id_field}}" placeholder="Строка">{{$item_auto->seo_description_field}}</textarea>
             </div>
+            <div class="field-wrap ">
+                <label class="field-title"> СЕО-Текст (под футером) </label>
+                <textarea type="text" data-field-type="text" data-field-name="seo_text" data-block="auto_block"
+                          data-group="auto" class="input-field group_field" data-item-id="{{$item_auto->id_field}}"
+                          placeholder="Строка">{{$item_auto->seo_text_field}}</textarea>
+            </div>
         </div>
 
         <div class="disabled">
