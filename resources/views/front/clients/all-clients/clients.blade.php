@@ -5,8 +5,15 @@
     <?php $shadow = true; ?>
     {{----}}
     <section class="content clients " itemscope="" itemtype="http://schema.org/Service">
-        <?php $i = 0;
-        $all_count = $counts[$i]->count();
+        <?php
+        $i = 0;
+        /*$all_count = $counts[$i]->count();*/
+
+        $all_count = 0;
+        foreach ($filter->institution_group as $item){
+            $all_count += $item->institution_count_field;
+        }
+
         $d10 = $all_count % 10;
         $d100 = ($all_count % 100 < 5) || ($all_count % 100 > 20);
         ?>
@@ -23,7 +30,8 @@
                 @foreach($filter->institution_group as $item)
                     <?php
                     $i++;
-                    $count = $counts[$i];
+                    /*$count = $counts[$i];*/
+                    $count = $item->institution_count_field;
                     ?>
                     @if($count % 10 == 1)
                         <li class="item"><a href="/clients/{{$city}}/{{$item->id_field}}"

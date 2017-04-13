@@ -174,6 +174,7 @@ return [
             ],
             'institution' => [
                 'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description'],
+                'numbs' => ['institution_count']
             ],
             'city'        => [
                 'stringfields' => ['city_name']

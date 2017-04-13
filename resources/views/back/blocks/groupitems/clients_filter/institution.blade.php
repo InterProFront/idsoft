@@ -23,6 +23,13 @@
                    value="{{$item_institution->seo_keywords_field}}" data-item-id="{{$item_institution->id_field}}"
                    placeholder="Строка">
         </div>
+        <div class="field-wrap ">
+            <label class="field-title"> Количество клиентов данного типа </label>
+            <input type="number" data-field-type="numb" data-field-name="institution_count" data-block="clients_filter"
+                   data-group="institution" class="input-field group_field"
+                   value="{{$item_institution->institution_count_field}}" data-item-id="{{$item_institution->id_field}}"
+                   placeholder="Число">
+        </div>
         <div class="field-wrap buttons_block">
             <div class="col-1-2">
                 <button type="button" class="any_delete button dark" data-block="clients_filter"
