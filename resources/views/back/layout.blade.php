@@ -28,14 +28,14 @@
     <aside class="main-menu">
         <div class="menu-section">
             <ul class="menu">
-                <li class="item"><a href="/adm/edit/all">Статичные элементы сайта</a></li>
+                <li class="item"><a href="/adm/edit/all">Статичные элементы</a></li>
             </ul>
         </div>
         <div class="menu-section">
             <ul class="menu">
-                <li class="item"><a href="/adm/edit/catalog">Каталог оборудования</a></li>
+                <li class="item"><a href="/adm/edit/catalog">Каталог</a></li>
                 <li class="item"><a href="/adm/edit/auto">Готовые решения</a></li>
-                <li class="item"><a href="/adm/edit/software">Программное обеспечение</a></li>
+                <li class="item"><a href="/adm/edit/software">Программы</a></li>
                 <li class="item"><a href="/adm/edit/showcase">Стеллажи и витрины</a></li>
                 <li class="item"><a href="/adm/edit/accounting">Бухгалтерия</a></li>
                 <li class="item"><a href="/adm/edit/video">Видеонаблюдение</a></li>
@@ -43,7 +43,7 @@
         </div>
         <div class="menu-section">
             <ul class="menu">
-                <li class="item"><a href="/adm/edit/informatic">Информационные страницы</a></li>
+                <li class="item"><a href="/adm/edit/informatic">Текстовые страницы</a></li>
                 <li class="item"><a href="/adm/edit/about">О компании</a></li>
                 <li class="item"><a href="/adm/edit/clients">Клиенты</a></li>
             </ul>
