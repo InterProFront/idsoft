@@ -35,6 +35,8 @@ class PageController extends Controller{
 	}
 
 	public function getIndex(){
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/');
 		$catalog = $this->queryAgent->getGroupItem('catalog_block','category_1',51);
 		$showcase = $this->queryAgent->getGroupItem('catalog_block','category_1',52);
 		$video = $this->queryAgent->getGroupItem('catalog_block','category_1',53);
@@ -55,8 +57,9 @@ class PageController extends Controller{
 			'iiko'	  => $iiko,
 			'acc_m'	  => $acc_menu,
 			'client'  => $clients,
-			'filter'  => $filter
-		]);
+			'filter'  => $filter,
+            'rating'  => $rating
+        ]);
 	}
 
 
