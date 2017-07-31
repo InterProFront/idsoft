@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="/img/id_fav.gif" type="image/gif">
     @yield('styles')
     @yield('meta')
+    <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/5cdef2d298991ff1822dcdcd3a3a5384_1.js" async></script>
 </head>
 <body>
 <p class="top">{{$static->logo_text_field}}</p>
