@@ -33,6 +33,7 @@
                 @endforeach
             </div>
         </div>
+        @include('front.social_buttons')
         <div class="rating">
             <span class="head-reiting">Оцените нашу страницу</span>
             <div class="raiting-star" data-entity="news" data-id="1177">
