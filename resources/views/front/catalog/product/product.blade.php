@@ -109,6 +109,20 @@
                             <br>
                     @endif
                 </div>
+                @if($product->product_reviews_group->count() > 0 )
+                    <div class="reviews">
+                        <h4 class="reviews__title">Отзывы</h4>
+                        @foreach($product->product_reviews_group as $review)
+                            <ul class="reviews__list">
+                                <li class="reviews__item">
+                                    <div class="reviews__text text-block">{!! $review->review_text_field !!}</div>
+                                    <p class="reviews__person-name">{{ $review->person_name_field }}</p>
+                                    <p class="reviews__person-position">{{ $review->person_position_field }}</p>
+                                </li>
+                            </ul>
+                        @endforeach
+                    </div>
+                @endif
             </div>
         </div>
         @if ($product->product_features_group->count() > 0 )

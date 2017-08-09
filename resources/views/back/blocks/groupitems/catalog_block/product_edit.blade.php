@@ -235,6 +235,19 @@
             </ul>
         </div>
         <div class="field-wrap group-wrap">
+            <div class="group-title-row"><label class="group-title">Отзывы</label>
+                <button class="any_create button blue" data-block="catalog_block" data-group="product_reviews"
+                        data-descr="Эл. первой группы" data-owner-id="{{$item_product->id_field}}">Добавить элемент
+                </button>
+            </div>
+            <ul class="group-block group_container" data-block="catalog_block" data-group="product_reviews"
+                data-owner-id="{{$item_product->id_field}}">
+                @foreach($item_product->product_reviews_group as $item_product_reviews )
+                    @include('back.blocks.groupitems.catalog_block.product_reviews')
+                @endforeach
+            </ul>
+        </div>
+        <div class="field-wrap group-wrap">
             <div class="group-title-row"><label class="group-title">Сопутствующие товары</label>
                 <button class="any_create button blue" data-block="catalog_block" data-group="product_related"
                         data-descr="Эл. первой группы" data-owner-id="{{$item_product->id_field}}">Добавить элемент

@@ -97,6 +97,11 @@ return [
             'product_features' => [
                 'owner' => 'product',
                 'stringfields' => ['feat_name', 'feat_value']
+            ],
+            'product_reviews' => [
+                'owner' => 'product',
+                'textfields' => ['review_text'],
+                'stringfields' => ['person_name', 'person_position']
             ]
         ]
     ],
