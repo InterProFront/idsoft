@@ -125,16 +125,16 @@ class BackController extends Controller {
 	//================================================================
 	public function editProduct($id, $product_id){
 		$product = 		$this->queryAgent->getGroupItem('catalog_block','product',$product_id);
-//		$all_products = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
-//		$auto = 		$this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
-//		$course 	=   $this->queryAgent->getGroupFlat('clients_filter','course',[],[]);
-//		$soft =         $this->queryAgent->getGroupFlat('catalog_block','product',[],['product'=>['owner_id' => 55]]);
+		$all_products = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		$auto = 		$this->queryAgent->getGroupFlat('auto_block','auto',[],[]);
+		$course 	=   $this->queryAgent->getGroupFlat('clients_filter','course',[],[]);
+		$soft =         $this->queryAgent->getGroupFlat('catalog_block','product',[],['product'=>['owner_id' => 55]]);
 		return view('back.blocks.groupitems.catalog_block.product_edit', [
 			'item_product' => $product,
-//			'related'      => $all_products,
-//			'cor'	   		=> $course,
-//			'auto'		   => $auto,
-//			'soft'         => $soft
+			'related'      => $all_products,
+			'cor'	   		=> $course,
+			'auto'		   => $auto,
+			'soft'         => $soft
 		]);
 	}
 	public function editProductSoft($product_id){
