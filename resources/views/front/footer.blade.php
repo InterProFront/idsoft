@@ -32,10 +32,10 @@
             <div class="center">
                 <p class="gray-text">Мы в социальных сетях
                     <span class="big-wrap">
-                    <span class="soc-link"><a href="https://vk.com/idsoft_too" rel="nofollow" target="_blank">ВКонтакте</a></span>
-                    <span class="soc-link"><a href="https://www.facebook.com/groups/1156844417706449/" rel="nofollow"
+                    <span class="soc-link"><a href="https://vk.com/idsoftkz" rel="nofollow" target="_blank">ВКонтакте</a></span>
+                    <span class="soc-link"><a href="https://www.facebook.com/idsoftalmaty/" rel="nofollow"
                                               target="_blank">Фейсбук</a></span>
-                    <span class="soc-link"><a href="https://www.instagram.com/id_soft_almaty/" rel="nofollow" target="_blank">Инстаграмм</a></span>
+                    <span class="soc-link"><a href="https://www.instagram.com/idsoftkz/" rel="nofollow" target="_blank">Инстаграмм</a></span>
                     </span>
                 </p>
 
