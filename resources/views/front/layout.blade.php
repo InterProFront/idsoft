@@ -29,6 +29,17 @@
         /></noscript>
     <!— DO NOT MODIFY —>
     <!— End Facebook Pixel Code —>
+    <script>
+        fbq('track', 'Search', {
+            search_string: 'leather sandals'
+        });
+    </script>
+    <script>
+        fbq('track', 'ViewContent', {
+            value: 3.50,
+            currency: 'USD'
+        });
+    </script>
 </head>
 <body>
 <p class="top">{{$static->logo_text_field}}</p>
