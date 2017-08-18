@@ -84,7 +84,7 @@ class CatalogController extends Controller
         $rating = new Rating();
         $rating = $rating->getRatingView('/catalog/'.$slug);
         return view('front.catalog.category.category', [
-            'products' => $catalog,,
+            'products' => $catalog,
             'sort_list' => $sorting,
             'rating'   => $rating
         ]);
