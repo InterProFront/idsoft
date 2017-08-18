@@ -69,7 +69,7 @@ class CatalogController extends Controller
     {
         $catalog = $this->queryAgent->getGroupItemBySlug('catalog_block', 'category_2', $slug);
         $sorting = $this->queryAgent->getGroupFlat('catalog_block', 'product', ['product' =>['sorter' => 'ASC']], ['product' => ['owner_id' => $catalog->id_field]]);
-        foreach ($catalog as $item) {
+        foreach ($sorting as $item) {
             if ($item->course_id_field != 0) {
                 foreach ($this->course->course_group as $item_c) {
                     if ($item_c->id_field == $item->course_id_field) {
