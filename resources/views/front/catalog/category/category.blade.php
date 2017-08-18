@@ -7,7 +7,7 @@
         <h1 class="block-title">{{$products->category_name_field}}</h1>
         <div class="product-list">
 
-            @foreach($products->product_group as $item)
+            @foreach($sort_list as $item)
                 @if($item->show_field == 1)
                 <div class="product-item">
                     @if($products->id_field == 55)
