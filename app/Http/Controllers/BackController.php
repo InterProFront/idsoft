@@ -112,8 +112,10 @@ class BackController extends Controller {
 	}
 	public function editSubCategory($id){
 		$catalog = $this->queryAgent->getGroupItem('catalog_block','category_2',$id);
+        	$sorting = $this->queryAgent->getGroupFlat('catalog_block', 'product', ['product' =>['sorter' => 'ASC']], ['product' => ['owner_id' => $id]]);
 		return view('back.blocks.groupitems.catalog_block.category_2_edit', [
-			'item_category_2' => $catalog
+			'item_category_2' => $catalog,
+			'products_sort' => $sorting
 		]);
 	}
 
