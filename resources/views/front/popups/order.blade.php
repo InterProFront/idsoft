@@ -55,8 +55,13 @@
                     </p>
                 </div>
                 <div class="col-1-2">
+                    <script type="text/javascript">
+                        $( '#make-order' ).click(function() {
+                            fbq('track', 'Purchase');
+                        });
+                    </script>
                     <label class="row-name">
-                        <button class="send-form">Отправить</button>
+                        <button id="make-order" class="send-form">Отправить</button>
                     </label>
                 </div>
             </div>
