@@ -47,11 +47,13 @@ class PageController extends Controller{
 		$acc_menu = $this->queryAgent->getGroupFlat('auto_block','auto',[],['auto'=>['is_iiko'=>false]]);
 		$clients = $this->queryAgent->getGroupFlat('clients_block','client',[],[],['client' => ['take'=> 20, 'skip'=> 0]]);;
 		$filter = $this->queryAgent->getBlock('clients_filter',[],[]);
+		$wipon = $this->queryAgent->getBlock('wipon',[],[]);
 		return view('front.index.index',[
 			'catalog' => $catalog,
 			'auto'	  => $auto,
 			'video'	  => $video,
 			'soft'	  => $soft,
+			'wipon'	  => $wipon,
 			'buh'	  => $acc,
 			'showcase'=> $showcase,
 			'iiko'	  => $iiko,

@@ -42,6 +42,14 @@ return [
             ['width' => 100, 'height' => null, 'sufix' => 'icon'],
         ]
     ],
+    'wipon_main_background' => [
+        'sizes' => [
+            ['width' => null, 'height' => 180, 'sufix' => 'primary'],
+            ['width' => null, 'height' => 220, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
     'auto_block_iiko_background' => [
         'sizes' => [
             ['width' => null, 'height' => 180, 'sufix' => 'primary'],
@@ -60,6 +68,14 @@ return [
     ],
 //====index page end===========================================================================
     'auto_adv_card'      => [
+        'sizes' => [
+            ['width' => 260, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
+    'wipon_adv_card'      => [
         'sizes' => [
             ['width' => 260, 'height' => null, 'sufix' => 'primary'],
             ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
@@ -110,6 +126,14 @@ return [
         'proportions' => ['width' => 1, 'height' => 1, 'color' => '#ffffff']
     ],
     'auto_background' => [
+        'sizes' => [
+            ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
+            ['width' => 500, 'height' => null, 'sufix' => 'secondary'],
+            ['width' => 100, 'height' => null, 'sufix' => 'preview'],
+            ['width' => 100, 'height' => null, 'sufix' => 'icon'],
+        ]
+    ],
+    'wipon_background' => [
         'sizes' => [
             ['width' => 1200, 'height' => null, 'sufix' => 'primary'],
             ['width' => 500, 'height' => null, 'sufix' => 'secondary'],

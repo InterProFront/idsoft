@@ -36,7 +36,7 @@
                 <li class="item"><a href="/adm/edit/catalog">Каталог</a></li>
                 <li class="item"><a href="/adm/edit/auto">Готовые решения</a></li>
                 <li class="item"><a href="/adm/edit/software">Программы</a></li>
-                <li class="item"><a href="/adm/edit/showcase">Стеллажи и витрины</a></li>
+                <li class="item"><a href="/adm/edit/wipon">Wipon</a></li>
                 <li class="item"><a href="/adm/edit/accounting">Бухгалтерия</a></li>
                 <li class="item"><a href="/adm/edit/video">Видеонаблюдение</a></li>
             </ul>

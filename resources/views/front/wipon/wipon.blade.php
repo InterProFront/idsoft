@@ -1,56 +1,26 @@
 @extends('front.layout')
-@include('front.catalog.automatic.meta')
+@include('front.wipon.meta')
 @section('content')
     {{--Переменная Shadow нужна для определения есть ли тень под меню или нету--}}
     <?php $shadow = true; ?>
     {{----}}
     <section class="content automatic " itemscope="" itemtype="http://schema.org/Service">
-        <h1 class="page-title">{{$auto->page_name_field}}</h1>
+        <h1 class="page-title">{{$wipon->page_name_field}}</h1>
         <div class="page-title-image">
             <div class="image-wrap">
-                <img src="/images/{{$auto->background_image->primary_link}}" alt="{{$auto->background_image->alt}}">
+                <img src="/images/{{$wipon->background_image->primary_link}}" alt="{{$wipon->background_image->alt}}">
             </div>
         </div>
         <div class="main-content-block">
             <div class="col-1-2">
                 <div class="text-block">
-                    {!! $auto->content_field !!}
+                    {!! $wipon->content_field !!}
                 </div>
             </div>
             <div class="col-1-2">
-                <div class="right-menu-block">
-                    <p class="menu-title">Готовые решения</p>
-                    <ul class="right-menu">
-                        @foreach($all as $item)
-                            @if(!$item->is_iiko_field)
-                                <li class="menu-item">
-                                    <div class="orange-wrap"><a href="/automatic/{{$item->slug_field}}"
-                                                                class="link">{{$item->page_name_field}}</a></div>
-                                </li>
-                            @endif
-                        @endforeach
-                        <li class="menu-item iiko-popup">
-                            <div class="orange-wrap"><span class="open-popup">Автоматизация IIKO</span>
-                                <div class="left-popup">
-                                    <ul class="popup-menu">
-                                        @foreach($all as $item)
-                                            @if($item->is_iiko_field)
-                                                <li class="menu-item">
-                                                    <div class="orange-wrap-iiko"><a
-                                                                href="/automatic/{{$item->slug_field}}"
-                                                                class="link">{{$item->page_name_field}}</a></div>
-                                                </li>
-                                            @endif
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                @if($auto->vozm_field != '')
+                @if($wipon->vozm_field != '')
                     <div class="capability">
-                        {!! $auto->vozm_field !!}
+                        {!! $wipon->vozm_field !!}
                     </div>
                 @endif
             </div>
@@ -58,19 +28,17 @@
         <div class="second-content">
             <div class="col-1-2">
                 <div class="text-block">
-                    {!! $auto->system_features_field !!}
+                    {!! $wipon->system_features_field !!}
                 </div>
             </div>
             <div class="col-1-2">
                 <div class="advantages-block">
-                    @foreach($auto->auto_adv_group as $item)
+                    @foreach($wipon->wipon_adv_group as $item)
                         <div class="block-item">
                             <div class="img-wrap">
                                 <img src="/images/{{$item->card_image->primary_link}}" alt="{{$item->card_image->alt}}">
                             </div>
-                            <div class="text-wrap">
-                                <?php echo(str_replace('[%client-count%]', $clients_count, $item->card_text_field)); ?>
-                            </div>
+                            <div class="text-wrap">{{$item->card_text_field}}</div>
                         </div>
                     @endforeach
                 </div>
@@ -84,7 +52,7 @@
                 <h2 class="sub-title">Комплектация</h2>
                 <div class="products-list">
                     @foreach($prod as $item_prod)
-                        @foreach($auto->auto_related_group as $rel)
+                        @foreach($wipon->wipon_related_group as $rel)
 
                             @if($item_prod->id_field == $rel->product_field)
                                 <div class="product-item">
@@ -114,20 +82,20 @@
             </div>
         </div>
         <div class="warranty">
-            {!! $auto->warranty_field !!}
+            {!! $wipon->warranty_field !!}
         </div>
-        @if($auto->auto_cost_field != '0' && $auto->auto_cost_field != '')
+        @if($wipon->auto_cost_field != '0' && $wipon->auto_cost_field != '')
             <div class="cost-block">
                 <h2 class="cost">
-                    @if($auto->auto_sale_field > 0)
-                        <span class="sale">{{ number_format($auto->auto_sale_field,0,'',' ') }} тг</span>
+                    @if($wipon->auto_sale_field > 0)
+                        <span class="sale">{{ number_format($wipon->auto_sale_field,0,'',' ') }} тг</span>
                     @endif
-                    от {{ number_format($auto->auto_cost_field,0,'',' ') }} тенге
+                    от {{ number_format($wipon->auto_cost_field,0,'',' ') }} тенге
                 </h2>
             </div>
         @endif
         <div class="credit">
-            {!! $auto->pre_cost_text_field !!}
+            {!! $wipon->pre_cost_text_field !!}
         </div>
         <div class="button-wrap">
             <div class="button buy-it" id="buy" href="#order">Оформить заказ</div>

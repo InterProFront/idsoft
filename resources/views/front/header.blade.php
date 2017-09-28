@@ -138,9 +138,12 @@
                             <?php $i++ ?>
                             @if ($i>3)
                                 <li class="menu-item">
-                                    <a href="{{$link[$i-1]}}" class="all-site-menu" >{{$item->menu_text_field}}</a>
-                                    @if($i == 5)
+                                    @if($i == 4)
+                                        <a href="/wipon" class="all-site-menu" >Wipon Pro</a>
+                                    @elseif($i == 5)
+                                        <a href="{{$link[$i-1]}}" class="all-site-menu" >{{$item->menu_text_field}}</a>
                                     @else
+                                        <a href="{{$link[$i-1]}}" class="all-site-menu" >{{$item->menu_text_field}}</a>
                                         <div class="popup-form small">
                                             <h3 class="popup-title"><a
                                                         href="{{$link[$i-1]}}">{{$item->menu_text_field}}</a></h3>

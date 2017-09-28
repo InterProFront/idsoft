@@ -128,6 +128,22 @@ return [
             ]
         ]
     ],
+    'wipon' => [
+        'stringfields' => ['page_name', 'page_title', 'seo_description', 'seo_keywords', 'auto_title', 'auto_description'],
+        'images' => ['background', 'main_background'],
+        'textfields' => ['content', 'pre_cost_text', 'system_features', 'warranty', 'vozm', 'rassr', 'seo_text'],
+        'numbs' => ['auto_cost', 'auto_sale', 'course_id'],
+        'groups' => [
+            'wipon_adv' => [
+                'images' => ['card'],
+                'textfields' => ['card_text']
+            ],
+            'wipon_related' => [
+                'stringfields' => ['about_item'],
+                'numbs' => ['product']
+            ]
+        ]
+    ],
     'accounting_block' => [
         'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'card_title', 'card_description'],
         'images' => ['background', 'work_process', 'card_background'],

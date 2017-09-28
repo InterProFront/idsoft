@@ -49,6 +49,8 @@ Route::get('/showcase/{category}',              'CatalogController@getCategory')
 Route::get('/soft',					            'CatalogController@getSoftCategory');
 Route::get('/soft/{category}',					'CatalogController@getCategory');
 
+Route::get('/wipon',					        'CatalogController@getWipon');
+
 
 Route::get('/catalog/{category}/{product}',		'CatalogController@getProduct');
 Route::get('/video/{category}/{product}',		'CatalogController@getProduct');
@@ -98,10 +100,11 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 
 
 	Route::get('/edit/auto',			'BackController@editAuto');
-	Route::get('/edit/auto/{id}',		'BackController@editAutoItem');
+    Route::get('/edit/auto/{id}',		'BackController@editAutoItem');
 
+    Route::get('/edit/wipon',			'BackController@editWipon');
 
-	Route::get('/edit/accounting/',					'BackController@editAcc');
+    Route::get('/edit/accounting/',					'BackController@editAcc');
 	Route::get('/edit/accounting/{id}',				'BackController@editAccCategory');
 	Route::get('/edit/accounting/{id}/{tarif_id}',	'BackController@editAccItem');
 

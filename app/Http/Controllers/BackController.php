@@ -175,6 +175,18 @@ class BackController extends Controller {
 	}
 
 
+	// Wipon
+	public function editWipon(){
+		$wipon = $this->queryAgent->getBlock('wipon',[],[]);
+		$all_products = $this->queryAgent->getGroupFlat('catalog_block','product',[],[]);
+		$course 	=   $this->queryAgent->getGroupFlat('clients_filter','course',[],[]);
+		return view('back.blocks.wipon', [
+			'wipon'             => $wipon,
+			'cor'		        => $course,
+			'related'           => $all_products
+		]);
+	}
+
 	//================================================================
 	//	Редактирование страницы "Бухгалтерия"
 	//	Редактирование Категории

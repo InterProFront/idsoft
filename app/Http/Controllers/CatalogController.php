@@ -327,6 +327,44 @@ class CatalogController extends Controller
             'rating' => $rating
         ]);
     }
+
+
+    /* Wipon */
+    public function getWipon()
+    {
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/wipon');
+        $wipon = $this->queryAgent->getBlock('wipon',[],[]);
+        if ($wipon->course_id_field != 0) {
+            foreach ($this->course->course_group as $item) {
+                if ($item->id_field == $wipon->course_id_field) {
+                    $cost = $wipon->auto_cost_field * $item->course_field;
+                    $sale = $wipon->auto_sale_field * $item->course_field;
+                    $wipon->setField('auto_cost', $cost);
+                    $wipon->setField('auto_sale', $sale);
+                }
+            }
+        }
+        $test = $this->queryAgent->getGroupFlat('catalog_block', 'product', [], []);
+        foreach ($test as $item) {
+            if ($item->course_id_field != 0) {
+                foreach ($this->course->course_group as $item_c) {
+                    if ($item_c->id_field == $item->course_id_field) {
+                        $cost = $item->product_cost_field * $item_c->course_field;
+                        $sale = $item->product_sale_field * $item_c->course_field;
+                        $item->setField('product_cost', $cost);
+                        $item->setField('product_sale', $sale);
+                    }
+                }
+            }
+        }
+
+        return view('front.wipon.wipon', [
+            'wipon' => $wipon,
+            'prod' => $test,
+            'rating' => $rating
+        ]);
+    }
 }
 
 
