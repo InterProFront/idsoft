@@ -187,7 +187,7 @@
             </div>
             <ul class="group-block group_container" data-block="wipon" data-group="wipon_adv"
                 data-owner-id="0">
-                @foreach($wipon->wipon_adv_group as $wipon_adv )
+                @foreach($wipon->wipon_adv_group as $item_wipon_adv )
                     @include('back.blocks.groupitems.wipon.wipon_adv')
                 @endforeach
             </ul>
@@ -200,7 +200,7 @@
             </div>
             <ul class="group-block group_container" data-block="wipon" data-group="wipon_related"
                 data-owner-id="0">
-                @foreach($wipon->wipon_related_group as $wipon_related )
+                @foreach($wipon->wipon_related_group as $item_wipon_related )
                     @include('back.blocks.groupitems.wipon.wipon_related')
                 @endforeach
             </ul>

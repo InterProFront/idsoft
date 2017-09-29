@@ -3,7 +3,7 @@
     </div>
     <div class="block ">
         <div class="field-wrap ">
-            <label class="field-title"> Заголовок </label>
+            <label class="field-title"> Изображение </label>
             <div class="image-load">
                 <div class=" drag-n-drop">
                     <div class="drag"><input type="text" value="Отпустите клавишу мыши, чтобы загрузить файл"></div>
