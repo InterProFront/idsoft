@@ -13,7 +13,7 @@
         </div>
         <div class="main-content-block">
             <div class="col-1-2">
-                <div class="text-block">
+                <div class="text-block no-img-shadow">
                     {!! $wipon->content_field !!}
                 </div>
             </div>
