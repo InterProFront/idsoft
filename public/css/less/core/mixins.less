@@ -41,6 +41,13 @@
 }
 
 .text-block{
+  &.no-img-shadow{
+    img {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
+  }
   p, blockquote{
     color: #666666;
     line-height: 1.5em;
@@ -76,10 +83,10 @@
     font-weight: normal;
   }
   h4{
-    font-size: 16px;
+    font-size: 18px;
     color: #333333;
-    line-height: 1.2em;
-    font-weight:bold;
+    line-height: 1.2;
+    font-weight:normal;
   }
   h5{
     color: #333333;
