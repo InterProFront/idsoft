@@ -10,7 +10,7 @@
     <meta charset="UTF-8">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/id_fav.gif" type="image/gif">
+    <link rel="shortcut icon" href="/img/id_fav.png" type="image/png">
     @yield('styles')
     @yield('meta')
     <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/5cdef2d298991ff1822dcdcd3a3a5384_1.js" async></script>
