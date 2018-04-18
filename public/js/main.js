@@ -208,4 +208,21 @@ $(document).ready(function () {
             }
         }
     });
+
+
+    //==================================================================
+    //==== Отслеживание событий для менеджера
+    //==================================================================
+
+    $('.js_location').on('click', function () {
+        dataLayer.push({'event': 'gtm_click_Find_Us'});
+    });
+
+    $('.js_ask_me').on('click', function () {
+        dataLayer.push({'event': 'gtm_click_Send_Letter'});
+    });
+
+    $('.js_buy_popup').on('click', function () {
+        dataLayer.push({'event': 'gtm_click_Order'});
+    });
 });

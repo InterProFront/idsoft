@@ -61,7 +61,7 @@
                         });
                     </script>
                     <label class="row-name">
-                        <button id="make-order" class="send-form">Отправить</button>
+                        <button id="make-order" class="send-form" data-event-name="gtm_submit_Order">Отправить</button>
                     </label>
                 </div>
             </div>

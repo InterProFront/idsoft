@@ -13,6 +13,10 @@
     <link rel="shortcut icon" href="/img/id_fav.png" type="image/png">
     @yield('styles')
     @yield('meta')
+    <script>
+        dataLayer = [];
+    </script>
+    @yield('metriks')
     <script charset="UTF-8" src="//cdn.sendpulse.com/28edd3380a1c17cf65b137fe96516659/js/push/5cdef2d298991ff1822dcdcd3a3a5384_1.js" async></script>
     <!— Facebook Pixel Code —>
     <script>
@@ -42,6 +46,11 @@
     </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PDWZ8MW"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <p class="top">{{$static->logo_text_field}}</p>
 <div class="wrapper">
     @yield('header')
@@ -51,7 +60,6 @@
 </body>
 
 @yield('scripts')
-@yield('metriks')
 
 @include('front.popups.question')
 @include('front.popups.thank')

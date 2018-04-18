@@ -85,7 +85,7 @@
                     </div>
                     <div class="row-1-2">
                         <div class="col-1-2">
-                            <button class="button buy-it" id="buy" href="#order">Заказать</button>
+                            <button class="button buy-it js_buy_popup" id="buy" href="#order">Заказать</button>
                         </div>
                         <div class="col-1-2">
                             <p class="text">Возможна рассрочка и аренда оборудования.</p>

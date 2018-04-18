@@ -8,10 +8,10 @@
                 </div>
                 <ul class="head-list">
                     <li class="item">
-                        <a class="ask-me" href="#question">Написать письмо</a>
+                        <a class="ask-me js_ask_me" href="#question">Написать письмо</a>
                     </li>
                     <li class="item">
-                        <a href="http://go.2gis.com/nq2ta" target="_blank" rel="nofollow noindex">Как нас найти</a>
+                        <a href="http://go.2gis.com/nq2ta" class="js_location" target="_blank" rel="nofollow noindex">Как нас найти</a>
                     </li>
                 </ul>
             </div>

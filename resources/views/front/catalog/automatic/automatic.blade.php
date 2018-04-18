@@ -130,7 +130,7 @@
             {!! $auto->pre_cost_text_field !!}
         </div>
         <div class="button-wrap">
-            <div class="button buy-it" id="buy" href="#order">Оформить заказ</div>
+            <div class="button buy-it js_buy_popup" id="buy" href="#order">Оформить заказ</div>
         </div>
         @include('front.social_buttons')
         <div class="rating">

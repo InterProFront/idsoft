@@ -77,6 +77,7 @@ $(document).ready(function(){
     }
 
     $('.send-form').on('click',function() {
+        var eventName = $(this).data('eventName');
         unical = $(this).closest('.white-popup').attr('id');
         var $this = $(this);
         var dataobj = {};
@@ -117,6 +118,7 @@ $(document).ready(function(){
                 $('.thank').click();
 
                 clearFields(unical);
+                dataLayer.push({'event': eventName});
                 $this.removeClass('load');
 
             });
@@ -151,6 +153,7 @@ $(document).ready(function(){
             deferred.done(function(){
                 $('.thank').click();
                 $('.input.mail').val('');
+                dataLayer.push({'event': 'gtm_submit_Get_Price_List'});
                 $this.removeClass('load');
             });
         } else{

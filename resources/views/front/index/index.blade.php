@@ -208,7 +208,7 @@
                 заказ.</p>
             <div class="calculate">
                 <input type="text" class="input phone popup-input" data-mask="+7(000)000-00-00" placeholder="Номер телефона" data-field-name="phone" data-field-type="string">
-                <button class="calculated-button button send-form">Рассчитать</button>
+                <button class="calculated-button button send-form" data-event-name="gtm_submit_Project_Cost">Рассчитать</button>
             </div>
         </div>
     </section>

@@ -64,7 +64,7 @@
                 </div>
                 <div class="col-1-2">
                     <label class="row-name">
-                        <button class="send-form">Отправить</button>
+                        <button class="send-form" data-event-name="gtm_submit_Send_Letter">Отправить</button>
                     </label>
                 </div>
             </div>
