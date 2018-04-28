@@ -58,6 +58,7 @@ Route::get('/showcase/{category}/{product}', 	'CatalogController@getProduct');
 Route::get('/soft/{category}/{product}', 	'CatalogController@getProduct');
 
 
+Route::post('/send-price',           'BackController@priceSend');
 
 
 Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
@@ -126,7 +127,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
 	Route::get('/edit/course', 		'BackController@editCourse');
 
 	Route::post('/price',           'BackController@price');
-	Route::post('/send-price',           'BackController@priceSend');
 });
 Route::get('/inf/{slug}', 					'PageController@getInfPage');
 

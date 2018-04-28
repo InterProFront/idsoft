@@ -143,7 +143,7 @@ $(document).ready(function(){
             var deferred = $.ajax(
                 {
                     type: 'POST',
-                    url: '/adm/send-price',
+                    url: '/send-price',
                     dataType: 'json',
                     data: data
                 }
