@@ -28,7 +28,7 @@ class CatalogController extends Controller
 
         $auto = $this->queryAgent->getGroupFlat('auto_block', 'auto', [], []);
 
-        $soft = $this->queryAgent->getGroupFLat('catalog_block', 'product', [], ['category_2' => ['owner_id' => 55]]);
+        $soft = $this->queryAgent->getGroupFLat('catalog_block', 'product', [], ['category_2' => ['owner_id' => 54]]);
         $acc = $this->queryAgent->getGroupFlat('accounting_block', 'tarif_category', [], []);
 
 

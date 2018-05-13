@@ -153,7 +153,8 @@ return [
 		'Interpro\Fidback\FidbackServiceProvider',
 		'Interpro\Placeholder\PlaceholderServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
-		'Interpro\AdminGenerator\AdminGeneratorServiceProvider'
+		'Interpro\AdminGenerator\AdminGeneratorServiceProvider',
+		'Maatwebsite\Excel\ExcelServiceProvider'
 	],
 
 	/*
@@ -201,7 +202,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-
+        'Excel'     => 'Maatwebsite\Excel\Facades\Excel',
 	],
 
 ];
