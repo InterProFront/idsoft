@@ -99,24 +99,14 @@
                             <img src="/images/{{$buh->card_background_image->secondary_link}}" alt="{{$buh->card_background_image->alt}}">
                         </a>
                     </div>
-                    <div class="col-1-3">
+                    <div class="col-1-3 col-1-3--rosta">
+                        <a href="/rosta">
                         <div class="wrap">
-                            <p class="card-title">{{$video->category_name_field}}</p>
-                            <p class="card-text">{{$video->category_description_field}}</p>
-                        </div>
-                        <img src="/images/{{$video->card_background_image->secondary_link}}" alt="{{$video->card_background_image->alt}}">
-                        <div class="popup-form orange">
-                            <h3 class="popup-title">{{$video->category_name_field}}</h3>
-                            <div class="popup-items">
-                                <ul class="popup-list">
-                                    @foreach($m_popup[5] as $item_p)
-                                        <li class="item-popup">
-                                            <a href="/video/{{$item_p->slug_field}}">{{$item_p->category_name_field}}</a>
-                                        </li>
-                                    @endforeach
-                                </ul>
+                            <p class="card-title card-title--rosta">Rosta</p>
+                                <p class="card-text card-text--rosta">Автоматизация торговли, логистики и склада</p>
                             </div>
-                        </div>
+                            <img src="/img/rosta-main.png" alt="Rosta - Автоматизация торговли, логистики и склада">
+                        </a>
                     </div>
                 </div>
             </div>
