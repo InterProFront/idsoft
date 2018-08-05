@@ -389,6 +389,18 @@ class CatalogController extends Controller
             'rating' => $rating
         ]);
     }
+
+
+    /* Rosta */
+    public function getRosta()
+    {
+        $rating = new Rating();
+        $rating = $rating->getRatingView('/rosta');
+
+        return view('front.rosta.rosta', [
+            'rating' => $rating
+        ]);
+    }
 }
 
 

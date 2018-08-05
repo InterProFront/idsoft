@@ -18,10 +18,8 @@ Route::get('/catalog', 'CatalogController@getCatalog');
 Route::get('/category', 'CatalogController@getCategory');
 
 
-
 Route::get('/automatic',         'CatalogContoroler@getAuto');
 Route::get('/automatic/{slug}',  'CatalogController@getAuto');
-
 
 
 Route::get('/accounting', 'CatalogController@getAccounting');
@@ -48,6 +46,8 @@ Route::get('/showcase/{category}',              'CatalogController@getCategory')
 
 Route::get('/soft',					            'CatalogController@getSoftCategory');
 Route::get('/soft/{category}',					'CatalogController@getCategory');
+
+Route::get('/rosta',					        'CatalogController@getRosta');
 
 Route::get('/wipon',					        'CatalogController@getWipon');
 

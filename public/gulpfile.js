@@ -11,6 +11,7 @@ var gulp         = require('gulp'),
 
     svgmin       = require('gulp-svgmin'),
     imagemin     = require('gulp-imagemin'),
+    minify       = require('gulp-minify');
 
     changeCase   = require('change-case'),
     watch        = require('gulp-watch'),
@@ -147,6 +148,18 @@ gulp.task('image', function () {
         .pipe(livereload());
 });
 //======================================================================================================================
+
+
+gulp.task('compress', function() {
+    gulp.src('./dev/js/*.js')
+        .pipe(minify({
+            ext:{
+                src:'-debug.js',
+                min:'.js'
+            }
+        }))
+        .pipe(gulp.dest('./js'))
+});
 
 
 //======================================================================================================================
