@@ -396,9 +396,11 @@ class CatalogController extends Controller
     {
         $rating = new Rating();
         $rating = $rating->getRatingView('/rosta');
+        $rosta = $this->queryAgent->getBlock('rosta',[],[]);
 
         return view('front.rosta.rosta', [
-            'rating' => $rating
+            'rating' => $rating,
+            'rosta' => $rosta,
         ]);
     }
 }

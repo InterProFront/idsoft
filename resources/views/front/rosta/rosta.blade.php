@@ -14,8 +14,10 @@
                 <div class="r-automatization__container">
                     <h1 class="r-automatization__title">Автоматизация бизнеса</h1>
                     <p class="r-automatization__text">Rosta — программный комлекс для автоматизации бизнес-процессов: торговля, склад и логистика.</p>
-                    <div class="r-automatization__img-wrap">
-                        <img src="/img/rosta_illustration.png" alt="" class="r-automatization__img">
+                    <div class="r-automatization__illustration">
+                        <div class="r-automatization__img-wrap">
+                            <img src="/img/rosta_illustration.png" srcset="/img/rosta_illustration-2x.png 2x" alt="" class="r-automatization__img">
+                        </div>
                     </div>
                     <p class="r-automatization__text">Продукт доступен в нескольких ценовых вариантах, что позволяет пользоваться им как маленьким кафе, так и большим торговым центрам.</p>
                     <div class="r-automatization__btn-wrap">
@@ -27,17 +29,17 @@
                 <div class="r-advantages__container">
                     <ul class="r-advantages__list">
                         <li class="r-advantages__item">
-                            <img src="/img/rosta_advantage_1.png" alt="" class="r-advantages__item-img">
+                            <img src="/img/rosta_advantage_1.svg" alt="" class="r-advantages__item-img">
                             <p class="r-advantages__item-title">Работает без интернета</p>
                             <p class="r-advantages__item-text">Программа не нуждается в постоянном подключении к интернету. Все ваши данные и операции хранятся локально.</p>
                         </li>
                         <li class="r-advantages__item">
-                            <img src="/img/rosta_advantage_2.png" alt="" class="r-advantages__item-img">
+                            <img src="/img/rosta_advantage_2.svg" alt="" class="r-advantages__item-img">
                             <p class="r-advantages__item-title">Приватность данных</p>
                             <p class="r-advantages__item-text">Все данные хранятся в зашифрованном виде на множестве серверов и не могут быть собранны единоразово.</p>
                         </li>
                         <li class="r-advantages__item">
-                            <img src="/img/rosta_advantage_3.png" alt="" class="r-advantages__item-img">
+                            <img src="/img/rosta_advantage_3.svg" alt="" class="r-advantages__item-img">
                             <p class="r-advantages__item-title">Быстрее аналогов</p>
                             <p class="r-advantages__item-text">Благодаря оптимизации системы, программный комплекс роста работает в&nbsp;несколько раз быстрее аналогов.</p>
                         </li>
@@ -49,7 +51,7 @@
                     <p class="r-products__title">Продукты роста</p>
                     <div class="r-products__item r-product">
                         <div class="r-product__text-block">
-                            <img src="/img/rosta_tradepoint.png" alt="Rosta Tradepoint" class="r-product__text-img">
+                            <img src="/img/rosta_tradepoint.svg" alt="Rosta Tradepoint" class="r-product__text-img r-product__text-img--tradepoint">
                             <p class="r-product__text"><b>Rosta Tradepoint</b> — предельно простая система для ведения продаж.  Интуитивно-понятный интерфейс
                                 не требует специального обучения, а настройка программы для ваших нужд занимает не более получаса.
                             </p>
@@ -72,7 +74,7 @@
                             </div>
                         </div>
                         <div class="r-product__text-block">
-                            <img src="/img/rosta_backoffice.png" alt="Rosta Tradepoint" class="r-product__text-img">
+                            <img src="/img/rosta_backoffice.svg" alt="Rosta Backoffice" class="r-product__text-img r-product__text-img--backoffice">
                             <p class="r-product__text"><b>Rosta Back Office</b> — интуитивно-понятная программа для администрирования бизнеса. Программа помогает в оптимизации и ускорению работы управляющего персонала предприятий.</p>
                             <p class="r-product__text">Ежедневные процессы занимают минимальное кол-во времени, делая ваши бизнес-процессы по-настоящему реактивными.</p>
                         </div>
@@ -83,10 +85,10 @@
                 <p class="r-prices__title" id="rosta-plans">Цена роста</p>
                 <div class="r-prices__container">
                     <div class="r-prices__bundle r-bundle">
-                        <div class="r-bundle__name">Minimum</div>
-                        <div class="r-bundle__price">10 000 <span class="r-bundle__tenge tenge">h</span></div>
+                        <div class="r-bundle__name">Start</div>
+                        <div class="r-bundle__price">10&nbsp;000 <span class="r-bundle__tenge tenge">h</span></div>
                         <ul class="r-bundle__list">
-                            <li class="r-bundle__list-item">ПО «Rosta Cloud»</li>
+                            <li class="r-bundle__list-item">ПО «<a href="https://rosta.kz/prices" target="_blank" class="r-bundle__link">Rosta Cloud</a>»</li>
                             <li class="r-bundle__list-item">Бесплатный перенос данных</li>
                             <li class="r-bundle__list-item">Резервное копирование</li>
                         </ul>
@@ -96,14 +98,14 @@
                     </div>
                     <div class="r-prices__bundle r-bundle">
                         <div class="r-bundle__name">Business</div>
-                        <div class="r-bundle__price r-bundle__price--green">329 999 <span class="r-bundle__tenge tenge">h</span></div>
+                        <div class="r-bundle__price r-bundle__price--green">329&nbsp;999 <span class="r-bundle__tenge tenge">h</span></div>
                         <ul class="r-bundle__list">
-                            <li class="r-bundle__list-item">ПО «Rosta Cloud»</li>
-                            <li class="r-bundle__list-item">Моноблок IDSOFT ID5000</li>
-                            <li class="r-bundle__list-item">Сканер IDSOFT DS2208</li>
-                            <li class="r-bundle__list-item">Принтер чеков</li>
-                            <li class="r-bundle__list-item">Принтер этикеток</li>
-                            <li class="r-bundle__list-item">Денежный ящик</li>
+                            <li class="r-bundle__list-item">ПО «<a href="https://rosta.kz/prices" target="_blank" class="r-bundle__link">Rosta Cloud</a>»</li>
+                            <li class="r-bundle__list-item">Моноблок <a href="/catalog/pos-system/id5000" target="_blank" class="r-bundle__link">IDSOFT ID5000</a></li>
+                            <li class="r-bundle__list-item">Сканер <a href="/catalog/skaner-kod/idsoft-id2706" target="_blank" class="r-bundle__link">IDSOFT ID2706</a></li>
+                            <li class="r-bundle__list-item"><a href="/catalog/printery-chekovie/idsoft-id80use" target="_blank" class="r-bundle__link">Принтер чеков</a></li>
+                            <li class="r-bundle__list-item"><a href="/catalog/printer-etiketok/IDSOFTID60L" target="_blank" class="r-bundle__link">Принтер этикеток</a></li>
+                            <li class="r-bundle__list-item"><a href="/catalog/cash-box" target="_blank" class="r-bundle__link">Денежный ящик</a></li>
                             <li class="r-bundle__list-item">Бесплатный перенос данных</li>
                             <li class="r-bundle__list-item">Резервное копирование</li>
                         </ul>
@@ -113,17 +115,16 @@
                     </div>
                     <div class="r-prices__bundle r-bundle">
                         <div class="r-bundle__name">Professional</div>
-                        <div class="r-bundle__price r-bundle__price--blue">759 999 <span class="r-bundle__tenge tenge">h</span></div>
+                        <div class="r-bundle__price r-bundle__price--blue">759&nbsp;999 <span class="r-bundle__tenge tenge">h</span></div>
                         <ul class="r-bundle__list">
-                            <li class="r-bundle__list-item">ПО «Rosta Cloud»</li>
-                            <li class="r-bundle__list-item">Моноблок <a href="#" target="_blank" class="r-bundle__link">IDSOFT AIONE</a></li>
-                            <li class="r-bundle__list-item">Сканер <a href="#" target="_blank" class="r-bundle__link">IDSOFT DS2208</a></li>
-                            <li class="r-bundle__list-item">Сканер IDSOFT ID2909</li>
-                            <li class="r-bundle__list-item">2 x Принтер чеков</li>
-                            <li class="r-bundle__list-item">2 x Принтер этикеток</li>
-                            <li class="r-bundle__list-item">ТСД Honeywell EDA50U</li>
-                            <li class="r-bundle__list-item">Весы Штрих-М</li>
-                            <li class="r-bundle__list-item">Денежный ящик</li>
+                            <li class="r-bundle__list-item">ПО «<a href="https://rosta.kz/prices" target="_blank" class="r-bundle__link">Rosta Cloud</a>»</li>
+                            <li class="r-bundle__list-item">2 x Моноблок <a href="/catalog/pos-system/id5000" target="_blank" class="r-bundle__link">IDSOFT ID5000</a></li>
+                            <li class="r-bundle__list-item">2 x Сканер <a href="/catalog/skaner-kod/idsoft-id2706" target="_blank" class="r-bundle__link">IDSOFT ID2706</a></li>
+                            <li class="r-bundle__list-item">2 x <a href="/catalog/printery-chekovie/idsoft-id80use" target="_blank" class="r-bundle__link">Принтер чеков</a></li>
+                            <li class="r-bundle__list-item">2 x <a href="/catalog/printer-etiketok/IDSOFTID60L" target="_blank" class="r-bundle__link">Принтер этикеток</a></li>
+                            <li class="r-bundle__list-item">2 x <a href="/catalog/cash-box" target="_blank" class="r-bundle__link">Денежный ящик</a></li>
+                            <li class="r-bundle__list-item"><a href="/catalog/vesy-torgovie/shtrih-print-m-v4.5" target="_blank" class="r-bundle__link">Весы Штрих-М</a></li>
+                            <li class="r-bundle__list-item">Терминал сбора данных <a href="/catalog/terminali-sbora-dannyh/eda50" target="_blank" class="r-bundle__link">EDA50</a></li>
                             <li class="r-bundle__list-item">Бесплатный перенос данных</li>
                             <li class="r-bundle__list-item">Резервное копирование</li>
                         </ul>

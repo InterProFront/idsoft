@@ -104,6 +104,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'adm'], function(){
     Route::get('/edit/auto/{id}',		'BackController@editAutoItem');
 
     Route::get('/edit/wipon',			'BackController@editWipon');
+    Route::get('/edit/rosta',			'BackController@editRosta');
 
     Route::get('/edit/accounting/',					'BackController@editAcc');
 	Route::get('/edit/accounting/{id}',				'BackController@editAccCategory');

@@ -105,7 +105,7 @@
                             <p class="card-title card-title--rosta">Rosta</p>
                                 <p class="card-text card-text--rosta">Автоматизация торговли, логистики и склада</p>
                             </div>
-                            <img src="/img/rosta-main.png" alt="Rosta - Автоматизация торговли, логистики и склада">
+                            <img src="/img/rosta-main.png" srcset="/img/rosta-main-2x.png 2x"  alt="Rosta - Автоматизация торговли, логистики и склада">
                         </a>
                     </div>
                 </div>

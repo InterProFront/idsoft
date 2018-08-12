@@ -187,6 +187,15 @@ class BackController extends Controller {
 		]);
 	}
 
+
+	// Rosta
+	public function editRosta(){
+        $rosta = $this->queryAgent->getBlock('rosta',[],[]);
+		return view('back.blocks.rosta', [
+			'rosta'             => $rosta,
+		]);
+	}
+
 	//================================================================
 	//	Редактирование страницы "Бухгалтерия"
 	//	Редактирование Категории

@@ -144,6 +144,10 @@ return [
             ]
         ]
     ],
+    'rosta' => [
+        'stringfields' => ['page_title', 'seo_description', 'seo_keywords'],
+        'textfields' => ['seo_text'],
+    ],
     'accounting_block' => [
         'stringfields' => ['page_name', 'page_title', 'seo_keywords', 'seo_description', 'card_title', 'card_description'],
         'images' => ['background', 'work_process', 'card_background'],

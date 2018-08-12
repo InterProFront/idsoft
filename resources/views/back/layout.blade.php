@@ -37,6 +37,7 @@
                 <li class="item"><a href="/adm/edit/auto">Готовые решения</a></li>
                 <li class="item"><a href="/adm/edit/software">Программы</a></li>
                 <li class="item"><a href="/adm/edit/wipon">Wipon</a></li>
+                <li class="item"><a href="/adm/edit/rosta">Rosta</a></li>
                 <li class="item"><a href="/adm/edit/accounting">Бухгалтерия</a></li>
                 <li class="item"><a href="/adm/edit/video">Видеонаблюдение</a></li>
             </ul>
